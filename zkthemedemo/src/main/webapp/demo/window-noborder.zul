@@ -1,0 +1,63 @@
+<?page title="Window (without border)" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="700px" border="normal">
+		<hbox>
+			<window title="Window: Embedded"
+				closable="true" sizable="true" maximizable="true" minimizable="true"
+				width="300px" height="200px" top="50px" left="50px">
+				Window Content
+			</window>
+			<window title="Window: Overlapped" mode="overlapped"
+				closable="true" sizable="true" maximizable="true" minimizable="true"
+				width="300px" height="200px" top="130px" left="560px" >
+				Window Content
+			</window>
+			<window id="popup1" title="Window: Popup" mode="popup"
+				closable="true" sizable="true" maximizable="true" minimizable="true"
+				width="300px" height="200px" top="130px" left="880px" >
+				Window Content
+			</window>
+			<window id="modal1" title="Window: Modal" visible="false"
+				closable="true" sizable="true" maximizable="true" minimizable="true"
+				width="300px" height="200px">
+				<vbox>
+					<div>Window Content</div>
+					<div>
+						<button label="Close" onClick="modal1.visible = false;"/>
+					</div>
+				</vbox>
+			</window>
+		</hbox>
+		<separator spacing="20px"/>
+		<hbox>
+			<window closable="true" 
+				width="300px" height="200px" top="50px" left="50px">
+				Window Content
+			</window>
+			<window mode="overlapped" closable="true" 
+				width="300px" height="200px" top="350px" left="560px" >
+				Window Content
+			</window>
+			<window id="popup2" mode="popup" closable="true" 
+				width="300px" height="200px" top="350px" left="880px" >
+				Window Content
+			</window>
+			<window id="modal2" visible="false"
+				closable="true" sizable="true" maximizable="true" minimizable="true"
+				width="300px" height="200px">
+				<vbox>
+					<div>Window Content</div>
+					<div>
+						<button label="Close" onClick="modal2.visible = false;"/>
+					</div>
+				</vbox>
+			</window>
+		</hbox>
+		<separator spacing="20px"/>
+		<vbox>
+			<button label="Show Popup" onClick="popup1.doPopup(); popup2.doPopup();"/>
+			<button label="Show Modal 1" onClick="modal1.doModal();" />
+			<button label="Show Modal 2" onClick="modal2.doModal();" />
+		</vbox>
+	</window>
+</zk>

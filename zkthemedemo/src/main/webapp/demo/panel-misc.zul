@@ -1,0 +1,8 @@
+<?page title="Panel" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<panel title="panel" border="normal" width="300px" height="300px">
+		<panelchildren style="overflow:auto;" >
+			<label style="white-space:nowrap" value="-------------------------------------------------------------------------------------------"/>
+		</panelchildren>
+	</panel>
+</zk>

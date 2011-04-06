@@ -1,0 +1,149 @@
+<?page title="Combo Inputs (Default)" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<window title="Default Mold" border="normal" width="300px" height="600px">
+			<vbox>
+				Combobox:
+				<combobox>
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<combobox buttonVisible="false">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<separator />
+				Datebox:
+				<datebox />
+				<datebox buttonVisible="false" />
+				<separator />
+				Bandbox:
+				<bandbox>
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<bandbox buttonVisible="false">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<separator />
+				Timebox:
+				<timebox />
+				<timebox buttonVisible="false" />
+				<separator />
+				Spinner:
+				<spinner />
+				<spinner buttonVisible="false" />
+				<separator />
+			</vbox>
+		</window>
+		<window title="Default Mold, Disabled" border="normal" width="300px" height="600px">
+			<vbox>
+				Combobox:
+				<combobox disabled="true">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<combobox disabled="true" buttonVisible="false">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<separator />
+				Datebox:
+				<datebox disabled="true" />
+				<datebox disabled="true" buttonVisible="false" />
+				<separator />
+				Bandbox:
+				<bandbox disabled="true">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<bandbox disabled="true" buttonVisible="false">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<separator />
+				Timebox:
+				<timebox disabled="true" />
+				<timebox disabled="true" buttonVisible="false" />
+				<separator />
+				Spinner:
+				<spinner disabled="true" />
+				<spinner disabled="true" buttonVisible="false" />
+				<separator />
+			</vbox>
+		</window>
+		<window title="Default Mold, Read Only" border="normal" width="300px" height="600px">
+			<vbox>
+				Combobox:
+				<combobox readonly="true">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<combobox readonly="true" buttonVisible="false">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<separator />
+				Datebox:
+				<datebox readonly="true" />
+				<datebox readonly="true" buttonVisible="false" />
+				<separator />
+				Bandbox:
+				<bandbox readonly="true">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<bandbox readonly="true" buttonVisible="false">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<separator />
+				Timebox:
+				<timebox readonly="true" />
+				<timebox readonly="true" buttonVisible="false" />
+				<separator />
+				Spinner:
+				<spinner readonly="true" />
+				<spinner readonly="true" buttonVisible="false" />
+				<separator />
+			</vbox>
+		</window>
+		<window title="Default Mold, Inplace" border="normal" width="300px" height="600px">
+			<vbox>
+				Combobox:
+				<combobox inplace="true">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<combobox inplace="true" buttonVisible="false">
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<separator />
+				Datebox:
+				<datebox inplace="true" />
+				<datebox inplace="true" buttonVisible="false" />
+				<separator />
+				Bandbox:
+				<bandbox inplace="true">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<bandbox inplace="true" buttonVisible="false">
+					<bandpopup>Bandpopup Content</bandpopup>
+				</bandbox>
+				<separator />
+				Timebox:
+				<timebox inplace="true" />
+				<timebox inplace="true" buttonVisible="false" />
+				<separator />
+				Spinner:
+				<spinner inplace="true" />
+				<spinner inplace="true" buttonVisible="false" />
+				<separator />
+			</vbox>
+		</window>
+	</hbox>
+</zk>

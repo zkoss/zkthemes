@@ -1,0 +1,16 @@
+<language-addon>
+	<addon-name>breeze</addon-name>
+	<depends>zul</depends>
+	<language-name>xul/html</language-name>
+	
+	<version>
+		<version-class>org.zkoss.theme.breeze.Version</version-class>
+		<version-uid>5.0.7</version-uid>
+	</version>
+	
+	<!-- backward compatible -->
+	<library-property>
+		<name>org.zkoss.zul.themejar.breeze</name>
+		<value>true</value>
+	</library-property>
+</language-addon>

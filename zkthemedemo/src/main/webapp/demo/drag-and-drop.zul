@@ -1,0 +1,45 @@
+<?page title="Drag and Drop" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hlayout>
+		<listbox id="left" height="250px" width="200px" fixedLayout="true"
+			onDrop="move(event.dragged)" droppable="true" oddRowSclass="non-odd">
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK Forge" />
+			</listitem>
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)"> 
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK Mobile" />
+			</listitem>
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK GWT" />
+			</listitem>
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK JSF" />
+			</listitem>
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK JSP" />
+			</listitem>
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK Spring" />
+			</listitem>
+		</listbox>
+		<separator orient="vertical" spacing="8px" />
+		<listbox id="right" height="250px" width="200px" fixedLayout="true" 
+			onDrop="move(event.dragged)" droppable="true" oddRowSclass="non-odd">
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK" />
+			</listitem>
+			<listitem draggable="true" droppable="true" onDrop="move(event.dragged)">
+				<listcell src="/widgets/effects/drag_n_drop/img/document.png" label="ZK Studio" />
+			</listitem>
+		</listbox>
+	</hlayout>
+	<zscript><![CDATA[
+		void move(Component dragged) {
+			if (self instanceof Listitem) {
+				self.parent.insertBefore(dragged, self);
+			} else {
+				self.appendChild(dragged);
+			}
+		}
+	]]></zscript>
+</zk>

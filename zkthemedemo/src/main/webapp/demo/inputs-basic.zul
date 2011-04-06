@@ -1,0 +1,39 @@
+<?page title="Basic Inputs, Errorbox" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<vbox>
+			<window title="Basic Inputs" border="normal" width="300px" height="300px">
+				<vbox>
+					Intbox:
+					<div><intbox value="123" /> (Normal)</div>
+					<div><intbox value="123" disabled="true" /> (Disabled)</div>
+					<div><intbox value="123" readonly="true" /> (Read Only)</div>
+					<div><intbox value="123" inplace="true" /> (Inplace)</div>
+				</vbox>
+				<separator />
+				Note: This includes Decimalbox, Doublebox, Intbox, Longbox and Textbox. They all use the same style.
+			</window>
+			<window title="Textbox" border="normal" width="300px" height="300px">
+				<vbox>
+					Textbox:
+					<div><textbox value="abc" /> (Normal)</div>
+					<div><textbox multiline="true" rows="4" value="abc" /> (Multiline)</div>
+				</vbox>
+				<separator />
+			</window>
+		</vbox>
+		<window width="150px" height="300px" />
+		<vbox>
+			<separator spacing="150px" />
+			<window title="Error Box" border="normal" width="300px" height="300px">
+				<vbox>
+					For showing error box:
+					<div><textbox constraint="/^`````````$/" /> (Normal)</div>
+					<div><textbox inplace="true" constraint="/^`````````$/" /> (Inplace)</div>
+				</vbox>
+				<separator />
+				Note: please click on the textbox and then click somewhere else.
+			</window>
+		</vbox>
+	</hbox>
+</zk>

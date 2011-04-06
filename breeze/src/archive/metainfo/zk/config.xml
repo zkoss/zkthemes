@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<config-name>breeze</config-name><!-- used to resolve dependency -->
+	<depends>zul</depends>
+	<version>
+		<version-class>org.zkoss.theme.breeze.Version</version-class>
+		<version-uid>5.0.7</version-uid>
+	</version>
+	
+	<listener>
+		<listener-class>org.zkoss.theme.breeze.BreezeThemeWebAppInit</listener-class>
+	</listener>
+</config>

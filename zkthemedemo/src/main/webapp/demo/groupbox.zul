@@ -1,0 +1,25 @@
+<?page title="Groupbox" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<groupbox width="300px" height="300px">
+			<caption image="/common/img/volumn.gif" label="Caption" />
+			Groupbox Content	
+		</groupbox>
+		<groupbox width="300px" height="300px">
+			<caption label="Caption" />
+			Groupbox Content	
+		</groupbox>
+	</hbox>
+	<separator />
+	<hbox>
+		<groupbox width="300px" height="300px">
+			<caption image="/common/img/volumn.gif" />
+			Groupbox Content	
+		</groupbox>
+		<groupbox width="300px" height="300px">
+			Groupbox Content	
+		</groupbox>
+	</hbox>
+	<separator />
+	Note: we kept the original design, which uses native fieldset and caption html element.
+</zk>

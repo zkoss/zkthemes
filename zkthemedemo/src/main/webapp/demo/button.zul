@@ -1,0 +1,59 @@
+<?page title="Button" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<window title="Button" border="normal" width="300px" height="300px">
+			<vbox>
+				Trendy Mold:
+				<div>
+					<button label="Button" mold="trendy" />
+					<button image="/common/img/volumn.gif" mold="trendy" />
+					<button label="Button" image="/common/img/volumn.gif" mold="trendy" />
+				</div>
+				<separator />
+				OS Mold:
+				<div>
+					<button label="Button" mold="os" />
+					<button image="/common/img/volumn.gif" mold="os" />
+					<button label="Button" image="/common/img/volumn.gif" mold="os" />
+				</div>
+			</vbox>
+			<separator />
+			Note: keeps the original design for OS mold
+		</window>
+		<window title="Button with longer label" border="normal" width="300px" height="300px">
+			<vbox>
+				Trendy Mold:
+				<button label="Long Long Button" mold="trendy" />
+				<separator />
+				OS Mold:
+				<button label="Long Long Button" mold="os" />
+			</vbox>
+			<separator />
+		</window>
+		<window title="Large Button" border="normal" width="300px" height="300px">
+			<vbox>
+				Trendy Mold:
+				<button label="Button" width="100px" height="50px" mold="trendy" />
+				<separator />
+				OS Mold:
+				<button label="Button" width="100px" height="50px" mold="os" />
+			</vbox>
+			<separator />
+		</window>
+	</hbox>
+	<separator />
+	<hbox>
+		<window title="Button with Hover Image" border="normal" width="300px" height="300px">
+			<vbox>
+				Trendy Mold:
+				<button label="Button" image="/common/img/volumn.gif" 
+					hoverImage="/common/img/network.gif" mold="trendy" />
+				<separator />
+				OS Mold:
+				<button label="Button" image="/common/img/volumn.gif" 
+					hoverImage="/common/img/network.gif" mold="os" />
+			</vbox>
+			<separator />
+		</window>
+	</hbox>
+</zk>

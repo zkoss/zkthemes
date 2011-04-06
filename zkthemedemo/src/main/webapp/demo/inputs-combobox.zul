@@ -1,0 +1,42 @@
+<?page title="Inputs-Combobox" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<window title="Combobox (default mold)" border="normal" width="300px" height="300px">
+			<vbox>
+				Simple Combobox:
+				<combobox>
+					<comboitem label="Comboitem 1" />
+					<comboitem label="Comboitem 2" />
+					<comboitem label="Comboitem 3" />
+				</combobox>
+				<separator />
+				Comboitem with description:
+				<combobox>
+					<comboitem label="Comboitem 1" description="Description of the great Comboitem 1." />
+					<comboitem label="Comboitem 2" description="Description of the great Comboitem 2." />
+					<comboitem label="Comboitem 3" description="Description of the great Comboitem 3." />
+				</combobox>
+				<separator />
+				Comboitem with icon:
+				<combobox>
+					<comboitem label="Comboitem 1" image="/common/img/search.png" />
+					<comboitem label="Comboitem 2" image="/common/img/search.png" />
+				<comboitem label="Comboitem 3" image="/common/img/search.png" />
+				</combobox>
+				<separator />
+				Comboitem with description and icon:
+				<combobox>
+					<comboitem label="Comboitem 1" image="/common/img/search.png" 
+						description="Description of the great Comboitem 1." />
+					<comboitem label="Comboitem 2" image="/common/img/search.png" 
+						description="Description of the great Comboitem 2." />
+					<comboitem label="Comboitem 3" image="/common/img/search.png" 
+						description="Description of the great Comboitem 3." />
+				</combobox>
+			</vbox>
+		</window>
+	</hbox>
+	<separator />
+	<hbox>
+	</hbox>
+</zk>
