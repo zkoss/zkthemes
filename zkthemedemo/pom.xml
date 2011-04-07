@@ -191,7 +191,7 @@
 							<goal>single</goal>
 						</goals>
 						<configuration>
-							<finalName>zk-theme-demo${packname}</finalName>
+							<finalName>zk-theme-demo-${version}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
 								<descriptor>assembly/demo.xml</descriptor>

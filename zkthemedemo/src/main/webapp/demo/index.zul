@@ -131,7 +131,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 				    cookie.setPath(cp);
 				    ((HttpServletResponse)exe.getNativeResponse()).addCookie(cookie);
 				    
-				    Library.setProperty("org.zkoss.theme.prefered", self.getSelectedItem().getValue());
+				    Library.setProperty("org.zkoss.theme.preferred", self.getSelectedItem().getValue());
 				    Executions.sendRedirect(null);
 				]]></attribute>
 			</combobox>

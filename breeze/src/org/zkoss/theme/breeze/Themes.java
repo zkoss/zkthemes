@@ -34,7 +34,7 @@ import org.zkoss.zk.ui.Executions;
 public class Themes {
 	public final static String THEME_COOKIE_KEY = "zktheme";
 
-	public final static String PREFERRED_THEME = "org.zkoss.theme.prefered";
+	public final static String PREFERRED_THEME = "org.zkoss.theme.preferred";
 	public final static String THEME_NAMES = "org.zkoss.theme.names";
 
 	private final static String THEME_DEFAULT = BreezeThemeWebAppInit.THEME_DEFAULT;

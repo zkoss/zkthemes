@@ -6,7 +6,7 @@ How to use breeze.jar:
 	* Use library-property
 	  	<!-- in WEB-INF/zk.xml -->
 		<library-property>
-		    <name>org.zkoss.theme.prefered</name>
+		    <name>org.zkoss.theme.preferred</name>
 		    <value>breeze</value>
 		</library-property>
 		
