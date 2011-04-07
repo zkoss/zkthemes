@@ -1,0 +1,3 @@
+[17:10:24] Eric Brecht: #eeffee for okay
+#ffeeee for 'x'
+[17:10:35] Eric Brecht: alternative just white bg
