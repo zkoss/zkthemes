@@ -1,0 +1,49 @@
+<?page title="Popup" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<style>
+		.labelbox {
+			border: 1px solid #CCCCCC;
+			padding: 10px;
+			margin: 5px;
+		}
+	</style>
+	<hbox>
+		<window title="Popup" border="normal" width="300px" height="300px">
+			<vbox>
+				<button label="Show Popup" popup="p1" />
+				<button label="Show Popup with fixed size" popup="p2" />
+			</vbox>
+		</window>
+		<window title="Tooltip, Context" border="normal" width="300px" height="300px">
+			<vbox>
+				<div sclass="labelbox" tooltip="p1">
+					<label value="Tooltip (mouse over)" />
+				</div>
+				<div sclass="labelbox" context="p1">
+					<label value="Context (right click)" />
+				</div>
+			</vbox>
+		</window>
+		<window title="Tooltiptext" border="normal" width="300px" height="300px">
+			<vbox>
+				<div sclass="labelbox" tooltiptext="Tooltip Message">
+					<label value="Tooltiptext (mouse over)" />
+				</div>
+			</vbox>
+			Note: Tooltiptext is not a Popup.
+		</window>
+	</hbox>
+	Note: for Errorbox, please visit Input-2.
+	<popup id="p1">
+		<vbox>
+			<label value="Popup Content" />
+			<label value="Second Line" />
+		</vbox>
+	</popup>
+	<popup id="p2" width="200px" height="200px">
+		<vbox>
+			<label value="Popup Content" />
+			<label value="Second Line" />
+		</vbox>
+	</popup>
+</zk>

@@ -1,0 +1,434 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	Header and footer
+	<hbox>
+		<window title="auxhead, column, auxhead" border="normal"
+			hflex="min">
+			<listbox width="400px" fixedLayout="true">
+				<auxhead>
+					<auxheader label="A+B" colspan="2" />
+					<auxheader label="C" />
+				</auxhead>
+				<listhead id="cs">
+					<listheader label="Align Left" align="left" />
+					<listheader label="Align Center" align="center"/>
+					<listheader label="Align Right" align="right" />
+				</listhead>
+				<auxhead>
+					<auxheader label="C+D" colspan="2" />
+					<auxheader label="E" />
+				</auxhead>
+				<listitem>
+					<listcell label="AA01" />
+					<listcell label="BB01" />
+					<listcell label="CC01" />
+				</listitem>
+				<listfoot>
+					<listfooter label="footer 1" />
+					<listfooter label="image" image="/img/Centigrade-Widget-Icons/BookBlue-16x16.png" hoverImage="/img/Centigrade-Widget-Icons/BookGreen-16x16.png"/>
+					<listfooter label="image" image="/img/Centigrade-Widget-Icons/BookBlue-16x16.png" hoverImage="/img/Centigrade-Widget-Icons/BookGreen-16x16.png"/>
+				</listfoot>
+			</listbox>
+		</window>
+		<window title="column, auxhead, auxhead" border="normal"
+			hflex="min">
+			<listbox fixedLayout="true" width="400px">
+				<listhead id="cs">
+					<listheader label="Align Left" align="left" />
+					<listheader label="Align Center" align="center"/>
+					<listheader label="Align Right" align="right" />
+				</listhead>
+				<auxhead>
+					<auxheader label="A+B" colspan="2" />
+					<auxheader label="C" />
+				</auxhead>
+				<auxhead>
+					<auxheader label="C"  />
+					<auxheader label="D + E" colspan="2"/>
+				</auxhead>
+				<listitem>
+					<listcell label="AA01" />
+					<listcell label="BB01" />
+					<listcell label="CC01" />
+				</listitem>
+				<listfoot>
+					<listfooter label="footer 1" />
+					<listfooter label="footer 2" />
+					<listfooter label="footer 3" />
+				</listfoot>
+			</listbox>
+		</window>
+		
+		<window title="auxhead, auxhead, column" border="normal"
+			hflex="min">
+			<listbox fixedLayout="true" width="400px">
+				<auxhead>
+					<auxheader label="A+B" colspan="2" />
+					<auxheader label="C" />
+				</auxhead>
+				<auxhead>
+					<auxheader label="C"  />
+					<auxheader label="D + E" colspan="2"/>
+				</auxhead>
+				<listhead id="cs">
+					<listheader label="Align Left" align="left"/>
+					<listheader label="Align Center" align="center"/>
+					<listheader label="Align Right" align="right"/>
+				</listhead>
+				<listitem>
+					<listcell label="AA01" />
+					<listcell label="BB01" />
+					<listcell label="CC01" />
+				</listitem>
+				<listfoot>
+					<listfooter label="footer 1" />
+					<listfooter label="footer 2" />
+					<listfooter label="footer 3" />
+				</listfoot>
+			</listbox>
+		</window>
+	</hbox>
+	
+	<div height="30px"></div>
+	Sorting
+	<hbox>
+		<window title="sorting, sizeable" border="normal">
+			<listbox fixedLayout="true" width="400px">
+				<listhead sizable="true">
+					<listheader align="center" width="40px"
+						image="/img/Centigrade-Widget-Icons/ArrowsUpDown-16x16.png" />
+					<listheader label="Subject" sort="auto" />
+					<listheader label="Received" sort="auto" />
+				</listhead>
+				<listitem height="28px">
+					<listcell
+						image="/img/Centigrade-Widget-Icons/ArrowUpOrange-16x16.png" />
+					<listcell label="ZK Jet 0.8.0 is released" />
+					<listcell label="2008/11/17 17:41:29" />
+				</listitem>
+				<listitem height="28px">
+					<listcell
+						image="/img/Centigrade-Widget-Icons/ArrowDown-16x16.png" />
+					<listcell
+						label="URLs for iPhone-Optimized Google Sites" />
+					<listcell label="2008/11/17 15:56:37" />
+				</listitem>
+				<listitem height="28px">
+					<listcell label="&#160;" />
+					<listcell label="Style Guide for ZK 3.5 released" />
+					<listcell label="2008/11/14 13:23:07" />
+				</listitem>
+				<listitem height="28px">
+					<listcell
+						image="/img/Centigrade-Widget-Icons/ArrowUpOrange-16x16.png" />
+					<listcell label="ZK Studio 0.9.0 released." />
+					<listcell label="2008/11/16 10:26:37" />
+				</listitem>
+			</listbox>
+		</window>
+		
+		<window title="sorting, sizeable with header" border="normal">
+			<listbox fixedLayout="true" width="400px">
+				<auxhead>
+					<auxheader label="A+B (Align Center)" colspan="2" align="center"/>
+					<auxheader label="C" />
+				</auxhead>
+				<listhead sizable="true">
+					<listheader align="center" width="40px"
+						image="/img/Centigrade-Widget-Icons/ArrowsUpDown-16x16.png" />
+					<listheader label="Subject" sort="auto" />
+					<listheader label="Received" sort="auto" />
+				</listhead>
+				<listitem height="28px">
+					<listcell
+						image="/img/Centigrade-Widget-Icons/ArrowUpOrange-16x16.png" />
+					<listcell label="ZK Jet 0.8.0 is released" />
+					<listcell label="2008/11/17 17:41:29" />
+				</listitem>
+				<listitem height="28px">
+					<listcell
+						image="/img/Centigrade-Widget-Icons/ArrowDown-16x16.png" />
+					<listcell
+						label="URLs for iPhone-Optimized Google Sites" />
+					<listcell label="2008/11/17 15:56:37" />
+				</listitem>
+				<listitem height="28px">
+					<listcell label="&#160;" />
+					<listcell label="Style Guide for ZK 3.5 released" />
+					<listcell label="2008/11/14 13:23:07" />
+				</listitem>
+				<listitem height="28px">
+					<listcell
+						image="/img/Centigrade-Widget-Icons/ArrowUpOrange-16x16.png" />
+					<listcell label="ZK Studio 0.9.0 released." />
+					<listcell label="2008/11/16 10:26:37" />
+				</listitem>
+				<listfoot>
+					<listfooter label="footer" />
+				</listfoot>
+			</listbox>
+		</window>
+		
+		<window title="sorting, resize, checkable" border="normal" >
+			<listbox fixedLayout="true" width="400px" multiple="true" checkmark="true">
+				<listhead sizable="true">
+					<listheader align="center" width="40px"/>
+					<listheader label="Subject" sort="auto" />
+					<listheader label="Received" sort="auto" />
+				</listhead>
+				<auxhead>
+					<auxheader label="A+B (Align Right)" colspan="2" align="right"/>
+					<auxheader label="C" />
+				</auxhead>
+				<listitem height="28px">
+					<listcell/>
+					<listcell label="ZK Jet 0.8.0 is released" />
+					<listcell label="2008/11/17 17:41:29" />
+				</listitem>
+				<listitem height="28px">
+					<listcell />
+					<listcell
+						label="URLs for iPhone-Optimized Google Sites" />
+					<listcell label="2008/11/17 15:56:37" />
+				</listitem>
+				<listitem height="28px">
+					<listcell/>
+					<listcell label="Style Guide for ZK 3.5 released" />
+					<listcell label="2008/11/14 13:23:07" />
+				</listitem>
+				<listitem height="28px">
+					<listcell/>
+					<listcell label="ZK Studio 0.9.0 released." />
+					<listcell label="2008/11/16 10:26:37" />
+				</listitem>
+				<listfoot>
+					<listfooter label="" />
+					<listfooter label="image" image="/img/Centigrade-Widget-Icons/BookBlue-16x16.png" hoverImage="/img/Centigrade-Widget-Icons/BookGreen-16x16.png"/>
+					<listfooter label="image" image="/img/Centigrade-Widget-Icons/BookBlue-16x16.png" hoverImage="/img/Centigrade-Widget-Icons/BookGreen-16x16.png"/>
+				</listfoot>
+			</listbox>
+		</window>
+	</hbox>
+	<div height="30px"></div>
+	Grouping
+	<hbox>
+		<window title="grouping" border="normal">
+			<listbox fixedLayout="true" width="400px">
+				<listhead sizable="true">
+					<listheader label="Brand" />
+					<listheader label="Price"  width="100px"/>
+					<listheader label="Hard Drive Capacity" width="150px"/>
+				</listhead>
+					<listgroup label="Dell" open="false"/>
+					<listitem>
+						<listcell label="Dell E4500 2.2GHz"/>
+						<listcell label="$261.00" />
+						<listcell label="500GB"/>
+					</listitem>
+					<listitem>
+						<listcell label="XP-Pro Slim Dell-Inspiron-530-s"/>
+						<listcell label="$498.93" />
+						<listcell label="500GB"/>				
+					</listitem>
+					<listitem>
+						<listcell label="Dell P4 3.2 GHz"/>
+						<listcell label="$377.99" />
+						<listcell label="500GB"/>				
+					</listitem>
+					<listgroup label="Compaq"/>
+					<listitem>
+						<listcell label="Compaq SR5113WM"/>
+						<listcell label="$279.00" />
+						<listcell label="160GB"/>				
+					</listitem>
+					<listitem>
+						<listcell label="Compaq HP XW4200"/>
+						<listcell label="$980"/>
+						<listcell label="500GB"/>				
+					</listitem>
+					<listgroupfoot>
+						<listcell label="cell in groupfoot"/>
+						<listcell label=""/>
+						<listcell label=""/>
+					</listgroupfoot>
+					<listfoot>
+						<listfooter label="" />
+						<listfooter label="image" image="/img/Centigrade-Widget-Icons/BookBlue-16x16.png" hoverImage="/img/Centigrade-Widget-Icons/BookGreen-16x16.png"/>
+					</listfoot>
+			</listbox>
+		</window>
+		
+		<window title="grouping with height" border="normal">
+			<listbox fixedLayout="true" width="400px" height="200px">
+				<listhead sizable="true">
+					<listheader label="Brand" />
+					<listheader label="Price"  width="100px"/>
+					<listheader label="Hard Drive Capacity" width="150px"/>
+				</listhead>
+					<listgroup label="Dell" />
+					<listitem>
+						<listcell label="Dell E4500 2.2GHz"/>
+						<listcell label="$261.00" />
+						<listcell label="500GB"/>
+					</listitem>
+					<listitem>
+						<listcell label="XP-Pro Slim Dell-Inspiron-530-s"/>
+						<listcell label="$498.93" />
+						<listcell label="500GB"/>				
+					</listitem>
+					<listitem>
+						<listcell label="Dell P4 3.2 GHz"/>
+						<listcell label="$377.99" />
+						<listcell label="500GB"/>				
+					</listitem>
+					<listgroup label="Compaq"/>
+					<listitem>
+						<listcell label="Compaq SR5113WM"/>
+						<listcell label="$279.00" />
+						<listcell label="160GB"/>				
+					</listitem>
+					<listitem>
+						<listcell label="Compaq HP XW4200"/>
+						<listcell label="$980"/>
+						<listcell label="500GB"/>				
+					</listitem>
+					<listgroupfoot>
+						<listcell label="cell in groupfoot"/>
+						<listcell label=""/>
+						<listcell label=""/>
+					</listgroupfoot>
+			</listbox>
+		</window>
+		<window title="grouping with paging" border="normal">
+			<radiogroup
+				onCheck="listbox.pagingPosition = self.selectedItem.label">
+				<radio label="top" />
+				<radio label="bottom" checked="true" />
+				<radio label="both" />
+			</radiogroup>
+			<button label="Change Paging Mold">
+				<attribute name="onClick">
+				listbox.pagingChild.mold = "os".equals(listbox.pagingChild.mold) ? "default" : "os";
+				</attribute>
+			</button>
+			<listbox id="listbox" fixedLayout="true" width="400px" mold="paging" pageSize="3">
+				<listhead sizable="true">
+					<listheader label="Brand" />
+					<listheader label="Price"  width="100px"/>
+					<listheader label="Hard Drive Capacity" width="150px"/>
+				</listhead>
+					<listgroup label="Dell"/>
+					<listitem>
+						<listcell label="Dell E4500 2.2GHz"/>
+						<listcell label="$261.00" />
+						<listcell label="500GB"/>
+					</listitem>
+					<listitem>
+						<listcell label="XP-Pro Slim Dell-Inspiron-530-s"/>
+						<listcell label="$498.93" />
+						<listcell label="500GB"/>				
+					</listitem>
+					<listitem>
+						<listcell label="Dell P4 3.2 GHz"/>
+						<listcell label="$377.99" />
+						<listcell label="500GB"/>				
+					</listitem>
+					<listgroup label="Compaq"/>
+					<listitem>
+						<listcell label="Compaq SR5113WM"/>
+						<listcell label="$279.00" />
+						<listcell label="160GB"/>				
+					</listitem>
+					<listitem>
+						<listcell label="Compaq HP XW4200"/>
+						<listcell label="$980"/>
+						<listcell label="500GB"/>				
+					</listitem>
+					<listgroupfoot>
+						<listcell label="cell in groupfoot"/>
+						<listcell label=""/>
+						<listcell label=""/>
+					</listgroupfoot>
+			</listbox>
+		</window>		
+	</hbox>
+
+	<div height="30px"></div>
+	<hbox>
+		<window
+			title="Complex header: with toobarbutton and menu inside"
+			border="normal" hflex="min">
+			<listbox>
+				<auxhead>
+					<auxheader colspan="2">
+						<label id="span">ss</label>
+						<textbox onChange='span.value = self.value' />
+						<datebox />
+						ssss
+					</auxheader>
+				</auxhead>
+				<listhead sizable="true">
+					<listheader sort="auto">
+						<toolbarbutton label="toobarbutton"
+							onClick='alert(self.label)' />
+						<menubar>
+							<menu label="File">
+								<menupopup>
+									<menuitem label="New"
+										onClick="alert(self.label)" />
+									<menuitem label="Open"
+										onClick="alert(self.label)" />
+									<menuitem label="Save"
+										onClick="alert(self.label)" />
+									<menuseparator />
+									<menuitem label="Exit"
+										onClick="alert(self.label)" />
+								</menupopup>
+							</menu>
+							<menu label="Help">
+								<menupopup>
+									<menuitem label="Index"
+										onClick="alert(self.label)" />
+									<menu label="About">
+										<menupopup>
+											<menuitem label="About ZK"
+												onClick="alert(self.label)" />
+											<menuitem
+												label="About Potix" onClick="alert(self.label)" />
+										</menupopup>
+									</menu>
+								</menupopup>
+							</menu>
+						</menubar>
+						<button label="lable" onClick='alert("button")' />
+						<datebox />
+					</listheader>
+					<listheader>
+						<listbox rows="1" mold="select">
+							<listitem label="option1" />
+							<listitem label="option2" />
+							<listitem label="option3" />
+						</listbox>
+					</listheader>
+				</listhead>
+				<listitem>
+					<listcell label="Mary" />
+					<listcell label="FEMALE" />
+				</listitem>
+				<listitem>
+					<listcell label="John" />
+					<listcell label="MALE" />
+				</listitem>
+				<listitem>
+					<listcell label="Jane" />
+					<listcell label="FEMALE" />
+				</listitem>
+				<listitem>
+					<listcell label="Henry" />
+					<listcell label="MALE" />
+				</listitem>
+			</listbox>
+		</window>
+
+	</hbox>
+</zk>

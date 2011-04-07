@@ -1,0 +1,52 @@
+<zk>
+<style dynamic="true">
+
+
+</style>
+<zscript>
+import java.util.*;
+import java.text.*;
+Random random = new Random(20);
+String[] stocks = {"Csco", "Goog", "Yhoo", "Msft", "Orcl"};
+String[] color = {"red", "blue", "yellow", "green", "gray"};
+NumberFormat nf = NumberFormat.getInstance();
+Locale locale = Locale.ENGLISH;
+SimpleDateFormat df = new SimpleDateFormat("MMMM", locale);
+String[] months = new String[12];
+java.util.Calendar cal = java.util.Calendar.getInstance(locale);
+cal.clear();
+for (int j = 0; j &lt; 12; ++j) {
+	cal.set(java.util.Calendar.MONTH, j);
+	months[j] = df.format(cal.getTime());
+} 
+String nextPrice() {
+    nf.setMaximumFractionDigits( 2 );
+	return nf.format(Math.random() * 50 + 40);
+}
+</zscript>
+<grid fixedLayout="true">
+	<columns>
+		<column width="40px" />
+		<column label="Stock Name"/>
+		<column label="Date"/>
+		<column label="Open" align="center" sort="auto"/>
+		<column label="High" align="center" sort="auto"/>
+		<column label="Low" align="center" sort="auto"/>
+		<column label="Close" align="center" sort="auto"/>
+		<column label="volume" align="center" sort="auto"/>
+	</columns>
+	<rows>
+		<row forEach="&#36;{stocks}">
+			<detail open="false" fulfill="onOpen=/demo2/season.zul"/>
+			<label value="&#36;{stocks[forEachStatus.index]}"/>
+			<label value="31-Aug-09"/>
+			<label style="color:red;" onCreate='self.value = nextPrice()'/>
+			<label onCreate='self.value = nextPrice()'/>
+			<label style="color:red;" onCreate='self.value = nextPrice()'/>
+			<label onCreate='self.value = nextPrice()'/>
+			<label onCreate='self.value = random.nextInt(65536)+ ""'/>
+		</row>
+	</rows>
+</grid>
+</zk>
+			

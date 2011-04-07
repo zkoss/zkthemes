@@ -1,0 +1,39 @@
+<?page title="Panel" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window border="normal" mold="desktop">
+		<hbox>
+			<panel framable="true" border="normal" height="300px" width="300px" 
+				maximizable="true" minimizable="true" collapsible="true" closable="true"
+				title="Panel (with frame)" mold="desktop">
+				<toolbar mold="desktop">Toolbar</toolbar>
+				<panelchildren mold="desktop">
+					Panel Content
+				</panelchildren>
+				<toolbar mold="desktop">Toolbar</toolbar>
+			</panel>
+			<panel border="normal" height="300px" width="300px" 
+				maximizable="true" minimizable="true" collapsible="true" closable="true"
+				title="Panel (no frame)" mold="desktop">
+				<toolbar mold="desktop">Toolbar</toolbar>
+				<panelchildren mold="desktop">
+					Panel Content
+				</panelchildren>
+				<toolbar mold="desktop">Toolbar</toolbar>
+			</panel>
+			<panel framable="true" border="normal" height="300px" width="300px" mold="desktop">
+				<toolbar mold="desktop">Toolbar</toolbar>
+				<panelchildren mold="desktop">
+					Panel Content
+				</panelchildren>
+				<toolbar mold="desktop">Toolbar</toolbar>
+			</panel>
+			<panel border="normal" height="300px" width="300px" mold="desktop">
+				<toolbar mold="desktop">Toolbar</toolbar>
+				<panelchildren mold="desktop">
+					Panel Content
+				</panelchildren>
+				<toolbar mold="desktop">Toolbar</toolbar>
+			</panel>
+		</hbox>
+	</window>
+</zk>

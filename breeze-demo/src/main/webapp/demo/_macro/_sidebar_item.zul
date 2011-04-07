@@ -1,0 +1,2 @@
+<toolbarbutton label="${arg.label}" topic="${arg.topic}" 
+	sclass="item" use="org.zkoss.zkdemo.theme.Sidebaritem" />

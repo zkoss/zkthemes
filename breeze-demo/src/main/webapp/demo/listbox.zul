@@ -1,0 +1,126 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Listbox" border="normal">
+	<listbox rows="1" mold="select">
+		<listitem label="Inbox"/>
+		<listitem label="Received"/>
+		<listitem label="Draft"/>
+	</listbox>		
+
+	<separator bar="true"/>
+	<listbox fixedLayout="true">
+		<listhead sizable="true">
+			<listheader align="center" width="40px"
+				image="/img/Centigrade-Widget-Icons/ArrowsUpDown-16x16.png" />
+			<listheader align="center" width="40px" image="/img/Centigrade-Widget-Icons/Envelope-16x16.png" />
+			<listheader align="center" width="40px"
+				image="/img/Centigrade-Widget-Icons/PaperClip-16x16.png" />
+			<listheader label="Subject" sort="auto"/>
+			<listheader label="Received" sort="auto"/>
+		</listhead>
+		<listitem height="28px">
+			<listcell image="/img/Centigrade-Widget-Icons/ArrowUpOrange-16x16.png" />
+			<listcell image="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+			<listcell image="/img/Centigrade-Widget-Icons/PaperClip-16x16.png" />
+			<listcell label="ZK Jet 0.8.0 is released" />
+			<listcell label="2008/11/17 17:41:29" />
+		</listitem>
+		<listitem height="28px">
+			<listcell image="/img/Centigrade-Widget-Icons/ArrowDown-16x16.png" />
+			<listcell image="/img/Centigrade-Widget-Icons/Envelope-16x16.png" />
+			<listcell image="/img/Centigrade-Widget-Icons/PaperClip-16x16.png" />
+			<listcell label="URLs for iPhone-Optimized Google Sites" />
+			<listcell label="2008/11/17 15:56:37" />
+		</listitem>
+		<listitem height="28px">
+			<listcell label="&#160;" />
+			<listcell image="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+			<listcell label="&#160;" />
+			<listcell label="Style Guide for ZK 3.5 released" />
+			<listcell label="2008/11/14 13:23:07" />
+		</listitem>
+		<listitem height="28px">
+			<listcell image="/img/Centigrade-Widget-Icons/ArrowUpOrange-16x16.png" />
+			<listcell image="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+			<listcell label="&#160;" />
+			<listcell label="ZK Studio 0.9.0 released." />
+			<listcell label="2008/11/16 10:26:37" />
+		</listitem>
+	</listbox>
+	
+	<separator/>
+	Listbox Live data
+		<zscript>
+		ListModel strset = new org.zkoss.zkdemo.userguide.FakeListModel(20000);
+	</zscript>
+	<listbox id="list" width="200px" rows="5" model="&#36;{strset}">
+		<listhead>
+			<listheader label="Load on Demend" sort="auto"/>
+		</listhead>
+	</listbox>
+	
+	<separator/>
+	Listbox with checkmarks
+	<button label="Toggle checkmark" onClick="box.checkmark = !box.checkmark"/>
+	<button label="Toggle multiple" onClick="box.multiple = !box.multiple"/>
+	<listbox id="box" fixedLayout="true" multiple="true" checkmark="true">
+		<listhead>
+			<listheader label="Name"/>
+			<listheader label="Gender"/>
+			<listheader label="Age"/>
+			<listheader label="Description"/>
+		</listhead>
+		<listitem>
+			<listcell label="Mary"/>
+			<listcell label="FEMALE"/>
+			<listcell label="18"/>
+			<listcell label="A young lady."/>
+		</listitem>
+		<listitem>
+			<listcell label="John"/>
+			<listcell label="MALE"/>
+			<listcell label="20"/>
+			<listcell label="A college student."/>
+		</listitem>
+		<listitem>
+			<listcell label="Jane"/>
+			<listcell label="FEMALE"/>
+			<listcell label="32"/>
+			<listcell label="A remarkable artist."/>
+		</listitem>
+		<listitem>
+			<listcell label="Henry"/>
+			<listcell label="MALE"/>
+			<listcell label="29"/>
+			<listcell label="A graduate."/>
+		</listitem>
+	</listbox>	
+	
+	<separator/>
+	Paging can be supported to locate at three position: Top, Bottom, and Both.
+	<radiogroup
+		onCheck="tree.pagingPosition = self.selectedItem.label;listbox.pagingPosition = self.selectedItem.label">
+		<radio label="top" />
+		<radio label="bottom" checked="true" />
+		<radio label="both" />
+	</radiogroup>
+	<separator/>
+	<button label="Change Paging Mold">
+		<attribute name="onClick">
+		listbox.pagingChild.mold = "os".equals(listbox.pagingChild.mold) ? "default" : "os";
+		</attribute>
+	</button>
+	<zscript>
+		List items = new org.zkoss.zkdemo.userguide.BigList(1000); //a big list of Integer
+	</zscript>
+	<listbox id="listbox" mold="paging" pageSize="5">
+		<listitem forEach="&#36;{items}">
+		<listcell label="&#36;{each}-1"/>
+		<listcell label="&#36;{each}-2"/>
+		<listcell label="&#36;{each}-3"/>
+		<listcell label="&#36;{each}-4"/>
+		</listitem>
+	</listbox>
+</window>
+			
+</zk>

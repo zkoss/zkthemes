@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	menu.zul
+	
+	{{IS_NOTE
+	Purpose:
+	
+	Description:
+	
+	History:
+	Thu Nov 13 16:07:16 TST 2008, Created by Flyworld
+	}}IS_NOTE
+	
+	Copyright (C) 2008 Potix Corporation. All Rights Reserved.
+	
+	{{IS_RIGHT
+	}}IS_RIGHT
+-->
+<zk>
+	<hbox>
+		<window title="Menubar (horizontal)" border="normal"
+			width="350px" height="300px">
+			<label>Horizontal</label>
+			<menubar id="menubar" width="100%">
+				<menu label="Project"
+					image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png">
+					<menupopup>
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"
+							label="New" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png"
+							label="Open" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
+							label="Save" onClick="alert(self.label)" />
+						<menuseparator />
+						<menuitem label="Exit"
+							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
+							onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menu label="Help"
+					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK"
+									onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+									onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</menu>
+				<menu
+					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menuitem label="Menuitem" onClick="alert(self.label)" />
+			</menubar>
+
+			<div height="50px"></div>
+			<label>Vertical: Default width is 100%</label>
+			<menubar width="100%" orient="vertical">
+				<menu label="Project"
+					image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png">
+					<menupopup>
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"
+							label="New" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png"
+							label="Open" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
+							label="Save" onClick="alert(self.label)" />
+						<menuseparator />
+						<menuitem label="Exit"
+							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
+							onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menu label="Help"
+					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK"
+									onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+									onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</menu>
+				<menu
+					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menuitem label="Menuitem" onClick="alert(self.label)" />
+			</menubar>
+		</window>
+		<window title="Menupopup" border="normal" width="300px"
+			height="300px">
+			<div height="50px"></div>
+			<button label="Open menupopup">
+				<attribute name="onClick">
+	popuop.open(self);
+</attribute>
+			</button>
+			<menupopup id="popuop">
+				<menuitem
+					image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"
+					label="New" onClick="alert(self.label)" />
+				<menuitem
+					image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png"
+					label="Open" onClick="alert(self.label)" />
+				<menuitem
+					image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
+					label="Save" onClick="alert(self.label)" />
+				<menuseparator />
+				<menuitem label="Exit"
+					image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
+					onClick="alert(self.label)" />
+			</menupopup>
+		</window>
+		<window title="Auto drop menubar" border="normal"
+			height="300px">
+			<menubar id="menubar" width="100%">
+				<attribute name="onCreate">
+	self.setAutodrop(true);
+</attribute>
+				<menu label="Project"
+					image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png">
+					<menupopup>
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"
+							label="New" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png"
+							label="Open" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
+							label="Save" onClick="alert(self.label)" />
+						<menuseparator />
+						<menuitem label="Exit"
+							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
+							onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menu label="Help"
+					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK"
+									onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+									onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</menu>
+				<menu
+					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="Color Picker"
+							content="#color=#184dc6" />
+					</menupopup>
+				</menu>
+			</menubar>
+		</window>
+	</hbox>
+	<hbox>
+		<window title="Scrollable Menupopup" border="normal"
+			width="350px" height="300px">
+			<label>Horizontal Menubar</label>
+			<menubar id="menubar" width="200px;">
+				<attribute name="onCreate">
+					self.setScrollable(true);
+				</attribute>
+				<menu label="Project"
+					image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png">
+					<menupopup>
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"
+							label="New" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png"
+							label="Open" onClick="alert(self.label)" />
+						<menuitem
+							image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
+							label="Save" onClick="alert(self.label)" />
+						<menuseparator />
+						<menuitem label="Exit"
+							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
+							onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menu label="Help"
+					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK"
+									onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+									onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</menu>
+				<menu
+					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="Color Picker"
+							content="#color=#184dc6" />
+					</menupopup>
+				</menu>
+			</menubar>
+		</window>
+		<window title="Colorbox in Menu" border="normal" width="350px"
+			height="300px">
+			<menubar id="menubar" width="100%">
+				<menu
+					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="Color Picker"
+							content="#color=#184dc6" />
+					</menupopup>
+				</menu>
+			</menubar>
+			<checkbox label="Vertical orient">
+				<attribute name="onCheck">
+					menubar.orient = self.checked ? "vertical" : "horizontal";
+				</attribute>
+			</checkbox>
+		</window>
+	</hbox>
+</zk>

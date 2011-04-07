@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<config-name>breeze</config-name><!-- used to resolve dependency -->
+	<depends>zul</depends>
+	<version>
+		<version-class>org.zkoss.breeze.Version</version-class>
+		<version-uid>5.0.6</version-uid>
+	</version>
+	
+	<javascript-module name="breeze" version="5.0.6"/>
+	
+	<listener>
+		<listener-class>org.zkoss.breeze.ComponentWebAppInit</listener-class>
+	</listener>
+</config>

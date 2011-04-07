@@ -1,0 +1,33 @@
+<?page title="Panel in a Window" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<window title="Window" border="normal" height="300px" width="300px" mold="desktop">
+			<panel height="100%" border="normal" framable="true" title="Panel" mold="desktop">
+				<panelchildren mold="desktop">
+					Panel Content (with title, frame)
+				</panelchildren>
+			</panel>
+		</window>
+		<window title="Window" border="normal" height="300px" width="300px" mold="desktop">
+			<panel height="100%" border="normal" title="Panel" mold="desktop">
+				<panelchildren mold="desktop">
+					Panel Content (with title, no frame)
+				</panelchildren>
+			</panel>
+		</window>
+		<window title="Window" border="normal" height="300px" width="300px" mold="desktop">
+			<panel height="100%" border="normal" framable="true" mold="desktop">
+				<panelchildren mold="desktop">
+					Panel Content (no title, with frame)
+				</panelchildren>
+			</panel>
+		</window>
+		<window title="Window" border="normal" height="300px" width="300px" mold="desktop">
+			<panel height="100%" border="normal" mold="desktop">
+				<panelchildren mold="desktop">
+					Panel Content (no title, no frame)
+				</panelchildren>
+			</panel>
+		</window>
+	</hbox>
+</zk>

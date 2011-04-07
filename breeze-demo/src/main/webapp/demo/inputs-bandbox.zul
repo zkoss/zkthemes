@@ -1,0 +1,87 @@
+<?page title="Bandbox" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<window title="Bandbox (Default mold)" border="normal" width="300px" height="600px">
+			<vbox>
+				Simple Bandbox:
+				<bandbox>
+					<bandpopup>
+						Bandbox Content
+					</bandpopup>
+				</bandbox>
+				<separator />
+				Grid in Bandbox:
+				<bandbox>
+					<bandpopup>
+						<vbox>
+							<hbox>
+								Search
+								<textbox />
+							</hbox>
+							<listbox width="200px">
+								<listhead>
+									<listheader label="Name" />
+									<listheader label="Description" />
+								</listhead>
+								<listitem>
+									<listcell label="John" />
+									<listcell label="CEO" />
+								</listitem>
+								<listitem>
+									<listcell label="Joe" />
+									<listcell label="Engineer" />
+								</listitem>
+								<listitem>
+									<listcell label="Mary" />
+									<listcell label="Supervisor" />
+								</listitem>
+							</listbox>
+						</vbox>
+					</bandpopup>
+				</bandbox>
+				<separator />
+			</vbox>
+		</window>
+		<window title="Bandbox (Rounded mold)" border="normal" width="300px" height="600px">
+			<vbox>
+				Simple Bandbox:
+				<bandbox mold="rounded">
+					<bandpopup>
+						Bandbox Content
+					</bandpopup>
+				</bandbox>
+				<separator />
+				Grid in Bandbox:
+				<bandbox mold="rounded">
+					<bandpopup>
+						<vbox>
+							<hbox>
+								Search
+								<textbox />
+							</hbox>
+							<listbox width="200px">
+								<listhead>
+									<listheader label="Name" />
+									<listheader label="Description" />
+								</listhead>
+								<listitem>
+									<listcell label="John" />
+									<listcell label="CEO" />
+								</listitem>
+								<listitem>
+									<listcell label="Joe" />
+									<listcell label="Engineer" />
+								</listitem>
+								<listitem>
+									<listcell label="Mary" />
+									<listcell label="Supervisor" />
+								</listitem>
+							</listbox>
+						</vbox>
+					</bandpopup>
+				</bandbox>
+				<separator />
+			</vbox>
+		</window>
+	</hbox>
+</zk>

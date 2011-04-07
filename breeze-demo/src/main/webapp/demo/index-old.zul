@@ -1,0 +1,134 @@
+<?page title="ZK Theme: Breeze"?>
+<?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
+<?component name="item" extends="toolbarbutton" sclass="item" ?>
+<zk>
+<style>
+.sidebar-left .content {
+	padding: 8px;
+	background: #EEE;
+	border: 1px solid #CCC;
+}
+.content .item {
+	padding: 0;
+	padding-left: 20px;
+	color: #333333;
+	font-size: 11px;
+	text-decoration:none;
+	line-height: 12px;
+}
+.content .z-vbox .item:hover {
+	text-decoration: underline;
+}
+.content .z-toolbarbutton-over {
+	border: 0;
+}
+.content .z-toolbarbutton-over .z-toolbarbutton-body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.content .z-toolbarbutton-over .z-toolbarbutton-cnt {
+	background: none repeat scroll 0 0 transparent;
+}
+.sidebar-left .z-west-header {
+	border: 0 none;
+	background: transparent none repeat scroll 0 0;
+	font-family: verdana,arial;
+	color:#333333;
+	font-weight:bold;
+}
+.sidebar-left .content {
+	padding: 8px;
+	background: #EEE;
+	border: 1px solid #CCC;
+}
+.sidebar-left .content {
+	padding: 8px;
+	background: #EEE;
+	border: 1px solid #CCC;
+}
+.banner .z-north-body {
+	background: #FFFFFF;
+}
+</style>
+<zscript><![CDATA[
+	boolean breezeTheme = org.zkoss.breeze.Themes.isBreeze(execution);
+	String themeTitle = breezeTheme? "Breeze" : "Blue";
+	page.setTitle("ZK Theme Demo: " + themeTitle);
+]]></zscript>
+<borderlayout xmlns:n="http://www.zkoss.org/2005/zk/native">
+	<north sclass="banner" border="none" size="100px" collapsible="true" style="background: #FFFFFF;">
+		<hbox width="100%" height="100%" align="center">
+			<separator width="10px"/>
+			<n:h1 style="top:5px; left:-120px; font-size:24px">ZK Theme: </n:h1>
+			<separator width="3px"/>
+			<listbox mold="select">
+				<attribute name="onSelect"><![CDATA[
+					boolean selectBreeze = self.getSelectedItem().getLabel().equals("breeze");
+					if(selectBreeze != breezeTheme) {
+						org.zkoss.breeze.Themes.setTheme(execution, selectBreeze);
+						Executions.sendRedirect(".");
+					}
+				]]></attribute>
+				<listitem label="blue" />
+				<listitem label="breeze" selected='${breezeTheme}' />
+			</listbox>
+		</hbox>
+	</north>
+	<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
+		<div sclass="content">
+			<vbox>
+				<category value="Layout" />
+					<item label="Window"        onClick='xcontents.src = "/demo/window.zul"' />
+					<item label="Panel"         onClick='xcontents.src = "/demo/panel.zul"' />
+					<item label="Popup"         onClick='xcontents.src = "/demo/popup.zul"' />
+					<item label="Borderlayout"  onClick='xcontents.src = "/demo/borderlayout.zul"' />
+					<item label="Tabbox"        onClick='xcontents.src = "/demo/tabbox.zul"' />
+					<item label="Tabbox (Accordion)" onClick='xcontents.src = "/demo/tabbox-accordion.zul"' />
+					<item label="Groupbox"      onClick='xcontents.src = "/demo/groupbox.zul"' />
+					<item label="Groupbox (3d)" onClick='xcontents.src = "/demo/groupbox-3d.zul"' />
+					
+				<category value="Menu" />
+					<item label="Menubar"    onClick='xcontents.src = "/demo/menu.zul"' />
+					<item label="Toolbar"    onClick='xcontents.src = "/demo/toolbar.zul"' />
+					<item label="Fisheyebar" onClick='xcontents.src = "/demo/fisheyebar.zul"'/>
+					
+				<category value="Grid" />
+					<item label="Grid"            onClick='xcontents.src = "/demo/grid.zul"'/>
+					<item label="Grid (Detail)"   onClick='xcontents.src = "/demo/grid-detail.zul"'/>
+					<item label="Grid (Grouping)" onClick='xcontents.src = "/demo/grid-grouping.zul"'/>
+					<item label="Grid (Live Grouping)" onClick='xcontents.src = "/demo/grid-livegrouping.zul"'/>
+					<item label="Grid (Paging)"   onClick='xcontents.src = "/demo/grid-paging.zul"'/>
+					<item label="Grid (Header, Footer)"   onClick='xcontents.src = "/demo/grid-header.zul"'/>
+					
+				<category value="Listbox" />
+					<item label="Listbox" onClick='xcontents.src = "/demo/listbox.zul"'/>
+					<item label="Listbox (Header, Footer)" onClick='xcontents.src = "/demo/listbox-header.zul"'/>
+					
+				<category value="Tree" />
+					<item label="Tree" onClick='xcontents.src = "/demo/tree.zul"'/>
+					<item label="Tree (Header, Footer)" onClick='xcontents.src = "/demo/tree-header.zul"'/>
+					
+				<category value="Input" />
+					<item label="Input (Basic, Errbox)" onClick='xcontents.src = "/demo/inputs-basic.zul"'/>
+					<item label="Combo Input (Default)" onClick='xcontents.src = "/demo/inputs.zul"'/>
+					<item label="Combo Input (Rounded)" onClick='xcontents.src = "/demo/inputs-rounded.zul"'/>
+					<item label="Bandbox"               onClick='xcontents.src = "/demo/inputs-bandbox.zul"'/>
+					<item label="Combobox"              onClick='xcontents.src = "/demo/inputs-combobox.zul"'/>
+					<item label="Slider"                onClick='xcontents.src = "/demo/slider.zul"'/>
+					
+				<category value="Misc Widgets" />
+					<item label="Button"        onClick='xcontents.src = "/demo/button.zul"'/>
+					<item label="Colorbox"      onClick='xcontents.src = "/demo/colorbox.zul"'/>
+					<item label="Messagebox"    onClick='xcontents.src = "/demo/messagebox.zul"'/>
+					<item label="Progressmeter" onClick='xcontents.src = "/demo/progressmeter.zul"'/>
+					<item label="Splitter"      onClick='xcontents.src = "/demo/splitter.zul"'/>
+					
+			</vbox>
+		</div>
+	</west>
+	<center autoscroll="true" border="0" flex="true">
+		<include mode="instant" style="padding:20px;" id="xcontents" src="/demo/hello.zul"></include>
+	</center>
+</borderlayout>
+</zk>
