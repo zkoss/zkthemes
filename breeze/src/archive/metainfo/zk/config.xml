@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<config-name>breeze</config-name><!-- used to resolve dependency -->
+	<depends>zul</depends>
+	
+	
+	<listener>
+		<listener-class>org.zkoss.breeze.init.ComponentWebAppInit</listener-class>
+	</listener>
+</config>

@@ -1,0 +1,24 @@
+<language-addon>
+	<addon-name>breeze</addon-name>
+	<depends>zul</depends>
+	<language-name>xul/html</language-name>
+	
+	<!--
+ 	<stylesheet href="~./breeze/css/norm.css.dsp" type="text/css"/>
+ 	-->
+ 	
+	<!-- 
+		JS or CSS is declared here that it will be loaded immediately, rather
+		than load-on-demand  
+	<javascript src="~./js/zul.wpd" charset="UTF-8"/>
+	<stylesheet href="~./zul/css/zk.wcs" type="text/css"/>
+	-->
+	
+	<javascript package="zul.breeze" charset="UTF-8" merge="true" />
+	
+	<library-property>
+		<name>org.zkoss.zul.themejar.breeze</name>
+		<value>true</value>
+	</library-property>
+	
+</language-addon>
