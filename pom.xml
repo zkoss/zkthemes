@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.zkoss.theme</groupId>
+	<artifactId>zkthemes</artifactId>
+	<version>5.0.7.FL.20110304</version>
+	<packaging>pom</packaging>
+	<name>ZK Theme Maven Bulider</name>
+	<url>http://www.zkoss.org/themes</url>
+	<modules>
+		<module>breeze</module>
+		<module>sapphire</module>
+		<module>silvertail</module>
+	</modules>
+	<licenses>
+		<license>
+			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<properties>
+		<servlet.version>2.4</servlet.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>zk repository</id>
+			<url>http://mavensync.zkoss.org/maven2</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zk</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zul</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+<!--	<build>-->
+<!--		<plugins>-->
+<!--			<plugin>-->
+<!--				<inherited>false</inherited>-->
+<!--				<artifactId>maven-antrun-plugin</artifactId>-->
+<!--				<version>1.6</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<phase>package</phase>-->
+<!--						<configuration>-->
+<!--							<tasks>-->
+<!--								<delete-->
+<!--									file="${project.build.directory}\${project.artifactId}-${project.version}.jar" />-->
+<!--								<jar-->
+<!--									destfile="${project.build.directory}\${project.artifactId}-${project.version}.jar" />-->
+<!--							</tasks>-->
+<!--						</configuration>-->
+<!--						<goals>-->
+<!--							<goal>run</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<inherited>false</inherited>-->
+<!--				<artifactId>maven-assembly-plugin</artifactId>-->
+<!--				<version>2.2</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<phase>package</phase>-->
+<!--						<goals>-->
+<!--							<goal>single</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<descriptors>-->
+<!--								<descriptor>bundle.xml</descriptor>-->
+<!--							</descriptors>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+<!--		</plugins>-->
+<!--	</build>-->
+</project>
