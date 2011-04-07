@@ -13,6 +13,7 @@
 		</file>
 		<file>
 			<source>${project.build.directory}/${artifactId}-${version}.jar</source>
+			<destName>${artifactId}.jar</destName>
 			<outputDirectory>/</outputDirectory>
 		</file>
 	</files>
