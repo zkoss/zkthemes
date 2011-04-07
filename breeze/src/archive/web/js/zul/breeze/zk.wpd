@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- zk.wpd
+	Purpose:
+		Widget/Mold addon for Theme Breeze.
+		
+	Description:
+		
+	History:
+		Thu Jul 15 09:34:12     2010, Created by simon
+
+Copyright (C) 2010 Potix Corporation. All Rights Reserved.
+-->
+<package name="zul.breeze" language="xul/html">
+<script>
+zul.breeze.theme = function(){
+	var c = document.cookie;
+	if(!c) return '';
+	var startIdx = c.indexOf('zktheme=');
+	if (startIdx &lt; 0) return '';
+	var valStartIdx = startIdx + 'zktheme='.length,
+		endIdx = c.indexOf(';', startIdx);
+	return (endIdx &lt; 0) ? c.substring(valStartIdx) : c.substring(valStartIdx, endIdx);
+};
+var t = zul.breeze.theme();
+if ( !t || 'breeze' == t) {
+</script>
+	
+	<!-- zul.db -->
+	<script src="../db/db.breeze.js"/>
+	
+	<!-- zul.grid -->
+	<script src="../grid/grid.breeze.js"/>
+	
+	<!-- zul.inp -->
+	<script src="../inp/inp.breeze.js"/>
+	
+	<!-- zul.menu -->
+	<script src="../menu/menu.breeze.js"/>
+	
+	<!-- zul.mesh -->
+	<script src="../mesh/mesh.breeze.js"/>
+	
+	<!-- zul.sel -->
+	<script src="../sel/sel.breeze.js"/>
+	
+	<!-- zul.tab -->
+	<script src="../tab/tab.breeze.js"/>
+	
+	<!-- zul.wgt -->
+	<script src="../wgt/wgt.breeze.js"/>
+	
+	<!-- zul.wnd -->
+	<script src="../wnd/wnd.breeze.js"/>
+	
+<script>
+}
+</script><!-- End of if(theme==breeze) -->
+	
+</package>

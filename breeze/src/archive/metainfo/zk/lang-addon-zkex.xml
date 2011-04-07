@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- lang-addon.xml
+	Purpose:
+		
+	Description:
+		
+	History:
+		Wed Sep 19 12:37:15     2007, Created by tomyeh
+
+Copyright (C) 2007 Potix Corporation. All Rights Reserved.
+-->
+
+<language-addon>
+	<!-- The name of this addon. It must be unique -->
+	<addon-name>breezeex</addon-name>
+	<depends>zkex</depends>
+	<language-name>xul/html</language-name>
+	
+	<javascript package="zkex.breeze" charset="UTF-8" />
+	
+</language-addon>

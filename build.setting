@@ -1,0 +1,6 @@
+D.ON=true
+unzip=true
+debug=true
+optimize=true
+#jboss.deploy=default/deploy
+#start.service=Apache Tomcat 6
