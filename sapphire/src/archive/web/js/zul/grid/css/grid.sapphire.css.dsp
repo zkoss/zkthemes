@@ -124,7 +124,7 @@ tr.z-grid-odd {
 <%-- Group --%>
 tr.z-group {
 	background: #E9F2FB repeat-x 0 0;
-	background-image:url(${c:encodeURL('~./zul/img/grid/group_bg.gif')});
+	background-image:url(${c:encodeURL('~./zul/img/sapphire/grid/group_bg.gif')});
 }
 td.z-group-inner {
 	padding: 2px; overflow: hidden;
