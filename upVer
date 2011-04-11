@@ -1,0 +1,66 @@
+#!/bin/bash
+# release
+#
+#{{IS_NOTE
+#	Purpose:
+#		
+#	Description:
+#		
+#	History:
+#		Tue Mar 3 11:11:09     2011, Created by Jimmy
+#}}IS_NOTE
+#
+#Copyright (C) 2011 Potix Corporation. All Rights Reserved.
+#
+#{{IS_RIGHT
+#}}IS_RIGHT
+#
+maindir="$(pwd)"
+maindir="${maindir%/cmldoc}"
+cd $maindir
+echo "Working directory $maindir"
+stamp=$(date +%Y%m%d)
+target=$1
+oldVersion=$2
+newVersion=$3
+
+if [ "$newVersion" == "" ] ; then
+	target=""
+	oldVersion=$1
+	newVersion=$2
+fi
+
+if [ "$oldVersion" == "" ] || [ "$newVersion" == "" ] ; then
+	echo "Usage: upVer [ breeze | etc..] [ oldVersion ] [ newVersion ]"
+	exit 1
+fi
+
+function upVer {
+	sed -i "s/$oldVersion/$newVersion/g" $maindir/$1/version
+	sed -i "1,/description/s/version>.*<\/version/version>$newVersion<\/version/" $maindir/$1/pom.xml
+	find $maindir/$1/src -name config.xml -exec sed -i "s/version-uid>.*<\/version-uid/version-uid>$newVersion<\/version-uid/" {} \;
+	find $maindir/$1/src -name lang-addon.xml -exec sed -i "s/version-uid>.*<\/version-uid/version-uid>$newVersion<\/version-uid/" {} \;
+	find $maindir/$1/src -name Version.java -exec sed -i "s/UID.*;/UID = \"$ver\";/g" {} \;
+	echo "Update $1 version to $newVersion"
+}
+
+sed -i "s/$oldVersion/$newVersion/g" version
+sed -i "1,/version>.*<\/version/s/version>.*<\/version/version>$newVersion<\/version/" pom.xml
+if [ "$target" != "" ] ; then
+	upVer $target
+else
+	targetListOld="$(cat build.projects | tr '\n' ' ')"
+	targetListOld="${targetListOld% }"
+	targetList=
+	for target in $targetListOld ; do
+		targetList="$targetList $target"
+	done
+	echo "targets: ${targetList}"
+	for target in $targetList ; do
+		if [ -d $target ] ; then
+			upVer $target
+		else
+			echo "Ignore: $target doesn't exist"
+		fi
+	done
+fi

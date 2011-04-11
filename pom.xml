@@ -11,7 +11,6 @@
 		<module>breeze</module>
 		<module>sapphire</module>
 		<module>silvertail</module>
-		<module>zkthemedemo</module>
 	</modules>
 	<licenses>
 		<license>
@@ -47,4 +46,47 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<inherited>false</inherited>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<delete
+									file="${project.build.directory}\${project.artifactId}-${project.version}.jar" />
+								<jar
+									destfile="${project.build.directory}\${project.artifactId}-${project.version}.jar" />
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<inherited>false</inherited>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>bundle.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
