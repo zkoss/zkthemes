@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.theme</groupId>
-	<artifactId>zkthemes</artifactId>
+	<artifactId>zktheme</artifactId>
 	<version>5.0.7.FL.20110304</version>
 	<packaging>pom</packaging>
 	<name>ZK Theme Maven Bulider</name>
