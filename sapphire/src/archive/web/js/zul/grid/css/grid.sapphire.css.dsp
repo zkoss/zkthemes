@@ -265,7 +265,9 @@ div.z-grid-header .z-column-sort-asc, div.z-grid-header .z-column-sort-dsc {
 	margin-top: -1px;
 }
 <%-- ZK Column's sizing --%>
-div.z-grid-header .z-column.z-column-sizing, div.z-grid-header .z-column.z-column-sizing div.z-column-cnt {
+div.z-grid-header .z-column.z-column-sizing, 
+div.z-grid-header .z-column.z-column-sizing div.z-column-cnt,
+div.z-grid-header .z-column.z-column-sizing div.z-column-cnt .z-column-btn {
 	cursor: e-resize;
 }
 .z-auxheader-cnt {
