@@ -60,6 +60,13 @@ div.z-grid-header .z-column-sort-dsc div.z-column-cnt {
 div.z-grid-body {
 	background: white; border: 0; overflow: auto; width: 100%;
 }
+tbody.z-grid-empty-body td{
+   	font-family: arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color:#BFBFBF;
+    text-align:center;
+}
 div.z-grid-pgi-b {
 	border-top: 1px solid #8FB9D0; overflow: hidden; width: 100%;
 }

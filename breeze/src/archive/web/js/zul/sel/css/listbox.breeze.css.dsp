@@ -50,6 +50,13 @@ div.z-listbox-header th.z-listheader-sort-dsc div.z-listheader-cnt {
 div.z-listbox-body {
 	background: white; border: 0; overflow: auto; width: 100%; position: relative;
 }
+tbody.z-listbox-empty-body td{
+   	font-family: arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color:#BFBFBF;
+    text-align:center;
+}
 div.z-listbox-pgi-b {
 	border-top: 1px solid #AAB; overflow: hidden;
 }
