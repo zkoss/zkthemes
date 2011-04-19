@@ -16,12 +16,19 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.theme.breeze;
 
+import java.util.Collection;
+import java.util.Iterator;
+
 import org.zkoss.lang.Library;
-import org.zkoss.lang.Strings;
+import org.zkoss.lang.Objects;
+import org.zkoss.web.servlet.JavaScript;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Desktop;
+import org.zkoss.zk.ui.Page;
 import org.zkoss.zk.ui.WebApp;
 import org.zkoss.zk.ui.impl.PageImpl;
+import org.zkoss.zk.ui.metainfo.LanguageDefinition;
+import org.zkoss.zk.ui.sys.PageCtrl;
 import org.zkoss.zk.ui.util.Composer;
 import org.zkoss.zk.ui.util.WebAppInit;
 
@@ -94,10 +101,11 @@ public class BreezeThemeWebAppInit implements WebAppInit, Composer {
 		boolean inited = Boolean.TRUE.equals(desktop.getAttribute(THEME_INITED_DESKTOP));
 		if (!inited) {
 			desktop.setAttribute(THEME_INITED_DESKTOP, Boolean.TRUE);
-			PageImpl pageImpl = (PageImpl)desktop.getFirstPage();
 			String name = Themes.getCurrentTheme();
-			if (!CLASSICBLUE_NAME.equals(name))
-				pageImpl.addAfterHeadTags("<script>zk.load('zul." + name + "')</script>");	
+			if (!CLASSICBLUE_NAME.equals(name)) {
+				LanguageDefinition.getByExtension("zul").
+					addJavaScript(new JavaScript("zk.load('zul." + name + "')"));
+			}
 		}
 	}
 }
