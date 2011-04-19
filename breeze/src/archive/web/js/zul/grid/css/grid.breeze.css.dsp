@@ -33,6 +33,7 @@ div.z-grid-header th.z-column {
 	position: relative;
 }
 div.z-grid-header th.z-auxheader {
+	position: relative;
 	padding: 7px 10px;
 }
 div.z-grid-header .z-column-sort div.z-column-cnt {
