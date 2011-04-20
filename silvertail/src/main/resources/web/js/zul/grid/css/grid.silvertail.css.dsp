@@ -61,8 +61,8 @@ div.z-grid-body {
 	background: white; border: 0; overflow: auto; width: 100%;
 }
 tbody.z-grid-empty-body td{
-   	font-family: arial,sans-serif;
-    font-size: 12px;
+   	font-family: ${fontFamilyC};
+    font-size: ${fontSizeM};
     font-weight: normal;
     color:#BFBFBF;
     text-align:center;
