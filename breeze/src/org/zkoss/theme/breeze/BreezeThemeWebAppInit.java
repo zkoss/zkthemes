@@ -16,11 +16,10 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.theme.breeze;
 
-import org.zkoss.web.servlet.JavaScript;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Desktop;
 import org.zkoss.zk.ui.WebApp;
-import org.zkoss.zk.ui.metainfo.LanguageDefinition;
+import org.zkoss.zk.ui.impl.PageImpl;
 import org.zkoss.zk.ui.util.Composer;
 import org.zkoss.zk.ui.util.WebAppInit;
 import org.zkoss.zkplus.theme.StandardThemeProvider;
@@ -57,9 +56,9 @@ public class BreezeThemeWebAppInit implements WebAppInit, Composer {
 			desktop.setAttribute(THEME_INITED_DESKTOP, Boolean.TRUE);
 			String name = Themes.getCurrentTheme();
 			// load theme specific javascript
+			PageImpl pageImpl = (PageImpl) desktop.getFirstPage();
 			if (!Themes.CLASSICBLUE_NAME.equals(name))
-				LanguageDefinition.getByExtension("zul").
-					addJavaScript(new JavaScript("zk.load('zul." + name + "')"));
+				pageImpl.addAfterHeadTags("<script>zk.load('zul." + name + "')</script>");
 		}
 	}
 	
