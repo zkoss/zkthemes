@@ -18,6 +18,7 @@ package org.zkoss.theme.silvertail;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Desktop;
+import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.WebApp;
 import org.zkoss.zk.ui.impl.PageImpl;
 import org.zkoss.zk.ui.util.Composer;
@@ -58,7 +59,8 @@ public class SilvertailThemeWebAppInit implements WebAppInit, Composer {
 			// load theme specific javascript
 			PageImpl pageImpl = (PageImpl) desktop.getFirstPage();
 			if (!Themes.CLASSICBLUE_NAME.equals(name))
-				pageImpl.addAfterHeadTags("<script>zk.load('zul." + name + "')</script>");
+				pageImpl.addAfterHeadTags("<script src='" + 
+					Executions.encodeURL("~./js/zul." + name + ".wpd") + "'></script>");
 		}
 	}
 	
