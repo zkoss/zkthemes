@@ -71,6 +71,17 @@
 	overflow: hidden;
 	zoom: 1;
 }
+
+.z-window-modal-tl-noborder,
+.z-window-highlighted-tl-noborder,
+.z-window-overlapped-tl-noborder,
+.z-window-popup-tl-noborder,
+.z-window-modal-bl-noborder,
+.z-window-highlighted-bl-noborder,
+.z-window-overlapped-bl-noborder,
+.z-window-popup-bl-noborder {
+	display: none;
+}
 <%-- Top Left Corner --%>
 .z-window-embedded-tl,
 .z-window-modal-tl,
@@ -91,6 +102,7 @@
 .z-window-popup-tl {
 	background-image: url(${c:encodeURL('~./zul/img/breeze/wnd/wnd-pop-corner.png')});
 }
+
 <%-- Top Right Corner --%>
 .z-window-embedded-tr,
 .z-window-modal-tr,

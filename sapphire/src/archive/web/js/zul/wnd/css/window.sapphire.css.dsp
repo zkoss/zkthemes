@@ -91,6 +91,17 @@
 .z-window-popup-tl {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/wnd/wnd-pop-corner.png')});
 }
+
+.z-window-modal-tl-noborder,
+.z-window-highlighted-tl-noborder,
+.z-window-overlapped-tl-noborder,
+.z-window-popup-tl-noborder,
+.z-window-modal-bl-noborder,
+.z-window-highlighted-bl-noborder,
+.z-window-overlapped-bl-noborder,
+.z-window-popup-bl-noborder {
+	display: none;
+}
 <%-- Top Right Corner --%>
 .z-window-embedded-tr,
 .z-window-modal-tr,
