@@ -327,6 +327,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 <%-- Timebox and Spinner --%>
 .z-timebox-rounded,
 .z-spinner-rounded,
+.z-doublespinner-rounded,
 .z-timebox,
 .z-spinner,
 .z-doublespinner {
