@@ -30,6 +30,9 @@ div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
 	border-top: none;
 	padding: 0;
 }
+div.z-listbox-header th.z-listheader {
+	position: relative;
+}
 div.z-listbox-header th.z-listheader-sort div.z-listheader-cnt {
 	cursor: pointer; padding-right: 9px;
 	background: transparent no-repeat 99% center;
@@ -221,6 +224,7 @@ div.z-listbox-header th.z-listheader.z-listheader-sizing, div.z-listbox-header t
 }
 
 div.z-listbox-header th.z-auxheader {
+	position: relative;
 	padding: 7px 10px;
 }
 div.z-listbox-header tr.z-auxhead th:last-child, 
