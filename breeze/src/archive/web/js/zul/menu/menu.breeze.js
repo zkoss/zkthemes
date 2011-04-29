@@ -42,4 +42,7 @@ zk.afterLoad('zul.menu', function () {
 			}
 		}
 	};
+	zul.menu.Menu.prototype._getArrowWidth = function () {
+		return 20;
+	};
 });

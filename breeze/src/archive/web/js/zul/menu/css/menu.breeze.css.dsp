@@ -62,13 +62,18 @@
 	text-align: center;
 	padding-right: 5px;
 }
-.z-menu-body .z-menu-inner-m div {
+.z-menu-body .z-menu-inner-m div,
+.z-menubar-hor .z-menu-body-clk .z-menu-inner-m  div {
 	display: block;
 	min-height: 17px;
 	padding-right: 3px;
 	padding-left: 0;
 	background: transparent no-repeat right -14px;
 	background-image:url(${c:encodeURL('~./zul/img/breeze/menu/btn-arrow.gif')});
+}
+.z-menubar-hor .z-menu-body-clk .z-menu-inner-m  div,
+.z-menubar-ver .z-menu-body-clk .z-menu-inner-m  div {
+	padding-right: 6px;
 }
 .z-menubar-ver .z-menu-inner-m div {
 	background-position: right 0;
@@ -155,8 +160,16 @@
 	background: transparent no-repeat right -14px;
 	background-image:url(${c:encodeURL('~./zul/img/breeze/menu/btn-arrow.gif')});
 }
+.z-menubar-hor .z-menu-body-clk-over .z-menu-inner-m  div {
+	background: transparent no-repeat right 0;
+	background-image:url(${c:encodeURL('~./zul/img/breeze/menu/btn-menu-hor-over.gif')});
+}
 .z-menubar-ver .z-menu-body-over .z-menu-inner-m  div {
 	background-image:url(${c:encodeURL('~./zul/img/breeze/menu/btn-arrow.gif')});
+}
+.z-menubar-ver .z-menu-body-clk-over .z-menu-inner-m  div {
+	background: transparent no-repeat right 0;
+	background-image:url(${c:encodeURL('~./zul/img/breeze/menu/btn-menu-ver-over.gif')});
 }
 <%-- seld effect --%>
 .z-menu-body-seld .z-menu-inner-l,
