@@ -16,12 +16,14 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.theme.sapphire;
 
-import org.zkoss.zk.ui.Component;
+import java.io.IOException;
+import java.io.Writer;
+
 import org.zkoss.zk.ui.Desktop;
 import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.Page;
 import org.zkoss.zk.ui.WebApp;
-import org.zkoss.zk.ui.impl.PageImpl;
-import org.zkoss.zk.ui.util.Composer;
+import org.zkoss.zk.ui.sys.SEORenderer;
 import org.zkoss.zk.ui.util.WebAppInit;
 import org.zkoss.zkplus.theme.StandardThemeProvider;
 import org.zkoss.zkplus.theme.Themes;
@@ -31,7 +33,7 @@ import org.zkoss.zkplus.theme.Themes;
  * Library property setting, Theme provider setting and Component definition setting 
  * 
  */
-public class SapphireThemeWebAppInit implements WebAppInit, Composer {
+public class SapphireThemeWebAppInit implements WebAppInit, SEORenderer {
 
 	private final static String SAPPHIRE_NAME = "sapphire";
 	private final static String SAPPHIRE_DISPLAY = "Sapphire";
@@ -47,21 +49,16 @@ public class SapphireThemeWebAppInit implements WebAppInit, Composer {
 	
 	// desktop attribute
 	private final static String THEME_INITED_DESKTOP = "org.zkoss.theme.desktop.inited";
-	
-	public void doAfterCompose(Component comp) throws Exception {
-		
-		Desktop desktop = comp.getDesktop();
+	public void render(Page page, Writer out) throws IOException {
+		final Desktop desktop = page.getDesktop();
 		boolean inited = Boolean.TRUE.equals(desktop.getAttribute(THEME_INITED_DESKTOP));
 		
 		if (!inited) {
 			desktop.setAttribute(THEME_INITED_DESKTOP, Boolean.TRUE);
 			String name = Themes.getCurrentTheme();
-			// load theme specific javascript
-			PageImpl pageImpl = (PageImpl) desktop.getFirstPage();
 			if (!Themes.CLASSICBLUE_NAME.equals(name))
-				pageImpl.addAfterHeadTags("<script src='" + 
+				out.write("<script src='" + 
 					Executions.encodeURL("~./js/zul." + name + ".wpd") + "'></script>");
 		}
 	}
-	
 }
