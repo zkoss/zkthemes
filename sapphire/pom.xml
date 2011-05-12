@@ -75,18 +75,31 @@
 				<version>2.2</version>
 				<executions>
 					<execution>
+						<id>bin</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
+						<configuration>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>assembly/zip.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+					<execution>
+						<id>bundle</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>assembly/bundle.xml</descriptor>
+							</descriptors>
+						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<descriptors>
-						<descriptor>assembly/zip.xml</descriptor>
-						<descriptor>assembly/bundle.xml</descriptor>
-					</descriptors>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
