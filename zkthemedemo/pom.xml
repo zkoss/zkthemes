@@ -4,11 +4,11 @@
 	<parent>
 		<artifactId>zktheme</artifactId>
 		<groupId>org.zkoss.theme</groupId>
-		<version>5.0.7.FL.20110304</version>
+		<version>5.0.8-SNAPSHOT</version>
 	</parent>
 	<groupId>org.zkoss.theme</groupId>
 	<artifactId>zkthemedemo</artifactId>
-	<version>5.0.7.FL.20110304</version>
+	<version>5.0.8-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>ZK Theme Demo</name>
 	<url>http://www.zkoss.org/themes</url>
@@ -50,6 +50,16 @@
 		</repository>
 	</repositories>
 	<dependencies>
+		
+		<!-- Lesser -->
+		<!--  
+		<dependency>
+			<groupId>org.zkoss.theme.lesser</groupId>
+			<artifactId>sapphire</artifactId>
+			<version>0.8.0</version>
+		</dependency>
+		-->
+		
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>breeze</artifactId>
