@@ -328,6 +328,11 @@ tr.z-row-over > td.z-row-inner, tr.z-row-over > .z-cell {
 	background-color: #6BA6BF;
 }
 
+<%-- Autopaging --%>
+.z-grid-autopaging .z-row-cnt {
+	height: 30px;
+	overflow: hidden;
+}
 <%-- IE --%>
 <c:if test="${c:isExplorer()}">
 div.z-grid-header, div.z-grid-footer {

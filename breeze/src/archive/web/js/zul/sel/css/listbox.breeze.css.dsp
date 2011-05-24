@@ -294,6 +294,12 @@ div.z-listbox-header th.z-listheader-sort-asc div.z-listheader-cnt,
 div.z-listbox-header th.z-listheader-sort-dsc div.z-listheader-cnt {
 	background-image: none;
 }
+
+<%-- Autopaging --%>
+.z-listbox-autopaging .z-listcell-cnt {
+	height: 30px;
+	overflow: hidden;
+}
 <%-- IE --%>
 <c:if test="${c:isExplorer()}">
 div.z-listbox-header, div.z-listbox-footer {
