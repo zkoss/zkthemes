@@ -25,7 +25,6 @@ import org.zkoss.zk.ui.Page;
 import org.zkoss.zk.ui.WebApp;
 import org.zkoss.zk.ui.sys.SEORenderer;
 import org.zkoss.zk.ui.util.WebAppInit;
-import org.zkoss.zkplus.theme.StandardThemeProvider;
 import org.zkoss.zkplus.theme.Themes;
 
 /**
