@@ -99,6 +99,9 @@
 	margin: 0;
 	background: #C1E5ED;
 	padding-top: 6px;
+	<c:if test="${c:browser('ie6-') or c:browser('ie7-')}">
+	zoom: 1; <%-- fixed for B50-3315594.zul --%>
+	</c:if>
 }
 <%-- Center Left, Footer Left --%>
 .z-panel-cl,
