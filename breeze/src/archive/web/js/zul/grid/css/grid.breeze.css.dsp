@@ -121,10 +121,6 @@ div.z-column-cnt {
 div.z-row-cnt {
 	color: #363636;
 }
-tr.z-row td.z-row-inner, tr.z-row .z-cell {
-	background: white; border-top: none; border-left: 1px solid white;
-	border-right: 1px solid #CCC; border-bottom: 1px solid #DDD;
-}
 tr.z-grid-odd td.z-row-inner,
 tr.z-grid-odd .z-cell,
 tr.z-grid-odd {
@@ -297,8 +293,12 @@ div.z-grid-header tr.z-auxhead th:last-child {
 }
 tr.z-row td.z-row-inner,
 tr.z-row .z-cell {
+	background: white;
 	border: 1px solid white;
 	border-right: 1px solid transparent;
+	<c:if test="${c:browser('ie6-')}">
+	border-right: 1px solid white;
+	</c:if>
 	padding: 4px 4px 4px 6px;
 }
 tr.z-grid-odd td.z-row-inner,
