@@ -239,6 +239,28 @@ tr.z-treerow-over {
 tr.z-treerow-over-seld {
 	background: #B7B7B7;
 }
+
+.z-tree-header-bg,
+.z-dottree-header-bg,
+.z-filetree-header-bg,
+.z-vfiletree-header-bg {
+	position:relative;
+	margin-right: -11px;
+	top: 0;
+	height: 1px;
+	font-size: 0;
+	background-image: url(${c:encodeURL('~./zul/img/silvertail/grid/head-bg.png')});
+	margin-top: -1px;
+}
+
+<c:if test="${c:browser('ie6-') or c:browser('ie7-')}">
+.z-tree-header-bg,
+.z-dottree-header-bg,
+.z-filetree-header-bg,
+.z-vfiletree-header-bg {
+	display: none;
+}
+</c:if>
 <%-- z-dottree --%>
 div.z-dottree {
 	background: #FFF;
