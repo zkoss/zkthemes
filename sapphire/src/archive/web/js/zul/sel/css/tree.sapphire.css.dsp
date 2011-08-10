@@ -26,7 +26,6 @@ div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
 	font-weight: normal;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
-	padding: 4px 10px 3px 10px;
 }
 div.z-tree-body, div.z-dottree-body, div.z-filetree-body, div.z-vfiletree-body {
 	background: white; border: 0; overflow: auto; width: 100%; position: relative;
@@ -45,6 +44,9 @@ div.z-tree-body td.z-treecell, div.z-tree-footer td.z-treefooter {
 div.z-tree-footer {
 	background: #F9F9F9;
 	border-top:1px solid #CFCFCF;
+}
+div.z-tree-header div.z-auxheader-cnt {
+	padding: 8px 5px 7px;
 }
 tr.z-tree-faker, tr.z-tree-faker th, tr.z-tree-faker div,
 tr.z-dottree-faker, tr.z-dottree-faker th, tr.z-dottree-faker div,
@@ -88,7 +90,6 @@ span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
-	padding: 4px 10px 3px 10px;
 }
 div.z-tree-header tr.z-treecols th:last-child, 
 div.z-tree div.z-tree-header tr.z-auxhead th:last-child {
@@ -101,7 +102,8 @@ div.z-tree-footer td.z-treefooter {
 }
 <%-- Treecol, Treefooter, and Treecell--%>
 div.z-treefooter-cnt, div.z-treecell-cnt, div.z-treecol-cnt {
-	border: 0; margin: 0; padding: 0;
+	border: 0; margin: 0; 
+	padding: 8px 5px 7px;
 	font-family: ${fontFamilyC};
 	font-size: ${fontSizeM}; font-weight: normal;
 	white-space: nowrap;
@@ -113,7 +115,6 @@ div.z-treefooter-cnt, div.z-treecol-cnt {
 	font-size: 12px;
 	font-weight:bold;
 	color: #252525;
-	height: 16px;
 }
 div.z-treecol-cnt {
 	color: #00547A;
@@ -212,7 +213,6 @@ div.z-dottree-header th {
 	border: 1px solid;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
-	padding: 4px 10px 3px 10px;
 }
 div.z-dottree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
@@ -316,7 +316,6 @@ div.z-filetree-header th.z-treecol, div.z-filetree-header th.z-auxheader {
 	border: 1px solid;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
-	padding: 4px 10px 3px 10px;
 }
 div.z-filetree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
@@ -444,7 +443,6 @@ div.z-vfiletree-header th.z-treecol,
 div.z-vfiletree-header th.z-auxheader {
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
-	padding: 4px 10px 3px 10px;
 }
 div.z-vfiletree-header tr.z-treecols th:last-child, 
 div.z-vfiletree div.z-vfiletree-header tr.z-auxhead th:last-child {

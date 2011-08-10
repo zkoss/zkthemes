@@ -21,6 +21,7 @@ div.z-grid-header tr.z-columns, div.z-grid-header tr.z-auxhead {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/column-bg.png')});
 }
 div.z-grid-header th.z-column, div.z-grid-header th.z-auxheader {
+	position: relative;
 	overflow: hidden;
 	border: 1px solid;
 	white-space: nowrap;
@@ -28,13 +29,6 @@ div.z-grid-header th.z-column, div.z-grid-header th.z-auxheader {
 	font-size: ${fontSizeM}; font-weight: normal;
 	border-color: #8FB9D0 #8FB9D0 #8FB9D0 white;
 	border-top: none;
-}
-div.z-grid-header th.z-column {
-	position: relative;
-}
-div.z-grid-header th.z-auxheader {
-	position: relative;
-	padding: 7px 10px;
 }
 div.z-grid-header .z-column-sort div.z-column-cnt {
 	cursor: pointer;
@@ -115,7 +109,7 @@ div.z-column-cnt, div.z-row-cnt {
 	font-weight:bold;
 	color: #00547A;
 }
-div.z-column-cnt {
+div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 	padding: 8px 4px 7px;
 }
 div.z-row-cnt {
@@ -279,9 +273,6 @@ div.z-grid-header .z-column.z-column-sizing div.z-column-cnt .z-column-btn {
 	font-size: 12px; font-weight: bold;
 	font-family: arial;
 	color: #00547A;
-}
-div.z-grid-header th.z-auxheader {
-	padding: 7px 10px;
 }
 div.z-grid-header .z-column-over-sort-asc, div.z-grid-header .z-column-over-sort-dsc {
 	background-image:url(${c:encodeURL('~./zul/img/sapphire/grid/column-bg.png')});

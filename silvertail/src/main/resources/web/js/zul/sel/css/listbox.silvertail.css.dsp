@@ -19,6 +19,7 @@ div.z-listbox-header tr.z-listhead, div.z-listbox-header tr.z-auxhead {
 	background-image: url(${c:encodeURL('~./zul/img/silvertail/grid/column-bg.png')});
 }
 div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
+	position: relative;
 	overflow: hidden; 
 	border: 1px solid;
 	white-space: nowrap;
@@ -29,9 +30,6 @@ div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
 	padding: 0;
-}
-div.z-listbox-header th.z-listheader {
-	position: relative;
 }
 div.z-listbox-header th.z-listheader-sort div.z-listheader-cnt {
 	cursor: pointer; padding-right: 9px;
@@ -217,17 +215,12 @@ div.z-listbox-header th.z-listheader.z-listheader-sizing,
 div.z-listbox-header th.z-listheader.z-listheader-sizing div.z-listheader-cnt {
 	cursor: e-resize;
 }
-
-div.z-listbox-header th.z-auxheader {
-	position: relative;
-	padding: 7px 10px;
-}
 div.z-listbox-header tr.z-auxhead th:last-child, 
 div.z-listbox-header tr.z-listhead th:last-child {
 	border-right: none;
 }
 
-div.z-listheader-cnt {
+div.z-listheader-cnt, div.z-listbox-header div.z-auxheader-cnt {
 	font-weight:bold;
 	padding: 8px 5px 7px;
 }

@@ -125,11 +125,10 @@ div.z-treefooter-cnt, div.z-treecol-cnt {
 	font-size: 12px;
 	font-weight:bold;
 	color: #636363;
-	height: 16px;
 }
-div.z-treecol-cnt {
+div.z-treecol-cnt, div.z-tree-header div.z-auxheader-cnt {
 	font-weight:bold;
-	padding: 7px 10px;
+	padding: 8px 5px 7px;
 }
 .z-word-wrap div.z-treecell-cnt, .z-word-wrap div.z-treefooter-cnt,
 	.z-word-wrap div.z-treecol-cnt {
