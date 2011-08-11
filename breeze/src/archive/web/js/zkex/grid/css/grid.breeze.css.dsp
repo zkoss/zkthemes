@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 .z-detail {
 	height: 100%;
+	width: 18px;
 	padding: 0!important;
 	overflow: hidden;
 	white-space: nowrap;
@@ -25,4 +26,5 @@ tr.z-row .z-detail-outer {
 	vertical-align: top;
 	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/detail-bg.png')});
 	padding:10px;
+	width: 18px;
 }
