@@ -435,8 +435,10 @@ a.z-menu-item-cnt {
 	padding-top:0px;
 	padding-right:0px;
 }
+.z-menu-popup-cnt li.z-menu-item {
+	position: relative; <%-- B50-ZK-282 --%>
+}
 </c:if>
-
 .z-menu-popup-cnt li.z-menu-item {
 	padding: 2px;
 }
