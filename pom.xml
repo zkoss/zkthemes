@@ -39,16 +39,19 @@
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zk</artifactId>
 			<version>${project.version}</version>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zul</artifactId>
 			<version>${project.version}</version>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkplus</artifactId>
 			<version>${project.version}</version>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 	<build>
