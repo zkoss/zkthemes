@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
-.z-button {
+.z-button,
+.z-button tr td {
 	font-family: ${fontFamilyT};
 	font-size: ${fontSizeM}; 
 	color: black;
@@ -45,13 +46,14 @@ span.z-button {
 </c:if>
 
 .z-button-disd {
-	color: gray; 
-	cursor: default; 
+	color: gray;
 	opacity: .6; 
 	-moz-opacity: .6; 
 	filter: alpha(opacity=60);
 }
-
+.z-button-disd tr td {
+	cursor: default;
+}
 <%-- os mold --%>
 .z-button-os {
 	font-family: ${fontFamilyC};

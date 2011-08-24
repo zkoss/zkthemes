@@ -51,13 +51,14 @@ span.z-button {
 </c:if>
 
 .z-button-disd {
-	color: gray; 
-	cursor: default; 
+	color: gray;
 	opacity: .6; 
 	-moz-opacity: .6; 
 	filter: alpha(opacity=60);
 }
-
+.z-button-disd tr td {
+	cursor: default;
+}
 <%-- os mold --%>
 .z-button-os {
 	font-family: ${fontFamilyC};
