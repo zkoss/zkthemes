@@ -26,5 +26,5 @@ tr.z-row .z-detail-outer {
 	vertical-align: top;
 	background-image: url(${c:encodeURL('~./zul/img/silvertail/grid/detail-bg.png')});
 	padding:10px;
-	width: 18px;
+	width: 38px;
 }
