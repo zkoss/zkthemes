@@ -26,5 +26,10 @@ tr.z-row .z-detail-outer {
 	vertical-align: top;
 	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/detail-bg.png')});
 	padding:10px;
+	width: 18px;
+}
+<c:if test="${c:isSafari() || c:browser('chrome')}">
+tr.z-row .z-detail-outer {
 	width: 38px;
 }
+</c:if>
