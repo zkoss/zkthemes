@@ -28,7 +28,7 @@ tr.z-row .z-detail-outer {
 	padding:10px;
 	width: 18px;
 }
-<c:if test="${c:isSafari() || c:browser('chrome')}">
+<c:if test="${c:isSafari()}">
 tr.z-row .z-detail-outer {
 	width: 38px;
 }
