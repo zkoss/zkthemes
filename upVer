@@ -23,29 +23,41 @@ stamp=$(date +%Y%m%d)
 target=$1
 oldVersion=$2
 newVersion=$3
+isFL=$4
 
 if [ "$newVersion" == "" ] ; then
 	target=""
 	oldVersion=$1
 	newVersion=$2
+	isFL=$3
 fi
 
 if [ "$oldVersion" == "" ] || [ "$newVersion" == "" ] ; then
-	echo "Usage: upVer [ breeze | etc..] [ oldVersion ] [ newVersion ]"
+	echo "Usage: upVer [ breeze | etc..] [ oldVersion ] [ newVersion ] [ FL ]"
 	exit 1
 fi
 
 function upVer {
 	sed -i "s/$oldVersion/$newVersion/g" $maindir/$1/version
-	sed -i "1,/description/s/version>.*<\/version/version>$newVersion<\/version/" $maindir/$1/pom.xml
+	if [ "$isFL" == "FL" ] ; then
+		sed -i "1,/description/s/version>.*<\/version/version>$newVersion-SNAPSHOT<\/version/" $maindir/$1/pom.xml
+	else
+		sed -i "1,/description/s/version>.*<\/version/version>$newVersion<\/version/" $maindir/$1/pom.xml
+	fi
 	find $maindir/$1/src -name config.xml -exec sed -i "s/version-uid>.*<\/version-uid/version-uid>$newVersion<\/version-uid/" {} \;
 	find $maindir/$1/src -name lang-addon.xml -exec sed -i "s/version-uid>.*<\/version-uid/version-uid>$newVersion<\/version-uid/" {} \;
 	find $maindir/$1/src -name Version.java -exec sed -i "s/UID.*;/UID = \"$newVersion\";/g" {} \;
 	echo "Update $1 version to $newVersion"
 }
 
+#parent project
 sed -i "s/$oldVersion/$newVersion/g" version
-sed -i "1,/version>.*<\/version/s/version>.*<\/version/version>$newVersion<\/version/" pom.xml
+if [ "$isFL" == "FL" ] ; then
+	sed -i "1,/version>.*<\/version/s/version>.*<\/version/version>$newVersion-SNAPSHOT<\/version/" pom.xml
+else
+	sed -i "1,/version>.*<\/version/s/version>.*<\/version/version>$newVersion<\/version/" pom.xml
+fi
+
 if [ "$target" != "" ] ; then
 	upVer $target
 else
