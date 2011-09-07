@@ -25,7 +25,7 @@ oldVersion=$2
 newVersion=$3
 isFL=$4
 
-if [ "$newVersion" == "" ] ; then
+if [ "$3" == "" ] || [ "$3" == "FL" ] ; then
 	target=""
 	oldVersion=$1
 	newVersion=$2
@@ -62,6 +62,7 @@ if [ "$target" != "" ] ; then
 	upVer $target
 else
 	targetListOld="$(cat build.projects | tr '\n' ' ')"
+	# TODO: add zkthemedemo
 	targetListOld="${targetListOld% }"
 	targetList=
 	for target in $targetListOld ; do
