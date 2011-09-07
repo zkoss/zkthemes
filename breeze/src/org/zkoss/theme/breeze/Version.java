@@ -26,5 +26,5 @@ package org.zkoss.theme.breeze;
 public class Version {
 	/** Returns the version UID.
 	 */
-	public static final String UID = "5.0.9";
+	public static final String UID = "5.1.0";
 }
