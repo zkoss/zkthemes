@@ -1,0 +1,67 @@
+<?page title="Combobutton" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<hbox>
+		<window title="Combobutton with combopopup" border="normal" width="300px" height="300px">
+			message box
+			<textbox id="messageBox" width="200px" />
+			<combobutton label="Combobutton">
+				<attribute name="onClick">
+					messageBox.setValue("Combobutton clicked");
+				</attribute>
+				<attribute name="onOpen">
+					messageBox.setValue("Combobutton " + (event.isOpen()? "opened" : "closed"));
+				</attribute>
+				<combopopup>
+					<vbox>
+						<hbox>
+							Search
+							<textbox />
+						</hbox>
+						<listbox width="200px">
+							<listhead>
+								<listheader label="Name" />
+								<listheader label="Description" />
+							</listhead>
+							<listitem>
+								<listcell label="John" />
+								<listcell label="CEO" />
+							</listitem>
+							<listitem>
+								<listcell label="Joe" />
+								<listcell label="Engineer" />
+							</listitem>
+							<listitem>
+								<listcell label="Mary" />
+								<listcell label="Supervisor" />
+							</listitem>
+						</listbox>
+					</vbox>
+				</combopopup>
+			</combobutton>
+			<separator />
+		</window>
+		<window title="Combobutton with menupopup" border="normal" width="300px" height="300px">
+			<combobutton label="Combobutton">
+				<menupopup>
+					<menuitem label="Index" onClick="alert(self.label)" />
+					<menu label="About">
+						<menupopup>
+							<menuitem label="About ZK"
+								onClick="alert(self.label)" />
+							<menuitem label="About Potix"
+								onClick="alert(self.label)" />
+							<menu label="others">
+								<menupopup>
+									<menuitem label="About theme"
+										onClick="alert(self.label)" />
+									<menuitem label="About addon"
+										onClick="alert(self.label)" />
+								</menupopup>
+							</menu>
+						</menupopup>
+					</menu>
+				</menupopup>
+			</combobutton>
+		</window>
+	</hbox>
+</zk>

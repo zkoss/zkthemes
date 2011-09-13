@@ -184,6 +184,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 					
 				<category value="Miscellaneous" />
 					<item label="Button"        topic="demo/button" />
+					<item label="Combobutton"   topic="demo/combobutton" />
 					<item label="Colorbox"      topic="demo/colorbox" />
 					<item label="Messagebox"    topic="demo/messagebox" />
 					<item label="Progressmeter" topic="demo/progressmeter" />
