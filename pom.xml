@@ -7,6 +7,9 @@
 	<packaging>pom</packaging>
 	<name>ZK Theme Maven Bulider</name>
 	<url>http://www.zkoss.org/themes</url>
+	<scm>
+		<url>http://mavensync.zkoss.org/maven2</url>
+	</scm>
 	<modules>
 		<module>breeze</module>
 		<module>sapphire</module>
