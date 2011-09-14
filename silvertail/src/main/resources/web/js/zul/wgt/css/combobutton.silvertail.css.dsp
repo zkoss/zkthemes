@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 
-.z-combobutton {
+.z-combobutton,
+.z-combobutton-img {
 	display:inline-block;
 }
 
@@ -12,6 +13,12 @@
 	<c:if test="${c:browser('ie7-') || c:browser('ie6-')}">
 		margin-top: 1px;
 	</c:if>
+}
+
+.z-combobutton-img {
+	width: 19px;
+	height: 19px;
+	margin: 1px;
 }
 
 .z-combobutton .z-combobutton-btn-img,
