@@ -144,6 +144,11 @@
 		margin-top: 1px;
 	</c:if>
 }
+.z-textbox-ml-rounded {
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
 <%-- rounded: disabled --%>
 .z-textbox-rounded-disd,
 .z-decimalbox-rounded-disd,
