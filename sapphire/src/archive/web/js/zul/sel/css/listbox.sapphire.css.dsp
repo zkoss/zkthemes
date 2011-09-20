@@ -93,7 +93,8 @@ div.z-listheader-cnt {
 }
 .z-listheader, .z-listheader .z-listheader-cnt,
 .z-listcell .z-listcell-cnt,
-.z-listfooter .z-listfooter-cnt {
+.z-listfooter .z-listfooter-cnt,
+.z-auxheader, .z-auxheader .z-auxheader-cnt {
 	text-overflow: ellipsis;
 }
 div.z-listfooter-cnt, div.z-listcell-cnt, div.z-listheader-cnt {

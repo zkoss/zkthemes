@@ -125,7 +125,8 @@ div.z-treecol-cnt {
 }
 .z-treecol, .z-treecol .z-treecol-cnt,
 .z-treecell .z-treecell-cnt,
-.z-treefooter .z-treefooter-cnt {
+.z-treefooter .z-treefooter-cnt,
+.z-auxheader, .z-auxheader .z-auxheader-cnt {
 	text-overflow: ellipsis;
 }
 <%-- ZK Treecol's sizing --%>
