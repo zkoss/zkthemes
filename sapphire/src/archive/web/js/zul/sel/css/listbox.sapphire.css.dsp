@@ -430,3 +430,9 @@ div.z-listbox {
 	-moz-opacity: .6;
 	filter: alpha(opacity=60);
 }
+<c:if test="${c:browser('opera')}">
+tr.z-listitem-disd .z-listitem-img-checkbox,
+tr.z-listitem-disd .z-listitem-img-radio {
+	overflow: visible;<%-- Bug ZK-397 --%>
+}
+</c:if>

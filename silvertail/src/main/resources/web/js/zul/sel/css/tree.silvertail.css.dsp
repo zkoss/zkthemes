@@ -681,3 +681,9 @@ span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 	-moz-opacity: .6;
 	filter: alpha(opacity=60);
 }
+<c:if test="${c:browser('opera')}">
+tr.z-treerow-disd .z-treerow-img-checkbox,
+tr.z-treerow-disd .z-treerow-img-radio {
+	overflow: visible;<%-- Bug ZK-397 --%>
+}
+</c:if>
