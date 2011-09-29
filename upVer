@@ -33,7 +33,7 @@ if [ "$3" == "" ] || [ "$3" == "FL" ] ; then
 fi
 
 if [ "$oldVersion" == "" ] || [ "$newVersion" == "" ] ; then
-	echo "Usage: upVer [ breeze | etc..] [ oldVersion ] [ newVersion ] [ FL ]"
+	echo "Usage: upVer [ sapphire | etc..] [ oldVersion ] [ newVersion ] [ FL ]"
 	exit 1
 fi
 
