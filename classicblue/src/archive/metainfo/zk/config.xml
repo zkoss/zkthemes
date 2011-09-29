@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<config-name>classicblue</config-name><!-- used to resolve dependency -->
+	<depends>zul</depends>
+	<version>
+		<version-class>org.zkoss.theme.classicblue.Version</version-class>
+		<version-uid>6.0.0</version-uid>
+	</version>
+	
+	<listener>
+		<listener-class>org.zkoss.theme.classicblue.ClassicblueThemeWebAppInit</listener-class>
+	</listener>
+</config>
