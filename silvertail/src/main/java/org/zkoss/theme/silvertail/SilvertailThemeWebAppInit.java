@@ -43,7 +43,7 @@ public class SilvertailThemeWebAppInit implements WebAppInit, SEORenderer {
 		if (webapp.getConfiguration().getThemeProvider() == null)
 			webapp.getConfiguration().setThemeProvider(new StandardThemeProvider());
 		
-		Themes.register(Themes.CLASSICBLUE_NAME, Themes.CLASSICBLUE_DISPLAY, Themes.CLASSICBLUE_PRIORITY);
+		Themes.register(Themes.BREEZE_NAME, Themes.BREEZE_DISPLAY, Themes.BREEZE_PRIORITY);
 		Themes.register(SILVERTAIL_NAME, SILVERTAIL_DISPLAY, SILVERTAIL_PRIORITY);
 	}
 	
@@ -56,7 +56,7 @@ public class SilvertailThemeWebAppInit implements WebAppInit, SEORenderer {
 		if (!inited) {
 			desktop.setAttribute(THEME_INITED_DESKTOP, Boolean.TRUE);
 			String name = Themes.getCurrentTheme();
-			if (!Themes.CLASSICBLUE_NAME.equals(name))
+			if (!Themes.BREEZE_NAME.equals(name))
 				out.write("<script src='" + 
 					Executions.encodeURL("~./js/zul." + name + ".wpd") + "'></script>");
 		}
