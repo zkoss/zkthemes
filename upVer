@@ -25,7 +25,7 @@ oldVersion=$2
 newVersion=$3
 isFL=$4
 
-if [ "$newVersion" == "" ] ; then
+if [ "$newVersion" == "" ] || [ "$newVersion" == "FL" ]; then
 	target=""
 	oldVersion=$1
 	newVersion=$2
@@ -38,7 +38,9 @@ if [ "$oldVersion" == "" ] || [ "$newVersion" == "" ] ; then
 fi
 
 function upVer {
-	sed -i "s/$oldVersion/$newVersion/g" $maindir/$1/version
+	if [ "$1" != "zkthemedemo"] ; then
+		sed -i "s/$oldVersion/$newVersion/g" $maindir/$1/version
+	fi
 	if [ "$isFL" == "FL" ] ; then
 		sed -i "1,/description/s/version>.*<\/version/version>$newVersion-SNAPSHOT<\/version/" $maindir/$1/pom.xml
 	else
@@ -67,6 +69,7 @@ else
 	for target in $targetListOld ; do
 		targetList="$targetList $target"
 	done
+	targetList="$targetList zkthemedemo"
 	echo "targets: ${targetList}"
 	for target in $targetList ; do
 		if [ -d $target ] ; then
