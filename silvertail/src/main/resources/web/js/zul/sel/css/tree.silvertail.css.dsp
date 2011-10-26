@@ -637,6 +637,11 @@ span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 	border-color: #E8F6FD #E8F6FD #E8F6FD #FFFFFF;
 }
 </c:if>
+<c:if test="${c:browser('ie6-')}">
+div.z-treefooter-cnt, div.z-treecol-cnt {
+	height: 16px;
+}
+</c:if>
 .z-treerow-img {
 	background:transparent no-repeat scroll center center;
 	border:0;

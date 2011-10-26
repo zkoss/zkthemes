@@ -539,6 +539,9 @@ span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/tree/arrow-toggle.gif')});
 }
+div.z-treefooter-cnt, div.z-treecol-cnt {
+	height: 16px;
+}
 </c:if>
 </c:if>
 
