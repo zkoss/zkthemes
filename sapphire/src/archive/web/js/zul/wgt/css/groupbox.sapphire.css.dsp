@@ -17,10 +17,10 @@
 	left: -1000px; 
 	top: -1000px;
 }
-.z-fieldset .z-caption:hover {
+.z-fieldset .z-caption {
 	cursor: pointer;
 }
-.z-fieldset .z-caption-readonly:hover {
+.z-fieldset .z-caption-readonly {
 	cursor: default;
 }
 
@@ -62,10 +62,10 @@
 	border: 1px solid #8FB9D0;
 	zoom: 1;
 }
-.z-groupbox-hm:hover {
+.z-groupbox-hm {
 	cursor: pointer;
 }
-.z-groupbox-hm-readonly:hover {
+.z-groupbox-hm-readonly {
 	cursor: default;
 }
 .z-groupbox-header {

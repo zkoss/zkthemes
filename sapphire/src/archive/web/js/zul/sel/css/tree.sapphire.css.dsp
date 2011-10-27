@@ -26,6 +26,7 @@ div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
 	font-weight: normal;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
+	padding: 0;
 }
 div.z-tree-body, div.z-dottree-body, div.z-filetree-body, div.z-vfiletree-body {
 	background: white; border: 0; overflow: auto; width: 100%; position: relative;
@@ -101,6 +102,24 @@ div.z-tree-footer td.z-treefooter {
 	padding: 2px 10px;
 }
 <%-- Treecol, Treefooter, and Treecell--%>
+div.z-tree-header th.z-treecol-sort-over {
+	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/header-over.png')});
+}
+div.z-treefooter-cnt, div.z-treecol-cnt {
+	overflow: hidden;
+	cursor: default;
+}
+div.z-treecol-cnt {
+	position: relative;
+}
+td.z-treecell {
+	border: 1px solid transparent;
+	border-left: 1px solid #FFF;
+}
+div.z-treecell-cnt {
+	padding: 1px 0 1px 0;
+}
+
 div.z-treefooter-cnt, div.z-treecell-cnt, div.z-treecol-cnt {
 	border: 0; margin: 0; 
 	padding: 8px 5px 7px;
@@ -119,23 +138,88 @@ div.z-treefooter-cnt, div.z-treecol-cnt {
 div.z-treecol-cnt {
 	color: #00547A;
 }
+div.z-treecol-cnt, div.z-tree-header div.z-auxheader-cnt {
+	font-weight:bold;
+	padding: 8px 5px 7px;
+}
+
 .z-word-wrap div.z-treecell-cnt, .z-word-wrap div.z-treefooter-cnt,
 	.z-word-wrap div.z-treecol-cnt {
 	word-wrap: break-word;
 }
 <%-- ZK Treecol's sizing --%>
-.z-tree-header .z-treecol.z-treecol-sizing, .z-tree-header .z-treecol.z-treecol-sizing .z-treecol-cnt {
-	cursor: e-resize;
-}
-.z-dottree-header .z-treecol.z-treecol-sizing, .z-dottree-header .z-treecol.z-treecol-sizing .z-treecol-cnt {
-	cursor: e-resize;
-}
-.z-filetree-header .z-treecol.z-treecol-sizing, .z-filetree-header .z-treecol.z-treecol-sizing .z-treecol-cnt {
-	cursor: e-resize;
-}
+.z-tree-header .z-treecol.z-treecol-sizing, .z-tree-header .z-treecol.z-treecol-sizing .z-treecol-cnt,
+.z-dottree-header .z-treecol.z-treecol-sizing, .z-dottree-header .z-treecol.z-treecol-sizing .z-treecol-cnt,
+.z-filetree-header .z-treecol.z-treecol-sizing, .z-filetree-header .z-treecol.z-treecol-sizing .z-treecol-cnt,
 .z-vfiletree-header .z-treecol.z-treecol-sizing, .z-vfiletree-header .z-treecol.z-treecol-sizing .z-treecol-cnt {
 	cursor: e-resize;
 }
+<%-- ZK Treecol's sorting --%>
+div.z-tree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-dottree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-filetree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-vfiletree-header th.z-treecol-sort div.z-treecol-cnt {
+	cursor: pointer; padding-right: 9px;
+	background: transparent no-repeat 99% center;
+	padding: 7px 10px;
+	font-weight:bold;
+}
+div.z-tree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-dottree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-filetree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-vfiletree-header th.z-treecol-sort-asc div.z-treecol-cnt {
+	cursor: pointer; padding-right: 9px;
+	background: transparent no-repeat 99% center;
+}
+div.z-tree-header th.z-treecol-sort-dsc div.z-treecol-cnt,
+div.z-dottree-header th.z-treecol-sort-dsc div.z-treecol-cnt,
+div.z-filetree-header th.z-treecol-sort-dsc div.z-treecol-cnt,
+div.z-vfiletree-header th.z-treecol-sort-dsc div.z-treecol-cnt {
+	cursor: pointer; padding-right: 9px;
+	background: transparent no-repeat 99% center;
+}
+.z-treecol-sort-img {
+	position: absolute;
+	float: left;
+	left: 50%;
+	font-size: 0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.z-treecol-sort .z-treecol-sort-img {
+	margin-top: -5px;
+	width: 8px;
+	height: 5px;
+}
+.z-treecol-sort-asc .z-treecol-sort-img,
+.z-treecol-sort-dsc .z-treecol-sort-img {
+	background-position: 0 0;
+    background-repeat: no-repeat;
+	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/arrows.png')});
+}
+
+.z-treecol-sort-asc .z-treecol-sort-img {
+	background-position: 0 0;
+}
+
+.z-treecol-sort-dsc .z-treecol-sort-img {
+	background-position: 0 -5px;
+}
+div.z-tree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-tree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-tree-header th.z-treecol-sort-dsc div.z-treecol-cnt,
+div.z-dottree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-dottree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-dottree-header th.z-treecol-sort-dsc div.z-treecol-cnt,
+div.z-filetree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-filetree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-filetree-header th.z-treecol-sort-dsc div.z-treecol-cnt,
+div.z-vfiletree-header th.z-treecol-sort div.z-treecol-cnt,
+div.z-vfiletree-header th.z-treecol-sort-asc div.z-treecol-cnt,
+div.z-vfiletree-header th.z-treecol-sort-dsc div.z-treecol-cnt {
+	background-image: none;
+}
+
 <%-- Treerow --%>
 tr.z-treerow, tr.z-treerow a, tr.z-treerow a:visited {
 	font-size: ${fontSizeM}; font-weight: normal; color: black;
@@ -160,6 +244,11 @@ tr.z-treerow-seld {
 	</c:if>
 	border: 1px solid #6f97d2;
 }
+tr.z-treerow-over > td.z-treecell {
+	border-top: 1px solid #F1FAFF;
+	border-bottom: 1px solid #F1FAFF;
+}
+
 tr.z-treerow-over {
 	background: #e8f6fd;
 }
@@ -213,6 +302,7 @@ div.z-dottree-header th {
 	border: 1px solid;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
+	padding: 4px 10px 3px 10px;
 }
 div.z-dottree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
@@ -316,6 +406,7 @@ div.z-filetree-header th.z-treecol, div.z-filetree-header th.z-auxheader {
 	border: 1px solid;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
+	padding: 4px 10px 3px 10px;
 }
 div.z-filetree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
@@ -443,6 +534,7 @@ div.z-vfiletree-header th.z-treecol,
 div.z-vfiletree-header th.z-auxheader {
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
+	padding: 4px 10px 3px 10px;
 }
 div.z-vfiletree-header tr.z-treecols th:last-child, 
 div.z-vfiletree div.z-vfiletree-header tr.z-auxhead th:last-child {
@@ -539,9 +631,6 @@ span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/tree/arrow-toggle.gif')});
 }
-div.z-treefooter-cnt, div.z-treecol-cnt {
-	height: 16px;
-}
 </c:if>
 </c:if>
 
@@ -554,6 +643,23 @@ div.z-treefooter-cnt, div.z-treecol-cnt {
 	-moz-binding: url(${c:encodeURL('~./zk/wordwrap.xml#wordwrap')});
 }
 </c:if>
+<c:if test="${c:browser('ie7-') or c:browser('ie6-')}">
+.z-tree td.z-treecell,
+.z-dottree td.z-treecell,
+.z-filetree td.z-treecell,
+.z-vfiletree td.z-treecell{
+	border-color: #FFFFFF #FFFFFF #FFFFFF #FFFFFF;
+}
+.z-treerow-seld td.z-treecell {
+	border-color: #E8F6FD #E8F6FD #E8F6FD #FFFFFF;
+}
+</c:if>
+<c:if test="${c:browser('ie6-')}">
+div.z-treefooter-cnt, div.z-treecol-cnt {
+	height: 16px;
+}
+</c:if>
+
 .z-treerow-img {
 	background:transparent no-repeat scroll center center;
 	border:0;

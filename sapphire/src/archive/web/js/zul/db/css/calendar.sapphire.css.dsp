@@ -28,6 +28,7 @@
 	width : 10px;
 	padding-bottom: 10px;
 	width: 16px;
+	cursor: pointer;
 }
 .z-calendar-left,
 .z-calendar-right {
@@ -54,12 +55,24 @@
 	border-right: 0;
 	left: 0;
 }
-.z-calendar-right-icon-disd {
-	border-left: 6px solid #D9DADA;
+.z-calendar-over .z-calendar-left-icon {
+	border-right-color: #c3e5f4;
 }
-.z-calendar-left-icon-disd {
-	border-right: 6px solid #D9DADA;
+.z-calendar-over .z-calendar-right-icon {
+	border-left-color: #c3e5f4;
 }
+.z-calendar-icon-disd .z-calendar-left-icon {
+	border-right: 6px solid #E3E3E3;
+	cursor: auto;
+}
+.z-calendar-icon-disd .z-calendar-right-icon {
+	border-left: 6px solid #E3E3E3;
+	cursor: auto;
+}
+.z-calendar-icon-disd {
+	cursor: default;
+}
+
 .z-calendar-disd {
 	opacity: .6;
 	filter: alpha(opacity=60);
@@ -68,6 +81,7 @@
 .z-calendar-disd * {
 	cursor: default !important;
 	color: #AAA !important;
+	color: rgba(170,170,170,0.6) !important;
 }
 /*.z-calendar-calyear*/ 
 .z-datebox-rounded-calyear,
@@ -91,6 +105,7 @@
 	text-align: center;
 	white-space: nowrap;
 }
+.z-calendar-title,
 .z-calendar-calctrl .z-calendar-ctrler {
 	cursor: pointer;
 	font-weight:bold;
@@ -98,7 +113,7 @@
 	font-size: 12px;
 	color: #252525;
 }
-
+.z-calendar-caldayrow .z-calendar-over,
 .z-calendar-title-over .z-calendar-ctrler {
 	color: #37d4ff;
 }
@@ -106,27 +121,23 @@
 .z-calendar-calyear td,
 .z-calendar-calmon td {
 	padding: 12px 3px;
-	text-align: center;
-	cursor: pointer;
 }
 .z-calendar-calday {
 	table-layout: fixed;
 }
-.z-calendar-caldayrow td,
-.z-calendar td a,
-.z-calendar td a:visited {
+.z-calendar-calyear td,
+.z-calendar-calmon td,
+.z-calendar-caldayrow td {
 	font-size: ${fontSizeS}; 
 	text-align: center;
 	cursor: pointer; 
 	text-decoration: none;
 	-moz-user-select: none;
+	color: #5C5C5C;	
 }
 
-
-.z-calendar-calyear td a,
-.z-calendar-calyear td a:visited,
-.z-calendar-calmon td a,
-.z-calendar-calmon td a:visited {
+.z-calendar-calyear td,
+.z-calendar-calmon td {
 	font-size: ${fontSizeM};
 }
 
@@ -140,10 +151,7 @@
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
-}
-
-.z-calendar-caldayrow .z-calendar-over a {
-	color: #37d4ff;
+	text-shadow: 1px 1px 3px #008bb6;
 }
 
 .z-calendar-calyear td.z-calendar-seld,
@@ -154,6 +162,7 @@
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-color: #fcd4a9;
+	text-shadow: 1px 1px 3px #888;
 }
 .z-datebox-rounded-calmon td.z-datebox-rounded-over-seld,
 .z-datebox-rounded-calday td.z-datebox-rounded-over-seld,
@@ -165,7 +174,7 @@
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 }
-.z-calendar td.z-calendar-over-seld a {
+.z-calendar td.z-calendar-over-seld {
 	color: white;
 }
 .z-calendar-caldow td {
@@ -188,24 +197,28 @@
 .z-calendar .z-weekday {
 	color: #636363;
 }
-.z-calendar .z-outside a {
+.z-calendar .z-outside {
 	color: #888;
-}
-.z-calendar-caldayrow td a {
-	padding: 2px 10px;
-	outline: none;
-}
-.z-calendar td a:hover {
-	border: none;
+	text-shadow: none;
 }
 
 <%-- Calendar weekend --%>
 td.z-calendar-wkend {
 	background: #f7f7f7;
 }
+<%-- Issues --%>
+<%-- 3159648 --%>
+<c:if test="${c:isGecko3()}">
+.z-calendar-disd,
+.z-calendar-disd * {
+	opacity: 1;	
+	color: rgba(170,170,170,0.6) !important;
+}
+</c:if>
+<%-- 1735084 --%>
 <c:if test="${c:isExplorer()}">
 .z-datebox-rounded-calyear td,
 .z-calendar-calyear td, .z-datebox-calyear td {
-	color: black; <%-- 1735084 --%>
+	color: black;
 }
 </c:if>
