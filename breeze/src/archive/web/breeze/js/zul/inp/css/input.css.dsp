@@ -18,7 +18,6 @@
 	background: #FFFFFF repeat-x 0 0;
 	border: 1px solid #E6E6E6;
 	border-top-color: #B2B2B2;
-	border-top-color: #B2B2B2;
 	font-family: ${fontFamilyC};
 	font-size: ${fontSizeM};
 	font-weight: normal;
@@ -38,7 +37,6 @@
 .z-doublebox-focus, .z-doublebox-focus input {
 	background: #FFFFFF repeat-x 0 0;
 	border: 1px solid #D5EAFD;
-	border-top: 1px solid #94B9DA;
 	border-top: 1px solid #94B9DA;
 }
 .z-textbox-text-invalid,
@@ -123,7 +121,7 @@
 	height: 14px;
 	border: 0;
 	padding: 5px 4px;
-	background-image: url(${c:encodeURL('~./zul/img/button/timebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});
 	background-position: 0 -24px;
 }
 .z-textbox-rounded-right-edge,
@@ -132,7 +130,7 @@
 .z-longbox-rounded-right-edge,
 .z-doublebox-rounded-right-edge {
 	background: transparent no-repeat 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/button/timebox-rounded.png')});	
+	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});	
 	background-position: -19px -120px;
 	vertical-align: top; 
 	overflow: hidden;
@@ -217,7 +215,7 @@ i.z-doublebox-rounded-right-edge-invalid {
 .z-intbox-rounded-real-readonly .z-intbox-rounded-inp,
 .z-longbox-rounded-real-readonly .z-longbox-rounded-inp,
 .z-doublebox-rounded-real-readonly .z-doublebox-rounded-inp {
-	background-image: url(${c:encodeURL('~./zul/img/button/timebox-rounded.png')});	
+	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});	
 	background-position: 0 -72px;
 }
 .z-textbox-rounded-focus i.z-textbox-rounded-right-edge,
@@ -230,7 +228,7 @@ i.z-doublebox-rounded-right-edge-invalid {
 .z-intbox-rounded-real-readonly .z-intbox-rounded-right-edge,
 .z-longbox-rounded-real-readonly .z-longbox-rounded-right-edge,
 .z-doublebox-rounded-real-readonly .z-doublebox-rounded-right-edge {
-	background-image: url(${c:encodeURL('~./zul/img/button/timebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});
 	background-position: -19px -192px;
 }
 <%-- rounded: focus + invalid (overrides focus) --%>
@@ -315,7 +313,7 @@ i.z-doublebox-rounded-right-edge-invalid {
 	padding: 5px 3px;
 }
 .z-errbox-left {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/error-icon.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/error-icon.png')});
 	background-repeat: no-repeat;
 	background-position: 5px 4px;
 	cursor: pointer; 
@@ -336,40 +334,40 @@ i.z-doublebox-rounded-right-edge-invalid {
 	height: 11px;
 }
 .z-pointer-d {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerD.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerD.png')});
 	height: 6px;
 }
 .z-pointer-u {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerU.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerU.png')});
 	height: 6px;
 }
 .z-pointer-l {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerL.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerL.png')});
 	width: 6px;
 }
 .z-pointer-r {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerR.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerR.png')});
 	width: 6px;
 }
 .z-pointer-ld {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerLD.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerLD.png')});
 }
 .z-pointer-lu {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerLU.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerLU.png')});
 }
 .z-pointer-rd {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerRD.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerRD.png')});
 }
 .z-pointer-ru {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerRU.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerRU.png')});
 }
 
 .z-errbox-close, .z-errbox-close-over {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/error-close.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/error-close.gif')});
 	zoom: 1; <%--Bug 2916148 --%>
 }
 .z-errbox-close-over {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/error-close-over.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/error-close-over.gif')});
 }
 .z-errbox.z-popup .z-popup-cl {
 	background: transparent repeat-x 0 0;
@@ -387,31 +385,31 @@ i.z-doublebox-rounded-right-edge-invalid {
 <%-- IE 6 GIF  --%>
 <c:if test="${c:browser('ie6-')}">
 .z-pointer-d {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerD.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerD.gif')});
 }
 .z-pointer-l {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerL.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerL.gif')});
 }
 .z-pointer-ld {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerLD.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerLD.gif')});
 }
 .z-pointer-lu {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerLU.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerLU.gif')});
 }
 .z-pointer-rd {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerRD.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerRD.gif')});
 }
 .z-pointer-ru {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerRU.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerRU.gif')});
 }
 .z-pointer-r {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerR.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerR.gif')});
 }
 .z-pointer-u {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/pointerU.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/pointerU.gif')});
 }
 .z-errbox-left {
-	background-image: url(${c:encodeURL('~./zul/img/errbox/error-icon.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/errbox/error-icon.gif')});
 }
 .z-popup .z-popup-cl {
 	background: transparent repeat-x 0 0;
