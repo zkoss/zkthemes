@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- zk.wpd
+	Purpose:
+		Widget/Mold addon for Theme Breeze, zul and zkex
+		
+	Description:
+		
+	History:
+		Thu Jul 15 09:34:12     2010, Created by simon
+
+Copyright (C) 2010 Potix Corporation. All Rights Reserved.
+-->
+<package name="zul.breeze" language="xul/html">
+<script>
+	jq(document.body).addClass('breeze');
+</script>
+	<!-- zul.grid -->
+	<script src="../grid/grid.breeze.js"/>
+	
+	<!-- zul.inp -->
+	<script src="../inp/inp.breeze.js"/>
+	
+	<!-- zul.menu -->
+	<script src="../menu/menu.breeze.js"/>
+	
+	<!-- zul.tab -->
+	<script src="../tab/tab.breeze.js"/>
+	
+	<!-- zul.wgt -->
+	<script src="../wgt/wgt.breeze.js"/>
+	
+	<!-- zul.wnd -->
+	<script src="../wnd/wnd.breeze.js"/>
+
+</package>
