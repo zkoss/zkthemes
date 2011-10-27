@@ -1,10 +1,5 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 
-.z-groupbox legend{
-	font-family: ${fontFamilyC};
-	font-size: ${fontSizeM}; 
-	font-weight: normal;
-}
 .z-groupbox-cnt {
 	overflow: hidden;
 	padding: 5px;
@@ -14,14 +9,6 @@
 .z-groupbox-colpsd {
 	padding-bottom: 0 !important; 
 	border-width: 2px 0 0 0 !important;
-}
-.z-groupbox-colpsd .z-groupbox-cnt {
-	position: absolute; 
-	left: -1000px; 
-	top: -1000px;
-}
-.z-groupbox .z-caption {
-	cursor: pointer;
 }
 .z-groupbox .z-caption-readonly {
 	cursor: default;
@@ -56,10 +43,13 @@
 	font-weight: normal;
 	border: 0 none;
 }
-.z-groupbox-header .z-caption span {
+.z-groupbox-header span {
 	background-color: #FFFFFF;
 	padding-left: 3px;
 	padding-right: 3px;
+}
+.z-groupbox-title {
+	cursor: pointer;
 }
 <%-- 3D --%>
 .z-groupbox-3d {
@@ -118,7 +108,9 @@
 	border: 0 none;
 	background: transparent;
 }
-
+.z-groupbox-3d-title {
+	cursor: pointer;
+}
 .z-groupbox-3d-cnt {<%-- content of 3d groupbox-new2 --%>
 	border: 1px solid #8FB9D0;
 	padding: 5px;
