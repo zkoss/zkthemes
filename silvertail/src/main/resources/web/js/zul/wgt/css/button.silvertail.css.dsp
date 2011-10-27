@@ -7,11 +7,6 @@
 	cursor: pointer; 
 	white-space: nowrap;
 }
-.z-button-over tr td,
-.z-button-focus tr td,
-.z-button-clk tr td {
-	color: #252525;
-}
 button.z-button {
 	padding:0 !important; 
 	margin:0 !important; 
@@ -196,7 +191,7 @@ span.z-button {
 	margin: 0; overflow: hidden;
 	vertical-align: middle;
 	text-align: center;
-	padding: 1px 7px;
+	padding: 0 7px;
 	background-repeat: repeat-x;
 	background-position: 0 0;
 	white-space: nowrap;
@@ -210,6 +205,5 @@ span.z-button {
 .z-button-clk .z-button-cm {
 	background-position: 0 -1500px;
 	padding: 2px 7px 0 7px;
-	margin
 }
 

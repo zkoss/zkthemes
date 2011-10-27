@@ -61,6 +61,9 @@
 	border:0;	
 	padding: 5px 4px;
 	height: 14px;
+	<c:if test="${c:browser('ios')}">
+		margin-right:-1px;
+	</c:if>
 }
 .z-combobox-rounded-inp {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/button/combobox-rounded.png')});
@@ -172,7 +175,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background: transparent no-repeat 0 0;
 	background-image : url(${c:encodeURL('~./zul/img/sapphire/input/combobtn.gif')});
 	vertical-align: top; 
-	cursor: default; 
+	cursor: pointer; 
 	width: 19px; 
 	height: 20px; 
 	border: 0;
@@ -604,6 +607,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background: #F0F0F0;
 }
 .z-spinner-readonly,
+.z-doublespinner-readonly,
 .z-timebox-readonly,
 .z-datebox-readonly,
 .z-bandbox-readonly,
@@ -675,6 +679,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 }
 
 .z-spinner-real-readonly,
+.z-doublespinner-real-readonly,
 .z-timebox-real-readonly,
 .z-datebox-real-readonly,
 .z-bandbox-real-readonly,
@@ -762,7 +767,8 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-bandbox-inplace .z-bandbox-inp,
 .z-datebox-inplace .z-datebox-inp,
 .z-timebox-inplace .z-timebox-inp,
-.z-spinner-inplace .z-spinner-inp {
+.z-spinner-inplace .z-spinner-inp,
+.z-doublespinner-inplace .z-doublespinner-inp {
 	border-right-width: 0 !important;
 }
 .z-combobox-inplace .z-combobox-btn,
@@ -853,7 +859,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 <%-- Gecko --%>
 <c:if test="${c:isGecko()}">
 i.z-combobox-rounded-btn, i.z-datebox-rounded-btn, i.z-bandbox-rounded-btn,
-i.z-timebox-rounded-btn, i.z-spinner-rounded-btn,
+i.z-timebox-rounded-btn, i.z-spinner-rounded-btn, i.z-doublespinner-rounded-btn,
 i.z-combobox-btn, i.z-datebox-btn, i.z-bandbox-btn, i.z-timebox-btn,
 i.z-spinner-btn, i.z-doublespinner-btn {<%-- button at the right edge --%>
 	margin: 0; padding: 0;
@@ -861,6 +867,7 @@ i.z-spinner-btn, i.z-doublespinner-btn {<%-- button at the right edge --%>
 </c:if>
 <c:if test="${c:browser('gecko2-')}">
 .z-spinner-rounded,
+.z-doublespinner-rounded,
 .z-timebox-rounded,
 .z-datebox-rounded,
 .z-bandbox-rounded,

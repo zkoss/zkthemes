@@ -17,6 +17,7 @@
 .z-textbox, .z-decimalbox, .z-intbox, .z-longbox, .z-doublebox {
 	background: #FFFFFF repeat-x 0 0;
 	border: 1px solid #CCCCCC;
+	border-top-color: #B2B2B2;
 	font-family: ${fontFamilyC};
 	font-size: ${fontSizeM};
 	font-weight: normal;
@@ -36,6 +37,7 @@
 .z-doublebox-focus, .z-doublebox-focus input {
 	background: #FFFFFF repeat-x 0 0;
 	border: 1px solid #999999;
+	border-top: 1px solid #8D8D8D;
 }
 .z-textbox-text-invalid,
 .z-decimalbox-text-invalid,
@@ -370,10 +372,8 @@ i.z-doublebox-rounded-right-edge-invalid {
 	background: transparent repeat-x 0 0;
 	background-color : #CD0A0A;
 	border: 1px solid #CD0A0A;
-}
-div.z-errbox {
-	-moz-border-radius: 0;
-	-moz-box-shadow: none;
+	-moz-border-radius: 1px 1px 1px 1px;
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 <c:if test="${c:isExplorer()}">

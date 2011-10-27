@@ -20,10 +20,10 @@
 	left: -1000px; 
 	top: -1000px;
 }
-.z-groupbox .z-caption:hover {
+.z-groupbox .z-caption {
 	cursor: pointer;
 }
-.z-groupbox .z-caption-readonly:hover {
+.z-groupbox .z-caption-readonly {
 	cursor: default;
 }
 
@@ -99,10 +99,10 @@
 	border: 1px solid #8FB9D0;
 	zoom: 1;
 }
-.z-groupbox-3d-hm:hover {
+.z-groupbox-3d-hm {
 	cursor: pointer;
 }
-.z-groupbox-3d-hm-readonly:hover {
+.z-groupbox-3d-hm-readonly {
 	cursor: default;
 }
 .z-groupbox-3d-header {

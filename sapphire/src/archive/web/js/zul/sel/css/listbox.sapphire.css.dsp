@@ -93,9 +93,8 @@ div.z-listheader-cnt {
 }
 div.z-listfooter-cnt, div.z-listcell-cnt, div.z-listheader-cnt {
 	border: 0; margin: 0; padding: 0;
-	font-family:arial, sans-serif;
-	font-size:12px;
-	font-weight:normal;
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeM}; font-weight: normal;
 	color:#00547A;
 }
 div.z-listcell-cnt {
@@ -151,9 +150,6 @@ tr.z-listgroup {
 	background: #E9F2FB repeat-x 0 0;
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/group_bg.gif')});
 }
-td.z-listgroup-inner {
-	padding-top: 2px;
-}
 tr.z-listgroup-over {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/group-bg-over.png')});
 }
@@ -162,6 +158,9 @@ tr.z-listgroup-seld {
 }
 tr.z-listgroup-over-seld {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/group-bg-over-seld.png')});
+}
+td.z-listgroup-inner {
+	padding-top: 2px;
 }
 tr.z-listgroup td.z-listgroup-inner {
 	border-bottom:1px solid #8FB9D0;
@@ -217,7 +216,8 @@ td.z-listgroupfoot-inner div.z-listcell-cnt {
 	color:#00547A;
 }
 <%-- ZK Listhead's sizing --%>
-div.z-listbox-header th.z-listheader.z-listheader-sizing, div.z-listbox-header th.z-listheader.z-listheader-sizing div.z-listheader-cnt {
+div.z-listbox-header th.z-listheader.z-listheader-sizing,
+div.z-listbox-header th.z-listheader.z-listheader-sizing div.z-listheader-cnt {
 	cursor: e-resize;
 }
 div.z-listbox-header tr.z-auxhead th:last-child, 

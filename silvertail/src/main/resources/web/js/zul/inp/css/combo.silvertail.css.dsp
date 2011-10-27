@@ -61,6 +61,9 @@
 	border:0;	
 	padding: 5px 4px;
 	height: 14px;
+	<c:if test="${c:browser('ios')}">
+		margin-right:-1px;
+	</c:if>
 }
 .z-combobox-rounded-inp {
 	background-image: url(${c:encodeURL('~./zul/img/silvertail/button/combobox-rounded.png')});

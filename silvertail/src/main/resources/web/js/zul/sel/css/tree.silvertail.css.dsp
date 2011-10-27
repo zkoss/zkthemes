@@ -39,7 +39,6 @@ div.z-tree-pgi-t {
 }
 div.z-tree-body td.z-treecell, div.z-tree-footer td.z-treefooter {
 	cursor: pointer;
-	font-family: ${fontFamilyC}; 
 	font-size: ${fontSizeM}; font-weight: normal; overflow: hidden;
 	padding: 1px 2px;
 }

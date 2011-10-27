@@ -270,8 +270,9 @@ div.z-grid-header .z-column.z-column-sizing div.z-column-cnt .z-column-btn {
 	cursor: e-resize;
 }
 .z-auxheader-cnt {
-	font-size: 12px; font-weight: bold;
-	font-family: arial;
+	font-weight: bold;
+	font-size: ${fontSizeM};
+	font-family: ${fontFamilyC};
 	color: #00547A;
 }
 div.z-grid-header .z-column-over-sort-asc, div.z-grid-header .z-column-over-sort-dsc {
