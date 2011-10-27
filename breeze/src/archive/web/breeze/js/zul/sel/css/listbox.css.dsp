@@ -6,7 +6,7 @@ div.z-listbox {
 	zoom: 1;
 	background: #FFF;
 	border:1px solid #CFCFCF;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
 }
 div.z-listbox-header, div.z-listbox-header tr, div.z-listbox-footer {
 	border: 0; width: 100%;
@@ -16,7 +16,7 @@ div.z-listbox-header, div.z-listbox-footer {
 }
 div.z-listbox-header tr.z-listhead, div.z-listbox-header tr.z-auxhead {
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
 }
 div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
 	position: relative;
@@ -126,9 +126,9 @@ td.z-listcell-disd a:visited, td.z-listcell-disd a:hover {
 	border-color: #D0DEF0 !important;
 }
 tr.z-listitem-seld {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/tree/item-sel.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/tree/item-sel.png')});
 	<c:if test="${c:browser('ie6-')}">
-		background-image: url(${c:encodeURL('~./zul/img/breeze/tree/item-sel.gif')});
+		background-image: url(${c:encodeURL('~./breeze/zul/img/tree/item-sel.gif')});
 	</c:if>
 }
 tr.z-listitem-over > td.z-listcell {
@@ -136,7 +136,7 @@ tr.z-listitem-over > td.z-listcell {
 	border-bottom: 1px solid #e3f2ff;
 }
 tr.z-listitem-over {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/column-over.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-over.png')});
 }
 tr.z-listitem-over-seld {
 	background: #c5e8fa;
@@ -180,7 +180,7 @@ td.z-listgroup-inner div.z-listcell-cnt {
 	display:-moz-inline-box;
 	vertical-align: top;
 	display: inline-block;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/tree/arrow-toggle.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/tree/arrow-toggle.gif')});
 	background-repeat: no-repeat;
 	vertical-align: top; cursor: pointer; border: 0;
 }
@@ -241,7 +241,7 @@ div.z-listbox-footer .z-listfooter {
 }
 
 div.z-listbox-header th.z-listheader-sort-over {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/header-over.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/header-over.png')});
 }
 
 .z-listbox-header-bg {
@@ -250,7 +250,7 @@ div.z-listbox-header th.z-listheader-sort-over {
 	top: 0;
 	height: 1px;
 	font-size: 0;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/head-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/head-bg.png')});
 	margin-top: -1px;
 }
 
@@ -271,7 +271,7 @@ div.z-listbox-header th.z-listheader-sort-over {
 .z-listheader-sort-dsc .z-listheader-sort-img {
 	background-position: 0 0;
     background-repeat: no-repeat;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/arrows.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/arrows.png')});
 }
 
 .z-listheader-sort-asc .z-listheader-sort-img {

@@ -46,7 +46,7 @@ tr.z-vbox-sep {
 .z-splitter-hor-outer,
 .z-splitter-os-hor-outer {
 	background: transparent repeat-y top right;
-	background-image:url(${c:encodeURL('~./zul/img/breeze/splt/splt-h-ns.png')});
+	background-image:url(${c:encodeURL('~./breeze/zul/img/splt/splt-h-ns.png')});
 }
 .z-splitter-os-hor-outer {
 	background-image:url(${c:encodeURL('~./zul/img/splt/splt-h-os.gif')});
@@ -54,14 +54,14 @@ tr.z-vbox-sep {
 .z-splitter-ver-outer .z-splitter-ver-outer-td,
 .z-splitter-os-ver-outer .z-splitter-os-ver-outer-td {
  	background: transparent repeat-x bottom left;
-	background-image:url(${c:encodeURL('~./zul/img/breeze/splt/splt-v-ns.png')});
+	background-image:url(${c:encodeURL('~./breeze/zul/img/splt/splt-v-ns.png')});
 }
 .z-splitter-os-ver-outer .z-splitter-os-ver-outer-td {
 	background-image:url(${c:encodeURL('~./zul/img/splt/splt-v-os.gif')});
 }
 .z-splitter-hor {
 	background: transparent no-repeat center left;
-	background-image:url(${c:encodeURL('~./zul/img/breeze/splt/splt-h.png')});
+	background-image:url(${c:encodeURL('~./breeze/zul/img/splt/splt-h.png')});
 	max-width: 6px; width: 6px;
 }
 .z-splitter-hor,
@@ -79,7 +79,7 @@ tr.z-vbox-sep {
 }
 .z-splitter-ver {
 	background: transparent no-repeat top center;
-	background-image:url(${c:encodeURL('~./zul/img/breeze/splt/splt-v.png')});
+	background-image:url(${c:encodeURL('~./breeze/zul/img/splt/splt-v.png')});
 	max-height: 6px; height: 6px;
 }
 .z-splitter-ver,
@@ -137,18 +137,18 @@ tr.z-vbox-sep {
 .z-splitter-hor-btn-l,
 .z-splitter-hor-btn-r {
 	width: 6px;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-l.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-l.png')});
 }
 .z-splitter-hor-btn-r {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-r.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-r.png')});
 }
 .z-splitter-ver-btn-t,
 .z-splitter-ver-btn-b {
 	width: 50px; min-height: 6px; height: 6px;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-t.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-t.png')});
 }
 .z-splitter-ver-btn-b {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-b.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-b.png')});
 }
 .z-splitter-os-hor-btn-l,
 .z-splitter-os-hor-btn-r {
@@ -169,19 +169,19 @@ tr.z-vbox-sep {
 <c:if test="${c:browser('ie6-')}">
 .z-splitter-ver-btn-l, 
 .z-splitter-hor-btn-l {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-l.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-l.gif')});
 }
 .z-splitter-ver-btn-r, 
 .z-splitter-hor-btn-r {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-r.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-r.gif')});
 }
 .z-splitter-ver-btn-t, 
 .z-splitter-hor-btn-t {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-t.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-t.gif')});
 }
 .z-splitter-ver-btn-b, 
 .z-splitter-hor-btn-b {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/splt/colps-b.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-b.gif')});
 }
 </c:if>
 <c:if test="${c:isGecko()}">

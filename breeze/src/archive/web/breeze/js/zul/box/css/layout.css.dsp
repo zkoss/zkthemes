@@ -1,2 +1,2 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
-<c:include page="~./js/zul/layout/css/layout.breeze.css.dsp"/>
+<c:include page="~./breeze/js/zul/layout/css/layout.css.dsp"/>

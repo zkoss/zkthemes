@@ -11,7 +11,7 @@
 	width: 100%;
 	height: 18px;
 	background: transparent no-repeat 2px 3px;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/row-expand.png')}); 
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/row-expand.png')}); 
 }
 .z-detail.z-detail-expd .z-detail-img {
 	background-position: -14px 3px;
@@ -24,7 +24,7 @@ tr.z-row .z-detail-outer {
 	border-right: 1px solid #C0C0C0;
 	border-bottom: 1px solid #D0D0D0;
 	vertical-align: top;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/detail-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/detail-bg.png')});
 	padding:10px;
 	width: 18px;
 }

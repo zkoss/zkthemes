@@ -4,7 +4,7 @@
 div.z-grid {
 	border: 1px solid #CFCFCF;
 	background: #FFF;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
 	overflow: hidden;
 	zoom: 1;
 }
@@ -18,7 +18,7 @@ div.z-grid-header, div.z-grid-footer {
 div.z-grid-header tr.z-columns, div.z-grid-header tr.z-auxhead {
 	background-repeat: repeat-x;
 	background-color: white;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
 }
 div.z-grid-header th.z-column, div.z-grid-header th.z-auxheader {
 	position: relative;
@@ -152,7 +152,7 @@ td.z-group-inner {
 	display:-moz-inline-box;
 	vertical-align: top;
 	display: inline-block;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/tree/arrow-toggle.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/tree/arrow-toggle.gif')});
 	background-repeat: no-repeat;
 	vertical-align: top; cursor: pointer; border: 0;
 }
@@ -199,7 +199,7 @@ td.z-footer {
 	top: 0;
 	right: 0;
 	width: 23px;
-	background: url(${c:encodeURL('~./zul/img/breeze/grid/hd-btn.png')}) no-repeat scroll left 0 transparent;
+	background: url(${c:encodeURL('~./breeze/zul/img/grid/hd-btn.png')}) no-repeat scroll left 0 transparent;
 	background-position: 0 0;
 }
 .z-column-over .z-column-btn, .z-column-visi .z-column-btn {
@@ -223,7 +223,7 @@ a.z-column-btn:hover {
 }
 div.z-grid-header th.z-column-over,
 div.z-grid-header th.z-auxheader-over {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/header-over.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/header-over.png')});
 }
 .z-column-sort-img {
 	position: absolute;
@@ -245,7 +245,7 @@ div.z-grid-header .z-column-sort-asc, div.z-grid-header .z-column-sort-dsc {
 .z-column-sort-dsc .z-column-sort-img {
     background-position: 0 0;
     background-repeat: no-repeat;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/arrows.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/arrows.png')});
 }
 .z-column-sort-asc .z-column-sort-img {
 	background-position: 0 0;
@@ -260,7 +260,7 @@ div.z-grid-header .z-column-sort-asc, div.z-grid-header .z-column-sort-dsc {
 	top: 0;
 	height: 1px;
 	font-size: 0;
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/head-bg.png')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/head-bg.png')});
 	margin-top: -1px;
 }
 <%-- ZK Column's sizing --%>
@@ -276,7 +276,7 @@ div.z-grid-header .z-column.z-column-sizing div.z-column-cnt .z-column-btn {
 	color: #636363;
 }
 div.z-grid-header .z-column-over-sort-asc, div.z-grid-header .z-column-over-sort-dsc {
-	background-image:url(${c:encodeURL('~./zul/img/breeze/grid/column-bg.png')});
+	background-image:url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
 }
 div.z-grid-header tr.z-columns th:last-child,
 div.z-grid-header tr.z-auxhead th:last-child {
@@ -313,7 +313,7 @@ tr.z-row-over > td.z-row-inner {
 
 
 tr.z-row-over > td.z-row-inner, tr.z-row-over > .z-cell {
-	background-image:url(${c:encodeURL('~./zul/img/breeze/grid/column-over.png')});
+	background-image:url(${c:encodeURL('~./breeze/zul/img/grid/column-over.png')});
 }
 
 <%-- Autopaging --%>
@@ -377,7 +377,7 @@ tr.z-row td.z-row-inner {
 }
 .z-column-sort-asc .z-column-sort-img,
 .z-column-sort-dsc .z-column-sort-img {
-	background-image: url(${c:encodeURL('~./zul/img/breeze/grid/arrows.gif')});
+	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/arrows.gif')});
 }
 </c:if>
 <c:if test="${c:browser('ie6-') or c:browser('ie7-')}">
