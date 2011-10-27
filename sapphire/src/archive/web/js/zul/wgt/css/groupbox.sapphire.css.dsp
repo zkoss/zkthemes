@@ -57,7 +57,7 @@
 }
 .z-groupbox-hm {
 	background:transparent repeat-x 0 0;
-	background-image:url(${c:encodeURL('~./zul/img/sapphire/layout/borderlayout-hm.png')});
+	background-image:url(${c:encodeURL('~./zul/img/sapphire/layout/groupbox-hm.png')});
 	overflow: hidden;
 	border: 1px solid #8FB9D0;
 	zoom: 1;
@@ -116,6 +116,6 @@
 <%-- IE 6 GIF  --%>
 <c:if test="${c:browser('ie6-')}">
 .z-groupbox-hm {
-	background-image:url(${c:encodeURL('~./zul/img/sapphire/layout/borderlayout-hm.gif')});
+	background-image:url(${c:encodeURL('~./zul/img/sapphire/layout/groupbox-hm.gif')});
 }
 </c:if>
