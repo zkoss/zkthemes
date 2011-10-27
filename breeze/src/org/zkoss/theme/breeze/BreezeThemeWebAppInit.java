@@ -58,7 +58,7 @@ public class BreezeThemeWebAppInit implements WebAppInit, SEORenderer {
 			String name = Themes.getCurrentTheme();
 			if (!BREEZE_NAME.equals(name))
 				out.write("<script src='" + 
-					Executions.encodeURL("~./js/zul." + name + ".wpd") + "'></script>");
+					Executions.encodeURL("~./" + name +"/js/zul.wpd") + "'></script>");
 		}
 	}
 }
