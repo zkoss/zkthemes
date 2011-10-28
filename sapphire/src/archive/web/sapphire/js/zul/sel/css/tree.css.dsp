@@ -6,7 +6,7 @@ div.z-tree {
 	overflow: hidden; 
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-tree-header, div.z-tree-header tr, div.z-tree-footer {
 	border: 0; width: 100%;
@@ -16,7 +16,7 @@ div.z-tree-header, div.z-tree-footer {
 }
 div.z-tree-header tr.z-treecols, div.z-tree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
 	overflow: hidden; 
@@ -46,6 +46,9 @@ div.z-tree-footer {
 	background: #F9F9F9;
 	border-top:1px solid #CFCFCF;
 }
+div.z-tree-header div.z-auxheader-cnt {
+	padding: 8px 5px 7px;
+}
 tr.z-tree-faker, tr.z-tree-faker th, tr.z-tree-faker div,
 tr.z-dottree-faker, tr.z-dottree-faker th, tr.z-dottree-faker div,
 tr.z-filetree-faker, tr.z-filetree-faker th, tr.z-filetree-faker div,
@@ -67,7 +70,7 @@ span.z-tree-ico {
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/tree/arrow-toggle.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/tree/arrow-toggle.png')});
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open {
 	background-position: 0 -18px;
@@ -85,6 +88,10 @@ span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 .z-treerow-ico-over span.z-tree-last-close {
 	background-position: right 0;
 }
+div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
+	border-color: #CFCFCF #CFCFCF #CFCFCF white;
+	border-top: none;
+}
 div.z-tree-header tr.z-treecols th:last-child, 
 div.z-tree div.z-tree-header tr.z-auxhead th:last-child {
 	border-right: none;
@@ -96,7 +103,7 @@ div.z-tree-footer td.z-treefooter {
 }
 <%-- Treecol, Treefooter, and Treecell--%>
 div.z-tree-header th.z-treecol-sort-over {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/header-over.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/header-over.png')});
 }
 div.z-treefooter-cnt, div.z-treecol-cnt {
 	overflow: hidden;
@@ -112,11 +119,13 @@ td.z-treecell {
 div.z-treecell-cnt {
 	padding: 1px 0 1px 0;
 }
+
 div.z-treefooter-cnt, div.z-treecell-cnt, div.z-treecol-cnt {
-	border: 0; margin: 0; padding: 0;
+	border: 0; margin: 0; 
+	padding: 8px 5px 7px;
 	font-family: ${fontFamilyC};
 	font-size: ${fontSizeM}; font-weight: normal;
-	color:#636363;
+	white-space: nowrap;
 }
 div.z-treefooter-cnt, div.z-treecol-cnt {
 	overflow: hidden;
@@ -124,7 +133,10 @@ div.z-treefooter-cnt, div.z-treecol-cnt {
 	font-family: arial;
 	font-size: 12px;
 	font-weight:bold;
-	color: #636363;
+	color: #252525;
+}
+div.z-treecol-cnt {
+	color: #00547A;
 }
 div.z-treecol-cnt, div.z-tree-header div.z-auxheader-cnt {
 	font-weight:bold;
@@ -182,7 +194,7 @@ div.z-vfiletree-header th.z-treecol-sort-dsc div.z-treecol-cnt {
 .z-treecol-sort-dsc .z-treecol-sort-img {
 	background-position: 0 0;
     background-repeat: no-repeat;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/arrows.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/arrows.png')});
 }
 
 .z-treecol-sort-asc .z-treecol-sort-img {
@@ -207,6 +219,7 @@ div.z-vfiletree-header th.z-treecol-sort-asc div.z-treecol-cnt,
 div.z-vfiletree-header th.z-treecol-sort-dsc div.z-treecol-cnt {
 	background-image: none;
 }
+
 <%-- Treerow --%>
 tr.z-treerow, tr.z-treerow a, tr.z-treerow a:visited {
 	font-size: ${fontSizeM}; font-weight: normal; color: black;
@@ -225,18 +238,18 @@ td.z-treecell-disd a:visited, td.z-treecell-disd a:hover {
 	border-color: #D0DEF0 !important;
 }
 tr.z-treerow-seld {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/tree/item-sel.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/tree/item-sel.png')});
 	<c:if test="${c:browser('ie6-')}">
-		background-image: url(${c:encodeURL('~./breeze/zul/img/tree/item-sel.gif')});
+		background-image: url(${c:encodeURL('~./sapphire/zul/img/tree/item-sel.gif')});
 	</c:if>
 	border: 1px solid #6f97d2;
 }
 tr.z-treerow-over > td.z-treecell {
-	border-top: 1px solid #e3f2ff;
-	border-bottom: 1px solid #e3f2ff;
+	border-top: 1px solid #F1FAFF;
+	border-bottom: 1px solid #F1FAFF;
 }
 tr.z-treerow-over {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-over.png')});
+	background: #e8f6fd;
 }
 tr.z-treerow-over-seld {
 	background: #c5e8fa;
@@ -250,7 +263,7 @@ tr.z-treerow-over-seld {
 	top: 0;
 	height: 1px;
 	font-size: 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/head-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/head-bg.png')});
 	margin-top: -1px;
 }
 
@@ -262,14 +275,13 @@ tr.z-treerow-over-seld {
 	display: none;
 }
 </c:if>
-
 <%-- z-dottree --%>
 div.z-dottree {
 	background: #FFF;
 	overflow: hidden;
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-dottree-header, div.z-dottree-header tr, div.z-dottree-footer {
 	border: 0; width: 100%;
@@ -278,7 +290,7 @@ div.z-dottree-header, div.z-dottree-footer {
 	overflow: hidden;
 }
 div.z-dottree-header tr.z-treecols, div.z-tree-header tr.z-auxhead {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-dottree-header th {
 	overflow: hidden; 
@@ -303,7 +315,7 @@ div.z-dottree-pgi-t {
 div.z-dottree-header tr.z-treecols,
 div.z-dottree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 
 
@@ -373,7 +385,7 @@ div.z-filetree {
 	overflow: hidden;
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-filetree-header, div.z-filetree-header tr, div.z-filetree-footer {
 	border: 0; width: 100%;
@@ -382,7 +394,7 @@ div.z-filetree-header, div.z-filetree-footer {
 	overflow: hidden;
 }
 div.z-filetree-header tr.z-treecols, div.z-tree-header tr.z-auxhead  {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-filetree-header th.z-treecol, div.z-filetree-header th.z-auxheader {
 	overflow: hidden; 
@@ -439,7 +451,7 @@ span.z-filetree-vbar, span.z-filetree-spacer {
 div.z-filetree-header tr.z-treecols, 
 div.z-filetree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-filetree-header tr.z-treecols th:last-child, 
 div.z-filetree div.z-filetree-header tr.z-auxhead th:last-child {
@@ -451,7 +463,7 @@ div.z-vfiletree {
 	overflow: hidden; 
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-vfiletree-header, div.z-vfiletree-header tr, div.z-vfiletree-footer {
 	border: 0; width: 100%;
@@ -460,7 +472,7 @@ div.z-vfiletree-header, div.z-vfiletree-footer {
 	overflow: hidden;
 }
 div.z-vfiletree-header tr.z-treecols, div.z-tree-header tr.z-auxhead  {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-vfiletree-header th.z-treecol, div.z-vfiletree-header th.z-auxheader {
 	overflow: hidden; border: 1px solid;
@@ -514,7 +526,7 @@ span.z-vfiletree-vbar, span.z-vfiletree-spacer {
 div.z-vfiletree-header tr.z-treecols, 
 div.z-vfiletree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
 }
 div.z-vfiletree-header th.z-treecol,
 div.z-vfiletree-header th.z-auxheader {
@@ -617,7 +629,7 @@ span.z-vfiletree-tee, span.z-vfiletree-last {
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/tree/arrow-toggle.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/tree/arrow-toggle.gif')});
 }
 </c:if>
 </c:if>
@@ -662,7 +674,7 @@ div.z-treefooter-cnt, div.z-treecol-cnt {
 	margin: 2px;
 }
 .z-treerow-img-checkbox, .z-treerow-img-radio {
-	background-image:url(${c:encodeURL('~./zul/img/common/check-sprite.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/common/check-sprite.gif')});
 	background-position: 0 0;
 }
 .z-treerow-img-radio {

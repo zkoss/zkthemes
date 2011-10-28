@@ -10,20 +10,20 @@
 	white-space: nowrap;
 	font-family:  Arial;
 	font-size: 12px;
-	color: #636363;
+	color: #00547A;
 }
 <%-- define common horizontal and vertical property --%>
 .z-menubar-hor,.z-menubar-ver {
 	position : relative;
 	display: block;
 	padding : 2px 0;
-	border-top : 1px solid #D8D8D8;
-	border-bottom : 1px solid #D8D8D8;
+	border-top : 1px solid #8FB9D0;
+	border-bottom : 1px solid #8FB9D0;
 	background: #F5F5F5 repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/menu/menu-bg.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/menu/menu-bg.png')});
 }
 .z-menubar-ver {
-	background-color: #f5f5f5;
+	background-color: #C5E8FA;
 	background-image: none;
 }
 .z-menubar-ver button.z-menu-btn {
@@ -69,11 +69,11 @@
 	padding-right: 3px;
 	padding-left: 0;
 	background: transparent no-repeat right -14px;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/btn-arrow.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/btn-arrow.gif')});
 }
 .z-menubar-hor .z-menu-body-clk .z-menu-inner-m  div,
 .z-menubar-ver .z-menu-body-clk .z-menu-inner-m  div {
-	padding-right: 6px;
+	padding-right: 8px;
 }
 .z-menubar-ver .z-menu-inner-m div {
 	background-position: right 0;
@@ -139,7 +139,7 @@
 .z-menu-item-body-over .z-menu-item-inner-r {
 	background-repeat : no-repeat;
 	background-position : 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/menu/menu-btn.png')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/menu/menu-btn.png')});
 }
 .z-menu-body-over .z-menu-inner-r,
 .z-menu-item-body-over .z-menu-item-inner-r {
@@ -149,39 +149,39 @@
 .z-menu-item-body-over .z-menu-item-inner-m {
 	background-repeat : repeat-x;
 	background-position : 0 -80px;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/menu/menu-btn.png')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/menu/menu-btn.png')});
 	overflow: hidden;
 }
 .z-menu-body-over .z-menu-inner-m .z-menu-btn,
 .z-menu-item-body-over .z-menu-item-inner-m .z-menu-btn{
-	color:#233D6D;
+	color:#00547A;
 }
 .z-menubar-hor .z-menu-body-over .z-menu-inner-m  div {
 	background: transparent no-repeat right -14px;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/btn-arrow.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/btn-arrow.gif')});
 }
 .z-menubar-ver .z-menu-body-over .z-menu-inner-m  div {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/btn-arrow.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/btn-arrow.gif')});
 }
 .z-menubar-hor .z-menu-body-clk-over .z-menu-inner-m  div {
 	background: transparent no-repeat right 0;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/btn-menu-hor-over.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/btn-menu-hor-over.gif')});
 }
 .z-menubar-ver .z-menu-body-clk-over .z-menu-inner-m  div {
 	background: transparent no-repeat right 0;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/btn-menu-ver-over.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/btn-menu-ver-over.gif')});
 }
 <%-- seld effect --%>
 .z-menu-body-seld .z-menu-inner-l,
 .z-menu-body-seld .z-menu-inner-r {
-	background:  url(${c:encodeURL('~./breeze/zul/img/menu/menu-btn.png')}) no-repeat transparent 0 -120px;
+	background:  url(${c:encodeURL('~./sapphire/zul/img/menu/menu-btn.png')}) no-repeat transparent 0 -120px;
 }
 .z-menu-body-seld .z-menu-inner-r {
 	background-position : 0 -160px;
 }
 .z-menu-body-seld .z-menu-inner-m {
 	background-position : 0 -200px;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/menu/menu-btn.png')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/menu/menu-btn.png')});
 }
 .z-menu-body-seld .z-menu-inner-m .z-menu-btn {
 	color:#233D6D;
@@ -209,8 +209,8 @@
 }
 .z-menu-popup {
 	background:none;
-	background-color:#FAFAFA;
-	border:1px solid #c2c2c2;
+	background-color:#C5E8FA;
+	border:1px solid #8FB9D0;
 	padding:1px;
 	z-index:88000;
 	left: 0;
@@ -231,7 +231,7 @@
 }
 .z-menu-popup .z-menu-popup-cnt{
 	background:transparent none repeat 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/menu/pp-bg.png')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/menu/pp-bg.png')});
 	border:0 none;
 	padding:0;
 	margin:0 !important;
@@ -252,7 +252,7 @@
 }
 .z-menu-popup-cnt .z-menu a.z-menu-cnt,
 .z-menu-popup-cnt .z-menu-item a.z-menu-item-cnt {
-	color:#222222;
+	color:#233D6D;
 	display:block;
 	line-height:17px;
 	<c:if test="${c:browser('ie7-')}">
@@ -284,16 +284,16 @@
 }
 .z-menu-popup-cnt .z-menu .z-menu-cnt-img {
 	background:transparent no-repeat right center;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/arrow.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/arrow.gif')});
 }
 <%--define checked menuitem effect in menupopup --%>
 .z-menu-popup-cnt .z-menu-item-cnt-ck .z-menu-item-img {
 	background:transparent no-repeat center center;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/checked.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/checked.gif')});
 }
 .z-menu-popup-cnt .z-menu-item-cnt-unck .z-menu-item-img {
 	background:transparent no-repeat center center;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/menu/unchecked.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/menu/unchecked.gif')});
 }
 <%--define disabled menuitem effect in menupopup--%>
 .z-menu-popup-cnt .z-menu-item-disd,
@@ -319,7 +319,7 @@
 }
 .z-menu-popup-cnt .z-menu-over a.z-menu-cnt,
 .z-menu-popup-cnt .z-menu-item-over a.z-menu-item-cnt{
-	color:#233D6D;
+	color:#00547A;
 }
 .z-menu-popup-cnt .z-menu-item-over .z-menu-item-cl,
 .z-menu-popup-cnt .z-menu-item-over .z-menu-item-cr,
@@ -329,7 +329,7 @@
 .z-menu-popup-cnt .z-menu-over .z-menu-cm {
 	background-repeat : no-repeat;
 	background-position : 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/menu/menu-btn.png')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/menu/trans-menu-btn.png')});
 }
 
 .z-menu-popup-cnt .z-menu-item-over .z-menu-item-cl {
@@ -364,8 +364,8 @@
 	background-position: center left; background-repeat: repeat-x;
 }
 .z-menu-popup-cnt .z-menu-separator-inner {
-	background-color:#E0E0E0;
-	border-bottom:1px solid #FFFFFF;
+	background-color:#A2C0CE;
+	border-bottom:1px solid #D9F0FC;
 	display:block;
 	font-size:1px;
 	line-height:1px;
@@ -411,7 +411,7 @@
 .z-menubar-hor-left-scroll {
 	left: 0;
 	background: transparent no-repeat 0 -1px;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/tab/scroll-l.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/tab/scroll-l.png')});
 }
 .z-menubar-hor-left-scroll-over {
 	background-position: -25px -1px;
@@ -419,7 +419,7 @@
 .z-menubar-hor-right-scroll {
 	right: 0;
 	background: transparent no-repeat -25px -1px;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/tab/scroll-r.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/tab/scroll-r.png')});
 }
 .z-menubar-hor-right-scroll-over {
 	background-position: 0 -1px;

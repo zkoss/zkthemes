@@ -66,18 +66,18 @@
 	</c:if>
 }
 .z-combobox-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/combobox-rounded.png')});
 }
 .z-bandbox-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/bandbox-rounded.png')});
 }
 .z-datebox-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/datebox-rounded.png')});
 }
 .z-timebox-rounded-inp,
 .z-spinner-rounded-inp,
 .z-doublespinner-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});	
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/timebox-rounded.png')});	
 }
 .z-combobox-focus .z-combobox-inp,
 .z-bandbox-focus .z-bandbox-inp,
@@ -173,7 +173,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-spinner .z-spinner-btn,
 .z-doublespinner .z-doublespinner-btn {
 	background: transparent no-repeat 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/input/combobtn.gif')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/input/combobtn.gif')});
 	vertical-align: top; 
 	cursor: pointer; 
 	width: 19px; 
@@ -201,18 +201,18 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background-position: 0 -120px;	
 }
 .z-combobox-rounded .z-combobox-rounded-btn{	
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/combobox-rounded.png')});
 }
 .z-bandbox-rounded .z-bandbox-rounded-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/bandbox-rounded.png')});
 }
 .z-datebox-rounded .z-datebox-rounded-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/datebox-rounded.png')});
 }
 .z-timebox-rounded .z-timebox-rounded-btn,
 .z-spinner-rounded .z-spinner-rounded-btn,
 .z-doublespinner-rounded .z-doublespinner-rounded-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/timebox-rounded.png')});
 }
 .z-combobox-rounded .z-combobox-rounded-btn-right-edge,
 .z-bandbox-rounded .z-bandbox-rounded-btn-right-edge,
@@ -245,7 +245,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-datebox-rounded .z-datebox-rounded-btn-over,
 .z-timebox-rounded .z-timebox-rounded-btn-over,
 .z-spinner-rounded .z-spinner-rounded-btn-over,
-.z-doublespinner-rounded .z-doublespinner-rounded-btn-over  {
+.z-doublespinner-rounded .z-doublespinner-rounded-btn-over {
 	background-position: 0 -144px;
 }
 .z-combobox-focus .z-combobox-btn-clk, .z-combobox .z-combobox-btn-clk,
@@ -365,14 +365,14 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox .z-timebox-btn-upper,
 .z-spinner .z-spinner-btn-upper,
 .z-doublespinner .z-doublespinner-btn-upper {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/input/timebtn-up.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/input/timebtn-up.gif')});
 	border-bottom: 1px solid rgba(0,0,0,0);
 	-moz-border-radius:0 2px 0 0;
 }
 .z-timebox .z-timebox-btn-lower,
 .z-spinner .z-spinner-btn-lower,
 .z-doublespinner .z-doublespinner-btn-lower {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/input/timebtn-down.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/input/timebtn-down.gif')});
 	-moz-border-radius:0 0 2px 0;
 }
 .z-timebox .z-timebox-btn-over .z-timebox-btn-upper,
@@ -473,7 +473,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 
 <%-- Bandbox trendy mold --%>
 .z-bandbox .z-bandbox-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/input/bandbtn.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/input/bandbtn.gif')});
 }
 <%-- Datebox --%>
 .z-datebox-rounded-over,
@@ -481,7 +481,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background: #dae7f6;
 }
 .z-datebox .z-datebox-btn {
-	background-image : url(${c:encodeURL('~./breeze/zul/img/input/datebtn.gif')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/input/datebtn.gif')});
 }
 .z-datebox-rounded-pp,
 .z-datebox-pp {
@@ -642,18 +642,18 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background-position: 0 -72px;
 }
 .z-combobox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/combobox-rounded.png')});
 }
 .z-bandbox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/bandbox-rounded.png')});
 }
 .z-datebox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/datebox-rounded.png')});
 }
 .z-timebox-rounded-readonly,
 .z-spinner-rounded-readonly,
 .z-doublespinner-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});	
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/timebox-rounded.png')});	
 }
 .z-combobox-rounded .z-combobox-rounded-btn-right-edge.z-combobox-rounded-btn-readonly,
 .z-combobox-rounded i.z-combobox-rounded-btn-right-edge-readonly,
@@ -832,17 +832,17 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-combobox-rounded-inp,
 .z-combobox-rounded .z-combobox-rounded-btn,
 .z-combobox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/combobox-rounded.gif')});
 }
 .z-bandbox-rounded-inp,
 .z-bandbox-rounded .z-bandbox-rounded-btn,
 .z-bandbox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/bandbox-rounded.gif')});
 }
 .z-datebox-rounded-inp,
 .z-datebox-rounded .z-datebox-rounded-btn,
 .z-datebox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/datebox-rounded.gif')});
 }
 .z-timebox-rounded-inp,
 .z-spinner-rounded-inp,
@@ -853,7 +853,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox-rounded-readonly,
 .z-spinner-rounded-readonly,
 .z-doublespinner-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.gif')});	
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/button/timebox-rounded.gif')});	
 }
 </c:if>
 <%-- Gecko --%>

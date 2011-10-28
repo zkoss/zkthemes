@@ -2,7 +2,7 @@
 
 <%-- os mold --%>
 .z-paging-os {
-	background: #F9F9F9;
+	background: #E8F6FD;
 	padding: 6px 5px 6px 10px; zoom:1;
 	position: relative;
 }
@@ -10,7 +10,7 @@
 	background: none;
 	border: 0;
 	font-size: ${fontSizeS};
-	color: #0076a3; 
+	color: #00547A; 
 	font-weight: normal;
 	text-decoration: none;
 	font-family: arial;
@@ -20,25 +20,25 @@
 	top: -7px;
 }
 .z-paging-os .z-paging-os-cnt:hover {
-	color: #0076A3;
+	color: #00547A;
 	background-position: -24px 0;
 	text-decoration: underline;
 }
 .z-paging-os .z-paging-os-seld {
 	font-family:arial;
 	font-size: 11px; 
-	color: #363636; 
+	color: #FFFFFF; 
 	font-weight: bold;
 	background-image:none;
 	background-position: right 0;
 }
 .z-paging-os .z-paging-os-seld:hover {
-	color: #403E39;
+	color: #FFFFFF;
 }
 .z-paging-os span {
 	font-family: Arial;
 	font-size: 11px; 
-	color: #363636; 
+	color: #00547A; 
 	font-weight: normal;
 	position:absolute;
 	right: 8px;
@@ -74,7 +74,7 @@ div.z-paging-os-cnt-seld-m,
 div.z-paging-os-cnt-l-over {
 	display: inline-block;
 	*display: inline;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/paging-btn.png')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/paging-btn.png')});
 	background-position: 0 0;
 	zoom: 1;
 }
@@ -151,7 +151,7 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 	display:block;
 	padding:6px 2px 6px 10px;
 	position:relative;
-	background:#F9F9F9;
+	background:#E8F6FD;
 	background-image: none;
 }
 
@@ -171,9 +171,11 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 	font-family: ${fontFamilyT};
 	font-size: ${fontSizeMS};
 }
-
+.z-paging-text {
+	color: #00547A;
+}
 .z-paging .z-paging-btn {
-	background:#F9F9F9 none repeat 0 0;
+	background:#E8F6FD none repeat 0 0;
 	cursor:pointer;
 	text-align:center;
 	vertical-align:middle;
@@ -232,19 +234,19 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 }
 .z-paging-btn .z-paging-next {
 	background-position:0 0;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/pg-btn2.png')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/pg-btn2.png')});
 }
 .z-paging-btn .z-paging-prev {
 	background-position:0 -24px;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/pg-btn2.png')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/pg-btn2.png')});
 }
 .z-paging-btn .z-paging-last {
 	background-position:0 -48px;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/pg-btn2.png')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/pg-btn2.png')});
 }
 .z-paging-btn .z-paging-first {
 	background-position:0 -72px;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/pg-btn2.png')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/pg-btn2.png')});
 }
 
 
@@ -292,7 +294,7 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 <%--paging info--%>
 .z-paging-info,
 .z-paging div.z-paging-info {
-	color:#363636;
+	color:#00547A;
 	position:absolute;
 	right:8px;
 	top:11px;
@@ -310,7 +312,7 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 .z-paging-btn .z-paging-prev,
 .z-paging-btn .z-paging-last,
 .z-paging-btn .z-paging-first {	
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/pg-btn2.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/pg-btn2.gif')});
 }
 div.z-paging-os-cnt-l,
 div.z-paging-os-cnt-r,
@@ -319,7 +321,7 @@ div.z-paging-os-cnt-seld-l,
 div.z-paging-os-cnt-seld-r,
 div.z-paging-os-cnt-seld-m,
 div.z-paging-os-cnt-l-over {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/paging/paging-btn.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/paging/paging-btn.gif')});
 }
 </c:if>
 <c:if test="${c:isSafari()}">

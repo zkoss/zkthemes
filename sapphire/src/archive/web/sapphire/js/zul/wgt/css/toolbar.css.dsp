@@ -1,13 +1,13 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 
 .z-toolbar {
-	border-color: #C5C5C5; 
+	border-color: #8FB9D0; 
 	border-style: solid; 
 	border-width: 0 0 1px; 
 	display: block;
 	padding: 2px;
-	background: repeat-x 0 -1px;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/common/toolbar-hm.png')});
+	background: #C6E9FA repeat-x 0 -1px;
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/common/toolbar-hm.png')});
 	position: relative; zoom: 1;
 }
 .z-caption .z-toolbar {
@@ -46,6 +46,7 @@
 <%-- Toolbar Panel Mold--%>
 .z-toolbar-panel {
 	padding: 5px;
+	background: #C1E5ED;
 }
 
 .z-toolbar-panel .z-toolbar-panel-body .z-toolbar-panel-hor,
@@ -71,18 +72,18 @@
 .z-toolbarbutton .z-toolbarbutton-tr, 
 .z-toolbarbutton .z-toolbarbutton-bl, 
 .z-toolbarbutton .z-toolbarbutton-br{
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-corner.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/button/toolbarbtn-corner.gif')});
 }
 .z-toolbarbutton .z-toolbarbutton-tm, 
 .z-toolbarbutton .z-toolbarbutton-bm  {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-x.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/button/toolbarbtn-x.gif')});
 }
 .z-toolbarbutton .z-toolbarbutton-cl, 
 .z-toolbarbutton .z-toolbarbutton-cr {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-y.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/button/toolbarbtn-y.gif')});
 }
 .z-toolbarbutton .z-toolbarbutton-cm {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-ctr.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/button/toolbarbtn-ctr.gif')});
 }
 
 .z-toolbarbutton .z-toolbarbutton-tl,
@@ -197,7 +198,7 @@
 	font-weight: normal;
 }
 .z-toolbarbutton-over .z-toolbarbutton-cnt {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-ctr.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/button/toolbarbtn-ctr.gif')});
 	background-position: 0 -500px;
 }
 

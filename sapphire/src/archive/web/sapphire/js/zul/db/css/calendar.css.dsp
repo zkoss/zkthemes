@@ -2,7 +2,7 @@
 
 .z-calendar {
 	background: white;
-	border: 1px solid #C5C5C5;
+	border: 1px solid #8FB9D0;
 	font-family: ${fontFamilyC};
 	font-size: ${fontSizeM};
 	font-weight: normal;
@@ -113,11 +113,11 @@
 	font-weight:bold;
 	font-family:arial;
 	font-size: 12px;
-	color: #595959;
+	color: #252525;
 }
 .z-calendar-caldayrow .z-calendar-over,
 .z-calendar-title-over .z-calendar-ctrler {
-	color: #4D9CB5;
+	color: #37d4ff;
 }
 
 .z-calendar-calyear td,
@@ -149,7 +149,7 @@
 .z-calendar-calyear .z-calendar-over,
 .z-calendar-calmon .z-calendar-over,
 .z-calendar-caldayrow .z-calendar-over {
-	background: #E3F2FF;
+	background: #F1F9FC;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -159,7 +159,7 @@
 .z-calendar-calyear td.z-calendar-seld,
 .z-calendar-calmon td.z-calendar-seld,
 .z-calendar-calday td.z-calendar-seld {
-	background: #D9EFFA; 
+	background: #fdf2e6; 
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -171,14 +171,14 @@
 .z-calendar td.z-calendar-over-seld,
 .z-datebox-calmon td.z-datebox-over-seld,
 .z-datebox-calday td.z-datebox-over-seld {
-	background: #C3E5F4;
+	background: #5FA4FF;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	text-shadow: 1px 1px 3px #008bb6;
 }
 .z-calendar td.z-calendar-over-seld {
-	color: #008BB6;
+	color: white;
 }
 .z-calendar-caldow td {
 	text-align: center;
@@ -201,13 +201,13 @@
 	color: #636363;
 }
 .z-calendar .z-outside {
-	color: #AAA;
+	color: #888;
 	text-shadow: none;
 }
 
 <%-- Calendar weekend --%>
 td.z-calendar-wkend {
-	background: #F3F3F3;
+	background: #f7f7f7;
 }
 
 <%-- Issues --%>
@@ -223,6 +223,6 @@ td.z-calendar-wkend {
 <c:if test="${c:isExplorer()}">
 .z-datebox-rounded-calyear td,
 .z-calendar-calyear td, .z-datebox-calyear td {
-	color: #404040; 
+	color: black;
 }
 </c:if>

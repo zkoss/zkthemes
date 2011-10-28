@@ -16,7 +16,7 @@
 	font-weight: normal;
 	font-size: 12px;
 	background-color: #FFFFFF; 
-	border: 1px solid #CFCFCF;
+	border: 1px solid #80AABD;
 	padding: 2px 5px;
 }
 .z-fisheyebar-inner {

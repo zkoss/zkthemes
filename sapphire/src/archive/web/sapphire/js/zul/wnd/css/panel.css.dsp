@@ -25,7 +25,7 @@
 .z-panel-bl,
 .z-panel-br {
 	background: transparent no-repeat 0 top;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-corner.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-corner.png')});
 	margin-right: 7px;
 	height: 7px;
 	font-size: 0;
@@ -35,7 +35,7 @@
 .z-panel-tl-gray,
 .z-panel-tr-gray {
 	/* ADDED for framable, untitled case */
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-corner-blue.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-corner-blue.png')});
 }
 .z-panel-bl {
 	background-position: 0 -7px;
@@ -64,7 +64,7 @@
 }
 .z-panel-header {
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-hm.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-hm.png')});
 	border: 1px solid #B1CBD5;
 	padding: 5px 3px 4px 5px;
 }
@@ -74,22 +74,22 @@
 <%-- Header Left --%>
 .z-panel-hl {
 	background: transparent no-repeat 0 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-hl.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-hl.png')});
 	padding-left: 7px;
-	border-bottom: 1px solid #C5C5C5;
+	border-bottom: 1px solid #8FB9D0;
 	zoom: 1;
 }
 <%-- Header Right --%>
 .z-panel-hr {
 	background: transparent no-repeat right 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-hr.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-hr.png')});
 	padding-right: 7px;
 	zoom: 1;
 }
 <%-- Header Middle --%>
 .z-panel-hm {
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-hm.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-hm.png')});
 	overflow: hidden;
 	zoom: 1;
 }
@@ -97,7 +97,7 @@
 .z-panel-cm {
 	border: 0;
 	margin: 0;
-	background: #F1F9FF;
+	background: #C1E5ED;
 	padding-top: 6px;
 	<c:if test="${c:browser('ie6-') or c:browser('ie7-')}">
 	zoom: 1; <%-- fixed for B50-3315594.zul --%>
@@ -107,7 +107,7 @@
 .z-panel-cl,
 .z-panel-fl {
 	background: transparent repeat-y 0 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-clr.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-clr.png')});
 	padding-left: 4px;
 	zoom: 1;
 }
@@ -115,7 +115,7 @@
 .z-panel-cr,
 .z-panel-fr {
 	background: transparent repeat-y right 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-clr.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-clr.png')});
 	padding-right: 4px;
 	zoom: 1;
 }
@@ -194,7 +194,7 @@
 .z-panel-hl .z-panel-header {
 	background-color: transparent;
 	border: 0;
-	color: #363636;
+	color: #00547A;
 	padding: 3px 0 7px 0;
 }
 .z-panel-body {
@@ -204,7 +204,7 @@
 .z-panel-children {
 	overflow: hidden;
 	background-color: white;
-	border: 1px solid #C5C5C5;
+	border: 1px solid #8FB9D0;
 	border-top: 0;
 	position: relative;
 	zoom: 1;
@@ -216,22 +216,22 @@
 <%-- This is for fixing border of toolbars at different position --%>
 .z-panel-body .z-panel-top .z-toolbar,
 .z-panel-body .z-panel-btm .z-toolbar {
-	border: 1px solid #C5C5C5;
+	border: 1px solid #8FB9D0;
 	border-top: 0;
 	overflow: hidden;
 	padding: 2px;
 }
 .z-panel-cl .z-panel-top .z-toolbar {
-	border-top: 1px solid #C5C5C5;
+	border-top: 1px solid #8FB9D0;
 	border-bottom: 0;
 }
 .z-panel-cl .z-panel-children {
 	background-color: white;
-	border: 1px solid #C5C5C5;
+	border: 1px solid #8FB9D0;
 }
 .z-panel-children-noheader,
 .z-panel-cl .z-panel-children {
-	border-top: 1px solid #C5C5C5;
+	border-top: 1px solid #8FB9D0;
 }
 .z-panel-noborder .z-panel-children-noborder {
 	border-width: 0;
@@ -249,24 +249,24 @@
 <%-- This is for fixing border of toolbars at different position --%>
 .z-panel-top-noborder .z-toolbar {
 	border-bottom: 0;
-	border-top: 1px solid #C5C5C5;
+	border-top: 1px solid #8FB9D0;
 	overflow: hidden;
 }
 .z-panel-noborder .z-panel-top .z-panel-top-noborder .z-toolbar {
-	border-bottom: 1px solid #C5C5C5;
+	border-bottom: 1px solid #8FB9D0;
 	border-width: 0 0 1px;
 }
 .z-panel-noborder .z-panel-btm .z-panel-btm-noborder .z-toolbar {
-	border-top: 1px solid #C5C5C5;
+	border-top: 1px solid #8FB9D0;
 	border-width: 1px 0 0;
 }
 .z-panel-noborder .z-panel-header .z-panel-header-noborder {
 	border-width: 0;
-	border-bottom: 1px solid #C5C5C5;
+	border-bottom: 1px solid #8FB9D0;
 }
 .z-panel-top.z-panel-noheader .z-toolbar {
 	border-bottom: 0;
-	border-top: 1px solid #C5C5C5;
+	border-top: 1px solid #8FB9D0;
 	overflow: hidden;
 }
 
@@ -276,40 +276,37 @@
 	float: right;
 	margin-left: 2px;
 	background: transparent no-repeat 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/wnd/wnd-icon.png')});
-	width: 28px;
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-icon.png')});
+	width: 17px;
 	height: 17px;
 	cursor: pointer;
 }
-.z-panel-min {
-	background-position: 0 0;
-}
 .z-panel-min-over {
-	background-position: -28px 0;
+	background-position: -17px 0;
 }
 .z-panel-max {
 	background-position: 0 -17px;
 }
 .z-panel-max-over {
-	background-position: -28px -17px;
+	background-position: -17px -17px;
 }
 .z-panel-maxd {
 	background-position: 0 -34px;
 }
 .z-panel-maxd-over {
-	background-position: -28px -34px;
+	background-position: -17px -34px;
 }
 .z-panel-close {
 	background-position: 0 -51px;
 }
 .z-panel-close-over {
-	background-position: -28px -51px;
+	background-position: -17px -51px;
 }
 .z-panel-exp {
 	background-position: 0 -68px;
 }
 .z-panel-exp-over {
-	background-position: -28px -68px;
+	background-position: -17px -68px;
 }
 .z-panel-colpsd .z-panel-exp {
 	background-position: 0 -102px;
@@ -318,7 +315,7 @@
 	height:auto !important;
 }
 .z-panel-colpsd .z-panel-exp-over {
-	background-position: -28px -102px;
+	background-position: -17px -102px;
 }
 
 <%-- IE --%>
@@ -341,14 +338,14 @@
 .z-panel-tr,
 .z-panel-bl,
 .z-panel-br {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/wnd/panel-corner.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-corner.gif')});
 }
 .z-panel-tl-gray,
 .z-panel-tr-gray{
-	background-image: url(${c:encodeURL('~./breeze/zul/img/wnd/panel-corner-blue.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/panel-corner.gif')});
 }
 .z-panel-icon {
-	background-image : url(${c:encodeURL('~./breeze/zul/img/wnd/wnd-icon.gif')});
+	background-image : url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-icon.gif')});
 }
 </c:if>
 </c:if>
