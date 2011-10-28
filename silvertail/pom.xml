@@ -49,6 +49,16 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
+		<directory>${project.basedir}/debug</directory>
+		<outputDirectory>${project.basedir}/debug/classes</outputDirectory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		<sourceDirectory>${project.basedir}/src/</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/archive</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.zkoss.maven</groupId>
