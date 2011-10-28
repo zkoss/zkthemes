@@ -334,6 +334,9 @@ div.z-dottree-body td.z-treecell, div.z-dottree-footer td.z-treefooter {
 	font-size: ${fontSizeM}; font-weight: normal; overflow: hidden;
 	padding: 0 2px;
 }
+div.z-dottree-body .z-treecell-cnt {
+	padding: 0;
+}
 div.z-dottree-footer {
 	background: #F9F9F9;
 	border-top:1px solid #CFCFCF;
