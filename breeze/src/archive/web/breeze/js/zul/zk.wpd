@@ -10,26 +10,26 @@
 
 Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 -->
-<package name="zul.breeze" language="xul/html">
+<package name="zul" language="xul/html">
 <script>
 	jq(document.body).addClass('breeze');
 </script>
 	<!-- zul.grid -->
-	<script src="../grid/grid.breeze.js"/>
+	<script src="../grid/grid.js"/>
 	
 	<!-- zul.inp -->
-	<script src="../inp/inp.breeze.js"/>
+	<script src="../inp/inp.js"/>
 	
 	<!-- zul.menu -->
-	<script src="../menu/menu.breeze.js"/>
+	<script src="../menu/menu.js"/>
 	
 	<!-- zul.tab -->
-	<script src="../tab/tab.breeze.js"/>
+	<script src="../tab/tab.js"/>
 	
 	<!-- zul.wgt -->
-	<script src="../wgt/wgt.breeze.js"/>
+	<script src="../wgt/wgt.js"/>
 	
 	<!-- zul.wnd -->
-	<script src="../wnd/wnd.breeze.js"/>
+	<script src="../wnd/wnd.js"/>
 
 </package>
