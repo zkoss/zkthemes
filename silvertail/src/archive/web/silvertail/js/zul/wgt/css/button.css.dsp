@@ -3,7 +3,7 @@
 .z-button tr td {
 	font-family: ${fontFamilyT};
 	font-size: ${fontSizeM}; 
-	color: black;
+	color: #363636;
 	cursor: pointer; 
 	white-space: nowrap;
 }
@@ -46,7 +46,7 @@ span.z-button {
 </c:if>
 
 .z-button-disd {
-	color: gray; 
+	color: gray;
 	opacity: .6; 
 	-moz-opacity: .6; 
 	filter: alpha(opacity=60);
@@ -66,16 +66,16 @@ span.z-button {
 .z-button .z-button-tr, 
 .z-button .z-button-bl, 
 .z-button .z-button-br{
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-corner.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-corner.gif')});
 }
 .z-button .z-button-tm, .z-button .z-button-bm  {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-x.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-x.gif')});
 }
 .z-button .z-button-cl, .z-button .z-button-cr {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-y.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-y.gif')});
 }
 .z-button .z-button-cm {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-ctr.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-ctr.gif')});
 }
 
 <%-- tl, tr, cl, cr --%>
@@ -204,6 +204,6 @@ span.z-button {
 }
 .z-button-clk .z-button-cm {
 	background-position: 0 -1500px;
-	padding: 0 6px 0 8px;
+	padding: 2px 7px 0 7px;
 }
 

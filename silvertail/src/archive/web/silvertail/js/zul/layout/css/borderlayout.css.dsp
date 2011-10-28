@@ -58,7 +58,7 @@
 	height: 6px;
 	width: 6px;
 	background: #C4DCFB left;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/splt/splt-h.png')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/splt/splt-h.png')});
 	cursor: col-resize;
 	cursor: e-resize;
 	line-height: 0;
@@ -67,7 +67,7 @@
 .z-north-splt,
 .z-south-splt {
 	background: #C4DCFB top;
-	background-image:url(${c:encodeURL('~./breeze/zul/img/splt/splt-v.png')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/splt/splt-v.png')});
 	cursor: row-resize;
 	cursor: s-resize;
 }
@@ -107,7 +107,7 @@
 	height: 15px;
 	float: right;
 	background: transparent no-repeat 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/layout/borderlayout-btn.png')});
+	background-image : url(${c:encodeURL('~./silvertail/zul/img/layout/borderlayout-btn.png')});
 	margin-left: 2px;
 	cursor: pointer;
 }
@@ -117,14 +117,14 @@
 .z-east-header,
 .z-north-header,
 .z-south-header {
-	color: #555555;
+	color: #1B1B1B;
 	font-size: ${fontSizeMS};
 	font-family: ${fontFamilyT};
 	font-weight: bold;
 	padding: 5px 3px 4px 5px;
 	border-bottom: 1px solid #C5C5C5;
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/layout/borderlayout-hm.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/layout/borderlayout-hm.png')});
 	white-space: nowrap;
 	overflow: hidden;
 	line-height: 15px;
@@ -190,7 +190,7 @@
 .z-south-colpsd-over,
 .z-north-colpsd-over {
 	cursor: pointer;
-	background-color: #E5F5FD;
+	background-color: #E1E1E1;
 }
 
 <%-- Splitter button --%>
@@ -220,36 +220,36 @@
 	width: 6px; min-height: 50px; height: 50px;
 }
 .z-west-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-l.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-l.png')});
 }
 .z-east-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-r.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-r.png')});
 }
 .z-north-splt-btn,
 .z-south-splt-btn {
 	width: 50px; min-height: 5px; height: 6px;
 }
 .z-north-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-t.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-t.png')});
 }
 .z-south-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-b.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-b.png')});
 }
 
 <c:if test="${c:browser('ie6-')}">
 .z-borderlayout-icon {
-	background-image : url(${c:encodeURL('~./breeze/zul/img/layout/borderlayout-btn.gif')});
+	background-image : url(${c:encodeURL('~./silvertail/zul/img/layout/borderlayout-btn.gif')});
 }
 .z-west-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-l.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-l.gif')});
 }
 .z-east-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-r.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-r.gif')});
 }
 .z-north-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-t.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-t.gif')});
 }
 .z-south-splt-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/splt/colps-b.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/splt/colps-b.gif')});
 }
 </c:if>

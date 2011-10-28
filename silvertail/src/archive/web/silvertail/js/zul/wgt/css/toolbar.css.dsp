@@ -6,8 +6,8 @@
 	border-width: 0 0 1px; 
 	display: block;
 	padding: 2px;
-	background: repeat-x 0 -1px;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/common/toolbar-hm.png')});
+	background: #EEEEEE repeat-x 0 -1px;
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/common/toolbar-hm.png')});
 	position: relative; zoom: 1;
 }
 .z-caption .z-toolbar {
@@ -71,18 +71,18 @@
 .z-toolbarbutton .z-toolbarbutton-tr, 
 .z-toolbarbutton .z-toolbarbutton-bl, 
 .z-toolbarbutton .z-toolbarbutton-br{
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-corner.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/toolbarbtn-corner.gif')});
 }
 .z-toolbarbutton .z-toolbarbutton-tm, 
 .z-toolbarbutton .z-toolbarbutton-bm  {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-x.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/toolbarbtn-x.gif')});
 }
 .z-toolbarbutton .z-toolbarbutton-cl, 
 .z-toolbarbutton .z-toolbarbutton-cr {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-y.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/toolbarbtn-y.gif')});
 }
 .z-toolbarbutton .z-toolbarbutton-cm {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-ctr.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/toolbarbtn-ctr.gif')});
 }
 
 .z-toolbarbutton .z-toolbarbutton-tl,
@@ -172,8 +172,8 @@
 	zoom: 1;
 }
 .z-toolbarbutton-over {
-	border-top: 1px solid #7EAAC6;
-	border-bottom: 1px solid #7EAAC6;
+	border-top: 1px solid #CFCFCF;
+	border-bottom: 1px solid #CFCFCF;
 	padding: 0;
 }
 .z-toolbarbutton-body {
@@ -184,8 +184,8 @@
 	zoom: 1;
 }
 .z-toolbarbutton-over .z-toolbarbutton-body {
-	border-left: 1px solid #7EAAC6;
-	border-right: 1px solid #7EAAC6;
+	border-left: 1px solid #CFCFCF;
+	border-right: 1px solid #CFCFCF;
 	padding: 0;
 }
 .z-toolbarbutton-cnt {
@@ -197,7 +197,7 @@
 	font-weight: normal;
 }
 .z-toolbarbutton-over .z-toolbarbutton-cnt {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/toolbarbtn-ctr.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/toolbarbtn-ctr.gif')});
 	background-position: 0 -500px;
 }
 

@@ -3,9 +3,14 @@
 .z-combobutton tr td {
 	font-family: ${fontFamilyT};
 	font-size: ${fontSizeM}; 
-	color: black;
+	color: #363636;
 	cursor: pointer; 
 	white-space: nowrap;
+}
+.z-combobutton-over tr td,
+.z-combobutton-focus tr td,
+.z-combobutton-clk tr td {
+	color: #252525;
 }
 button.z-combobutton {
 	padding:0 !important; 
@@ -46,7 +51,7 @@ span.z-combobutton {
 </c:if>
 
 .z-combobutton-disd {
-	color: gray; 
+	color: gray;
 	opacity: .6; 
 	-moz-opacity: .6; 
 	filter: alpha(opacity=60);
@@ -64,23 +69,23 @@ span.z-combobutton {
 <%-- image --%>
 .z-combobutton .z-combobutton-tl, 
 .z-combobutton .z-combobutton-bl {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-corner.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-corner.gif')});
 }
-.z-combobutton .z-combobutton-tr, 
+.z-combobutton .z-combobutton-tr,
 .z-combobutton .z-combobutton-br {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/combobutton-corner-r.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/combobutton-corner-r.gif')});
 }
 .z-combobutton .z-combobutton-tm, .z-combobutton .z-combobutton-bm  {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-x.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-x.gif')});
 }
 .z-combobutton .z-combobutton-cl {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-y.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-y.gif')});
 }
 .z-combobutton .z-combobutton-cr {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/combobutton-y-r.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/combobutton-y-r.gif')});
 }
 .z-combobutton .z-combobutton-cm {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/btn-ctr.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/btn-ctr.gif')});
 }
 
 <%-- tl, tr, cl, cr --%>
@@ -96,14 +101,9 @@ span.z-combobutton {
 }
 .z-combobutton .z-combobutton-tr,
 .z-combobutton .z-combobutton-cr {
+	background-position: 0 0;
 	width: 21px;
-	border-left: 1px solid #CCCCCC;
-}
-.z-combobutton .z-combobutton-tr {
-	background-position: 0 0;
-}
-.z-combobutton .z-combobutton-cr {
-	background-position: 0 0;
+	border-left: 1px solid #AAAAAA;
 }
 .z-combobutton .z-combobutton-tl,
 .z-combobutton .z-combobutton-tr {
@@ -135,10 +135,8 @@ span.z-combobutton {
 }
 .z-combobutton-clk .z-combobutton-tr,
 .z-combobutton-clk .z-combobutton-cr {
-	border-color: #86A4BE;
-}
-.z-combobutton-clk .z-combobutton-tr {
 	background-position: 0 -24px;
+	border-color: #858585;
 }
 .z-combobutton-clk .z-combobutton-cr {
 	background-position: -63px 0;
@@ -160,7 +158,7 @@ span.z-combobutton {
 .z-combobutton .z-combobutton-br {
 	background-position: 0 -4px;
 	width: 21px;
-	border-left: 1px solid #CCCCCC;
+	border-left: 1px solid #AAAAAA;
 }
 .z-combobutton-focus .z-combobutton-bl {
 	background-position: -16px -4px;
@@ -179,7 +177,7 @@ span.z-combobutton {
 }
 .z-combobutton-clk .z-combobutton-br {
 	background-position: 0 -28px;
-	border-color: #86A4BE;
+	border-color: #858585;
 }
 
 <%-- tm, bm --%>
@@ -216,7 +214,7 @@ span.z-combobutton {
 	margin: 0; overflow: hidden;
 	vertical-align: middle;
 	text-align: center;
-	padding: 0 7px;
+	padding: 1px 7px;
 	background-repeat: repeat-x;
 	background-position: 0 0;
 	white-space: nowrap;
@@ -229,11 +227,11 @@ span.z-combobutton {
 }
 .z-combobutton-clk .z-combobutton-cm {
 	background-position: 0 -1500px;
-	padding: 0 6px 0 8px;
+	padding: 2px 7px 0 7px;
+	margin
 }
-
 .z-combobutton .z-combobutton-cr .z-combobutton-btn-img {
-	background-image:url(${c:encodeURL('~./breeze/zul/img/button/combobutton-right-btn.gif')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/combobutton-right-btn.gif')});
 	background-position: 0 0px;
 	width: 12px !important;
 	height: 22px;

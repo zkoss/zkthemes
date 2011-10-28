@@ -66,18 +66,18 @@
 	</c:if>
 }
 .z-combobox-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/combobox-rounded.png')});
 }
 .z-bandbox-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/bandbox-rounded.png')});
 }
 .z-datebox-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/datebox-rounded.png')});
 }
 .z-timebox-rounded-inp,
 .z-spinner-rounded-inp,
 .z-doublespinner-rounded-inp {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});	
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/timebox-rounded.png')});	
 }
 .z-combobox-focus .z-combobox-inp,
 .z-bandbox-focus .z-bandbox-inp,
@@ -85,7 +85,7 @@
 .z-timebox-focus .z-timebox-inp,
 .z-spinner-focus .z-spinner-inp,
 .z-doublespinner-focus .z-doublespinner-inp {
-	border: 1px solid #90BCE6;
+	border: 1px solid #CCCCCC;
 }
 .z-combobox-right-edge,
 .z-bandbox-right-edge,
@@ -102,7 +102,7 @@
 .z-timebox-focus .z-timebox-inp,
 .z-spinner-focus .z-spinner-inp,
 .z-doublespinner-focus .z-doublespinner-inp {
-	border: 1px solid #90BCE6;
+	border: 1px solid #999999;
 	border-right: 0;
 }
 .z-combobox-focus .z-combobox-right-edge,
@@ -111,7 +111,7 @@
 .z-timebox-focus .z-timebox-right-edge,
 .z-spinner-focus .z-spinner-right-edge,
 .z-doublespinner-focus .z-doublespinner-right-edge {
-	border-right: 1px solid #90BCE6;
+	border-right: 1px solid #999999;
 	-moz-border-radius: 2px 2px 2px 2px;
 }
 .z-combobox .z-combobox-text-invalid,
@@ -173,7 +173,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-spinner .z-spinner-btn,
 .z-doublespinner .z-doublespinner-btn {
 	background: transparent no-repeat 0 0;
-	background-image : url(${c:encodeURL('~./breeze/zul/img/input/combobtn.gif')});
+	background-image : url(${c:encodeURL('~./silvertail/zul/img/input/combobtn.gif')});
 	vertical-align: top; 
 	cursor: pointer; 
 	width: 19px; 
@@ -201,18 +201,18 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background-position: 0 -120px;	
 }
 .z-combobox-rounded .z-combobox-rounded-btn{	
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/combobox-rounded.png')});
 }
 .z-bandbox-rounded .z-bandbox-rounded-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/bandbox-rounded.png')});
 }
 .z-datebox-rounded .z-datebox-rounded-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/datebox-rounded.png')});
 }
 .z-timebox-rounded .z-timebox-rounded-btn,
 .z-spinner-rounded .z-spinner-rounded-btn,
 .z-doublespinner-rounded .z-doublespinner-rounded-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/timebox-rounded.png')});
 }
 .z-combobox-rounded .z-combobox-rounded-btn-right-edge,
 .z-bandbox-rounded .z-bandbox-rounded-btn-right-edge,
@@ -228,8 +228,8 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-bandbox .z-bandbox-btn-over,
 .z-datebox .z-datebox-btn-over {
 	background-position: -19px 0;
-	border-bottom: 1px solid #8FB9D0;
-	border-left: 1px solid #8FB9D0;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
 	margin-left: -1px;
 }
 .z-combobox-rounded-inp-over,
@@ -255,7 +255,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-spinner-focus .z-spinner-btn-clk, .z-spinner .z-spinner-btn-clk,
 .z-doublespinner-focus .z-doublespinner-btn-clk, .z-doublespinner .z-doublespinner-btn-clk {
 	background-position: -38px 0;
-	border-bottom: 1px solid #8FB9D0;
+	border-bottom: 1px solid #999999;
 }
 .z-combobox-focus .z-combobox-btn,
 .z-bandbox-focus .z-bandbox-btn,
@@ -264,7 +264,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-spinner-focus .z-spinner-btn,
 .z-doublespinner-focus .z-doublespinner-btn {
 	background-position: -57px 0;
-	border-bottom: 1px solid #8FB9D0;
+	border-bottom: 1px solid #999999;
 }
 .z-combobox-rounded-focus .z-combobox-rounded-inp,
 .z-bandbox-rounded-focus .z-bandbox-rounded-inp,
@@ -297,7 +297,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-spinner-focus .z-spinner-btn-over,
 .z-doublespinner-focus .z-doublespinner-btn-over {
 	background-position: -19px 0;
-	border-bottom: 1px solid #8FB9D0;
+	border-bottom: 1px solid #CCCCCC;
 }
 .z-combobox-rounded-focus .z-combobox-rounded-btn-over,
 .z-bandbox-rounded-focus .z-bandbox-rounded-btn-over,
@@ -348,7 +348,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox-focus .z-timebox-btn,
 .z-spinner-focus .z-spinner-btn,
 .z-doublespinner-focus .z-doublespinner-btn {
-	border-color: #90BCE6;
+	border-color: #CCCCCC;
 }
 .z-timebox .z-timebox-btn-upper,
 .z-spinner .z-spinner-btn-upper,
@@ -365,14 +365,14 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox .z-timebox-btn-upper,
 .z-spinner .z-spinner-btn-upper,
 .z-doublespinner .z-doublespinner-btn-upper {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/input/timebtn-up.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/input/timebtn-up.gif')});
 	border-bottom: 1px solid rgba(0,0,0,0);
 	-moz-border-radius:0 2px 0 0;
 }
 .z-timebox .z-timebox-btn-lower,
 .z-spinner .z-spinner-btn-lower,
 .z-doublespinner .z-doublespinner-btn-lower {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/input/timebtn-down.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/input/timebtn-down.gif')});
 	-moz-border-radius:0 0 2px 0;
 }
 .z-timebox .z-timebox-btn-over .z-timebox-btn-upper,
@@ -397,8 +397,8 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox .z-timebox-btn-up-clk,
 .z-spinner .z-spinner-btn-up-clk,
 .z-doublespinner .z-doublespinner-btn-up-clk {
-	border: 1px solid #90BCE6;
-	border-bottom: 1px solid #AADEFB;
+	border: 1px solid #999999;
+	border-bottom: 1px solid #999999;
 	margin: -1px;
 	margin-bottom: 0;
 }
@@ -408,7 +408,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox .z-timebox-btn-down-clk,
 .z-spinner .z-spinner-btn-down-clk,
 .z-doublespinner .z-doublespinner-btn-down-clk {
-	border: 1px solid #90BCE6;
+	border: 1px solid #999999;
 	border-top: 0;
 	margin: -1px;
 	margin-top: 0;
@@ -421,7 +421,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-bandbox-pp,
 .z-datebox-pp {
 	display: block; position: absolute;
-	background: white; border: 1px solid #86A4BE; padding: 2px;
+	background: white; border: 1px solid #CFCFCF; padding: 2px;
 	font-size: ${fontSizeS};
 }
 .z-combobox-rounded-pp,
@@ -457,15 +457,15 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 }
 .z-combobox-rounded-pp .z-comboitem-seld,
 .z-combobox-pp .z-comboitem-seld {
-	background: #b3c8e8; border: 1px solid #6f97d2;
+	background: #CCCCCC; border: 1px solid #6f97d2;
 }
 .z-combobox-rounded-pp .z-comboitem-over,
 .z-combobox-pp .z-comboitem-over {
-	background: #D3EFFA;
+	background: #E1E1E1;
 }
 .z-combobox-rounded-pp .z-comboitem-over-seld,
 .z-combobox-pp .z-comboitem-over-seld {
-	background: #82D5F8;
+	background: #B7B7B7;
 }
 .z-comboitem .z-comboitem-text {
 	font-size: 12px;
@@ -473,7 +473,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 
 <%-- Bandbox trendy mold --%>
 .z-bandbox .z-bandbox-btn {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/input/bandbtn.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/input/bandbtn.gif')});
 }
 <%-- Datebox --%>
 .z-datebox-rounded-over,
@@ -481,7 +481,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background: #dae7f6;
 }
 .z-datebox .z-datebox-btn {
-	background-image : url(${c:encodeURL('~./breeze/zul/img/input/datebtn.gif')});
+	background-image : url(${c:encodeURL('~./silvertail/zul/img/input/datebtn.gif')});
 }
 .z-datebox-rounded-pp,
 .z-datebox-pp {
@@ -642,18 +642,18 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 	background-position: 0 -72px;
 }
 .z-combobox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/combobox-rounded.png')});
 }
 .z-bandbox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/bandbox-rounded.png')});
 }
 .z-datebox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/datebox-rounded.png')});
 }
 .z-timebox-rounded-readonly,
 .z-spinner-rounded-readonly,
 .z-doublespinner-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.png')});	
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/timebox-rounded.png')});	
 }
 .z-combobox-rounded .z-combobox-rounded-btn-right-edge.z-combobox-rounded-btn-readonly,
 .z-combobox-rounded i.z-combobox-rounded-btn-right-edge-readonly,
@@ -832,17 +832,17 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-combobox-rounded-inp,
 .z-combobox-rounded .z-combobox-rounded-btn,
 .z-combobox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/combobox-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/combobox-rounded.gif')});
 }
 .z-bandbox-rounded-inp,
 .z-bandbox-rounded .z-bandbox-rounded-btn,
 .z-bandbox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/bandbox-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/bandbox-rounded.gif')});
 }
 .z-datebox-rounded-inp,
 .z-datebox-rounded .z-datebox-rounded-btn,
 .z-datebox-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/datebox-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/datebox-rounded.gif')});
 }
 .z-timebox-rounded-inp,
 .z-spinner-rounded-inp,
@@ -853,7 +853,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox-rounded-readonly,
 .z-spinner-rounded-readonly,
 .z-doublespinner-rounded-readonly {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/button/timebox-rounded.gif')});	
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/timebox-rounded.gif')});	
 }
 </c:if>
 <%-- Gecko --%>
