@@ -1,4 +1,4 @@
-/* menu.breeze.js
+/* menu.js
 
 	Purpose:
 
