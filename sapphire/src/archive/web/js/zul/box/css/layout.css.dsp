@@ -1,2 +1,2 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
-<c:include page="~./js/zul/layout/css/layout.sapphire.css.dsp"/>
+<c:include page="~./sapphire/js/zul/layout/css/layout.css.dsp"/>
