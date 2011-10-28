@@ -191,7 +191,7 @@ span.z-button {
 	margin: 0; overflow: hidden;
 	vertical-align: middle;
 	text-align: center;
-	padding: 0 7px;
+	padding: 1px 7px;
 	background-repeat: repeat-x;
 	background-position: 0 0;
 	white-space: nowrap;
