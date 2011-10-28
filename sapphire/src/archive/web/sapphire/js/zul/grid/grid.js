@@ -1,4 +1,4 @@
-/* grid.breeze.js
+/* grid.js
 
 	Purpose:
 

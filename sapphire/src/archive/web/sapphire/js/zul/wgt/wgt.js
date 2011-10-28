@@ -1,4 +1,4 @@
-/* wgt.breeze.js
+/* wgt.js
 
 	Purpose:
 

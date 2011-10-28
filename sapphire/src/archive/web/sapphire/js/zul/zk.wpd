@@ -15,21 +15,21 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 	jq(document.body).addClass('sapphire');
 </script>
 	<!-- zul.grid -->
-	<script src="../grid/grid.js"/>
+	<script src="grid/grid.js"/>
 	
 	<!-- zul.inp -->
-	<script src="../inp/inp.js"/>
+	<script src="inp/inp.js"/>
 	
 	<!-- zul.menu -->
-	<script src="../menu/menu.js"/>
+	<script src="menu/menu.js"/>
 	
 	<!-- zul.tab -->
-	<script src="../tab/tab.js"/>
+	<script src="tab/tab.js"/>
 	
 	<!-- zul.wgt -->
-	<script src="../wgt/wgt.js"/>
+	<script src="wgt/wgt.js"/>
 	
 	<!-- zul.wnd -->
-	<script src="../wnd/wnd.js"/>
+	<script src="wnd/wnd.js"/>
 
 </package>

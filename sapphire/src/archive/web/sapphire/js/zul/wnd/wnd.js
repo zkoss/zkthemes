@@ -1,4 +1,4 @@
-/* wnd.breeze.js
+/* wnd.js
 
 	Purpose:
 

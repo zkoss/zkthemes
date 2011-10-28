@@ -1,4 +1,4 @@
-/* tab.breeze.js
+/* tab.js
 
 	Purpose:
 

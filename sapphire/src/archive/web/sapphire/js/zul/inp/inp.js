@@ -1,4 +1,4 @@
-/* inp.breeze.js
+/* inp.js
 
 	Purpose:
 
