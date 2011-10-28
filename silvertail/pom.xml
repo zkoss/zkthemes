@@ -49,6 +49,16 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
+		<directory>${project.basedir}/debug</directory>
+		<outputDirectory>${project.basedir}/debug/classes</outputDirectory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		<sourceDirectory>${project.basedir}/src/</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/archive</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.zkoss.maven</groupId>
@@ -113,5 +123,35 @@
 				</executions>
 			</plugin>
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.zkoss.maven</groupId>
+										<artifactId>yuicompressor-maven-plugin-zk</artifactId>
+										<versionRange>[1.1.5,)</versionRange>
+										<goals>
+											<goal>compress</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>
