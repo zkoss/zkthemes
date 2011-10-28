@@ -240,7 +240,7 @@ div.z-log button {
 .z-renderdefer {
 	height: 16px; width: 16px;
 	background: transparent no-repeat center;
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/progress_breeze.gif')});
+	background-image: url(${c:encodeURL('~./zk/img/progress4.gif')});
 }
 
 .z-apply-loading-icon,
@@ -404,10 +404,10 @@ span.z-drop-allow, span.z-drop-disallow {
 	height: 16px;
 }
 span.z-drop-allow {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/drag-allow.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/drag-allow.png')});
 }
 span.z-drop-disallow {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/drag-disallow.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/drag-disallow.png')});
 }
 div.z-drop-ghost {
 	border: 1px solid #CCCCCC;
@@ -433,14 +433,14 @@ span.z-drop-allow {
 	background: none no-repeat scroll 0 0 #EEFFEE;
 }
 span.z-drop-allow {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/drag-allow.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/drag-allow.png')});
 }
 div.z-drop-disallow div.z-drop-cnt,
 span.z-drop-disallow {
 	background: none no-repeat scroll 0 0 #FFEEEE;
 }
 span.z-drop-disallow {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/drag-disallow.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/drag-disallow.png')});
 }
 
 <%-- customized by users
@@ -553,10 +553,10 @@ option {
 	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true, ShadowOpacity=0.30)
 }
 span.z-drop-allow {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/drag-allow.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/drag-allow.gif')});
 }
 span.z-drop-disallow {
-	background-image: url(${c:encodeURL('~./breeze/zul/img/misc/drag-disallow.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/drag-disallow.gif')});
 }
 </c:if><%-- IE6 --%>
 </c:if><%--IE --%>
