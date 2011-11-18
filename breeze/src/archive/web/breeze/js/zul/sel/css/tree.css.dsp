@@ -536,6 +536,9 @@ div.z-vfiletree div.z-vfiletree-header tr.z-auxhead th:last-child {
 	overflow: hidden;
 }
 
+.z-treecell-cnt {
+	line-height: 18px;<%-- Bug ZK-508 --%>
+}
 <%-- IE --%>
 <c:if test="${c:isExplorer()}">
 div.z-tree-header, div.z-dottree-header, div.z-filetree-header, div.z-vfiletree-header,
@@ -640,11 +643,6 @@ span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 }
 .z-treerow-seld td.z-treecell {
 	border-color: #E8F6FD #E8F6FD #E8F6FD #FFFFFF;
-}
-</c:if>
-<c:if test="${c:browser('ie6-')}">
-div.z-treefooter-cnt, div.z-treecol-cnt {
-	height: 16px;
 }
 </c:if>
 .z-treerow-img {
