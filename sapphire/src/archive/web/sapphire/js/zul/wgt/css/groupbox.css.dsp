@@ -120,13 +120,13 @@
 	padding: 5px;
 }
 
-<c:if test="${c:isExplorer7()}">
+<c:if test="${zk.ie >= 7}">
 .z-groupbox-3d-cnt {
 	zoom: 1;
 }
 </c:if>
 <%-- IE 6 GIF  --%>
-<c:if test="${c:browser('ie6-')}">
+<c:if test="${zk.ie == 6}">
 .z-groupbox-3d-hm {
 	background-image:url(${c:encodeURL('~./sapphire/zul/img/layout/groupbox-hm.gif')});
 }
