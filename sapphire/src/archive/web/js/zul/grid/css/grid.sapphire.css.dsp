@@ -21,7 +21,10 @@ div.z-grid-header tr.z-columns, div.z-grid-header tr.z-auxhead {
 	background-image: url(${c:encodeURL('~./zul/img/sapphire/grid/column-bg.png')});
 }
 div.z-grid-header th.z-column, div.z-grid-header th.z-auxheader {
+	<c:if test="${c:browser('ie6-') or c:browser('ie7-')}">
+	<%-- Bug B50-3178977 for IE6/7, but cannot use it for IE8+ (Bug ZK-398)--%>
 	position: relative;
+	</c:if>
 	overflow: hidden;
 	border: 1px solid;
 	white-space: nowrap;
