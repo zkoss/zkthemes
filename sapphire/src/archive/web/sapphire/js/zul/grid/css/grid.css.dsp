@@ -29,6 +29,10 @@ div.z-grid-header th.z-column, div.z-grid-header th.z-auxheader {
 	font-size: ${fontSizeM}; font-weight: normal;
 	border-color: #8FB9D0 #8FB9D0 #8FB9D0 white;
 	border-top: none;
+	<c:if test="${!(zk.ie >= 8)}">
+	<%-- Bug B50-3178977 for IE6/7, but cannot use it for IE8+ (Bug ZK-398)--%>
+	position: relative;
+	</c:if>
 }
 div.z-grid-header .z-column-sort div.z-column-cnt {
 	cursor: pointer;
