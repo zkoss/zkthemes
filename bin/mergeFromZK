@@ -13,7 +13,7 @@
 
 maindir="$(pwd)"
 if [ $# != 2 ] ; then
-	echo Please specify 1 revision or 2 revision
+	echo Please specify 2 revisions
 	echo for example
 	echo ./bin/mergeFromZK 19200 19201
 	exit 1
