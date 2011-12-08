@@ -1,7 +1,8 @@
 <?page title="Combo Inputs (Default)" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Default Mold" border="normal" width="300px" height="600px">
+		<window title="Default Mold" sclass="center-bg-win"
+			border="normal" width="300px" height="600px">
 			<vbox>
 				Combobox:
 				<combobox>
@@ -37,7 +38,8 @@
 				<separator />
 			</vbox>
 		</window>
-		<window title="Default Mold, Disabled" border="normal" width="300px" height="600px">
+		<window title="Default Mold, Disabled" sclass="center-bg-win" 
+			border="normal" width="300px" height="600px">
 			<vbox>
 				Combobox:
 				<combobox disabled="true">
@@ -73,7 +75,8 @@
 				<separator />
 			</vbox>
 		</window>
-		<window title="Default Mold, Read Only" border="normal" width="300px" height="600px">
+		<window title="Default Mold, Read Only" sclass="center-bg-win"
+			border="normal" width="300px" height="600px">
 			<vbox>
 				Combobox:
 				<combobox readonly="true">
@@ -109,7 +112,8 @@
 				<separator />
 			</vbox>
 		</window>
-		<window title="Default Mold, Inplace" border="normal" width="300px" height="600px">
+		<window title="Default Mold, Inplace" sclass="center-bg-win"
+			border="normal" width="300px" height="600px">
 			<vbox>
 				Combobox:
 				<combobox inplace="true">

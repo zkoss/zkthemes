@@ -1,7 +1,8 @@
 <?page title="Combo Inputs (Rounded)" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Rounded Mold" border="normal" width="300px" vflex="min">
+		<window title="Rounded Mold" sclass="center-bg-win"
+			border="normal" width="300px" vflex="min">
 			<vbox style="padding: 10px 0;">	
 				Combobox:
 				<combobox mold="rounded">
@@ -44,7 +45,8 @@
 				<textbox mold="rounded"/>
 			</vbox>
 		</window>
-		<window title="Rounded Mold, Disabled" border="normal" width="300px" vflex="min">
+		<window title="Rounded Mold, Disabled" sclass="center-bg-win"
+			border="normal" width="300px" vflex="min">
 			<vbox style="padding: 10px 0;">
 				Combobox:
 				<combobox mold="rounded" disabled="true">
@@ -87,7 +89,8 @@
 				<textbox mold="rounded" disabled="true"/>
 			</vbox>
 		</window>
-		<window title="Rounded Mold, Read Only" border="normal" width="300px" vflex="min">
+		<window title="Rounded Mold, Read Only" sclass="center-bg-win"
+			border="normal" width="300px" vflex="min">
 			<vbox style="padding: 10px 0;">
 				Combobox:
 				<combobox readonly="true" mold="rounded">
@@ -130,7 +133,8 @@
 				<textbox mold="rounded" readonly="true"/>
 			</vbox>
 		</window>
-		<window title="Rounded Mold" border="normal" width="300px" vflex="min">
+		<window title="Rounded Mold" sclass="center-bg-win"
+			border="normal" width="300px" vflex="min">
 			<vbox style="padding: 10px 0;">
 				Combobox:
 				<combobox inplace="true" mold="rounded">

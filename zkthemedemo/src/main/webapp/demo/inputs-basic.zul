@@ -2,7 +2,8 @@
 <zk>
 	<hbox>
 		<vbox>
-			<window title="Basic Inputs" border="normal" width="300px" height="300px">
+			<window title="Basic Inputs" sclass="center-bg-win"
+				border="normal" width="300px" height="300px">
 				<vbox>
 					Intbox:
 					<div><intbox value="123" /> (Normal)</div>
@@ -13,7 +14,8 @@
 				<separator />
 				Note: This includes Decimalbox, Doublebox, Intbox, Longbox and Textbox. They all use the same style.
 			</window>
-			<window title="Textbox" border="normal" width="300px" height="300px">
+			<window title="Textbox" border="normal" sclass="center-bg-win"
+				width="300px" height="300px">
 				<vbox>
 					Textbox:
 					<div><textbox value="abc" /> (Normal)</div>
@@ -25,7 +27,8 @@
 		<window width="150px" height="300px" />
 		<vbox>
 			<separator spacing="150px" />
-			<window title="Error Box" border="normal" width="300px" height="300px">
+			<window title="Error Box" border="normal" sclass="center-bg-win"
+				width="300px" height="300px">
 				<vbox>
 					For showing error box:
 					<div><textbox constraint="/^`````````$/" /> (Normal)</div>

@@ -1,6 +1,6 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="Listbox" border="normal">
+<div>
 	<listbox rows="1" mold="select">
 		<listitem label="Inbox"/>
 		<listitem label="Received"/>
@@ -121,6 +121,6 @@
 		<listcell label="&#36;{each}-4"/>
 		</listitem>
 	</listbox>
-</window>
+</div>
 			
 </zk>

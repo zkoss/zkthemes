@@ -1,7 +1,8 @@
 <?page title="Button" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Button" border="normal" width="300px" height="300px">
+		<window title="Button" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<vbox>
 				Trendy Mold:
 				<div>
@@ -20,7 +21,8 @@
 			<separator />
 			Note: keeps the original design for OS mold
 		</window>
-		<window title="Button with longer label" border="normal" width="300px" height="300px">
+		<window title="Button with longer label" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<vbox>
 				Trendy Mold:
 				<button label="Long Long Button" mold="trendy" />
@@ -30,7 +32,8 @@
 			</vbox>
 			<separator />
 		</window>
-		<window title="Large Button" border="normal" width="300px" height="300px">
+		<window title="Large Button" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<vbox>
 				Trendy Mold:
 				<button label="Button" width="100px" height="50px" mold="trendy" />
@@ -43,7 +46,8 @@
 	</hbox>
 	<separator />
 	<hbox>
-		<window title="Button with Hover Image" border="normal" width="300px" height="300px">
+		<window title="Button with Hover Image" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<vbox>
 				Trendy Mold:
 				<button label="Button" image="/common/img/volumn.gif" 

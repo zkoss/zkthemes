@@ -1,10 +1,12 @@
 <?page title="Colorbox" contentType="text/html;charset=UTF-8"?>
 <zk>
 <hbox>
-<window title="Colorbox" border="normal" width="300px" height="300px" >
+<window title="Colorbox" sclass="center-bg-win"
+	border="normal" width="300px" height="300px" >
 	<colorbox />
 </window>
-<window title="Colorbox inside menu" border="normal" width="300px" height="300px">
+<window title="Colorbox inside menu" sclass="center-bg-win"
+	border="normal" width="300px" height="300px">
 	<menubar id="menubar" width="100%">
 		<menu image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
 			<menupopup>
@@ -14,7 +16,8 @@
 		</menu>
 	</menubar>
 </window>
-<window title="colorbox in toolbar" border="normal" width="300px" height="300px" >
+<window title="colorbox in toolbar" sclass="center-bg-win"
+	border="normal" width="300px" height="300px" >
 	<hbox height="100%" align="stretch">
 		<toolbar orient="vertical" width="38px" height="100%">
 			<colorbox width="22px" height="12px" color="#FFFFFF">

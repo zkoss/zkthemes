@@ -1,7 +1,7 @@
 <?page title="Splitter" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<panel title="Splitter, Default Mold" framable="true" border="normal" 
+		<panel title="Splitter, Default Mold" sclass="center-bg-win" framable="true" border="normal" 
 			height="300px" width="300px">
 			<panelchildren>
 				<hbox spacing="0" height="100%">
@@ -16,7 +16,7 @@
 			</panelchildren>
 		</panel>
 		<separator />
-		<panel title="Splitter, OS Mold" framable="true" border="normal" 
+		<panel title="Splitter, OS Mold" sclass="center-bg-win" framable="true" border="normal" 
 			height="300px" width="300px">
 			<panelchildren>
 				<hbox spacing="0" height="100%">
