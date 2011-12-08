@@ -1,7 +1,8 @@
 <?page title="Borderlayout" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Simple Title" border="normal" width="300px" height="300px">
+		<window title="Simple Title" sclass="center-bg-win" 
+			border="normal" width="300px" height="300px">
 			<borderlayout>
 				<center title="Center">
 					Center Content
@@ -20,7 +21,8 @@
 				</west>
 			</borderlayout>
 		</window>
-		<window title="Simple" border="normal" width="300px" height="300px">
+		<window title="Simple" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<borderlayout>
 				<center>
 					Center Content
@@ -39,7 +41,8 @@
 				</west>
 			</borderlayout>
 		</window>
-		<window title="No Border" border="normal" width="300px" height="300px">
+		<window title="No Border" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<borderlayout>
 				<center border="none">
 					Center Content
@@ -61,7 +64,8 @@
 	</hbox>
 	<separator />
 	<hbox>
-		<window title="Auto Scroll" border="normal" width="300px" height="300px">
+		<window title="Auto Scroll" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<borderlayout>
 				<center autoscroll="true">
 					<vbox>
@@ -92,7 +96,8 @@
 				</west>
 			</borderlayout>
 		</window>
-		<window title="Margins: 10px" border="normal" width="300px" height="300px">
+		<window title="Margins: 10px" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<borderlayout>
 				<center margins="10,10,10,10">
 					Center Content
@@ -111,7 +116,8 @@
 				</west>
 			</borderlayout>
 		</window>
-		<window title="Cmargins: 10px" border="normal" width="300px" height="300px">
+		<window title="Cmargins: 10px" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<borderlayout>
 				<center>
 					Center Content
