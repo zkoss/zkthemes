@@ -1,7 +1,7 @@
 <?page title="ZK Theme: Breeze"?>
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
 <?component name="item" inline="true" macroURI="/demo/_macro/_sidebar_item.zul" ?>
-<zk>
+<zk xmlns:w="client">
 <style>
 .content .item {
 	padding: 0;
@@ -39,6 +39,16 @@
 }
 .banner .z-north-body {
 	background: #FFFFFF;
+}
+.yellow .center-bg,
+.yellow .center-bg-win .z-window-embedded-cnt,
+.yellow .center-bg-win .z-panel-children {
+	background: #FFFF7F;
+}
+.green .center-bg,
+.green .center-bg-win .z-window-embedded-cnt,
+.green .center-bg-win .z-panel-children {
+	background: #7FFF7F;
 }
 </style>
 <zscript><![CDATA[
@@ -135,6 +145,21 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 				    Executions.sendRedirect(null);
 				]]></attribute>
 			</combobox>
+			Set background color
+			<listbox name="bg-color-box" mold="select">
+				<attribute w:name="onSelect">
+					var sclass = this.getChildAt(this.getSelectedIndex()).getValue(),
+						body = jq('body');
+					if (this._currBgClass)
+						body.removeClass(this._currBgClass);
+					if (sclass)
+						body.addClass(sclass);
+					this._currBgClass = sclass;
+				</attribute>
+				<listitem label="N/A" value="" selected="true" />
+				<listitem label="yellow" value="yellow" />
+				<listitem label="green" value="green" />
+			</listbox>
 		</hbox>
 	</north>
 	<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
@@ -196,7 +221,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 			</vbox>
 		</div>
 	</west>
-	<center autoscroll="true" border="0" flex="true">
+	<center sclass="center-bg" autoscroll="true" border="0" flex="true">
 		<include mode="instant" style="padding:20px;" id="xcontents" src="${contentSrc}"></include>
 	</center>
 </borderlayout>

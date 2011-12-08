@@ -1,14 +1,16 @@
 <?page title="Slider" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Slider: Horizontal" border="normal" width="300px" height="300px">
+		<window title="Slider: Horizontal" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<vbox>
 				<slider />
 				<slider mold="sphere" />
 				<slider mold="scale" />
 			</vbox>
 		</window>
-		<window title="Slider: Vertical" border="normal" width="300px" height="300px">
+		<window title="Slider: Vertical" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
 			<hbox>
 				<slider orient="vertical" />
 				<slider mold="sphere" orient="vertical" />

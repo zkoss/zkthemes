@@ -1,7 +1,8 @@
 <?page title="Tabbox" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Tabbox, tabscroll=false" border="normal" width="300px" height="300px">
+		<window title="Tabbox, tabscroll=false" sclass="center-bg-win" 
+			border="normal" width="300px" height="300px">
 			<tabbox tabscroll="false" height="100%">
 				<tabs>
 					<tab label="Tab 1" />
@@ -18,7 +19,8 @@
 	</hbox>
 	<separator />
 	<hbox>
-		<window title="Tabbox, tabscroll=false" border="normal" width="300px" height="300px">
+		<window title="Tabbox, tabscroll=false" sclass="center-bg-win" 
+			border="normal" width="300px" height="300px">
 			<tabbox tabscroll="false" orient="vertical" height="100%">
 				<tabs>
 					<tab label="Tab 1" />

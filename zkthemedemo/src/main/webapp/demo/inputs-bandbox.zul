@@ -1,7 +1,8 @@
 <?page title="Bandbox" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Bandbox (Default mold)" border="normal" width="300px" height="600px">
+		<window title="Bandbox (Default mold)" sclass="center-bg-win"
+			border="normal" width="300px" height="600px">
 			<vbox>
 				Simple Bandbox:
 				<bandbox>
@@ -42,7 +43,8 @@
 				<separator />
 			</vbox>
 		</window>
-		<window title="Bandbox (Rounded mold)" border="normal" width="300px" height="600px">
+		<window title="Bandbox (Rounded mold)" sclass="center-bg-win"
+			border="normal" width="300px" height="600px">
 			<vbox>
 				Simple Bandbox:
 				<bandbox mold="rounded">
