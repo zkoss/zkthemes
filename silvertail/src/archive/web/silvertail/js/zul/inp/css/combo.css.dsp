@@ -349,7 +349,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-timebox-focus .z-timebox-btn,
 .z-spinner-focus .z-spinner-btn,
 .z-doublespinner-focus .z-doublespinner-btn {
-	border-color: #CCCCCC;
+	border-color: #999999;
 }
 .z-timebox .z-timebox-btn-upper,
 .z-spinner .z-spinner-btn-upper,
