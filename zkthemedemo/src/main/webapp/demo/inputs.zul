@@ -36,6 +36,10 @@
 				<spinner />
 				<spinner buttonVisible="false" />
 				<separator />
+				Doublespinner:
+				<doublespinner />
+				<doublespinner buttonVisible="false" />
+				<separator />
 			</vbox>
 		</window>
 		<window title="Default Mold, Disabled" sclass="center-bg-win" 
@@ -72,6 +76,10 @@
 				Spinner:
 				<spinner disabled="true" />
 				<spinner disabled="true" buttonVisible="false" />
+				<separator />
+				Doublespinner:
+				<doublespinner disabled="true" />
+				<doublespinner disabled="true" buttonVisible="false" />
 				<separator />
 			</vbox>
 		</window>
@@ -110,6 +118,10 @@
 				<spinner readonly="true" />
 				<spinner readonly="true" buttonVisible="false" />
 				<separator />
+				Doublespinner:
+				<doublespinner readonly="true" />
+				<doublespinner readonly="true" buttonVisible="false" />
+				<separator />
 			</vbox>
 		</window>
 		<window title="Default Mold, Inplace" sclass="center-bg-win"
@@ -146,6 +158,10 @@
 				Spinner:
 				<spinner inplace="true" />
 				<spinner inplace="true" buttonVisible="false" />
+				<separator />
+				Doublespinner:
+				<doublespinner inplace="true" />
+				<doublespinner inplace="true" buttonVisible="false" />
 				<separator />
 			</vbox>
 		</window>

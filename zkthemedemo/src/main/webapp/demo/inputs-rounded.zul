@@ -32,7 +32,8 @@
 				<spinner mold="rounded" />
 				<spinner mold="rounded" buttonVisible="false" />
 				Doublespinner:
-				<doublespinner mold="rounded"/>
+				<doublespinner mold="rounded" />
+				<doublespinner mold="rounded" buttonVisible="false" />
 				Decimalbox:
 				<decimalbox mold="rounded"/>
 				Doublebox:
@@ -76,7 +77,8 @@
 				<spinner mold="rounded" disabled="true" />
 				<spinner mold="rounded" disabled="true" buttonVisible="false" />
 				Doublespinner:
-				<doublespinner mold="rounded" disabled="true"/>
+				<doublespinner mold="rounded" disabled="true" />
+				<doublespinner mold="rounded" disabled="true" buttonVisible="false" />
 				Decimalbox:
 				<decimalbox mold="rounded" disabled="true"/>
 				Doublebox:
@@ -120,7 +122,8 @@
 				<spinner readonly="true" mold="rounded" />
 				<spinner readonly="true" mold="rounded" buttonVisible="false" />
 				Doublespinner:
-				<doublespinner mold="rounded" readonly="true"/>
+				<doublespinner mold="rounded" readonly="true" />
+				<doublespinner mold="rounded" readonly="true" buttonVisible="false" />
 				Decimalbox:
 				<decimalbox mold="rounded" readonly="true"/>
 				Doublebox:
@@ -164,7 +167,8 @@
 				<spinner inplace="true" mold="rounded" />
 				<spinner inplace="true" mold="rounded" buttonVisible="false" />
 				Doublespinner:
-				<doublespinner mold="rounded" inplace="true"/>
+				<doublespinner mold="rounded" inplace="true" />
+				<doublespinner mold="rounded" inplace="true" buttonVisible="false" />
 				Decimalbox:
 				<decimalbox mold="rounded" inplace="true"/>
 				Doublebox:
