@@ -181,7 +181,7 @@
 	position: relative;
 	margin: 0 -1px;
 	padding: 0 1px;
-	vertical-align: middle;:
+	vertical-align: middle;
 	zoom: 1;
 }
 .z-toolbarbutton-over .z-toolbarbutton-body {
