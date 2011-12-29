@@ -12,15 +12,20 @@
 #
 
 maindir="$(pwd)"
-if [ $# != 2 ] ; then
-	echo Please specify 2 revisions
+if [ $# != 1 ] ; then
+	echo Please specify 1 or 2 revisions
 	echo for example
 	echo ./bin/mergeFromZK 19200 19201
+	echo ./bin/mergeFromZK 19201 \(equivalent to above\)
 	exit 1
 fi
 r1=$1
 r2=$2
+if [ $# == 1 ]; then
+	r2=$r1
+	r1=$((r2 - 1))
+fi
 
 cd breeze/src/archive/web/breeze
-svn merge https://svn.potix.com/svn/zk1/branches/6.0/zul/src/archive/web -r $1:$2
+svn merge https://svn.potix.com/svn/zk1/branches/6.0/zul/src/archive/web -r $r1:$r2
 svn status | grep 'js$' | awk '{print $3}' | xargs svn revert {}
