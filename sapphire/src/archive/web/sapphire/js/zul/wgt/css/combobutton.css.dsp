@@ -91,7 +91,6 @@ span.z-combobutton {
 	width: 21px;
 	border-left: 1px solid #D4D4D4;
 }
-
 .z-combobutton .z-combobutton-tl,
 .z-combobutton .z-combobutton-tr {
 	height: 4px;

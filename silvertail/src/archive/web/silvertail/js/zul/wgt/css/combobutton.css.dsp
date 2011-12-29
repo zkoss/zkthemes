@@ -219,7 +219,6 @@ span.z-combobutton {
 .z-combobutton-clk .z-combobutton-cm {
 	background-position: 0 -1500px;
 	padding: 2px 7px 0 7px;
-	margin
 }
 .z-combobutton .z-combobutton-cr .z-combobutton-btn-img {
 	background-image:url(${c:encodeURL('~./silvertail/zul/img/button/combobutton-right-btn.gif')});
