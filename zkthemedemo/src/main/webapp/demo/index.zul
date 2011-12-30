@@ -218,6 +218,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 					
 				<category value="Other Issues" />
 					<item label="Drag and Drop" topic="demo/drag-and-drop" />
+					<item label="Loading" topic="demo/loading" />
 			</vbox>
 		</div>
 	</west>

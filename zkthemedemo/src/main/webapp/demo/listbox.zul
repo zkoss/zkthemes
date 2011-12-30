@@ -82,14 +82,16 @@
 			<listcell label="20"/>
 			<listcell label="A college student."/>
 		</listitem>
-		<listitem>
+		<listitem disabled="true">
 			<listcell label="Jane"/>
 			<listcell label="FEMALE"/>
 			<listcell label="32"/>
 			<listcell label="A remarkable artist."/>
 		</listitem>
-		<listitem>
-			<listcell label="Henry"/>
+		<listitem disabled="true">
+			<listcell>
+				<a href="http://www.zkoss.org">ZK</a>
+			</listcell>
 			<listcell label="MALE"/>
 			<listcell label="29"/>
 			<listcell label="A graduate."/>
