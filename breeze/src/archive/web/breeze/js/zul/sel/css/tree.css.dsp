@@ -229,7 +229,6 @@ tr.z-treerow-seld {
 	<c:if test="${zk.ie == 6}">
 		background-image: url(${c:encodeURL('~./breeze/zul/img/tree/item-sel.gif')});
 	</c:if>
-	border: 1px solid #6f97d2;
 }
 tr.z-treerow-over > td.z-treecell {
 	border-top: 1px solid #e3f2ff;
