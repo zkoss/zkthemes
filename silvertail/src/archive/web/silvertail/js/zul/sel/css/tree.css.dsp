@@ -225,7 +225,6 @@ td.z-treecell-disd a:visited, td.z-treecell-disd a:hover {
 	border-color: #D0DEF0 !important;
 }
 tr.z-treerow-seld {
-	border: 1px solid #6f97d2;
 	background: #CCCCCC;
 }
 tr.z-treerow-over > td.z-treecell {
