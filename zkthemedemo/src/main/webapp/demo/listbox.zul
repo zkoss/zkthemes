@@ -50,8 +50,8 @@
 	
 	<separator/>
 	Listbox Live data
-		<zscript>
-		ListModel strset = new org.zkoss.zkdemo.userguide.FakeListModel(20000);
+	<zscript>
+		ListModel strset = new org.zkoss.zkdemo.userguide.FakeListModel(200);
 	</zscript>
 	<listbox id="list" width="200px" rows="5" model="&#36;{strset}">
 		<listhead>
