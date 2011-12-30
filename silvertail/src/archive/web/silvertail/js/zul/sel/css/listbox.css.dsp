@@ -15,7 +15,7 @@ div.z-listbox-header, div.z-listbox-footer {
 	overflow: hidden;
 }
 div.z-listbox-header tr.z-listhead, div.z-listbox-header tr.z-auxhead {
-	background: #C7E5F1 repeat-x 0 0;
+	background: transparent repeat-x 0 0;
 	background-image: url(${c:encodeURL('~./silvertail/zul/img/grid/column-bg.png')});
 }
 div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
