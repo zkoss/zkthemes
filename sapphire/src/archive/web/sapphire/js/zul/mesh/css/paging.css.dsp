@@ -157,25 +157,19 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 
 .z-paging-text {
 	padding-left: 4px;
+	color: #00547A;
 }
 
 .z-paging .z-paging-btn {
-	cursor:pointer;
 	font-weight:normal;
 	white-space:nowrap;
 	width:auto;
 	font-family: ${fontFamilyT};
 	font-size: ${fontSizeMS};
-}
-.z-paging-text {
-	color: #00547A;
-}
-.z-paging .z-paging-btn {
 	background:#E8F6FD none repeat 0 0;
 	cursor:pointer;
 	text-align:center;
 	vertical-align:middle;
-	white-space:nowrap;
 }
 
 .z-paging-btn .z-paging-first,
