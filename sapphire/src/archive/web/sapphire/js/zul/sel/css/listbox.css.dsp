@@ -75,7 +75,7 @@ div.z-listbox-body .z-listgroup-inner {
 }
 div.z-listbox-footer {
 	border-top:1px solid #8FB9D0;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif')});
 }
 tr.z-listfoot td.z-listfooter {
 	padding: 5px 10px 5px 8px;
@@ -238,7 +238,7 @@ div.z-listbox-body .z-listcell {
 
 div.z-listbox-footer .z-listfooter {
 	color: #00547A; 
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif')});
 }
 
 div.z-listbox-header th.z-listheader-sort-over {
