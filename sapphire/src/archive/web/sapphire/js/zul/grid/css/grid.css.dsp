@@ -152,7 +152,7 @@ td.z-group-inner {
 .z-groupfoot {
 	height: 25px;
 	background: #E9F2FB repeat-x 0 0;
-	background-image:url(${c:encodeURL('~./zul/img/grid/groupfoot_bg.gif')});
+	background-image:url(${c:encodeURL('~./sapphire/zul/img/grid/groupfoot_bg.gif')});
 }
 .z-groupfoot-inner .z-groupfoot-cnt .z-label, .z-groupfoot-inner .z-groupfoot-cnt {
 	color:#00547A;
@@ -199,13 +199,13 @@ a.z-column-btn:hover {
 	background-image: none;
 }
 .z-columns-menu-grouping .z-menu-item-img {
-	background-image: url(${c:encodeURL('~./zul/img/grid/menu-group.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/menu-group.png')});
 }
 .z-columns-menu-asc .z-menu-item-img {
-	background-image: url(${c:encodeURL('~./zul/img/grid/menu-arrowup.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/menu-arrowup.png')});
 }
 .z-columns-menu-dsc .z-menu-item-img {
-	background-image: url(${c:encodeURL('~./zul/img/grid/menu-arrowdown.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/menu-arrowdown.png')});
 }
 div.z-grid-header th.z-column-over,
 div.z-grid-header th.z-auxheader-over {
@@ -356,13 +356,13 @@ div.z-grid {
 	position:relative; <%-- Bug 1914215 and Bug 1914054 --%>
 }
 .z-columns-menu-grouping .z-menu-item-img {
-	background-image:  url(${c:encodeURL('~./zul/img/grid/menu-group.gif')});
+	background-image:  url(${c:encodeURL('~./sapphire/zul/img/grid/menu-group.gif')});
 }
 .z-columns-menu-asc .z-menu-item-img {
-	background-image:  url(${c:encodeURL('~./zul/img/grid/menu-arrowup.gif')});
+	background-image:  url(${c:encodeURL('~./sapphire/zul/img/grid/menu-arrowup.gif')});
 }
 .z-columns-menu-dsc .z-menu-item-img {
-	background-image:  url(${c:encodeURL('~./zul/img/grid/menu-arrowdown.gif')});
+	background-image:  url(${c:encodeURL('~./sapphire/zul/img/grid/menu-arrowdown.gif')});
 }
 .z-group-inner .z-group-cnt {
 	width: 100%;

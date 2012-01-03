@@ -321,7 +321,7 @@ span.z-dottree-ico, span.z-dottree-line {
 	display:inline-block;
 }
 span.z-dottree-root-open, span.z-dottree-root-close {
-	background-image: url(${c:encodeURL('~./zul/img/tree/dot-toggle.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/dot-toggle.gif')});
 }
 span.z-dottree-root-open {
 	background-position: 0 0;
@@ -330,25 +330,25 @@ span.z-dottree-root-close {
 	background-position: 0 -18px;
 }
 span.z-dottree-tee-open {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee-open.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee-open.gif')});
 }
 span.z-dottree-tee-close {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee-close.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee-close.gif')});
 }
 span.z-dottree-last-open {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee-last-open.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee-last-open.gif')});
 }
 span.z-dottree-last-close {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee-last-close.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee-last-close.gif')});
 }
 span.z-dottree-tee {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee.gif')});
 }
 span.z-dottree-vbar {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee-vbar.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee-vbar.gif')});
 }
 span.z-dottree-last {
-	background-image: url(${c:encodeURL('~./zul/img/tree/tee-last.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/tee-last.gif')});
 }
 span.z-dottree-spacer, span.z-dottree-firstspacer {
 	background:none;
@@ -406,7 +406,7 @@ span.z-filetree-line, span.z-filetree-ico, span.z-filetree-firstspacer {
 	display:inline-block;
 }
 span.z-filetree-ico,span.z-filetree-firstspacer {
-	background-image: url(${c:encodeURL('~./zul/img/tree/folder-toggle.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/folder-toggle.gif')});
 }
 span.z-filetree-root-open, span.z-filetree-root-close,
 span.z-filetree-root-open, span.z-filetree-tee-open, span.z-filetree-last-open {
@@ -417,7 +417,7 @@ span.z-filetree-last-close, span.z-filetree-firstspacer {
 	background-position: 0 -18px;
 }
 span.z-filetree-tee, span.z-filetree-last {
-	background-image: url(${c:encodeURL('~./zul/img/tree/entity.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/entity.gif')});
 }
 span.z-filetree-vbar, span.z-filetree-spacer {
 	background:none;
@@ -475,7 +475,7 @@ span.z-vfiletree-line, span.z-vfiletree-ico, span.z-vfiletree-firstspacer {
 	display:inline-block;
 }
 span.z-vfiletree-ico,span.z-vfiletree-firstspacer {
-	background-image: url(${c:encodeURL('~./zul/img/tree/vfolder-toggle.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/vfolder-toggle.png')});
 }
 span.z-vfiletree-root-open, span.z-vfiletree-root-close,
 span.z-vfiletree-root-open, span.z-vfiletree-tee-open, span.z-vfiletree-last-open {
@@ -486,7 +486,7 @@ span.z-vfiletree-last-close, span.z-vfiletree-firstspace {
 	background-position: 0 -18px;
 }
 span.z-vfiletree-tee, span.z-vfiletree-last {
-	background-image: url(${c:encodeURL('~./zul/img/tree/ventity.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/ventity.png')});
 }
 span.z-vfiletree-vbar, span.z-vfiletree-spacer {
 	background:none;
@@ -601,10 +601,10 @@ div.z-tree, div.z-dottree, div.z-filetree, div.z-vfiletree {
 	position:relative; <%-- Bug 1914215 and Bug 1914054 --%>
 }
 span.z-vfiletree-ico, span.z-vfiletree-firstspacer {
-	background-image: url(${c:encodeURL('~./zul/img/tree/vfolder-toggle.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/vfolder-toggle.gif')});
 }
 span.z-vfiletree-tee, span.z-vfiletree-last {
-	background-image: url(${c:encodeURL('~./zul/img/tree/ventity.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/tree/ventity.gif')});
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {

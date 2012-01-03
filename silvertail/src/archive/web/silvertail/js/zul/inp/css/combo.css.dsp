@@ -132,7 +132,7 @@
 .z-timebox-rounded input.z-timebox-rounded-text-invalid,
 .z-spinner-rounded input.z-spinner-rounded-text-invalid,
 .z-doublespinner-rounded input.z-doublespinner-rounded-text-invalid {
-	background: #FFF url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')}) repeat-x 0 0;
+	background: #FFF url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')}) repeat-x 0 0;
 }
 .z-combobox-rounded .z-combobox-rounded-text-invalid + i.z-combobox-rounded-btn-right-edge,
 .z-bandbox-rounded .z-bandbox-rounded-text-invalid + i.z-bandbox-rounded-btn-right-edge,
@@ -140,7 +140,7 @@
 .z-timebox-rounded .z-timebox-rounded-text-invalid + i.z-timebox-rounded-btn-right-edge,
 .z-spinner-rounded .z-spinner-rounded-text-invalid + i.z-spinner-rounded-btn-right-edge,
 .z-doublespinner-rounded .z-doublespinner-rounded-text-invalid + i.z-doublespinner-rounded-btn-right-edge {
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')});
 	background-position: 0 -24px;
 }
 i.z-combobox-rounded i.z-combobox-rounded-btn-right-edge-invalid,
@@ -149,7 +149,7 @@ i.z-datebox-rounded i.z-datebox-rounded-btn-right-edge-invalid,
 i.z-timebox-rounded i.z-timebox-rounded-btn-right-edge-invalid,
 i.z-spinner-rounded i.z-spinner-rounded-btn-right-edge-invalid,
 i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')});
 	background-position: 0 -24px;
 }
 

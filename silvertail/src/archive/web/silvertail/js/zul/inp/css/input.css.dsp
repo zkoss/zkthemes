@@ -179,14 +179,14 @@
 .z-longbox-rounded .z-longbox-rounded-text-invalid,
 .z-doublebox-rounded .z-doublebox-rounded-text-invalid {
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')});
 }
 .z-textbox-rounded .z-textbox-rounded-text-invalid + .z-textbox-rounded-right-edge,
 .z-decimalbox-rounded .z-decimalbox-rounded-text-invalid + .z-decimalbox-rounded-right-edge,
 .z-intbox-rounded .z-intbox-rounded-text-invalid + .z-intbox-rounded-right-edge,
 .z-longbox-rounded .z-longbox-rounded-text-invalid + .z-longbox-rounded-right-edge,
 .z-doublebox-rounded .z-doublebox-rounded-text-invalid + .z-doublebox-rounded-right-edge {
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')});
 	background-position: 0 -24px;
 }
 i.z-textbox-rounded-right-edge-invalid,
@@ -195,7 +195,7 @@ i.z-intbox-rounded-right-edge-invalid,
 i.z-longbox-rounded-right-edge-invalid,
 i.z-doublebox-rounded-right-edge-invalid {
 	<%-- extra class provided for IE 6 --%>
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')});
 	background-position: 0 -24px;
 }
 <%-- rounded: focus, read only --%>
@@ -239,14 +239,14 @@ i.z-doublebox-rounded-right-edge-invalid {
 .z-longbox-rounded-focus input.z-longbox-rounded-text-invalid,
 .z-doublebox-rounded-focus input.z-doublebox-rounded-text-invalid {
 	background: transparent repeat-x 0 0 !important;
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')}) !important;
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')}) !important;
 }
 .z-textbox-rounded-focus input.z-textbox-rounded-text-invalid + i.z-textbox-rounded-right-edge,
 .z-decimalbox-rounded-focus input.z-decimalbox-rounded-text-invalid + i.z-decimalbox-rounded-right-edge,
 .z-intbox-rounded-focus input.z-intbox-rounded-text-invalid + i.z-intbox-rounded-right-edge,
 .z-longbox-rounded-focus input.z-longbox-rounded-text-invalid + i.z-longbox-rounded-right-edge,
 .z-doublebox-rounded-focus input.z-doublebox-rounded-text-invalid + i.z-doublebox-rounded-right-edge {
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')}) !important;
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')}) !important;
 	background-position: 0 -24px !important;
 }
 .z-textbox-rounded-focus .z-textbox-rounded-right-edge-invalid,
@@ -255,7 +255,7 @@ i.z-doublebox-rounded-right-edge-invalid {
 .z-longbox-rounded-focus .z-longbox-rounded-right-edge-invalid,
 .z-doublebox-rounded-focus .z-doublebox-rounded-right-edge-invalid {
 	<%-- extra class provided for IE 6 --%>
-	background-image: url(${c:encodeURL('~./zul/img/button/redcombo-rounded.gif')}) !important;
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/button/redcombo-rounded.gif')}) !important;
 	background-position: 0 -24px !important;
 }
 <%-- rouneded: inplace --%>
@@ -414,7 +414,7 @@ i.z-doublebox-rounded-right-edge-invalid {
 }
 .z-popup .z-popup-cl {
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/popup2/popup-bg.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/popup2/popup-bg.png')});
 	background-position: 0 -2px;
 	border: 1px solid #CFCFCF;
 	padding-left: 0;

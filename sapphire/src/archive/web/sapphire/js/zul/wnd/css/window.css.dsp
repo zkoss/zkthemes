@@ -348,16 +348,16 @@
 	height: 32px;
 }
 .z-msgbox-question {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/question-btn.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/question-btn.png')});
 }
 .z-msgbox-exclamation {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/warning-btn.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/warning-btn.png')});
 }
 .z-msgbox-information {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/info-btn.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/info-btn.png')});
 }
 .z-msgbox-error {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/stop-btn.png')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/stop-btn.png')});
 }
 <%-- end of original --%>
 
@@ -721,15 +721,15 @@
 	background-image : url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-icon.gif')});
 }
 .z-msgbox-question {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/question-btn.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/question-btn.gif')});
 }
 .z-msgbox-exclamation {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/warning-btn.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/warning-btn.gif')});
 }
 .z-msgbox-information {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/info-btn.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/info-btn.gif')});
 }
 .z-msgbox-error {
-	background-image: url(${c:encodeURL('~./zul/img/msgbox/stop-btn.gif')});
+	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/stop-btn.gif')});
 }
 </c:if>

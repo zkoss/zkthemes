@@ -333,7 +333,7 @@ div.z-log button {
 }
 .z-shadow .z-shadow-cl{
 	background: transparent repeat-y 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/shadow-cl.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/shadow-cl.png')});
 	padding-left: 6px;
 	overflow: hidden;
 	height:100%;
@@ -341,7 +341,7 @@ div.z-log button {
 }
 .z-shadow .z-shadow-cr{
 	background: transparent repeat-y right;
-	background-image: url(${c:encodeURL('~./zul/img/shadow-cr.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/shadow-cr.png')});
 	padding-right: 6px;
 	overflow: hidden;
 	height:100%;
@@ -349,7 +349,7 @@ div.z-log button {
 }
 .z-shadow .z-shadow-cm {
 	background: transparent repeat 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/shadow-m.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/shadow-m.png')});
 	overflow: hidden;
 	height:100%;
 	zoom: 1;
@@ -374,12 +374,12 @@ div.z-log button {
 }
 .z-shadow .z-shadow-tl,
 .z-shadow .z-shadow-tr{
-	background-image:url(${c:encodeURL('~./zul/img/shadow-tlr.png')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/shadow-tlr.png')});
 }
 
 .z-shadow .z-shadow-bl,
 .z-shadow .z-shadow-br{
-	background-image:url(${c:encodeURL('~./zul/img/shadow-blr.png')});
+	background-image:url(${c:encodeURL('~./silvertail/zul/img/shadow-blr.png')});
 }
 
 <%-- Drag-Drop --%>
@@ -473,7 +473,7 @@ span.z-upload input {
 }
 .z-upload-icon {
 	overflow: hidden;
-	background-image: url(${c:encodeURL('~./zul/img/misc/prgmeter.png')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/prgmeter.png')});
 }
 
 <%-- fileupload dialog --%>
@@ -484,14 +484,14 @@ span.z-upload input {
 .z-fileupload-add {
 	cursor: pointer;
 	background: transparent no-repeat 0 -23px;
-	background-image: url(${c:encodeURL('~./zul/img/misc/fileupload.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/fileupload.gif')});
 	width: 16px;
 	height: 17px;
 }
 .z-fileupload-rm {
 	cursor: pointer;
 	background: transparent no-repeat 0 0;
-	background-image: url(${c:encodeURL('~./zul/img/misc/fileupload.gif')});
+	background-image: url(${c:encodeURL('~./silvertail/zul/img/misc/fileupload.gif')});
 	width: 16px;
 	height: 17px;
 }
