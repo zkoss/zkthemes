@@ -6,7 +6,7 @@ div.z-tree {
 	overflow: hidden; 
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-tree-header, div.z-tree-header tr, div.z-tree-footer {
 	border: 0; width: 100%;
@@ -16,7 +16,7 @@ div.z-tree-header, div.z-tree-footer {
 }
 div.z-tree-header tr.z-treecols, div.z-tree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
 	overflow: hidden; 
@@ -67,7 +67,7 @@ span.z-tree-ico {
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/arrow-toggle.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/arrow-toggle.png')});
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open {
 	background-position: 0 -18px;
@@ -96,7 +96,7 @@ div.z-tree-footer td.z-treefooter {
 }
 <%-- Treecol, Treefooter, and Treecell--%>
 div.z-tree-header th.z-treecol-sort-over {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/header-over.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/header-over.png')});
 }
 div.z-treecol-cnt {
 	position: relative;
@@ -178,7 +178,7 @@ div.z-vfiletree-header th.z-treecol-sort-dsc div.z-treecol-cnt {
 .z-treecol-sort-dsc .z-treecol-sort-img {
 	background-position: 0 0;
     background-repeat: no-repeat;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/arrows.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/arrows.png')});
 }
 
 .z-treecol-sort-asc .z-treecol-sort-img {
@@ -242,7 +242,7 @@ tr.z-treerow-over-seld {
 	top: 0;
 	height: 1px;
 	font-size: 0;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/head-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/head-bg.png')});
 	margin-top: -1px;
 }
 
@@ -261,7 +261,7 @@ div.z-dottree {
 	overflow: hidden;
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-dottree-header, div.z-dottree-header tr, div.z-dottree-footer {
 	border: 0; width: 100%;
@@ -270,7 +270,7 @@ div.z-dottree-header, div.z-dottree-footer {
 	overflow: hidden;
 }
 div.z-dottree-header tr.z-treecols, div.z-tree-header tr.z-auxhead {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-dottree-header th {
 	overflow: hidden; 
@@ -295,7 +295,7 @@ div.z-dottree-pgi-t {
 div.z-dottree-header tr.z-treecols,
 div.z-dottree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 
 
@@ -321,7 +321,7 @@ span.z-dottree-ico, span.z-dottree-line {
 	display:inline-block;
 }
 span.z-dottree-root-open, span.z-dottree-root-close {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/dot-toggle.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/dot-toggle.gif')});
 }
 span.z-dottree-root-open {
 	background-position: 0 0;
@@ -330,25 +330,25 @@ span.z-dottree-root-close {
 	background-position: 0 -18px;
 }
 span.z-dottree-tee-open {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee-open.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee-open.gif')});
 }
 span.z-dottree-tee-close {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee-close.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee-close.gif')});
 }
 span.z-dottree-last-open {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee-last-open.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee-last-open.gif')});
 }
 span.z-dottree-last-close {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee-last-close.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee-last-close.gif')});
 }
 span.z-dottree-tee {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee.gif')});
 }
 span.z-dottree-vbar {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee-vbar.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee-vbar.gif')});
 }
 span.z-dottree-last {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/tee-last.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/tee-last.gif')});
 }
 span.z-dottree-spacer, span.z-dottree-firstspacer {
 	background:none;
@@ -359,7 +359,7 @@ div.z-filetree {
 	overflow: hidden;
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-filetree-header, div.z-filetree-header tr, div.z-filetree-footer {
 	border: 0; width: 100%;
@@ -368,7 +368,7 @@ div.z-filetree-header, div.z-filetree-footer {
 	overflow: hidden;
 }
 div.z-filetree-header tr.z-treecols, div.z-tree-header tr.z-auxhead  {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-filetree-header th.z-treecol, div.z-filetree-header th.z-auxheader {
 	overflow: hidden; 
@@ -406,7 +406,7 @@ span.z-filetree-line, span.z-filetree-ico, span.z-filetree-firstspacer {
 	display:inline-block;
 }
 span.z-filetree-ico,span.z-filetree-firstspacer {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/folder-toggle.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/folder-toggle.gif')});
 }
 span.z-filetree-root-open, span.z-filetree-root-close,
 span.z-filetree-root-open, span.z-filetree-tee-open, span.z-filetree-last-open {
@@ -417,7 +417,7 @@ span.z-filetree-last-close, span.z-filetree-firstspacer {
 	background-position: 0 -18px;
 }
 span.z-filetree-tee, span.z-filetree-last {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/entity.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/entity.gif')});
 }
 span.z-filetree-vbar, span.z-filetree-spacer {
 	background:none;
@@ -425,7 +425,7 @@ span.z-filetree-vbar, span.z-filetree-spacer {
 div.z-filetree-header tr.z-treecols, 
 div.z-filetree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-filetree-header tr.z-treecols th:last-child, 
 div.z-filetree div.z-filetree-header tr.z-auxhead th:last-child {
@@ -437,7 +437,7 @@ div.z-vfiletree {
 	overflow: hidden; 
 	zoom: 1;
 	border: 1px solid #CFCFCF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-vfiletree-header, div.z-vfiletree-header tr, div.z-vfiletree-footer {
 	border: 0; width: 100%;
@@ -446,7 +446,7 @@ div.z-vfiletree-header, div.z-vfiletree-footer {
 	overflow: hidden;
 }
 div.z-vfiletree-header tr.z-treecols, div.z-tree-header tr.z-auxhead  {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-vfiletree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
@@ -475,7 +475,7 @@ span.z-vfiletree-line, span.z-vfiletree-ico, span.z-vfiletree-firstspacer {
 	display:inline-block;
 }
 span.z-vfiletree-ico,span.z-vfiletree-firstspacer {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/vfolder-toggle.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/vfolder-toggle.png')});
 }
 span.z-vfiletree-root-open, span.z-vfiletree-root-close,
 span.z-vfiletree-root-open, span.z-vfiletree-tee-open, span.z-vfiletree-last-open {
@@ -486,7 +486,7 @@ span.z-vfiletree-last-close, span.z-vfiletree-firstspace {
 	background-position: 0 -18px;
 }
 span.z-vfiletree-tee, span.z-vfiletree-last {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/ventity.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/ventity.png')});
 }
 span.z-vfiletree-vbar, span.z-vfiletree-spacer {
 	background:none;
@@ -494,7 +494,7 @@ span.z-vfiletree-vbar, span.z-vfiletree-spacer {
 div.z-vfiletree-header tr.z-treecols, 
 div.z-vfiletree-header tr.z-auxhead {
 	background: #FFF;
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});
 }
 div.z-vfiletree-header th.z-treecol,
 div.z-vfiletree-header th.z-auxheader {
@@ -601,14 +601,14 @@ div.z-tree, div.z-dottree, div.z-filetree, div.z-vfiletree {
 	position:relative; <%-- Bug 1914215 and Bug 1914054 --%>
 }
 span.z-vfiletree-ico, span.z-vfiletree-firstspacer {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/vfolder-toggle.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/vfolder-toggle.gif')});
 }
 span.z-vfiletree-tee, span.z-vfiletree-last {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/ventity.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/ventity.gif')});
 }
 span.z-tree-root-open, span.z-tree-tee-open, span.z-tree-last-open,
 span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/arrow-toggle.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/tree/arrow-toggle.gif')});
 }
 </c:if>
 </c:if>
@@ -639,7 +639,7 @@ span.z-tree-root-close, span.z-tree-tee-close, span.z-tree-last-close {
 	margin: 2px;
 }
 .z-treerow-img-checkbox, .z-treerow-img-radio {
-	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/common/check-sprite.gif', theme)});
+	background-image: url(${c:encodeThemeURL('~./zul/img/common/check-sprite.gif')});
 	background-position: 0 0;
 }
 .z-treerow-img-radio {
