@@ -89,7 +89,7 @@
 .z-window-overlapped-tl,
 .z-window-popup-tl {
 	background: transparent no-repeat 0 top;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.png', theme)});
 	margin-right: 5px;
 	height: 5px;
 	font-size: 0;
@@ -97,10 +97,10 @@
 	zoom: 1;
 }
 .z-window-embedded-tl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.png', theme)});
 }
 .z-window-popup-tl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-pop-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-pop-corner.png', theme)});
 }
 <%-- Top Right Corner --%>
 .z-window-embedded-tr,
@@ -109,7 +109,7 @@
 .z-window-overlapped-tr,
 .z-window-popup-tr {
 	background: transparent no-repeat right -10px;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.png', theme)});
 	position: relative;
 	height: 5px;
 	margin-right: -5px;
@@ -118,10 +118,10 @@
 	zoom: 1;
 }
 .z-window-embedded-tr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.png', theme)});
 }
 .z-window-popup-tr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-pop-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-pop-corner.png', theme)});
 }
 <%-- Header Left --%>
 .z-window-embedded-hl,
@@ -130,15 +130,15 @@
 .z-window-overlapped-hl,
 .z-window-popup-hl {
 	background: transparent no-repeat 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hl.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hl.png', theme)});
 	padding-left: 6px;
 	zoom: 1;
 }
 .z-window-embedded-hl{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hl.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hl.png', theme)});
 }
 .z-window-popup-hl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-pop-hl.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-pop-hl.png', theme)});
 }
 <%-- Header Right --%>
 .z-window-embedded-hr,
@@ -147,15 +147,15 @@
 .z-window-overlapped-hr,
  .z-window-popup-hr {
 	background: transparent no-repeat right 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hr.png', theme)});
 	padding-right: 6px;
 	zoom: 1;
 }
 .z-window-embedded-hr, .z-window-embedded-hr-noborder {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hr.png', theme)});
 }
 .z-window-popup-hr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-pop-hr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-pop-hr.png', theme)});
 }
 <%-- Header Middle --%>
 .z-window-embedded-hm,
@@ -164,7 +164,7 @@
 .z-window-overlapped-hm,
 .z-window-popup-hm {
 	background: transparent repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hm.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hm.png', theme)});
 	overflow: hidden;
 	zoom: 1;
 }
@@ -273,7 +273,7 @@
 .z-window-highlighted-cl,
 .z-window-overlapped-cl {
 	background: transparent repeat-y 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-clr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-clr.png', theme)});
 	padding-left: 6px;
 	zoom: 1;
 }
@@ -282,7 +282,7 @@
 .z-window-highlighted-cr,
 .z-window-overlapped-cr {
 	background: transparent repeat-y right 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-clr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-clr.png', theme)});
 	padding-right: 6px;
 	zoom: 1;
 }
@@ -305,7 +305,7 @@
 .z-window-highlighted-bl,
 .z-window-overlapped-bl {
 	background: transparent no-repeat 0 -5px;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.png', theme)});
 	height: 5px;
 	margin-right: 5px;
 	zoom: 1;
@@ -315,7 +315,7 @@
 .z-window-highlighted-br,
 .z-window-overlapped-br {
 	background: transparent no-repeat right bottom;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.png', theme)});
 	height: 5px;
 	margin-right: -5px;
 	font-size: 0;
@@ -348,16 +348,16 @@
 	height: 32px;
 }
 .z-msgbox-question {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/question-btn.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/question-btn.png', theme)});
 }
 .z-msgbox-exclamation {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/warning-btn.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/warning-btn.png', theme)});
 }
 .z-msgbox-information {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/info-btn.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/info-btn.png', theme)});
 }
 .z-msgbox-error {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/stop-btn.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/stop-btn.png', theme)});
 }
 <%-- end of original --%>
 
@@ -365,12 +365,12 @@
 .z-window-overlapped-tl, .z-window-overlapped-tr,
 .z-window-popup-tl, .z-window-popup-tr,
 .z-window-overlapped-bl, .z-window-overlapped-br {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.png', theme)});
 	height: 6px;
 }
 .z-window-embedded-tl, .z-window-embedded-tr,
 .z-window-embedded-bl, .z-window-embedded-br {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.png', theme)});
 }
 
 .z-window-modal-tl, .z-window-highlighted-tl, 
@@ -399,33 +399,33 @@
 <%-- Header --%>
 .z-window-overlapped-hl,
 .z-window-popup-hl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hl.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hl.png', theme)});
 }
 .z-window-embedded-hl{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hl.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hl.png', theme)});
 }
 .z-window-overlapped-hr,
 .z-window-popup-hr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hr.png', theme)});
 }
 .z-window-embedded-hr{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hr.png', theme)});
 }
 .z-window-overlapped-hm,
 .z-window-popup-hm {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hm.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hm.png', theme)});
 }
 .z-window-embedded-hm{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hm.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hm.png', theme)});
 }
 
 .z-window-overlapped-cl, 
 .z-window-overlapped-cr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-clr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-clr.png', theme)});
 }
 .z-window-embedded-cl, 
 .z-window-embedded-cr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-clr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-clr.png', theme)});
 }
 
 .z-window-embedded-hm,
@@ -466,13 +466,13 @@
 }
 .z-window-embedded-cl {
 	background: transparent repeat-y 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-clr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-clr.png', theme)});
 	padding-left: 6px;
 	zoom: 1;
 }
 .z-window-embedded-cr {
 	background: transparent repeat-y right 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-clr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-clr.png', theme)});
 	padding-right: 6px;
 	zoom: 1;
 }
@@ -482,14 +482,14 @@
 }
 .z-window-embedded-bl {
 	background: transparent no-repeat 0 -5px;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.png', theme)});
 	height: 5px;
 	margin-right: 5px;
 	zoom: 1;
 }
 .z-window-embedded-br {
 	background: transparent no-repeat right bottom;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.png', theme)});
 	position: relative;
 	height: 5px;
 	margin-right: -5px;
@@ -515,7 +515,7 @@
 .z-window-overlapped-icon,
 .z-window-highlighted-icon {
 	background: transparent no-repeat 0 0;
-	background-image : url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-icon.png')});
+	background-image : url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-icon.png', theme)});
 	height: 17px;
 	width: 17px;
 	overflow: hidden;
@@ -618,118 +618,118 @@
 .z-window-highlighted-tr,
 .z-window-highlighted-bl,
 .z-window-highlighted-br {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.gif', theme)});
 }
 .z-window-embedded-tl,
 .z-window-embedded-tr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.gif', theme)});
 }
 .z-window-popup-tl,
 .z-window-popup-tr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-pop-corner.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-pop-corner.gif', theme)});
 }
 .z-window-modal-hl,
 .z-window-highlighted-hl,
 .z-window-overlapped-hl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hl.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hl.gif', theme)});
 }
 .z-window-modal-hr,
 .z-window-highlighted-hr,
 .z-window-overlapped-hr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hr.gif', theme)});
 }
 .z-window-embedded-hl,
 .z-window-embedded-hl-noborder {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hl.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hl.gif', theme)});
 }
 .z-window-embedded-hr,
 .z-window-embedded-hr-noborder {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hr.gif', theme)});
 }
 .z-window-popup-hr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hr.gif', theme)});
 }
 .z-window-popup-hl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hl.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hl.gif', theme)});
 }
 .z-window-modal-hm,
 .z-window-highlighted-hm,
 .z-window-overlapped-hm,
 .z-window-popup-hm {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hm.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hm.gif', theme)});
 }
 .z-window-embedded-hm,
 .z-window-embedded-hm-noborder {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hm.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hm.gif', theme)});
 }
 .z-window-popup-hm {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-pop-hm.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-pop-hm.gif', theme)});
 }
 .z-window-modal-cl,       .z-window-modal-cr,
 .z-window-highlighted-cl, .z-window-highlighted-cr, 
 .z-window-overlapped-cl,  .z-window-overlapped-cr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-clr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-clr.gif', theme)});
 }
 .z-window-overlapped-tl, .z-window-overlapped-tr,
 .z-window-popup-tl,      .z-window-popup-tr,
 .z-window-overlapped-bl, .z-window-overlapped-br {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-corner.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-corner.gif', theme)});
 }
 .z-window-embedded-tl, .z-window-embedded-tr,
 .z-window-embedded-bl, .z-window-embedded-br {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.gif', theme)});
 }
 .z-window-overlapped-hl,
 .z-window-popup-hl {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hl.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hl.gif', theme)});
 }
 .z-window-embedded-hl{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hl.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hl.gif', theme)});
 }
 .z-window-overlapped-hr,
 .z-window-popup-hr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hr.gif', theme)});
 }
 .z-window-embedded-hr{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hr.gif', theme)});
 }
 .z-window-overlapped-hm,
 .z-window-popup-hm {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-hm.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-hm.gif', theme)});
 }
 .z-window-embedded-hm{
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-hm.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-hm.gif', theme)});
 }
 
 .z-window-overlapped-cl, 
 .z-window-overlapped-cr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-ol-clr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-ol-clr.gif', theme)});
 }
 .z-window-embedded-cl, 
 .z-window-embedded-cr {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-clr.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-clr.gif', theme)});
 }
 .z-window-embedded-bl,
 .z-window-embedded-br {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-corner.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-corner.gif', theme)});
 }
 .z-window-embedded-icon,
 .z-window-modal-icon,
 .z-window-highlighted-icon,
 .z-window-popup-icon,
 .z-window-overlapped-icon {
-	background-image : url(${c:encodeURL('~./sapphire/zul/img/wnd/wnd-icon.gif')});
+	background-image : url(${c:encodeThemeURL('~./${theme}/zul/img/wnd/wnd-icon.gif', theme)});
 }
 .z-msgbox-question {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/question-btn.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/question-btn.gif', theme)});
 }
 .z-msgbox-exclamation {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/warning-btn.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/warning-btn.gif', theme)});
 }
 .z-msgbox-information {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/info-btn.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/info-btn.gif', theme)});
 }
 .z-msgbox-error {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/msgbox/stop-btn.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/msgbox/stop-btn.gif', theme)});
 }
 </c:if>

@@ -6,7 +6,7 @@ div.z-listbox {
 	zoom: 1;
 	background: #FFF;
 	border:1px solid #8FB9D0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
 }
 div.z-listbox-header, div.z-listbox-header tr, div.z-listbox-footer {
 	border: 0; width: 100%;
@@ -16,7 +16,7 @@ div.z-listbox-header, div.z-listbox-footer {
 }
 div.z-listbox-header tr.z-listhead, div.z-listbox-header tr.z-auxhead {
 	background: #C7E5F1 repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/column-bg.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/column-bg.png', theme)});
 }
 div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
 	<c:if test="${!(zk.ie >= 8)}">
@@ -75,7 +75,7 @@ div.z-listbox-body .z-listgroup-inner {
 }
 div.z-listbox-footer {
 	border-top:1px solid #8FB9D0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/groupfoot_bg.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif', theme)});
 }
 tr.z-listfoot td.z-listfooter {
 	padding: 5px 10px 5px 8px;
@@ -151,16 +151,16 @@ tr.z-listitem-over-seld {
 <%-- Listgroup --%>
 tr.z-listgroup {
 	background: #E9F2FB repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/group_bg.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/group_bg.gif', theme)});
 }
 tr.z-listgroup-over {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/group-bg-over.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/group-bg-over.png', theme)});
 }
 tr.z-listgroup-seld {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/group-bg-seld.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/group-bg-seld.png', theme)});
 }
 tr.z-listgroup-over-seld {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/group-bg-over-seld.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/group-bg-over-seld.png', theme)});
 }
 td.z-listgroup-inner {
 	padding-top: 2px;
@@ -188,7 +188,7 @@ td.z-listgroup-inner div.z-listcell-cnt {
 	display:-moz-inline-box;
 	vertical-align: top;
 	display: inline-block;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/tree/arrow-toggle.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/tree/arrow-toggle.gif', theme)});
 	background-repeat: no-repeat;
 	vertical-align: top; cursor: pointer; border: 0;
 }
@@ -202,7 +202,7 @@ td.z-listgroup-inner div.z-listcell-cnt {
 .z-listgroupfoot{
 	height: 25px;
 	background: #E9F2FB repeat-x 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/groupfoot_bg.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif', theme)});
 }
 td.z-listgroupfoot-inner div.z-listcell-cnt {
 	color: #00547A;
@@ -238,11 +238,11 @@ div.z-listbox-body .z-listcell {
 
 div.z-listbox-footer .z-listfooter {
 	color: #00547A; 
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/groupfoot_bg.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/groupfoot_bg.gif', theme)});
 }
 
 div.z-listbox-header th.z-listheader-sort-over {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/header-over.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/header-over.png', theme)});
 }
 
 .z-listbox-header-bg {
@@ -251,7 +251,7 @@ div.z-listbox-header th.z-listheader-sort-over {
 	top: 0;
 	height: 1px;
 	font-size: 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/head-bg.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/head-bg.png', theme)});
 	margin-top: -1px;
 }
 
@@ -272,7 +272,7 @@ div.z-listbox-header th.z-listheader-sort-over {
 .z-listheader-sort-dsc .z-listheader-sort-img {
 	background-position: 0 0;
     background-repeat: no-repeat;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/grid/arrows.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/grid/arrows.png', theme)});
 }
 
 .z-listheader-sort-asc .z-listheader-sort-img {
@@ -380,7 +380,7 @@ div.z-listbox {
 .z-listgroup-img-checkbox,
 .z-listgroup-img-radio,
 .z-listgroupfoot-img {
-	background-image:url(${c:encodeURL('~./sapphire/zul/img/common/check-sprite.gif')});
+	background-image:url(${c:encodeThemeURL('~./${theme}/zul/img/common/check-sprite.gif', theme)});
 	background-position: 0 0;
 }
 .z-listitem-img-radio,

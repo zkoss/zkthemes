@@ -35,6 +35,8 @@
 	scope="request" if="${empty fontFamilyC}"/>
 </c:if>
 
+<c:set var="theme" value="sapphire" scope="request" />
+
 html, body {
 	height: 100%;
 }
@@ -333,7 +335,7 @@ div.z-log button {
 }
 .z-shadow .z-shadow-cl{
 	background: transparent repeat-y 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/shadow-cl.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/shadow-cl.png', theme)});
 	padding-left: 6px;
 	overflow: hidden;
 	height:100%;
@@ -341,7 +343,7 @@ div.z-log button {
 }
 .z-shadow .z-shadow-cr{
 	background: transparent repeat-y right;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/shadow-cr.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/shadow-cr.png', theme)});
 	padding-right: 6px;
 	overflow: hidden;
 	height:100%;
@@ -349,7 +351,7 @@ div.z-log button {
 }
 .z-shadow .z-shadow-cm {
 	background: transparent repeat 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/shadow-m.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/shadow-m.png', theme)});
 	overflow: hidden;
 	height:100%;
 	zoom: 1;
@@ -374,12 +376,12 @@ div.z-log button {
 }
 .z-shadow .z-shadow-tl,
 .z-shadow .z-shadow-tr{
-	background-image:url(${c:encodeURL('~./sapphire/zul/img/shadow-tlr.png')});
+	background-image:url(${c:encodeThemeURL('~./${theme}/zul/img/shadow-tlr.png', theme)});
 }
 
 .z-shadow .z-shadow-bl,
 .z-shadow .z-shadow-br{
-	background-image:url(${c:encodeURL('~./sapphire/zul/img/shadow-blr.png')});
+	background-image:url(${c:encodeThemeURL('~./${theme}/zul/img/shadow-blr.png', theme)});
 }
 
 <%-- Drag-Drop --%>
@@ -423,14 +425,14 @@ span.z-drop-allow {
 	background: none no-repeat scroll 0 0 #EEFFEE;
 }
 span.z-drop-allow {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/drag-allow.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/drag-allow.png', theme)});
 }
 div.z-drop-disallow div.z-drop-cnt,
 span.z-drop-disallow {
 	background: none no-repeat scroll 0 0 #FFEEEE;
 }
 span.z-drop-disallow {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/drag-disallow.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/drag-disallow.png', theme)});
 }
 
 <%-- customized by users
@@ -473,7 +475,7 @@ span.z-upload input {
 }
 .z-upload-icon {
 	overflow: hidden;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/prgmeter.png')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/prgmeter.png', theme)});
 }
 
 <%-- fileupload dialog --%>
@@ -484,14 +486,14 @@ span.z-upload input {
 .z-fileupload-add {
 	cursor: pointer;
 	background: transparent no-repeat 0 -23px;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/fileupload.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/fileupload.gif', theme)});
 	width: 16px;
 	height: 17px;
 }
 .z-fileupload-rm {
 	cursor: pointer;
 	background: transparent no-repeat 0 0;
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/fileupload.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/fileupload.gif', theme)});
 	width: 16px;
 	height: 17px;
 }
@@ -543,10 +545,10 @@ option {
 	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=true, ShadowOpacity=0.30);
 }
 span.z-drop-allow {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/drag-allow.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/drag-allow.gif', theme)});
 }
 span.z-drop-disallow {
-	background-image: url(${c:encodeURL('~./sapphire/zul/img/misc/drag-disallow.gif')});
+	background-image: url(${c:encodeThemeURL('~./${theme}/zul/img/misc/drag-disallow.gif', theme)});
 }
 </c:if><%-- IE6 --%>
 </c:if><%--IE --%>
