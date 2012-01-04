@@ -46,8 +46,7 @@
 .z-longbox-text-invalid,
 .z-doublebox-text-invalid {
 	background: #FFF repeat-x 0 0;
-	border: 1px solid #F2AEB2;
-	/* border-top: 1px solid #D59191; */
+	border: 1px solid #DD7777;
 }
 .z-textbox-readonly, .z-textbox-text-disd,
 .z-intbox-readonly, .z-intbox-text-disd,
@@ -421,8 +420,8 @@ i.z-doublebox-rounded-right-edge-invalid {
 }
 .z-errbox .z-popup-cl {
 	background: none !important;
-	background-color : #FFEDED !important;
-	border: 1px solid #940000 !important;
+	background-color: #FFEEEE !important;
+	border: 1px solid #990000 !important;
 	-moz-border-radius: 1px 1px 1px 1px !important;
 	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35) !important;
 }

@@ -297,7 +297,7 @@
 .z-window-overlapped-cm {
 	padding: 0;
 	margin: 0;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #C5C5C5;
 	background: #5EABDB;
 }
 <%-- Bottom Left --%>

@@ -114,7 +114,7 @@
 .z-spinner .z-spinner-text-invalid,
 .z-doublespinner .z-doublespinner-text-invalid {
 	background: #FFFFFF;
-	border: 1px solid #DD7870;
+	border: 1px solid #DD7777;
 	border-right-width: 1px !important;
 	margin-right: -1px;
 }
@@ -238,7 +238,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-datebox-rounded .z-datebox-rounded-btn-over,
 .z-timebox-rounded .z-timebox-rounded-btn-over,
 .z-spinner-rounded .z-spinner-rounded-btn-over,
-.z-doublespinner-rounded .z-doublespinner-rounded-btn-over {
+.z-doublespinner-rounded .z-doublespinner-rounded-btn-over  {
 	background-position: 0 -144px;
 }
 .z-combobox-focus .z-combobox-btn-clk, .z-combobox .z-combobox-btn-clk,

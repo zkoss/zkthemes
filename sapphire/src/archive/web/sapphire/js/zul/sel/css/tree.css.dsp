@@ -32,10 +32,10 @@ div.z-tree-body, div.z-dottree-body, div.z-filetree-body, div.z-vfiletree-body {
 	background: white; border: 0; overflow: auto; width: 100%; position: relative;
 }
 div.z-tree-pgi-b {
-	border-top: 1px solid #AAB; overflow: hidden;
+	border-top: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-tree-pgi-t {
-	border-bottom: 1px solid #AAB; overflow: hidden;
+	border-bottom: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-tree-body td.z-treecell, div.z-tree-footer td.z-treefooter {
 	cursor: pointer;
@@ -301,10 +301,10 @@ div.z-dottree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
 }
 div.z-dottree-pgi-b {
-	border-top: 1px solid #AAB; overflow: hidden;
+	border-top: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-dottree-pgi-t {
-	border-bottom: 1px solid #AAB; overflow: hidden;
+	border-bottom: 1px solid #8FB9D0; overflow: hidden;
 }
 
 div.z-dottree-header tr.z-treecols,
@@ -402,10 +402,10 @@ div.z-filetree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
 }
 div.z-filetree-pgi-b {
-	border-top: 1px solid #AAB; overflow: hidden;
+	border-top: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-filetree-pgi-t {
-	border-bottom: 1px solid #AAB; overflow: hidden;
+	border-bottom: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-filetree-body td.z-treecell, div.z-filetree-footer td.z-treefooter {
 	cursor: pointer; padding: 0 2px;
@@ -470,10 +470,10 @@ div.z-vfiletree-body {
 	background: white; border: 0; overflow: auto; width: 100%;
 }
 div.z-vfiletree-pgi-b {
-	border-top: 1px solid #AAB; overflow: hidden;
+	border-top: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-vfiletree-pgi-t {
-	border-bottom: 1px solid #AAB; overflow: hidden;
+	border-bottom: 1px solid #8FB9D0; overflow: hidden;
 }
 div.z-vfiletree-body td.z-treecell, div.z-vfiletree-footer td.z-treefooter {
 	cursor: pointer; padding: 0 2px;
