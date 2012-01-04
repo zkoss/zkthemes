@@ -22,8 +22,6 @@ div.z-tree-header th.z-treecol, div.z-tree-header th.z-auxheader {
 	overflow: hidden; 
 	border: 1px solid;
 	white-space: nowrap;
-	font-size: ${fontSizeM};
-	font-weight: normal;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
 	padding: 0;
@@ -135,7 +133,6 @@ div.z-treecol-cnt {
 	color: #00547A;
 }
 div.z-treecol-cnt, div.z-tree-header div.z-auxheader-cnt {
-	font-weight:bold;
 	padding: 8px 5px 7px;
 }
 .z-word-wrap div.z-treecell-cnt, .z-word-wrap div.z-treefooter-cnt,

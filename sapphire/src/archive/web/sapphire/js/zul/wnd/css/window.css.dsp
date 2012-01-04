@@ -134,12 +134,6 @@
 	padding-left: 6px;
 	zoom: 1;
 }
-.z-window-embedded-hl{
-	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-hl.png')});
-}
-.z-window-popup-hl {
-	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-pop-hl.png')});
-}
 <%-- Header Right --%>
 .z-window-embedded-hr,
 .z-window-modal-hr,
@@ -153,9 +147,6 @@
 }
 .z-window-embedded-hr, .z-window-embedded-hr-noborder {
 	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-hr.png')});
-}
-.z-window-popup-hr {
-	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-pop-hr.png')});
 }
 <%-- Header Middle --%>
 .z-window-embedded-hm,
@@ -239,9 +230,6 @@
 	background: white;
 	overflow: hidden;
 	zoom: 1;
-}
-.z-window-popup-cnt {
-	margin:0;
 }
 .z-window-modal-cnt,
 .z-window-highlighted-cnt,
@@ -645,12 +633,6 @@
 .z-window-embedded-hr,
 .z-window-embedded-hr-noborder {
 	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-hr.gif')});
-}
-.z-window-popup-hr {
-	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-ol-hr.gif')});
-}
-.z-window-popup-hl {
-	background-image: url(${c:encodeThemeURL('~./zul/img/wnd/wnd-ol-hl.gif')});
 }
 .z-window-modal-hm,
 .z-window-highlighted-hm,

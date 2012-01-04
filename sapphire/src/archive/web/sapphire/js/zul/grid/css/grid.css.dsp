@@ -25,7 +25,6 @@ div.z-grid-header th.z-column, div.z-grid-header th.z-auxheader {
 	border: 1px solid;
 	white-space: nowrap;
 	padding: 0 0 0 2px;
-	font-size: ${fontSizeM}; font-weight: normal;
 	border-color: #8FB9D0 #8FB9D0 #8FB9D0 white;
 	border-top: none;
 	<c:if test="${!(zk.ie >= 8)}">
@@ -254,12 +253,6 @@ div.z-grid-header .z-column.z-column-sizing,
 div.z-grid-header .z-column.z-column-sizing div.z-column-cnt,
 div.z-grid-header .z-column.z-column-sizing div.z-column-cnt .z-column-btn {
 	cursor: e-resize;
-}
-.z-auxheader-cnt {
-	font-weight: bold;
-	font-size: ${fontSizeM};
-	font-family: ${fontFamilyC};
-	color: #00547A;
 }
 div.z-grid-header .z-column-over-sort-asc, div.z-grid-header .z-column-over-sort-dsc {
 	background-image: url(${c:encodeThemeURL('~./zul/img/grid/column-bg.png')});

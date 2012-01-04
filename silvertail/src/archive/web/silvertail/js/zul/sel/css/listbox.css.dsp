@@ -27,9 +27,6 @@ div.z-listbox-header th.z-listheader, div.z-listbox-header th.z-auxheader {
 	border: 1px solid;
 	white-space: nowrap;
 	color:#363636;
-	font-family:arial;
-	font-size:12px;
-	font-weight:bold;
 	border-color: #CFCFCF #CFCFCF #CFCFCF white;
 	border-top: none;
 	padding: 0;
@@ -219,7 +216,6 @@ div.z-listbox-header tr.z-listhead th:last-child {
 }
 
 div.z-listheader-cnt, div.z-listbox-header div.z-auxheader-cnt {
-	font-weight:bold;
 	padding: 8px 5px 7px;
 }
 
