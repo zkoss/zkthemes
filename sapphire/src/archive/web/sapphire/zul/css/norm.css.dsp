@@ -200,8 +200,8 @@ div.z-log button {
 .z-loading, .z-apply-loading {
 	position: absolute;
 	cursor: wait;
-	background-color: #E3E3E3;
-	border: 1px solid #C5C5C5;
+	background-color: #CCDBE3;
+	border: 1px solid #8FB9D0;
 	white-space: nowrap;
 	padding: 3px;
 }
@@ -214,7 +214,7 @@ div.z-log button {
 	overflow: hidden;
 }
 .z-loading-indicator, .z-apply-loading-indicator {
-	border: 1px solid #C5C5C5;
+	border: 1px solid #8FB9D0;
 	background-color: #FFFFFF;
 	color: #363636;
 	white-space: nowrap;
