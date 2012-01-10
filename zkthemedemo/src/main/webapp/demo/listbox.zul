@@ -123,6 +123,10 @@
 		<listcell label="&#36;{each}-4"/>
 		</listitem>
 	</listbox>
+	<listbox emptyMessage="This Listbox is empty.">
+		<listhead>
+			<listheader label="Col" />
+		</listhead>
+	</listbox>
 </div>
-			
 </zk>

@@ -41,6 +41,7 @@
 							onClick="alert(self.label)" />
 					</menupopup>
 				</menu>
+				<menuseparator />
 				<menu label="Help"
 					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
 					<menupopup>

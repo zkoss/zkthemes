@@ -2,9 +2,10 @@
 <zk>
 	<hbox>
 		<window title="Window" border="normal" height="300px" width="300px">
-			<toolbar >
+			<toolbar>
 				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
 				<toolbarbutton label="Button 2" image="/common/img/network.gif"/>
+				<a href="http://www.zkoss.org">ZK</a>
 			</toolbar>
 			Window Content
 		</window>
@@ -17,7 +18,7 @@
 				Panel Content
 				(For Toolbar in panel mold, see Panel demo.)
 			</panelchildren>
-			<toolbar >
+			<toolbar>
 				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
 				<toolbarbutton label="Button 2" image="/common/img/network.gif"/>
 			</toolbar>
@@ -44,22 +45,22 @@
 	<separator />
 	<hbox>
 		<window title="Window" border="normal" height="300px" width="300px">
-			<toolbar >
+			<toolbar>
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" />
 			</toolbar>
 			Window Content
 		</window>
 		<panel title="Panel" border="normal" height="300px" width="300px" framable="true" >
-			<toolbar >
+			<toolbar>
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" />
 			</toolbar>
-			<panelchildren >
+			<panelchildren>
 				Panel Content
 				(For Toolbar in panel mold, see Panel demo.)
 			</panelchildren>
-			<toolbar >
+			<toolbar>
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" />
 			</toolbar>

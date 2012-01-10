@@ -341,5 +341,9 @@
 			</grid>
 		</window>
 	</hbox>
+	<grid emptyMessage="This Grid is empty.">
+		<columns>
+			<column label="Col" />
+		</columns>
+	</grid>
 </zk>
-			
