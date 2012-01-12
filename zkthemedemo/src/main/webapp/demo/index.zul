@@ -193,7 +193,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 					
 				<category value="Listbox" />
 					<item label="Listbox"                  topic="demo/listbox" />
-					<item label="Listbox (Grouping)"      topic="demo/listbox-grouping" />
+					<item label="Listbox (Grouping)"       topic="demo/listbox-grouping" />
 					<item label="Listbox (Header, Footer)" topic="demo/listbox-header"/>
 					
 				<category value="Tree" />
@@ -202,8 +202,9 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 					
 				<category value="Input Boxes" />
 					<item label="Input (Basic, Errbox)" topic="demo/inputs-basic" />
-					<item label="Input (Rounded)" topic="demo/inputs-rounded"/>
+					<item label="Input (Rounded)"       topic="demo/inputs-rounded"/>
 					<item label="Combo Input (Default)" topic="demo/inputs" />
+					<item label="Calendar"              topic="demo/calendar" />
 					<item label="Bandbox"               topic="demo/inputs-bandbox" />
 					<item label="Combobox"              topic="demo/inputs-combobox" />
 					
