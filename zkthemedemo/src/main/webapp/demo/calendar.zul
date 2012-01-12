@@ -1,3 +1,8 @@
 <zk>
 	<calendar />
+	<datebox id="db" width="200px" 
+		format="yyyy/MM/dd a hh:mm:ss" displayedTimeZones="GMT+8,GMT-8" />
+	<zscript>
+		db.value = new java.util.Date();
+	</zscript>
 </zk>
