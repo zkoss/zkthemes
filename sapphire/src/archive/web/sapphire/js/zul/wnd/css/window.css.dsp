@@ -286,7 +286,7 @@
 }
 .z-messagebox .z-label {
 	font-family: ${fontFamilyC};
-	font-size: 12px;
+	font-size: ${fontSizeM};
 	color: #363636;
 }
 .z-messagebox-btn {

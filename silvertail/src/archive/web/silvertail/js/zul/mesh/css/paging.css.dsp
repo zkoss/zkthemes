@@ -13,8 +13,8 @@
 	color: #363636; 
 	font-weight: normal;
 	text-decoration: none;
-	font-family: arial;
-	font-size: 11px;
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeS};
 	padding: 2px 2px 2px 4px;
 	position: relative;
 	top: -7px;
@@ -25,8 +25,8 @@
 	text-decoration: underline;
 }
 .z-paging-os .z-paging-os-seld {
-	font-family:arial;
-	font-size: 11px; 
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeS};
 	color: #FFFFFF; 
 	font-weight: bold;
 	background-image:none;
@@ -36,8 +36,8 @@
 	color: #363636; 
 }
 .z-paging-os span {
-	font-family: Arial;
-	font-size: 11px; 
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeS};
 	color: #363636; 
 	font-weight: normal;
 	position:absolute;
@@ -218,8 +218,8 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 	border:1px solid #CFCFCF;
 	height: 20px;
 	line-height: 20px;
-	font-family: arial;
-	font-size: 12px;
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeM};
 	color: #363636;
 }
 .z-paging-btn .z-paging-next {
@@ -288,8 +288,8 @@ div.z-paging-os-cnt-l-over  div.z-paging-os-cnt-m {
 	position:absolute;
 	right:8px;
 	top:11px;
-	font-family:Arial;
-	font-size: 11px;
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeS};
 }
 <c:if test="${zk.ie < 8}">
 .z-paging-os .z-paging-os-cnt {

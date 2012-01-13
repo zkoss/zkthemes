@@ -80,22 +80,10 @@
 .z-calendar-disd,
 .z-calendar-disd * {
 	cursor: default !important;
-	color: #AAA !important;
-	
+	color: #AAAAAA !important;
 	color: rgba(170,170,170,0.6) !important;
 }
 
-/*.z-calendar-calyear*/ 
-.z-datebox-rounded-calyear,
-.z-datebox-calyear {
-	background: #e9f1f3;
-	border: 1px solid;
-	border-color: #f8fbff #aca899 #aca899 #f8fbff;
-}
-.z-datebox-rounded-calday,
-.z-datebox-calday {
-	border: 1px solid #ddd;
-}
 .z-datebox-timezone-body,
 .z-datebox-timezone-item {
 	font-family: ${fontFamilyC};
@@ -136,7 +124,7 @@
 	cursor: pointer; 
 	text-decoration: none;
 	-moz-user-select: none;
-	color: #5C5C5C;	
+	color: #636363;	
 }
 .z-calendar-calday td {
 	padding: 3px 0;
@@ -148,7 +136,7 @@
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
-	text-shadow: 1px 1px 3px #008bb6;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .z-calendar-calyear td.z-calendar-seld,
@@ -158,36 +146,24 @@
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
-	border-color: #fcd4a9;
-	text-shadow: 1px 1px 3px #888;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
-.z-datebox-rounded-calmon td.z-datebox-rounded-over-seld,
-.z-datebox-rounded-calday td.z-datebox-rounded-over-seld,
-.z-calendar td.z-calendar-over-seld,
-.z-datebox-calmon td.z-datebox-over-seld,
-.z-datebox-calday td.z-datebox-over-seld {
+.z-calendar td.z-calendar-over-seld {
 	background: #5FA4FF;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
-	text-shadow: 1px 1px 3px #008bb6;
-}
-.z-calendar td.z-calendar-over-seld {
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 	color: white;
 }
 .z-calendar-caldow td {
 	text-align: center;
 }
-.z-datebox-rounded-caldow td,
-.z-datebox-caldow td {
-	font-size: ${fontSizeS}; color: #363636; font-weight: bold;
-	padding: 1px 2px; background: #e8e8f0; text-align: center;
-}
 .z-calendar .z-weekend,
 .z-calendar .z-weekday {
-	font-family: arial;
-	font-weight:bold;
-	font-size:11px;
+	font-family: ${fontFamilyT};
+	font-weight: bold;
+	font-size: ${fontSizeS};
 }
 .z-calendar .z-weekend {
 	color: #f7941d;
@@ -196,7 +172,7 @@
 	color: #636363;
 }
 .z-calendar .z-outside {
-	color: #888;
+	color: #888888;
 	text-shadow: none;
 }
 
@@ -216,8 +192,7 @@ td.z-calendar-wkend {
 </c:if>
 <%-- 1735084 --%>
 <c:if test="${zk.ie > 0}">
-.z-datebox-rounded-calyear td,
-.z-calendar-calyear td, .z-datebox-calyear td {
+.z-calendar-calyear td {
 	color: black;
 }
 </c:if>

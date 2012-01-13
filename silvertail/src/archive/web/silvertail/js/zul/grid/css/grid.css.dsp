@@ -101,9 +101,9 @@ tr.z-grid-faker, tr.z-grid-faker th, tr.z-grid-faker div {
 	overflow: hidden;
 }
 div.z-column-cnt, div.z-row-cnt {
-	font-family: arial;
-	font-size: 12px;
-	font-weight:bold;
+	font-family: ${fontFamilyC};
+	font-size: ${fontSizeM};
+	font-weight: bold;
 	color: #363636;
 }
 .z-row-over div.z-row-cnt {
