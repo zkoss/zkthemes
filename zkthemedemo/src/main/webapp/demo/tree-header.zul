@@ -366,8 +366,8 @@
 	</button>
 	<tree id="tree" width="400px" zclass="z-filetree" mold="paging" pageSize="7">
 		<treecols sizable="true">
-			<treecol label="Name" width="200"/>
-			<treecol label="Description" width="200"/>
+			<treecol label="Name" />
+			<treecol label="Description" />
 		</treecols>
 		<auxhead>
 			<auxheader label="A+B" colspan="2"/>
