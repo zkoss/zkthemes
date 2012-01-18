@@ -296,11 +296,11 @@ div.z-listbox-header th.z-listheader,
 div.z-listbox-header th.z-auxheader {
 	text-overflow: ellipsis;
 }
-div.z-listheader-cnt, .z-auxheader-cnt {
+div.z-listheader-cnt {
 	white-space: nowrap; <%-- Bug #1839960  --%>
 }
 div.z-listfooter-cnt,
-div.z-listheader-cnt, .z-auxheader-cnt {
+div.z-listheader-cnt {
 	position: relative; <%-- Bug #1825896  --%>
 }
 <c:if test="${!(zk.ie >= 8)}">
@@ -321,7 +321,7 @@ tr.z-listbox-faker {
 }
 </c:if>
 <c:if test="${zk.ie >= 8}">
-.z-listheader, .z-auxheader {
+.z-listheader {
 	text-align: left;
 }
 </c:if>
