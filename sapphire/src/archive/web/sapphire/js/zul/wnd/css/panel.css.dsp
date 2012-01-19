@@ -127,7 +127,7 @@
 	overflow: hidden;
 	padding: 2px;
 }
-.z-panel-noborder .z-panel-children-noborder {
+.z-panel-noborder .z-panelchildren-noborder {
 	border-width: 0;
 }
 .z-panel-fl.z-panel-nobtm2 {
@@ -183,7 +183,7 @@
 	overflow: hidden;
 	zoom: 1;
 }
-.z-panel-children {
+.z-panelchildren {
 	overflow: hidden;
 	background-color: white;
 	border: 1px solid #8FB9D0;
@@ -207,11 +207,11 @@
 	border-top: 1px solid #8FB9D0;
 	border-bottom: 0;
 }
-.z-panel-cl .z-panel-children {
+.z-panel-cl .z-panelchildren {
 	background-color: white;
 	border: 1px solid #8FB9D0;
 }
-.z-panel-children-noheader {
+.z-panelchildren-noheader {
 	border-top: 1px solid #8FB9D0;
 }
 .z-panel-top-noborder .z-toolbar {
