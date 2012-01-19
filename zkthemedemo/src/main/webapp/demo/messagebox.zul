@@ -1,5 +1,5 @@
 <?page title="Messagebox" contentType="text/html;charset=UTF-8"?>
-<zk>
+<zk xmlns:w="client">
 	<zscript><![CDATA[
 		// Ulysses from Project Gutenberg
 		String longmsg = "Stately, plump Buck Mulligan came from the stairhead,"+
@@ -77,6 +77,10 @@
 					Messagebox.show(longmsg, "Ulysses", Messagebox.OK, Messagebox.INFORMATION);
 				}</attribute>
 			</button>
+		</window>
+		<separator />
+		<window title="jq.alert()" border="normal" width="300px" height="300px">
+			<button label="Alert" w:onClick="jq.alert('Test Alert')" />
 		</window>
 	</hbox>
 </zk>
