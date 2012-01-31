@@ -1,4 +1,4 @@
-<?page title="ZK Theme: Breeze"?>
+<?page title="ZK Theme Demo" ?>
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
 <?component name="item" inline="true" macroURI="/demo/_macro/_sidebar_item.zul" ?>
 <zk xmlns:w="client">

@@ -1,6 +1,9 @@
-<?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="ZK Theme Demo: Breeze (2010)" border="normal" height="100%">
-Hi! This is a demo for our new Theme: Breeze. 
-</window>
+	<zscript>
+		import org.zkoss.zkplus.theme.Themes;
+		String theme = Themes.getDisplayName(Themes.getCurrentTheme());
+	</zscript>
+	<window title="ZK Theme Demo: ${theme}" border="normal" height="100%">
+		Hi! This is a demo for Theme: ${theme}. 
+	</window>
 </zk>
