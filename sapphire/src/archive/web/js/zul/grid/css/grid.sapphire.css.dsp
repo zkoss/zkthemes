@@ -315,7 +315,7 @@ tr.z-row-over > td.z-row-inner {
 
 <%-- IE6 not support row over --%>
 <c:if test="${not c:browser('ie6-')}">
-tr.z-row-over .z-row-cnt {
+tr.z-row-over > td.z-row-inner > .z-row-cnt {
 	color: #FFFFFF;
 }
 </c:if>
