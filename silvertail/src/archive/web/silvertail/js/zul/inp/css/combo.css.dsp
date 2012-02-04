@@ -294,7 +294,7 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-spinner-focus .z-spinner-btn-over,
 .z-doublespinner-focus .z-doublespinner-btn-over {
 	background-position: -19px 0;
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid #999999;
 }
 .z-combobox-rounded-focus .z-combobox-rounded-btn-over,
 .z-bandbox-rounded-focus .z-bandbox-rounded-btn-over,
