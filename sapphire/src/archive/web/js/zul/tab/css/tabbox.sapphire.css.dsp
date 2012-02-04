@@ -244,7 +244,7 @@
 }
 .z-tab-seld .z-tab-hr {
 	background-position: right 0;
-	<c:if test="${c:isExplorer()}">
+	<c:if test="${c:browser('ie6-')}">
 	position: relative;
 	</c:if>
 }
