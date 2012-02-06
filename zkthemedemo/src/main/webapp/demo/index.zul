@@ -1,56 +1,8 @@
 <?page title="ZK Theme Demo" ?>
+<?style src="/base.css" ?>
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
 <?component name="item" inline="true" macroURI="/demo/_macro/_sidebar_item.zul" ?>
-<zk xmlns:w="client">
-<style>
-.content .item {
-	padding: 0;
-	margin-left: 22px;
-	color: #333333;
-	font-size: 11px;
-	text-decoration:none;
-	line-height: 12px;
-}
-.content .z-vbox .item:hover {
-	text-decoration: underline;
-}
-.content .z-toolbarbutton-over {
-	border: 0;
-}
-.content .z-toolbarbutton-over .z-toolbarbutton-body {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-.content .z-toolbarbutton-over .z-toolbarbutton-cnt {
-	background: none repeat scroll 0 0 transparent;
-}
-.sidebar-left .z-west-header {
-	border: 0 none;
-	background: transparent none repeat scroll 0 0;
-	font-family: Verdana, Arial;
-	color: #333333;
-	font-weight: bold;
-}
-.sidebar-left .content {
-	padding: 8px;
-	background: #F0F0F0;
-	border: 1px solid #CCCCCC;
-}
-.banner .z-north-body {
-	background: #FFFFFF;
-}
-.yellow .center-bg,
-.yellow .center-bg-win .z-window-embedded-cnt,
-.yellow .center-bg-win .z-panel-children {
-	background: #FFFF7F;
-}
-.green .center-bg,
-.green .center-bg-win .z-window-embedded-cnt,
-.green .center-bg-win .z-panel-children {
-	background: #7FFF7F;
-}
-</style>
+<zk xmlns:w="client" xmlns:n="native">
 <zscript><![CDATA[
 import org.zkoss.lang.Library;
 import javax.servlet.http.*;
@@ -73,7 +25,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 	ListModelList model = new ListModelList(ary);
 	
 	ComboitemRenderer renderer = new ComboitemRenderer() {
-		public void render(Comboitem item, Object data) {
+		public void render(Comboitem item, Object data, int index) {
 			String name = (String)data;
 			String display = Library.getProperty("org.zkoss.theme.display." + name);
 			item.setLabel(display);
@@ -81,7 +33,7 @@ import org.zkoss.zk.ui.util.ThemeProvider;
 		}
 	};
 ]]></zscript>
-<borderlayout xmlns:n="http://www.zkoss.org/2005/zk/native">
+<borderlayout>
 	<north sclass="banner" border="none" size="100px" collapsible="true" style="background: #FFFFFF;">
 		<hbox width="100%" height="100%" align="center">
 			<separator width="10px"/>

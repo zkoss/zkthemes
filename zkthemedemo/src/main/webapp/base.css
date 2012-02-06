@@ -1,0 +1,47 @@
+.content .item {
+	padding: 0;
+	margin-left: 22px;
+	color: #333333;
+	font-size: 11px;
+	text-decoration:none;
+	line-height: 12px;
+}
+.content .z-vbox .item:hover {
+	text-decoration: underline;
+}
+.content .z-toolbarbutton-over {
+	border: 0;
+}
+.content .z-toolbarbutton-over .z-toolbarbutton-body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.content .z-toolbarbutton-over .z-toolbarbutton-cnt {
+	background: none repeat scroll 0 0 transparent;
+}
+.sidebar-left .z-west-header {
+	border: 0 none;
+	background: transparent none repeat scroll 0 0;
+	font-family: Verdana, Arial;
+	color: #333333;
+	font-weight: bold;
+}
+.sidebar-left .content {
+	padding: 8px;
+	background: #F0F0F0;
+	border: 1px solid #CCCCCC;
+}
+.banner .z-north-body {
+	background: #FFFFFF;
+}
+.yellow .center-bg,
+.yellow .center-bg-win .z-window-embedded-cnt,
+.yellow .center-bg-win .z-panel-children {
+	background: #FFFF7F;
+}
+.green .center-bg,
+.green .center-bg-win .z-window-embedded-cnt,
+.green .center-bg-win .z-panel-children {
+	background: #7FFF7F;
+}

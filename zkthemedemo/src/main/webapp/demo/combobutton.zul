@@ -1,75 +1,39 @@
 <?page title="Combobutton" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<hbox>
-		<window title="Combobutton with popup" border="normal" width="300px" height="300px">
-			message box
-			<textbox id="messageBox" width="200px" />
-			<combobutton label="Combobutton">
-				<attribute name="onClick">
-					messageBox.setValue("Combobutton one clicked");
-				</attribute>
-				<attribute name="onOpen">
-					messageBox.setValue("Combobutton one " + (event.isOpen()? "opened" : "closed"));
-				</attribute>
+	<hlayout>
+		<window title="Combobutton" border="normal" width="300px" height="300px">
+			<combobutton label="Combobutton" image="/common/img/volumn.gif">
 				<popup>
-					<vbox>
-						<hbox>
-							Search
-							<textbox />
-						</hbox>
-						<listbox width="200px">
-							<listhead>
-								<listheader label="Name" />
-								<listheader label="Description" />
-							</listhead>
-							<listitem>
-								<listcell label="John" />
-								<listcell label="CEO" />
-							</listitem>
-							<listitem>
-								<listcell label="Joe" />
-								<listcell label="Engineer" />
-							</listitem>
-							<listitem>
-								<listcell label="Mary" />
-								<listcell label="Supervisor" />
-							</listitem>
-						</listbox>
-					</vbox>
+					Popup Content
 				</popup>
 			</combobutton>
 			<separator />
-		</window>
-		<window title="Combobutton with menupopup" border="normal" width="300px" height="300px">
-			message box
-			<textbox id="messageBoxTwo" width="200px" />
-			<combobutton label="Combobutton">
-				<attribute name="onClick">
-					messageBoxTwo.setValue("Combobutton two clicked");
-				</attribute>
-				<attribute name="onOpen">
-					messageBoxTwo.setValue("Combobutton two " + (event.isOpen()? "opened" : "closed"));
-				</attribute>
+			<combobutton label="Combobutton" image="/common/img/volumn.gif">
 				<menupopup>
-					<menuitem label="Index" onClick="alert(self.label)" />
+					<menuitem label="Index" />
 					<menu label="About">
 						<menupopup>
-							<menuitem label="About ZK"
-								onClick="alert(self.label)" />
-							<menuitem label="About Potix"
-								onClick="alert(self.label)" />
-							<menu label="others">
-								<menupopup>
-									<menuitem label="About theme"
-										onClick="alert(self.label)" />
-									<menuitem label="About addon"
-										onClick="alert(self.label)" />
-								</menupopup>
-							</menu>
+							<menuitem label="About ZK" />
+							<menuitem label="About Potix" />
 						</menupopup>
 					</menu>
 				</menupopup>
 			</combobutton>
 		</window>
-	</hbox>
+		<window title="Combobutton mold=tbbtn" border="normal" width="300px" height="300px">
+			<toolbar>
+				<combobutton label="Combobutton" image="/common/img/volumn.gif" mold="tbbtn">
+					<menupopup>
+						<menuitem label="Index" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK" />
+								<menuitem label="About Potix" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</combobutton>
+			</toolbar>
+		</window>
+	</hlayout>
 </zk>
