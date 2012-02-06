@@ -9,12 +9,12 @@
 			</window>
 			<window title="Window: Overlapped" border="normal" mode="overlapped"
 				closable="true" sizable="true" maximizable="true" minimizable="true"
-				width="300px" height="200px" top="120px" left="550px" >
+				width="300px" height="200px" top="80px" left="550px" >
 				Window Content
 			</window>
 			<window id="popup1" title="Window: Popup" border="normal" mode="popup"
 				closable="true" sizable="true" maximizable="true" minimizable="true"
-				width="300px" height="200px" top="120px" left="870px" >
+				width="300px" height="200px" top="80px" left="870px" >
 				Window Content
 			</window>
 			<window id="modal1" title="Window: Modal" border="normal" visible="false"
@@ -35,11 +35,11 @@
 				Window Content
 			</window>
 			<window border="normal" mode="overlapped" closable="true" 
-				width="300px" height="200px" top="340px" left="550px" >
+				width="300px" height="200px" top="300px" left="550px" >
 				Window Content
 			</window>
 			<window id="popup2" border="normal" mode="popup" closable="true" 
-				width="300px" height="200px" top="340px" left="870px" >
+				width="300px" height="200px" top="300px" left="870px" >
 				Window Content
 			</window>
 			<window id="modal2" border="normal" visible="false"

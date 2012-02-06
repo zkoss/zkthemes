@@ -3,181 +3,99 @@
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
 <?component name="item" inline="true" macroURI="/demo/_macro/_sidebar_item.zul" ?>
 <zk xmlns:w="client" xmlns:n="native">
-<zscript><![CDATA[
-import org.zkoss.lang.Library;
-import javax.servlet.http.*;
-import java.util.*;
-import org.zkoss.zul.*;
-import org.zkoss.zk.ui.util.ThemeProvider;
-]]></zscript>
-<zscript><![CDATA[
-	String topic = Executions.getCurrent().getParameter("topic");
-	desktop.setAttribute("topic", topic);
-	String contentSrc = (topic==null || topic.isEmpty())? "/demo/hello.zul" : "/"+topic+".zul";
-	
-	String[] names = Library.getProperty("org.zkoss.theme.names").split(";");
-	ArrayList ary = new ArrayList();
-	for (int i = 0; i < names.length; i++) {
-		String name = names[i];
-		if (name != null && name.length() > 0)
-			ary.add(name);
-	}
-	ListModelList model = new ListModelList(ary);
-	
-	ComboitemRenderer renderer = new ComboitemRenderer() {
-		public void render(Comboitem item, Object data, int index) {
-			String name = (String)data;
-			String display = Library.getProperty("org.zkoss.theme.display." + name);
-			item.setLabel(display);
-			item.setValue(name);
-		}
-	};
-]]></zscript>
-<borderlayout>
-	<north sclass="banner" border="none" size="100px" collapsible="true" style="background: #FFFFFF;">
-		<hbox width="100%" height="100%" align="center">
-			<separator width="10px"/>
-			<n:h1 style="top:5px; left:-120px; font-size:24px">ZK Theme: </n:h1>
-			<separator width="3px"/>
-			Set theme by cookie
-			<combobox model="${model}" itemRenderer="${renderer}"> 
-				<attribute name="onCreate"><![CDATA[
-					Execution exe = Executions.getCurrent();
-					Cookie[] cookies = 
-						((HttpServletRequest)exe.getNativeRequest()).getCookies();
-					String themeKey = null;
-					if(cookies != null) 
-						for(int i=0; i < cookies.length; i++){
-							Cookie c = cookies[i];
-							if("zktheme".equals(c.getName())) {
-								String val = c.getValue();
-								if(val != null) 
-									themeKey = val;
-							}
-						}
-					if (themeKey != null) {
-						List list = self.getItems();
-						if (list != null) {
-							for (int i = 0; i < list.size(); i++) {
-								Comboitem item = list.get(i);
-								if (themeKey.equals(item.getLabel()))
-									self.setSelectedItem(item);
-							}
-						}
-					}
-				]]></attribute>
-				<attribute name="onSelect"><![CDATA[
-				 	Execution exe = Executions.getCurrent();
-				 	Cookie cookie = new Cookie("zktheme", self.getSelectedItem().getValue());
-				    cookie.setMaxAge(60*60*24*30); //store 30 days
-				    String cp = exe.getContextPath();
-				    // if path is empty, cookie path will be request path, which causes problems
-				    if(cp.length() == 0)
-				       cp = "/";
-				    cookie.setPath(cp);
-				    ((HttpServletResponse)exe.getNativeResponse()).addCookie(cookie);
-				    Executions.sendRedirect(null);
-				]]></attribute>
-			</combobox>
-			Set theme by Library Property
-			<combobox model="${model}" itemRenderer="${renderer}">
-				<attribute name="onSelect"><![CDATA[
-				 	//remove cookie
-				 	Execution exe = Executions.getCurrent();
-				 	Cookie cookie = new Cookie("zktheme", "");
-				    cookie.setMaxAge(0); //store 30 days
-				    String cp = exe.getContextPath();
-				    // if path is empty, cookie path will be request path, which causes problems
-				    if(cp.length() == 0)
-				       cp = "/";
-				    cookie.setPath(cp);
-				    ((HttpServletResponse)exe.getNativeResponse()).addCookie(cookie);
-				    
-				    Library.setProperty("org.zkoss.theme.preferred", self.getSelectedItem().getValue());
-				    Executions.sendRedirect(null);
-				]]></attribute>
-			</combobox>
-			Set background color
-			<listbox name="bg-color-box" mold="select">
-				<attribute w:name="onSelect">
-					var sclass = this.getChildAt(this.getSelectedIndex()).getValue(),
-						body = jq('body');
-					if (this._currBgClass)
-						body.removeClass(this._currBgClass);
-					if (sclass)
-						body.addClass(sclass);
-					this._currBgClass = sclass;
-				</attribute>
-				<listitem label="N/A" value="" selected="true" />
-				<listitem label="yellow" value="yellow" />
-				<listitem label="green" value="green" />
-			</listbox>
-		</hbox>
-	</north>
-	<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
-		<div sclass="content">
-			<vbox>
-				<category value="Layout" />
-					<item label="Window"              topic="demo/window" />
-					<item label="Window (no border)"  topic="demo/window-noborder" />
-					<item label="Panel"               topic="demo/panel" />
-					<item label="Panel (No border)"   topic="demo/panel-noborder" />
-					<item label="Popup"               topic="demo/popup" />
-					<item label="Borderlayout"        topic="demo/borderlayout" />
-					<item label="Borderlayout (Misc)" topic="demo/borderlayout-misc" />
-					<item label="Tabbox"              topic="demo/tabbox" />
-					<item label="Tabbox (Accordion)"  topic="demo/tabbox-accordion" />
-					<item label="Tabbox (Misc)"       topic="demo/tabbox-misc" />
-					<item label="Groupbox"            topic="demo/groupbox" />
-					<item label="Groupbox (3d)"       topic="demo/groupbox-3d" />
-					
-				<category value="Menu" />
-					<item label="Menubar"    topic="demo/menu" />
-					<item label="Toolbar"    topic="demo/toolbar" />
-					<item label="Fisheyebar" topic="demo/fisheyebar" />
-					
-				<category value="Grid" />
-					<item label="Grid"                 topic="demo/grid" />
-					<item label="Grid (Detail)"        topic="demo/grid-detail" />
-					<item label="Grid (Grouping)"      topic="demo/grid-grouping" />
-					<item label="Grid (Live Grouping)" topic="demo/grid-livegrouping" />
-					<item label="Grid (Paging)"        topic="demo/grid-paging" />
-					
-				<category value="Listbox" />
-					<item label="Listbox"                  topic="demo/listbox" />
-					<item label="Listbox (Grouping)"       topic="demo/listbox-grouping" />
-					<item label="Listbox (Header, Footer)" topic="demo/listbox-header"/>
-					
-				<category value="Tree" />
-					<item label="Tree"                  topic="demo/tree" />
-					<item label="Tree (Header, Footer)" topic="demo/tree-header"/>
-					
-				<category value="Input Boxes" />
-					<item label="Input (Basic, Errbox)" topic="demo/inputs-basic" />
-					<item label="Input (Rounded)"       topic="demo/inputs-rounded"/>
-					<item label="Combo Input (Default)" topic="demo/inputs" />
-					<item label="Calendar"              topic="demo/calendar" />
-					<item label="Bandbox"               topic="demo/inputs-bandbox" />
-					<item label="Combobox"              topic="demo/inputs-combobox" />
-					
-				<category value="Miscellaneous" />
-					<item label="Button"        topic="demo/button" />
-					<item label="Combobutton"   topic="demo/combobutton" />
-					<item label="Colorbox"      topic="demo/colorbox" />
-					<item label="Messagebox"    topic="demo/messagebox" />
-					<item label="Progressmeter" topic="demo/progressmeter" />
-					<item label="Slider"        topic="demo/slider" />
-					<item label="Splitter"      topic="demo/splitter" />
-					
-				<category value="Other Issues" />
-					<item label="Drag and Drop" topic="demo/drag-and-drop" />
-					<item label="Loading"       topic="demo/loading" />
-					<item label="JS Error"      topic="demo/error" />
-			</vbox>
-		</div>
-	</west>
-	<center sclass="center-bg" autoscroll="true" border="0" flex="true">
-		<include mode="instant" style="padding:20px;" id="xcontents" src="${contentSrc}"></include>
-	</center>
-</borderlayout>
+	<window vflex="1" apply="org.zkoss.theme.demo.MainController">
+		<borderlayout>
+			<north sclass="banner" border="none" size="60px" collapsible="true" style="background: #FFFFFF;">
+				<hbox width="100%" height="100%" align="center">
+					<separator width="10px" />
+					<n:h1 style="top:5px; left:-120px; font-size:24px">ZK Theme</n:h1>
+					<separator width="3px" />
+					Set theme by cookie
+					<combobox id="themeCookieCombobox" />
+					Set theme by Library Property
+					<combobox id="themeLibraryCombobox" />
+					Set background color
+					<listbox name="bg-color-box" mold="select">
+						<attribute w:name="onSelect">
+							var sclass = this.getChildAt(this.getSelectedIndex()).getValue(),
+								body = jq('body');
+							if (this._currBgClass)
+								body.removeClass(this._currBgClass);
+							if (sclass)
+								body.addClass(sclass);
+							this._currBgClass = sclass;
+						</attribute>
+						<listitem label="N/A" value="" selected="true" />
+						<listitem label="yellow" value="yellow" />
+						<listitem label="green" value="green" />
+					</listbox>
+				</hbox>
+			</north>
+			<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
+				<div sclass="content">
+					<vbox>
+						<category value="Layout" />
+							<item label="Window"              topic="demo/window" />
+							<item label="Window (no border)"  topic="demo/window-noborder" />
+							<item label="Panel"               topic="demo/panel" />
+							<item label="Panel (No border)"   topic="demo/panel-noborder" />
+							<item label="Popup"               topic="demo/popup" />
+							<item label="Borderlayout"        topic="demo/borderlayout" />
+							<item label="Borderlayout (Misc)" topic="demo/borderlayout-misc" />
+							<item label="Tabbox"              topic="demo/tabbox" />
+							<item label="Tabbox (Accordion)"  topic="demo/tabbox-accordion" />
+							<item label="Tabbox (Misc)"       topic="demo/tabbox-misc" />
+							<item label="Groupbox"            topic="demo/groupbox" />
+							<item label="Groupbox (3d)"       topic="demo/groupbox-3d" />
+							
+						<category value="Menu" />
+							<item label="Menubar"    topic="demo/menu" />
+							<item label="Toolbar"    topic="demo/toolbar" />
+							<item label="Fisheyebar" topic="demo/fisheyebar" />
+							
+						<category value="Grid" />
+							<item label="Grid"                 topic="demo/grid" />
+							<item label="Grid (Detail)"        topic="demo/grid-detail" />
+							<item label="Grid (Grouping)"      topic="demo/grid-grouping" />
+							<item label="Grid (Live Grouping)" topic="demo/grid-livegrouping" />
+							<item label="Grid (Paging)"        topic="demo/grid-paging" />
+							
+						<category value="Listbox" />
+							<item label="Listbox"                  topic="demo/listbox" />
+							<item label="Listbox (Grouping)"       topic="demo/listbox-grouping" />
+							<item label="Listbox (Header, Footer)" topic="demo/listbox-header"/>
+							
+						<category value="Tree" />
+							<item label="Tree"                  topic="demo/tree" />
+							<item label="Tree (Header, Footer)" topic="demo/tree-header"/>
+							
+						<category value="Input Boxes" />
+							<item label="Input (Basic, Errbox)" topic="demo/inputs-basic" />
+							<item label="Input (Rounded)"       topic="demo/inputs-rounded"/>
+							<item label="Combo Input (Default)" topic="demo/inputs" />
+							<item label="Calendar"              topic="demo/calendar" />
+							<item label="Bandbox"               topic="demo/inputs-bandbox" />
+							<item label="Combobox"              topic="demo/inputs-combobox" />
+							
+						<category value="Miscellaneous" />
+							<item label="Button"        topic="demo/button" />
+							<item label="Combobutton"   topic="demo/combobutton" />
+							<item label="Colorbox"      topic="demo/colorbox" />
+							<item label="Messagebox"    topic="demo/messagebox" />
+							<item label="Progressmeter" topic="demo/progressmeter" />
+							<item label="Slider"        topic="demo/slider" />
+							<item label="Splitter"      topic="demo/splitter" />
+							
+						<category value="Other Issues" />
+							<item label="Drag and Drop" topic="demo/drag-and-drop" />
+							<item label="Loading"       topic="demo/loading" />
+							<item label="JS Error"      topic="demo/error" />
+					</vbox>
+				</div>
+			</west>
+			<center sclass="center-bg" autoscroll="true" border="0" flex="true">
+				<include id="xcontents" mode="instant" style="padding:20px;" src="${contentSrc}" />
+			</center>
+		</borderlayout>
+	</window>
 </zk>
