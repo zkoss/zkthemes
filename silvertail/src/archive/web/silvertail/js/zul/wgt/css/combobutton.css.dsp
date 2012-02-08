@@ -130,7 +130,7 @@ span.z-combobutton-tbbtn {
 }
 .z-combobutton-over .z-combobutton-cr,
 .z-combobutton-over .z-combobutton-tr {
-	border-left: 1px solid #8FB9D0;
+	border-left: 1px solid #AAAAAA;
 }
 .z-combobutton-over .z-combobutton-tr {
 	background-position: 0 -8px;
@@ -181,7 +181,7 @@ span.z-combobutton-tbbtn {
 }
 .z-combobutton-over .z-combobutton-br {
 	background-position: 0 -12px;
-	border-left: 1px solid #8FB9D0;
+	border-left: 1px solid #AAAAAA;
 }
 .z-combobutton-clk .z-combobutton-bl {
 	background-position: -24px -4px;
@@ -289,10 +289,10 @@ span.z-combobutton-tbbtn {
 }
 .z-combobutton-tbbtn-over .z-combobutton-tbbtn-cm {
 	padding: 1px 2px 1px 2px;
-	border: 1px solid #7EAAC6;
+	border: 1px solid #AAAAAA;
 	border-right: 0 none;
 }
 .z-combobutton-tbbtn-over .z-combobutton-tbbtn-cr {
 	padding: 1px 1px 1px 2px;
-	border: 1px solid #7EAAC6;
+	border: 1px solid #AAAAAA;
 }
