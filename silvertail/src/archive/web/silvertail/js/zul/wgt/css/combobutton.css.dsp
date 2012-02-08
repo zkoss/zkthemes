@@ -15,7 +15,7 @@
 	color: #252525;
 }
 button.z-combobutton,
-button.z-combobutton-tbbtn { {
+button.z-combobutton-tbbtn {
 	padding:0 !important; 
 	margin:0 !important; 
 	border:0 !important;
