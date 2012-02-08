@@ -18,7 +18,7 @@
 .z-groupbox-hr {
 	position: relative;
 	top: 8px;
-	border: 1px solid #C5C5C5;
+	border: 1px solid #8FB9D0;;
 	border-bottom: none;
 }
 .z-groupbox-colpsd .z-groupbox-hr {
