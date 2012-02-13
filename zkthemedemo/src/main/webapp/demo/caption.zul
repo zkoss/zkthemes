@@ -1,0 +1,27 @@
+<zk>
+	<hlayout>
+		<window width="300px" height="300px" border="normal">
+			<caption label="Title" image="/common/img/volumn.gif">
+				Caption Content
+				<button label="Button" />
+			</caption>
+			Window Content
+		</window>
+		<panel width="300px" height="300px" border="normal">
+			<caption label="Title" image="/common/img/volumn.gif">
+				Caption Content
+				<button label="Button" />
+			</caption>
+			<panelchildren>
+				Panel Content
+			</panelchildren>
+		</panel>
+		<groupbox width="300px" height="300px">
+			<caption label="Title" image="/common/img/volumn.gif">
+				Caption Content
+				<button label="Button" />
+			</caption>
+			Groupbox Content
+		</groupbox>
+	</hlayout>
+</zk>

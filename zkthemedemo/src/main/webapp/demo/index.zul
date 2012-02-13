@@ -47,6 +47,7 @@
 							<item label="Tabbox (Misc)"       topic="demo/tabbox-misc" />
 							<item label="Groupbox"            topic="demo/groupbox" />
 							<item label="Groupbox (3d)"       topic="demo/groupbox-3d" />
+							<item label="Caption"             topic="demo/caption" />
 							
 						<category value="Menu" />
 							<item label="Menubar"    topic="demo/menu" />
