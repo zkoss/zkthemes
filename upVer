@@ -70,7 +70,7 @@ else
 	for target in $targetListOld ; do
 		targetList="$targetList $target"
 	done
-	targetList="$targetList zkthemedemo"
+	targetList="$targetList zkthemedemo breeze"
 	echo "targets: ${targetList}"
 	for target in $targetList ; do
 		if [ -d $target ] ; then
