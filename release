@@ -61,7 +61,8 @@ function updateVersion
 
 updateVersion ""
 echo "targets: ${targetList}"
-for target in $targetList ; do
+upTargetList="$targetList zkthemedemo breeze"
+for target in $upTargetList ; do
 	if [ -d $target ] ; then
 		updateVersion $target
 	else
