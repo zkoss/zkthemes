@@ -97,6 +97,10 @@ span.z-button {
 .z-button .z-button-tr {
 	height: 4px;
 }
+.z-button .z-button-tl {
+	<%-- ZK-868, font size will affect of inner button's td height --%>
+	font-size: 0px;
+}
 .z-button-focus .z-button-tl,
 .z-button-focus .z-button-cl {
 	background-position: -16px 0;
