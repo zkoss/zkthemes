@@ -203,15 +203,16 @@
 	border: 1px solid #86A4BE;
 	margin: 4px 2px;
 	position: relative;
-	left: 120px;
+	left: 123px;
 }
 .z-colorpalette-hex-inp, .z-colorpalette-btn {
 	position: absolute;
 	top: 5px;
-	left: 180px;
+	left: 185px;
 }
 .z-colorpalette-hex-inp {
 	width: 65px;
+	height: 16px;
 }
 
 .z-colorbox-palette-btn,
@@ -230,18 +231,18 @@
 .z-menu-palette-btn {
 	left: 6px;
 	top: 5px;
-	background-position:  0 0;
+	background-position: 0 0;
 }
 .z-colorbox-picker-btn,
 .z-menu-picker-btn {
 	left: 31px;
 	top: 5px;
-	background-position:  0 -44px;
+	background-position: 0 -44px;
 }
 .z-palette-btn .z-colorbox-palette-btn,
 .z-palette-btn .z-menu-palette-btn {
 	left: 6px;
-	background-position:  0 -22px;
+	background-position: 0 -22px;
 }
 .z-palette-btn .z-colorbox-picker-btn,
 .z-palette-btn .z-menu-picker-btn {
@@ -249,7 +250,7 @@
 }
 .z-picker-btn .z-colorbox-picker-btn,
 .z-picker-btn .z-menu-picker-btn {
-	background-position:  0 -66px;
+	background-position: 0 -66px;
 }
 .z-colorpalette-colorbox {
 	width: 12px; 
