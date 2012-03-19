@@ -450,6 +450,10 @@ span.z-drop-disallow {
 }
 --%>
 
+.z-drag-ghost {
+	list-style:none;
+}
+
 <%-- Focus Anchor --%>
 .z-focus-a {
 	position: absolute;
