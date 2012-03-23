@@ -374,6 +374,7 @@ span.z-drop-allow, span.z-drop-disallow {
 }
 div.z-drop-ghost {
 	border: 1px solid #CCCCCC;
+	list-style:none;
 }
 div.z-drop-cnt {
 	background: none no-repeat scroll 0 0 #FFFFFF;
@@ -411,6 +412,9 @@ span.z-drop-disallow {
 	border: 1px dotted #999;
 }
 --%>
+.z-drag-ghost {
+	list-style:none;
+}
 
 .z-drag-ghost {
 	list-style:none;
