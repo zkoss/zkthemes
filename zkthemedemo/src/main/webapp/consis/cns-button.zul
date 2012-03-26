@@ -1,0 +1,10 @@
+<zk>
+	<toolbar>
+		<toolbarbutton label="Toolbarbutton" image="/common/img/volumn.gif" />
+		<combobutton mold="tbbtn" label="Combobutton" image="/common/img/volumn.gif" />
+	</toolbar>
+	<div>
+		<button label="Button" image="/common/img/volumn.gif" />
+		<combobutton label="Combobutton" image="/common/img/volumn.gif" />
+	</div>
+</zk>

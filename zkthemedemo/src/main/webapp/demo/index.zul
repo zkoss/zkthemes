@@ -95,6 +95,7 @@
 							
 						<category value="Consistency" />
 							<item label="Input" topic="consis/cns-input" />
+							<item label="Button" topic="consis/cns-button" />
 					</vbox>
 				</div>
 			</west>
