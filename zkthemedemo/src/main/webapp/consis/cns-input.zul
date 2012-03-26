@@ -1,0 +1,7 @@
+<zk>
+	Mold: Default
+	<include src="/consis/_cns_input_template.zul" />
+	<separator bar="true" height="50px" />
+	Mold: Rounded
+	<include src="/consis/_cns_input_template.zul" imold="rounded" />
+</zk>

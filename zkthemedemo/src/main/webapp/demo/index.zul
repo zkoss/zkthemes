@@ -88,9 +88,13 @@
 							<item label="Splitter"      topic="demo/splitter" />
 							
 						<category value="Other Issues" />
+							<item label="Notification"  topic="demo/notification" />
 							<item label="Drag and Drop" topic="demo/drag-and-drop" />
 							<item label="Loading"       topic="demo/loading" />
 							<item label="JS Error"      topic="demo/error" />
+							
+						<category value="Consistency" />
+							<item label="Input" topic="consis/cns-input" />
 					</vbox>
 				</div>
 			</west>

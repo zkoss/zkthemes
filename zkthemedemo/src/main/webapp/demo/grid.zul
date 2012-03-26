@@ -94,9 +94,7 @@
 			</grid>
 		</window>
 		
-		<window
-			title="column, auxhead, auxhead"
-			border="normal" >
+		<window title="column, auxhead, auxhead" border="normal" >
 			<grid fixedLayout="true" width="300px">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
@@ -126,9 +124,7 @@
 			</grid>
 		</window>
 		
-		<window
-			title="column, auxhead, auxhead"
-			border="normal">
+		<window title="column, auxhead, auxhead" border="normal">
 			<grid fixedLayout="true" width="300px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
@@ -160,9 +156,7 @@
 	</hbox>
 	
 	<hbox>
-		<window
-			title="Only column"
-			border="normal" >
+		<window title="Only column" border="normal" >
 			<grid fixedLayout="true" width="300px">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
@@ -183,9 +177,7 @@
 			</grid>
 		</window>
 		
-		<window
-			title="Only auxhead: It shouldn't display auxhead"
-			border="normal" >
+		<window title="Only auxhead: It shouldn't display auxhead" border="normal" >
 			<grid fixedLayout="true" width="300px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
@@ -205,9 +197,7 @@
 			</grid>
 		</window>
 		
-		<window
-			title="No auxhead, No columns"
-			border="normal" >
+		<window title="No auxhead, No columns" border="normal" >
 			<grid fixedLayout="true" width="300px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
@@ -228,9 +218,7 @@
 		</window>
 	</hbox>
 	<hbox>
-		<window
-			title="Textbox and datebox in auxheader"
-			border="normal" >
+		<window title="Textbox and datebox in auxheader" border="normal" >
 			<grid fixedLayout="true" width="300px">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
@@ -272,9 +260,7 @@
 				</foot>
 			</grid>
 		</window>
-		<window
-			title="Embedded menubar, button, datebox and Listbox in column"
-			border="normal">
+		<window title="Embedded menubar, button, datebox and Listbox in column" border="normal">
 			<grid fixedLayout="true" width="600px">
 				<columns sizable="true">
 					<column label="Type">
@@ -343,7 +329,7 @@
 	</hbox>
 	<grid emptyMessage="This Grid is empty.">
 		<columns>
-			<column label="Col" />
+			<column label="Col Title">Col Content</column>
 		</columns>
 	</grid>
 </zk>

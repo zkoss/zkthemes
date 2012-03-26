@@ -1,0 +1,74 @@
+<zk xmlns:n="native">
+	<n:table>
+		<n:tr>
+			<n:th>
+				
+			</n:th>
+			<n:th>
+				<label>Doublebox</label>
+			</n:th>
+			<n:th>
+				<label>Datebox</label>
+			</n:th>
+			<n:th>
+				<label>Datebox</label>
+			</n:th>
+		</n:tr>
+		<n:tr>
+			<n:td>
+				<label>Base</label>
+			</n:td>
+			<n:td>
+				<doublebox mold="${arg.imold}" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" buttonVisible="false" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" />
+			</n:td>
+		</n:tr>
+		<n:tr>
+			<n:td>
+				<label>Disabled</label>
+			</n:td>
+			<n:td>
+				<doublebox mold="${arg.imold}" disabled="true" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" disabled="true" buttonVisible="false" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" disabled="true" />
+			</n:td>
+		</n:tr>
+		<n:tr>
+			<n:td>
+				<label>Read Only</label>
+			</n:td>
+			<n:td>
+				<doublebox mold="${arg.imold}" readonly="true" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" readonly="true" buttonVisible="false" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" readonly="true" />
+			</n:td>
+		</n:tr>
+		<n:tr>
+			<n:td>
+				<label>Inplace</label>
+			</n:td>
+			<n:td>
+				<doublebox mold="${arg.imold}" inplace="true" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" inplace="true" buttonVisible="false" />
+			</n:td>
+			<n:td>
+				<datebox mold="${arg.imold}" inplace="true" />
+			</n:td>
+		</n:tr>
+	</n:table>
+</zk>
