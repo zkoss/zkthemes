@@ -392,6 +392,37 @@ div.z-listbox {
 .z-listgroup-img-radio {
 	background-position: 0 -13px;
 }
+.z-listitem-over > td > .z-listcell-cnt > .z-listitem-img-radio,
+.z-listgroup-over > td > .z-listcell-cnt > .z-listgroup-img-radio {
+	background-position: -13px -13px;
+}
+.z-listitem-seld > td > .z-listcell-cnt > .z-listitem-img-radio,
+.z-listgroup-seld > td > .z-listcell-cnt > .z-listgroup-img-radio {
+	background-position: -26px -13px;
+}
+.z-listitem-over-seld > td > .z-listcell-cnt > .z-listitem-img-radio,
+.z-listgroup-over-seld > td > .z-listcell-cnt > .z-listgroup-img-radio {
+	background-position: -39px -13px;
+}
+.z-listheader-img-over,
+.z-listitem-over > td > .z-listcell-cnt > .z-listitem-img-checkbox, 
+.z-listgroup-over > td > .z-listcell-cnt > .z-listgroup-img-checkbox, 
+.z-listgroupfoot-over > td > .z-listcell-cnt > .z-listgroupfoot-img-checkbox {
+	background-position: -13px 0;
+}
+.z-listheader-img-seld,
+.z-listitem-seld > td > .z-listcell-cnt > .z-listitem-img-checkbox, 
+.z-listgroup-seld > td > .z-listcell-cnt > .z-listgroup-img-checkbox, 
+.z-listgroupfoot-seld > td > .z-listcell-cnt > .z-listgroupfoot-img-checkbox {
+	background-position: -26px 0;
+}
+.z-listheader-img-over-seld,
+.z-listitem-over-seld > td > .z-listcell-cnt > .z-listitem-img-checkbox, 
+.z-listgroup-over-seld > td > .z-listcell-cnt > .z-listgroup-img-checkbox, 
+.z-listgroupfoot-over-seld > td > .z-listcell-cnt > .z-listgroupfoot-img-checkbox {
+	background-position: -39px 0;
+}
+<c:if test="${c:browser('ie6-')}">
 .z-listitem-over .z-listitem-img-radio,
 .z-listgroup-over .z-listgroup-img-radio {
 	background-position: -13px -13px;
@@ -422,6 +453,7 @@ div.z-listbox {
 .z-listgroupfoot-over-seld .z-listgroupfoot-img-checkbox {
 	background-position: -39px 0;
 }
+</c:if>
 .z-listitem-img-disd {
 	opacity: .6;
 	-moz-opacity: .6;
