@@ -38,7 +38,7 @@ if [ "$oldVersion" == "" ] || [ "$newVersion" == "" ] ; then
 fi
 
 function upVer {
-	if [ "$1" != "zkthemedemo"] ; then
+	if [ "$1" != "zkthemedemo" ] ; then
 		sed -i "s/$oldVersion/$newVersion/g" $maindir/$1/version
 	fi
 	if [ "$isFL" == "FL" ] ; then
