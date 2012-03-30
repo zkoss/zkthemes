@@ -33,7 +33,7 @@ import org.zkoss.zkplus.theme.Themes;
  * Library property setting, Theme provider setting and Component definition setting 
  * @author sam
  */
-public class BreezeThemeWebAppInit implements WebAppInit, SEORenderer {
+public class BreezeThemeWebAppInit implements WebAppInit {
 	
 	private final static String BREEZE_NAME = "breeze";
 	private final static String BREEZE_DISPLAY = "Breeze";
@@ -47,18 +47,4 @@ public class BreezeThemeWebAppInit implements WebAppInit, SEORenderer {
 		Themes.register(BREEZE_NAME, BREEZE_DISPLAY, BREEZE_PRIORITY);
 	}
 	
-	// desktop attribute
-	private final static String THEME_INITED_DESKTOP = "org.zkoss.theme.desktop.inited";
-	public void render(Page page, Writer out) throws IOException {
-		final Desktop desktop = page.getDesktop();
-		boolean inited = Boolean.TRUE.equals(desktop.getAttribute(THEME_INITED_DESKTOP));
-		
-		if (!inited) {
-			desktop.setAttribute(THEME_INITED_DESKTOP, Boolean.TRUE);
-			String name = Themes.getCurrentTheme();
-			if (!BREEZE_NAME.equals(name))
-				out.write("<script src='" + 
-					Executions.encodeURL("~./" + name +"/js/zul.wpd") + "'></script>");
-		}
-	}
 }
