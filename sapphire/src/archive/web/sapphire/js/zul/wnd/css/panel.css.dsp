@@ -54,7 +54,7 @@
 <%-- Header --%>
 .z-panel-hm .z-panel-header,
 .z-panel-header {
-	color: #B2CAD6;
+	color: #00547A;
 	padding: 3px 0 7px 0;
 	background: transparent;
 	border: 0;
