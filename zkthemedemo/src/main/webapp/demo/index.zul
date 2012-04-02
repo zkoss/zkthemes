@@ -34,6 +34,9 @@
 			<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
 				<div sclass="content">
 					<vbox>
+						<category value="Overview" />
+							<item label="Overview" topic="demo/overview" />
+						
 						<category value="Layout" />
 							<item label="Window"              topic="demo/window" />
 							<item label="Window (no border)"  topic="demo/window-noborder" />
@@ -94,8 +97,9 @@
 							<item label="JS Error"      topic="demo/error" />
 							
 						<category value="Consistency" />
-							<item label="Input" topic="consis/cns-input" />
-							<item label="Button" topic="consis/cns-button" />
+							<item label="Input"    topic="consis/cns-input" />
+							<item label="Button"   topic="consis/cns-button" />
+							<item label="Caption"  topic="consis/cns-caption" />
 					</vbox>
 				</div>
 			</west>
