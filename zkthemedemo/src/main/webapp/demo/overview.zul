@@ -41,6 +41,9 @@
 				<hlayout hflex="1" vflex="1">
 					<grid model="${model}" hflex="1" vflex="1" 
 						mold="paging" pageSize="10">
+						<auxhead>
+							<auxheader label="Auxheader" colspan="2" />
+						</auxhead>
 						<columns>
 							<column label="Header 1" sort="auto" />
 							<column label="Header 2" sort="auto" />
@@ -51,6 +54,9 @@
 					</grid>
 					<listbox model="${model}" hflex="1" vflex="1" 
 						mold="paging" pageSize="10" checkmark="true">
+						<auxhead>
+							<auxheader label="Auxheader" colspan="2" />
+						</auxhead>
 						<listhead>
 							<listheader label="Header 1" sort="auto" />
 							<listheader label="Header 2" sort="auto" />
@@ -61,6 +67,9 @@
 					</listbox>
 					<tree model="${tmodel}" hflex="1" vflex="1"
 						mold="paging" pageSize="10" checkmark="true">
+						<auxhead>
+							<auxheader label="Auxheader" colspan="2" />
+						</auxhead>
 						<treecols>
 							<treecol label="Header 1" sort="auto" />
 							<treecol label="Header 2" sort="auto" />
@@ -76,11 +85,9 @@
 				<menubar>
 					<menu label="Menu">
 						<menupopup>
-							<menuitem label="New" />
-							<menuitem label="Open" image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png" />
-							<menuitem label="Save" image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png" />
+							<menuitem label="Menuitem" />
 							<menuseparator />
-							<menuitem label="Exit" image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png" />
+							<menuitem label="Menuitem" image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png" />
 						</menupopup>
 					</menu>
 					<menuitem label="Menuitem" />
@@ -115,7 +122,8 @@
 							<groupbox title="Groupbox" hflex="1" vflex="1">
 								MISC: progressmeter, slider, button for notif., popup, messagebox, loading
 							</groupbox>
-							<groupbox title="Groupbox" hflex="1" vflex="1">
+							<groupbox hflex="1" vflex="1">
+								<caption label="Groupbox" />
 							</groupbox>
 						</hlayout>
 					</center>

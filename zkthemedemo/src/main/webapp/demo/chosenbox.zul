@@ -1,0 +1,43 @@
+<zk xmlns:n="native">
+	<zscript><![CDATA[
+		import org.zkoss.zul.*;
+		import org.zkoss.zkmax.zul.Chosenbox;
+		import java.util.*;
+		
+		ListModel model = new ListModelList(new String[] {
+			"Apple", "Banana", "Super Apple", "Super Banana"
+		});
+		model.multiple = true;
+		model.addToSelection("Apple");
+		model.addToSelection("Banana");
+	]]></zscript>
+	<n:table>
+		<n:tr>
+			<n:td>
+				<label>Base</label>
+			</n:td>
+			<n:td>
+				<chosenbox width="300px" creatable="true" model="${model}" onSelect="" 
+					noResultsText="No Result" />
+			</n:td>
+		</n:tr>
+		<n:tr>
+			<n:td>
+				<label>Disabled</label>
+			</n:td>
+			<n:td>
+				<chosenbox width="300px" creatable="true" model="${model}" onSelect="" 
+					disabled="true" />
+			</n:td>
+		</n:tr>
+		<n:tr>
+			<n:td>
+				<label>No Model</label>
+			</n:td>
+			<n:td>
+				<chosenbox width="300px" creatable="true" onSelect="" 
+					noResultsText="No Result" createMessage="Create New" />
+			</n:td>
+		</n:tr>
+	</n:table>
+</zk>

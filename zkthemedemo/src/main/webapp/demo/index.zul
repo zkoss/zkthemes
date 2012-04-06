@@ -33,7 +33,7 @@
 			</north>
 			<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
 				<div sclass="content">
-					<vbox>
+					<vlayout>
 						<category value="Overview" />
 							<item label="Overview" topic="demo/overview" />
 						
@@ -73,13 +73,14 @@
 							<item label="Tree"                  topic="demo/tree" />
 							<item label="Tree (Header, Footer)" topic="demo/tree-header"/>
 							
-						<category value="Input Boxes" />
+						<category value="Input" />
 							<item label="Input (Basic, Errbox)" topic="demo/inputs-basic" />
 							<item label="Input (Rounded)"       topic="demo/inputs-rounded"/>
 							<item label="Combo Input (Default)" topic="demo/inputs" />
 							<item label="Calendar"              topic="demo/calendar" />
 							<item label="Bandbox"               topic="demo/inputs-bandbox" />
 							<item label="Combobox"              topic="demo/inputs-combobox" />
+							<item label="Chosenbox"             topic="demo/chosenbox" />
 							
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />
@@ -100,7 +101,7 @@
 							<item label="Input"    topic="consis/cns-input" />
 							<item label="Button"   topic="consis/cns-button" />
 							<item label="Caption"  topic="consis/cns-caption" />
-					</vbox>
+					</vlayout>
 				</div>
 			</west>
 			<center sclass="center-bg" autoscroll="true" border="0" flex="true">
