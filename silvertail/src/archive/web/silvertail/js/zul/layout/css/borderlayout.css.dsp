@@ -118,7 +118,7 @@
 .z-north-header,
 .z-south-header {
 	color: #1B1B1B;
-	font-size: ${fontSizeMS};
+	font-size: ${fontSizeM};
 	font-family: ${fontFamilyT};
 	font-weight: bold;
 	padding: 5px 3px 4px 5px;
