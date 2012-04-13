@@ -28,6 +28,11 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 	</library-property> 
 	
 	<library-property>
+		<name>org.zkoss.zk.WCS.cache</name>
+		<value>false</value>
+	</library-property> 
+	
+	<library-property>
 		<name>org.zkoss.zul.Button.mold</name>
 		<value>trendy</value>
 	</library-property>

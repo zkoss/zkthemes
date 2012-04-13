@@ -18,7 +18,7 @@
 				Panel Content
 				(For Toolbar in panel mold, see Panel demo.)
 			</panelchildren>
-			<toolbar>
+			<toolbar mold="panel">
 				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" image="/common/img/network.gif"/>
 			</toolbar>
@@ -60,7 +60,7 @@
 				Panel Content
 				(For Toolbar in panel mold, see Panel demo.)
 			</panelchildren>
-			<toolbar>
+			<toolbar mold="panel">
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" />
 			</toolbar>
