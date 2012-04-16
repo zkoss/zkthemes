@@ -1,15 +1,6 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 
 .z-chosenbox {
-	background-color: #FFF;
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #EEEEEE));
-	background-image: -webkit-linear-gradient(center bottom, white 85%, #EEEEEE 99%);
-	background-image: -moz-linear-gradient(center bottom, white 85%, #EEEEEE 99%);
-	background-image: -o-linear-gradient(bottom, white 85%, #EEEEEE 99%);
-	background-image: -ms-linear-gradient(top, #FFFFFF 85%,#EEEEEE 99%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#EEEEEE',GradientType=0 );
-	background-image: linear-gradient(top, #FFFFFF 85%,#EEEEEE 99%);
-
 	display:-moz-inline-box;
 	display: inline-block;
 	overflow: hidden;
@@ -17,90 +8,109 @@
 		zoom: 1;
 		display: inline;
 	</c:if>
-	border: 1px solid #CCCCCC;
+	background-color: #FFFFFF;
+	border: 1px solid #E6E6E6;
+	border-top-color: #B2B2B2;
 }
 .z-chosenbox-focus {
-	border: 1px solid #5897FB;
-}
-.z-chosenbox-sel {
-	padding-bottom: 3px;
+	border: 1px solid #D5EAFD;
+	border-top-color: #94B9DA;
 }
 .z-chosenbox-sel-item {
-	-webkit-border-radius: 3px;
-	-moz-border-radius   : 3px;
-	border-radius        : 3px;
-	-moz-background-clip   : padding;
-	-webkit-background-clip: padding-box;
-	background-clip        : padding-box;
-	background-color: #E4E4E4;
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E4E4E4), color-stop(0.7, #EEEEEE));
-	background-image: -webkit-linear-gradient(center bottom, #E4E4E4 0%, #EEEEEE 70%);
-	background-image: -moz-linear-gradient(center bottom, #E4E4E4 0%, #EEEEEE 70%);
-	background-image: -o-linear-gradient(bottom, #E4E4E4 0%, #EEEEEE 70%);
-	background-image: -ms-linear-gradient(top, #E4E4E4 0%,#EEEEEE 70%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E4E4E4', endColorstr='#EEEEEE',GradientType=0 );
-	background-image: linear-gradient(top, #E4E4E4 0%,#EEEEEE 70%);
-	color: #333;
-	border: 1px solid #B4B4B4;
-	margin: 3px 0px 3px 5px;
-	white-space: nowrap;
 	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
 	<c:if test="${zk.ie < 8}">
 		display: inline;
 		zoom: 1;
 	</c:if>
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin: 1px;
+	background: #E6EEF2;
+	border: 1px solid #B2B2B2;
+	color: #333333;
 	font-size: ${fontSizeM};
 	font-family: ${fontFamilyC};
 	font-style: normal;
+	cursor: pointer;
 }
 .z-chosenbox-sel-item-cnt {
-	font-size: 13px;
-	font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-	padding: 0px 2px;
 	display: inline-block;
 	<c:if test="${zk.ie < 8}">
 		display: inline;
 	</c:if>
+	float: left;
+	padding: 0 1px 0 3px;
+	height: 15px;
 	font-size: ${fontSizeM};
 	font-family: ${fontFamilyC};
 }
 .z-chosenbox-sel-item-focus {
-	background: #D4D4D4;
-	border-color: #FED700;
+	background: #CEE6F2;
+	border-color: #94B9DA;
 }
 .z-chosenbox-del-btn {
-	width: 12px;
-	height: 13px;
-	font-size: 1px;
-	background: url(${c:encodeURL('~./zkmax/img/inp/chosen-sprite.png')}) right top no-repeat;
-	border: 1px solid #CCCCCC;
-
 	display: inline-block;
 	<c:if test="${zk.ie < 8}">
 		display: inline;
-		background: url(${c:encodeURL('~./zkmax/img/inp/chosen-del.gif')}) no-repeat;
 		zoom: 1;
 	</c:if>
-
+	float: left;
+	margin: 2px;
+	margin-left: 1px;
+	width: 11px;
+	height: 11px;
+	font-size: 1px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.z-chosenbox-del-btn:hover {
+	background: #94B9DA;
+}
+.z-chosenbox-del-btn:hover .z-chosenbox-del-btn-icon {
+	background-position: right center;
+}
+.z-chosenbox-del-btn-icon {
+	height: 100%;
+	background: url(${c:encodeURL('~./zkmax/img/inp/chosenbox-del-btn.png')}) 0 center no-repeat;
+	<c:if test="${zk.ie < 8}">
+		background-image: url(${c:encodeURL('~./zkmax/img/inp/chosenbox-del-btn.gif')});
+	</c:if>
+}
+.z-chosenbox-disd {
+	opacity: .6;
+	-moz-opacity: .6;
+	filter: alpha(opacity=60);
+	background: #F0F0F0;
+}
+.z-chosenbox-disd .z-chosenbox-sel-item {
+	cursor: default !important;
+}
+.z-chosenbox-disd .z-chosenbox-sel-item-cnt {
+	padding-right: 3px !important;
+}
+.z-chosenbox-disd .z-chosenbox-del-btn {
+	display: none !important;
 }
 .z-chosenbox-inp {
-	color: #666;
-	background: transparent !important;
-	border: 0 !important;
-
-	outline: 0;
-	-webkit-box-shadow: none;
-	-moz-box-shadow   : none;
-	-o-box-shadow     : none;
-	box-shadow        : none;
-
-	padding: 7px;
-
 	display: inline-block;
-	width: 30px;
 	<c:if test="${zk.ie < 8}">
 		display: inline;
 	</c:if>
+	background: transparent !important;
+	border: 0 !important;
+	outline: 0;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	
+	padding: 2px;
+	width: 30px;
+	height: 15px;
+	color: #333333;
 	font-size: ${fontSizeM};
 	font-family: ${fontFamilyC};
 }
@@ -113,18 +123,19 @@
 .z-chosenbox-pp {
 	position: absolute;
 	background-color: #FFFFFF;
-	border: 1px solid #CCCCCC;
-	border-top: 0;
+	border: 1px solid #888888;
 	font-family: ${fontFamilyC};
 	font-size: ${fontSizeM};
 	font-weight: normal;
-	margin:0;
-	overflow:auto;
-
-	-webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
-	-moz-box-shadow   : 0 4px 5px rgba(0,0,0,.15);
-	-o-box-shadow     : 0 4px 5px rgba(0,0,0,.15);
-	box-shadow        : 0 4px 5px rgba(0,0,0,.15);
+	margin: 0;
+	overflow: auto;
+	padding: 2px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 }
 
 .z-chosenbox-pp-hidden {
@@ -132,17 +143,18 @@
 }
 .z-chosenbox-option {
 	cursor: pointer;
-	padding-top: 3px;
-	padding-left: 10px;
+	padding: 1px 5px;
 }
 .z-chosenbox-option-over {
 	background-color: #D3EFFA;
 }
 .z-chosenbox-empty {
-	padding: 3px;
-	padding-left: 10px;
+	padding: 1px 5px;
+	font-style: italic;
+	color: #888888;
 }
 .z-chosenbox-empty-creatable {
 	cursor: pointer;
 	background-color: #D3EFFA;
+	color: #333333;
 }
