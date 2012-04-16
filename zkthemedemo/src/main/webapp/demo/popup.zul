@@ -35,15 +35,11 @@
 	</hbox>
 	Note: for Errorbox, please visit Input (Basic, Errbox).
 	<popup id="p1">
-		<vbox>
-			<label value="Popup Content" />
-			<label value="Second Line" />
-		</vbox>
+		<div>Popup Content</div>
+		<div>Second Line</div>
 	</popup>
 	<popup id="p2" width="200px" height="200px">
-		<vbox>
-			<label value="Popup Content" />
-			<label value="Second Line" />
-		</vbox>
+		<div>Popup Content</div>
+		<div>Second Line</div>
 	</popup>
 </zk>
