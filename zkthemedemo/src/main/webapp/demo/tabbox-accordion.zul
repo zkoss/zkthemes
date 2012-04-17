@@ -2,7 +2,7 @@
 <zk>
 	<hbox>
 		<window title="Tabbox Accordion" sclass="center-bg-win"
-			border="normal" width="300px" height="300px" >
+			border="normal" width="300px" height="300px">
 			<tabbox height="100%" mold="accordion">
 				<tabs>
 					<tab label="Tab1" closable="true" />
@@ -23,14 +23,14 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Accordion" sclass="center-bg-win"
-			border="normal" width="300px" height="300px" >
+			border="normal" width="300px" height="300px">
 			<tabbox height="100%" mold="accordion">
 				<tabs>
 					<tab label="Tab1" image="/common/img/volumn.gif" closable="true" />
-					<tab label="Tab2" image="/common/img/volumn.gif" />
-					<tab label="Tab3" />
-					<tab label="Tab4" disabled="true" closable="true" />
-					<tab label="Tab5" disabled="true" />
+					<tab label="Tab2" image="/common/img/volumn.gif" closable="true" />
+					<tab label="Tab3" image="/common/img/volumn.gif" />
+					<tab label="Tab4" image="/common/img/volumn.gif" disabled="true" closable="true" />
+					<tab label="Tab5" image="/common/img/volumn.gif" disabled="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
@@ -47,7 +47,7 @@
 	<separator />
 	<hbox>
 		<window title="Tabbox Accordion-lite" sclass="center-bg-win"
-			border="normal" width="300px" height="300px" >
+			border="normal" width="300px" height="300px">
 			<tabbox height="100%" mold="accordion-lite">
 				<tabs>
 					<tab label="Tab1" closable="true" />
@@ -68,14 +68,14 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Accordion-lite" sclass="center-bg-win"
-			border="normal" width="300px" height="300px" >
+			border="normal" width="300px" height="300px">
 			<tabbox height="100%" mold="accordion-lite">
 				<tabs>
 					<tab label="Tab1" image="/common/img/volumn.gif" closable="true" />
-					<tab label="Tab2" image="/common/img/volumn.gif" />
-					<tab label="Tab3" />
-					<tab label="Tab4" disabled="true" closable="true" />
-					<tab label="Tab5" disabled="true" />
+					<tab label="Tab2" image="/common/img/volumn.gif" closable="true" />
+					<tab label="Tab3" image="/common/img/volumn.gif" />
+					<tab label="Tab4" image="/common/img/volumn.gif" disabled="true" closable="true" />
+					<tab label="Tab5" image="/common/img/volumn.gif" disabled="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
