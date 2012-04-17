@@ -7,9 +7,9 @@
 				<tabs>
 					<tab label="Tab1" closable="true" />
 					<tab label="Tab2" closable="true" />
-					<tab label="Tab3" closable="true" />
-					<tab label="Tab4" />
-					<tab label="Tab5" />
+					<tab label="Tab3" />
+					<tab label="Tab4" disabled="true" closable="true" />
+					<tab label="Tab5" disabled="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
@@ -28,9 +28,9 @@
 				<tabs>
 					<tab label="Tab1" image="/common/img/volumn.gif" closable="true" />
 					<tab label="Tab2" image="/common/img/volumn.gif" />
-					<tab label="Tab3" closable="true" />
-					<tab label="Tab4" />
-					<tab label="Tab5" />
+					<tab label="Tab3" />
+					<tab label="Tab4" disabled="true" closable="true" />
+					<tab label="Tab5" disabled="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
@@ -52,9 +52,9 @@
 				<tabs>
 					<tab label="Tab1" closable="true" />
 					<tab label="Tab2" closable="true" />
-					<tab label="Tab3" closable="true" />
-					<tab label="Tab4" />
-					<tab label="Tab5" />
+					<tab label="Tab3" />
+					<tab label="Tab4" disabled="true" closable="true" />
+					<tab label="Tab5" disabled="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
@@ -73,9 +73,9 @@
 				<tabs>
 					<tab label="Tab1" image="/common/img/volumn.gif" closable="true" />
 					<tab label="Tab2" image="/common/img/volumn.gif" />
-					<tab label="Tab3" closable="true" />
-					<tab label="Tab4" />
-					<tab label="Tab5" />
+					<tab label="Tab3" />
+					<tab label="Tab4" disabled="true" closable="true" />
+					<tab label="Tab5" disabled="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
