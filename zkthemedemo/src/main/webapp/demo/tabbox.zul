@@ -34,8 +34,8 @@
 				<tabs>
 					<tab label="Tab1" closable="true" image="/common/img/volumn.gif" />
 					<tab label="Tab2" closable="true" image="/common/img/volumn.gif" />
-					<tab label="Tab3" closable="true" image="/common/img/volumn.gif" />
-					<tab label="Tab4" closable="true" image="/common/img/volumn.gif" />
+					<tab label="Tab3" closable="true" />
+					<tab label="Tab4" closable="true" />
 					<tab label="Tab5" image="/common/img/volumn.gif" />
 				</tabs>
 				<tabpanels>
@@ -129,7 +129,7 @@
 				</toolbar>
 				<tabs>
 					<tab label="Tab1" closable="true" image="/common/img/volumn.gif" />
-					<tab label="Tab2" closable="true" image="/common/img/volumn.gif" />
+					<tab label="Tab2" closable="true" />
 				</tabs>
 				<tabpanels>
 					<tabpanel>
