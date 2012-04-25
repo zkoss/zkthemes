@@ -57,21 +57,18 @@
 							<item label="Toolbar"    topic="demo/toolbar" />
 							<item label="Fisheyebar" topic="demo/fisheyebar" />
 							
-						<category value="Grid" />
-							<item label="Grid"                 topic="demo/grid" />
-							<item label="Grid (Detail)"        topic="demo/grid-detail" />
-							<item label="Grid (Grouping)"      topic="demo/grid-grouping" />
-							<item label="Grid (Live Grouping)" topic="demo/grid-livegrouping" />
-							<item label="Grid (Paging)"        topic="demo/grid-paging" />
-							
-						<category value="Listbox" />
+						<category value="Mesh" />
+							<item label="Grid"                     topic="demo/grid" />
+							<item label="Grid (Detail)"            topic="demo/grid-detail" />
+							<item label="Grid (Grouping)"          topic="demo/grid-grouping" />
+							<item label="Grid (Live Grouping)"     topic="demo/grid-livegrouping" />
+							<item label="Grid (Paging)"            topic="demo/grid-paging" />
 							<item label="Listbox"                  topic="demo/listbox" />
 							<item label="Listbox (Grouping)"       topic="demo/listbox-grouping" />
 							<item label="Listbox (Header, Footer)" topic="demo/listbox-header"/>
-							
-						<category value="Tree" />
-							<item label="Tree"                  topic="demo/tree" />
-							<item label="Tree (Header, Footer)" topic="demo/tree-header"/>
+							<item label="Tree"                     topic="demo/tree" />
+							<item label="Tree (Header, Footer)"    topic="demo/tree-header"/>
+							<item label="Paging"                   topic="demo/paging" />
 						
 						<category value="Big Data" />
 							<item label="Biglistbox"    topic="demo/biglistbox" />

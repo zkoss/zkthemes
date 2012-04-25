@@ -1,0 +1,4 @@
+<zk>
+	<paging totalSize="300" pageSize="5" activePage="15" detailed="true" />
+	<paging totalSize="300" pageSize="5" activePage="15" detailed="true" mold="os" />
+</zk>
