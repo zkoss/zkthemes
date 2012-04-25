@@ -111,6 +111,7 @@
 							<timebox hflex="1" />
 							<spinner hflex="1" />
 							<doublespinner hflex="1" />
+							<separator bar="true" />
 							<div>
 								<button label="Button" />
 								<combobutton label="Combobutton" />
@@ -122,6 +123,7 @@
 							<groupbox title="Groupbox" hflex="1" vflex="1">
 								MISC: progressmeter, slider, button for notif., popup, messagebox, loading
 							</groupbox>
+							<separator orient="vertical" bar="true" vflex="1" />
 							<groupbox hflex="1" vflex="1">
 								<caption label="Groupbox" />
 							</groupbox>
