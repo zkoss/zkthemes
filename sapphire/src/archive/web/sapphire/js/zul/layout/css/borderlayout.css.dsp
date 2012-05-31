@@ -184,6 +184,7 @@
 	border: 1px solid #8FB9D0;
 	overflow: hidden;
 	position: absolute;
+	cursor: pointer;<%-- ios issue --%>
 }
 .z-east-colpsd-over,
 .z-west-colpsd-over,

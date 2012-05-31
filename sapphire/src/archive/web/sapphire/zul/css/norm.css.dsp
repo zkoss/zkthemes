@@ -52,6 +52,12 @@ img {
 	border: 0;
 }
 
+<%-- mobile --%>
+.mobile * {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
 <%-- ZK JavaScript debug box --%>
 div.z-error {
 	display: none;
