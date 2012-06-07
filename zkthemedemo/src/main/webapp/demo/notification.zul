@@ -1,6 +1,6 @@
 <zk xmlns:n="native">
 	<zscript><![CDATA[
-		import org.zkoss.zk.ui.*;
+		import org.zkoss.zk.ui.util.*;
 		import org.zkoss.zul.*;
 		ListModel posm1 = new SimpleListModel(new String[] {
 			"(default)", "before_start", "before_center", "before_end", 
@@ -35,9 +35,9 @@
 						<attribute name="onClick"><![CDATA[
 							int dur = adcb.checked ? adms.value : -1;
 							Component ref = refcb.checked ? win : null;
-							ListModel model0 = refcb.checked ? posm1 : posm2;
+							ListModel model = refcb.checked ? posm1 : posm2;
 							int i = Math.max(0, posbox.selectedIndex);
-							String plb = (String) model0.getElementAt(i);
+							String plb = (String) model.getElementAt(i);
 							String pval = plb.charAt(0) == '(' ? null : plb;
 							i = Math.max(0, typebox.selectedIndex);
 							String type = (String) types.getElementAt(i);
@@ -48,9 +48,9 @@
 								String[] ss = pval.split(",", 2);
 								int x = Integer.parseInt(ss[0].trim());
 								int y = Integer.parseInt(ss[1].trim());
-								Clients.showNotification(msg, type, ref, x, y, dur);
+								Clients.showNotification(msg, type, ref, x, y, dur, closable.checked);
 							} else
-								Clients.showNotification(msg, type, ref, pval, dur);
+								Clients.showNotification(msg, type, ref, pval, dur, closable.checked);
 						]]></attribute>
 					</button>
 				</n:td>
@@ -66,8 +66,11 @@
 				<n:td>
 					<label>Duration (ms)</label>
 				</n:td>
-				<n:td colspan="2">
+				<n:td>
 					<label>Message</label>
+				</n:td>
+				<n:td>
+					<label>Closable</label>
 				</n:td>
 			</n:tr>
 			<n:tr>
@@ -93,6 +96,9 @@
 						<listitem label="Beer" value="${msgs[2]}" />
 						<listitem label="HTML" value="${msgs[3]}" />
 					</listbox>
+				</n:td>
+				<n:td>
+					<checkbox id="closable" checked="true" />
 				</n:td>
 			</n:tr>
 		</n:table>
