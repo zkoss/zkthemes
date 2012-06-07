@@ -12,7 +12,7 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 zk.afterLoad('zul.tab', function() {
 	
 	/** Tab **/
-	zul.tab.TabRenderer.isFrameRequired = function(wgt) {
+	zul.tab.TabRenderer.isFrameRequired = function() {
 		return true;
 	};
 });

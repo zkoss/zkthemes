@@ -1,13 +1,4 @@
+codegen
+debug
+.settings
 target
-.settings/*.prefs
-.settings/*.component
-.settings/*.xml
-.project
-.classpath
-Thumbs.db
-*./target
-*/.settings/*.prefs
-*/.settings/*.component
-*/.settings/*.xml
-*/.project
-*/.classpath
