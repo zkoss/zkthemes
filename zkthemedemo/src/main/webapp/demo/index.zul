@@ -48,6 +48,7 @@
 							<item label="Tabbox"              topic="demo/tabbox" />
 							<item label="Tabbox (Accordion)"  topic="demo/tabbox-accordion" />
 							<item label="Tabbox (Misc)"       topic="demo/tabbox-misc" />
+							<item label="Tabbox (Tab Children)" topic="demo/tabbox-tabchildren" />
 							<item label="Groupbox"            topic="demo/groupbox" />
 							<item label="Groupbox (3d)"       topic="demo/groupbox-3d" />
 							<item label="Caption"             topic="demo/caption" />

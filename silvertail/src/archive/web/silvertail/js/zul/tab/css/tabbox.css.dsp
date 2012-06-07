@@ -820,3 +820,8 @@
 }
 </c:if>
 
+.z-tab-accordion-lite-tm .z-caption-l,
+.z-tab-accordion-hm .z-caption-l,
+.z-tab-ver-hm .z-caption-l {
+	padding-left: 5px;
+}
