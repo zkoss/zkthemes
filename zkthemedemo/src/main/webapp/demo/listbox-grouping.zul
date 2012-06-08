@@ -1,6 +1,6 @@
 <zk>
 <listbox >
-	<listhead>
+	<listhead menupopup="auto" >
 		<listheader label="Brand" sort="auto" />
 		<listheader label="Processor Type" sort="auto" width="150px"/>
 		<listheader label="Memory (RAM)" sort="auto" width="120px"/>

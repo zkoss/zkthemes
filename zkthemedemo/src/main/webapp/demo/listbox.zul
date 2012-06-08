@@ -64,10 +64,10 @@
 	<button label="Toggle checkmark" onClick="box.checkmark = !box.checkmark"/>
 	<button label="Toggle multiple" onClick="box.multiple = !box.multiple"/>
 	<listbox id="box" fixedLayout="true" multiple="true" checkmark="true">
-		<listhead>
+		<listhead menupopup="auto">
 			<listheader label="Name"/>
-			<listheader label="Gender"/>
-			<listheader label="Age"/>
+			<listheader label="Gender" sort="client"/>
+			<listheader label="Age" sort="auto"/>
 			<listheader label="Description"/>
 		</listhead>
 		<listitem>
