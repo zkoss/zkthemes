@@ -172,6 +172,9 @@ a.z-listheader-btn:hover {
 .z-listhead-menu-dsc .z-menuitem-img {
 	background-image: url(${c:encodeThemeURL('~./zul/img/grid/menu-arrowdown.png')});
 }
+.z-listhead-menu-ungrouping .z-menuitem-img {
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/menu-ungroup.png')});
+}
 
 tr.z-listitem-over {
 	background: #E1E1E1;
@@ -375,6 +378,9 @@ div.z-listbox {
 }
 .z-listhead-menu-dsc .z-menuitem-img {
 	background-image: url(${c:encodeThemeURL('~./zul/img/grid/menu-arrowdown.gif')});
+}
+.z-listhead-menu-ungrouping .z-menuitem-img {
+	background-image: url(${c:encodeThemeURL('~./zul/img/grid/menu-ungroup.gif')});
 }
 </c:if>
 </c:if>
