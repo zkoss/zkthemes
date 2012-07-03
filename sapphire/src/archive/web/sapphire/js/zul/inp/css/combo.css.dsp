@@ -478,8 +478,27 @@ i.z-doublespinner-rounded i.z-doublespinner-rounded-btn-right-edge-invalid {
 .z-combobox-pp .z-comboitem-over-seld {
 	background: #81D0F7;
 }
+<c:if test="${zk.mobile > 0}">
+.z-combobox-pp {
+	overflow: hidden;
+	background: #444;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000),color-stop(0.45, #444),color-stop(0.55, #444),color-stop(1, #000));
+	background: -moz-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+	background: -ms-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+	background: -o-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+}
+.z-combobox-pp .z-comboitem-seld .z-comboitem-text,
+.z-combobox-pp .z-comboitem-over .z-comboitem-text,
+.z-combobox-pp .z-comboitem-over-seld .z-comboitem-text {
+	color: #000;
+}
+</c:if>
 .z-comboitem .z-comboitem-text {
 	font-size: ${fontSizeM};
+	<c:if test="${zk.mobile > 0}">
+	color: #fff;
+	font-size: 22px;
+	</c:if>
 }
 .z-comboitem .z-comboitem-img {
 	width: 1px;
