@@ -839,3 +839,65 @@ i.z-spinner-btn, i.z-doublespinner-btn {<%-- button at the right edge --%>
 	margin: 0; padding: 0;
 }
 </c:if>
+
+<%-- Timebox wheel --%>
+<c:if test="${zk.mobile > 0}">
+.z-timebox-wheel-time {
+	float: left;
+	margin: 4px 2px;
+	position: relative;
+	background: #888;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000),color-stop(0.35, #333),color-stop(0.50, #888),color-stop(0.65, #333),color-stop(1, #000));
+	background: -moz-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+	background: -ms-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+	background: -o-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.z-timebox-wheel-line {
+	position: absolute;
+	top: 50%;
+	height: 0;
+	width: 100%;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #555555;
+	z-index: 1;
+}
+.z-timebox-wheel-list {
+	float: left;
+	min-width: 40px;
+	margin: 0 2px;
+	overflow: hidden;
+	position: relative;
+	color: #fff;
+	background: #444;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000),color-stop(0.45, #444),color-stop(0.55, #444),color-stop(1, #000));
+	background: -moz-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+	background: -ms-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+	background: -o-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+}
+.z-timebox-wheel-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 2;
+}
+.z-timebox-wheel-list li {
+	list-style: none;
+	margin: 0;
+	padding: 0 5px;
+	display: block;
+	text-align: center;
+	font-size: 26px;
+	white-space: nowrap;
+	text-shadow: 0 1px 1px #000;
+	opacity: .3;
+	filter: Alpha(Opacity=30);
+}
+li.z-timebox-wheel-list-seld {
+	opacity: 1;
+	filter: Alpha(Opacity=100);
+}
+</c:if>
