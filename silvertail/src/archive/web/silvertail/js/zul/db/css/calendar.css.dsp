@@ -7,6 +7,9 @@
 	font-size: ${fontSizeM};
 	font-weight: normal;
 	width: 215px;
+	<c:if test="${zk.mobile > 0}">
+	width: auto;
+	</c:if>
 	padding: 2px;
 }
 .z-calendar,
@@ -181,6 +184,103 @@
 td.z-calendar-wkend {
 	background: #F3F3F3;
 }
+
+<%-- Calendar and Timebox wheel --%>
+<c:if test="${zk.mobile > 0}">
+.z-calendar-wheel-cave {
+	position: relative;
+}
+.z-calendar-wheel-body {
+	clear: both;
+}
+.z-calendar-wheel-date {
+	float: left;
+	margin: 4px 2px;
+	position: relative;
+	background: #888;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000),color-stop(0.35, #333),color-stop(0.50, #888),color-stop(0.65, #333),color-stop(1, #000));
+	background: -moz-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+	background: -ms-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+	background: -o-linear-gradient(#000 0%,#333 35%, #888 50%,#333 65%,#000 100%);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.z-calendar-wheel-line {
+	position: absolute;
+	top: 50%;
+	height: 0;
+	width: 100%;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #555555;
+	z-index: 1;
+}
+.z-calendar-wheel-list {
+	float: left;
+	min-width: 70px;
+	margin: 0 2px;
+	overflow: hidden;
+	position: relative;
+	color: #fff;
+	background: #444;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000),color-stop(0.45, #444),color-stop(0.55, #444),color-stop(1, #000));
+	background: -moz-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+	background: -ms-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+	background: -o-linear-gradient(#000 0%,#444 45%, #444 55%, #000 100%);
+}
+.z-calendar-wheel-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 2;
+}
+.z-calendar-wheel-list li {
+	list-style: none;
+	margin: 0;
+	padding: 0 5px;
+	display: block;
+	text-align: center;
+	font-size: 26px;
+	white-space: nowrap;
+	text-shadow: 0 1px 1px #000;
+	opacity: .3;
+	filter: Alpha(Opacity=30);
+}
+li.z-calendar-wheel-list-seld {
+	opacity: 1;
+	filter: Alpha(Opacity=100);
+}
+.z-calendar-wheel-footer {
+	clear: both;
+	padding: 5px 0;
+	height: 40px;
+}
+.z-calendar-wheel-button {
+	width: 45%;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	margin: 0 2px;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #C7C7C7;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #FCFCFC;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FCFCFC), color-stop(100%,#EEEEEE));
+	background: -moz-linear-gradient(top, #FCFCFC 0%, #EEEEEE 100%);
+	background: -ms-linear-gradient(top, #FCFCFC 0%, #EEEEEE 100%);
+	background: -o-linear-gradient(top, #FCFCFC 0%, #EEEEEE 100%);
+}
+.z-calendar-wheel-left {
+	float: left;
+}
+.z-calendar-wheel-right {
+	float: right;
+}
+</c:if>
 
 <%-- Issues --%>
 <%-- 3159648 --%>
