@@ -20,7 +20,7 @@
 <zk>
 	<hbox>
 		<window title="Menubar (horizontal)" border="normal"
-			width="350px" height="300px">
+			width="550px" height="500px">
 			<label>Horizontal</label>
 			<menubar id="menubar" width="100%">
 				<menu label="Project"
@@ -65,6 +65,7 @@
 					</menupopup>
 				</menu>
 				<menuitem label="Menuitem" onClick="alert(self.label)" />
+				<menuitem disabled="true" label="Menuitem" onClick="alert(self.label)" />
 			</menubar>
 
 			<div height="50px"></div>
@@ -83,6 +84,7 @@
 							image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
 							label="Save" onClick="alert(self.label)" />
 						<menuseparator />
+						<menuitem autocheck="true" label="Menuitem" onClick="alert(self.label)" />
 						<menuitem label="Exit"
 							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
 							onClick="alert(self.label)" />
@@ -110,7 +112,9 @@
 							onClick="alert(self.label)" />
 					</menupopup>
 				</menu>
+				<menuseparator />
 				<menuitem label="Menuitem" onClick="alert(self.label)" />
+				<menuitem disabled="true" label="Menuitem" onClick="alert(self.label)" />
 			</menubar>
 		</window>
 		<window title="Menupopup" border="normal" width="300px"
