@@ -1,0 +1,9 @@
+<zk>
+	Checkbox: <checkbox/> Checked: <checkbox checked="true"/>  <textbox placeholder="test aligment"/>
+	<separator/>
+	Checkbox-Label: <checkbox label="checkbox"/> Checked: <checkbox label="checkbox" checked="true"/>  <textbox  placeholder="test aligment"/>
+	<separator/>
+	<radiogroup>Radio: <radio/> Checked: <radio checked="true"/>  <textbox  placeholder="test aligment"/></radiogroup>
+	<separator/>
+	<radiogroup>Radiobox: <radio  label="radio"/> Checked: <radio label="radio" checked="true"/> <textbox  placeholder="test aligment"/></radiogroup>
+</zk>

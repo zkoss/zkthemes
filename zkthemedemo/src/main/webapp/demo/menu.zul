@@ -65,7 +65,7 @@
 					</menupopup>
 				</menu>
 				<menuitem label="Menuitem" onClick="alert(self.label)" />
-				<menuitem disabled="true" label="Menuitem" onClick="alert(self.label)" />
+				<menuitem image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png" disabled="true" label="Menuitem" onClick="alert(self.label)" />
 			</menubar>
 
 			<div height="50px"></div>
@@ -84,7 +84,7 @@
 							image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
 							label="Save" onClick="alert(self.label)" />
 						<menuseparator />
-						<menuitem autocheck="true" label="Menuitem" onClick="alert(self.label)" />
+				<menuitem autocheck="true" checked="true" label="Menuitem" onClick="alert(self.label)" />
 						<menuitem label="Exit"
 							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
 							onClick="alert(self.label)" />

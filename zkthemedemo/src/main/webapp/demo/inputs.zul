@@ -17,7 +17,7 @@
 				</combobox>
 				<separator />
 				Datebox:
-				<datebox />
+				<datebox format="yyyy/MM/dd hh:mm:ss a" />
 				<datebox buttonVisible="false" />
 				<separator />
 				Bandbox:

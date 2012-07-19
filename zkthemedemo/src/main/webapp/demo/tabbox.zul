@@ -73,7 +73,7 @@
 		<window title="Tabbox Vertical" border="normal" sclass="center-bg-win" 
 			width="300px" height="300px" >
 			<tabbox height="100%" orient="vertical">
-				<tabs width="60px">
+				<tabs width="80px">
 					<tab label="Tab1" closable="true" />
 					<tab label="Tab2" closable="true" />
 					<tab label="Tab3" closable="true" />

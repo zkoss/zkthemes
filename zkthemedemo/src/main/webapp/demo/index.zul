@@ -82,6 +82,7 @@
 							<item label="Bandbox"               topic="demo/inputs-bandbox" />
 							<item label="Combobox"              topic="demo/inputs-combobox" />
 							<item label="Chosenbox"             topic="demo/chosenbox" />
+							<item label="Checkbox"             topic="demo/checkbox" />
 							
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />

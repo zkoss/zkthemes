@@ -20,9 +20,9 @@
 				</menupopup>
 			</combobutton>
 		</window>
-		<window title="Combobutton mold=tbbtn" border="normal" width="300px" height="300px">
+		<window title="Combobutton mold=toolbar" border="normal" width="300px" height="300px">
 			<toolbar>
-				<combobutton label="Combobutton" image="/common/img/volumn.gif" mold="tbbtn">
+				<combobutton label="Combobutton" image="/common/img/volumn.gif" mold="toolbar">
 					<menupopup>
 						<menuitem label="Index" />
 						<menu label="About">
