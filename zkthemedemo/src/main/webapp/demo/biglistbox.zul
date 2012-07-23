@@ -53,7 +53,7 @@
 					<radio label="min"/>
 				</radiogroup>
 			</hlayout>
-			<hlayout>
+			<hlayout valign="bottom">
 				Change fixForzenCols:
 				<radiogroup onCheck='biglist.fixFrozenCols = self.selectedItem.label.equals("Enable") '>
 					<radio label="Disable" checked="true"/>
@@ -85,7 +85,7 @@
 				Change rows: 
 				<selectbox model="${rowsSize}" onSelect="biglist.autoRows = false;biglist.rows = event.selectedObjects.iterator().next()"/>
 			</hlayout>
-			<hlayout>
+			<hlayout valign="bottom">
 				Invalidate should look the same as before: <button label="invalidate" onClick="biglist.invalidate()"/>
 			</hlayout>
 		</vlayout>
