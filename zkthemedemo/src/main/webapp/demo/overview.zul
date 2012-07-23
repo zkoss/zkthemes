@@ -134,7 +134,7 @@
 			</panelchildren>
 			<toolbar mold="panel">
 				<toolbarbutton label="Toolbarbutton" />
-				<combobutton mold="tbbtn" label="Combobutton" />
+				<combobutton mold="toolbar" label="Combobutton" />
 			</toolbar>
 		</panel>
 	</hlayout>

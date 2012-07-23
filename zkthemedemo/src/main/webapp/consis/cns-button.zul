@@ -1,16 +1,16 @@
 <zk>
 	<toolbar>
 		<toolbarbutton label="Toolbarbutton" mode="toggle" />
-		<combobutton mold="tbbtn" label="Combobutton" />
+		<combobutton mold="toolbar" label="Combobutton" />
 	</toolbar>
 	<toolbar>
 		<toolbarbutton label="Toolbarbutton" mode="toggle" image="/common/img/volumn.gif" />
-		<combobutton mold="tbbtn" label="Combobutton" image="/common/img/volumn.gif" />
+		<combobutton mold="toolbar" label="Combobutton" image="/common/img/volumn.gif" />
 	</toolbar>
 	<separator />
 	<div>
 		<toolbarbutton label="Toolbarbutton" mode="toggle" image="/common/img/volumn.gif" />
-		<combobutton mold="tbbtn" label="Combobutton" image="/common/img/volumn.gif" />
+		<combobutton mold="toolbar" label="Combobutton" image="/common/img/volumn.gif" />
 	</div>
 	<separator />
 	<div>
