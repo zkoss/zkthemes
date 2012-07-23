@@ -19,6 +19,7 @@
 -->
 <zk>
 	<hbox>
+		<custom-attributes org.zkoss.zul.image.preload='true'/>
 		<window title="Menubar (horizontal)" border="normal"
 			width="550px" height="500px">
 			<label>Horizontal</label>
