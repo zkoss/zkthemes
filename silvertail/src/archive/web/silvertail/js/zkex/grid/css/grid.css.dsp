@@ -28,7 +28,7 @@ tr.z-row .z-detail-outer {
 	padding:10px;
 	width: 18px;
 }
-<c:if test="${c:isSafari()}">
+<c:if test="${zk.safari > 0 && empty zk.chrome}"><%-- Bug for B50-ZK-299.zul for Chrome --%>
 tr.z-row .z-detail-outer {
 	width: 38px;
 }
