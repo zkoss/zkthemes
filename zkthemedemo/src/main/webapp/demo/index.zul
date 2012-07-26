@@ -31,7 +31,7 @@
 					</listbox>
 				</hbox>
 			</north>
-			<west title="Design Patterns Home" flex="true" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
+			<west title="Design Patterns Home" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
 				<div sclass="content">
 					<vlayout>
 						<category value="Overview" />
@@ -106,7 +106,7 @@
 					</vlayout>
 				</div>
 			</west>
-			<center sclass="center-bg" autoscroll="true" border="0" flex="true">
+			<center sclass="center-bg" autoscroll="true" border="0">
 				<include id="xcontents" mode="instant" style="padding:20px;" src="${contentSrc}" />
 			</center>
 		</borderlayout>
