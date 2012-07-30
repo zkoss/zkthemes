@@ -79,6 +79,7 @@ tr.z-listfoot td.z-listfooter {
 }
 div.z-listcell-cnt {
 	padding: 1px 0 1px 0;
+	line-height: 18px;
 }
 div.z-listfooter-cnt, div.z-listheader-cnt {
 	overflow: hidden;
@@ -218,17 +219,12 @@ tr.z-listgroup-seld {
 tr.z-listgroup-over-seld {
 	background-image: url(${c:encodeThemeURL('~./zul/img/grid/group-bg-over-seld.png')});
 }
-td.z-listgroup-inner {
-	padding-top: 2px;
-}
 tr.z-listgroup td.z-listgroup-inner {
 	border-bottom:1px solid #8FB9D0;
 	border-top:1px solid #8FB9D0;
-	padding:3px 2px 0;
 }
 td.z-listgroup-inner div.z-listcell-cnt {
 	color:#00547A;
-	padding: 2px;
 	width: auto;
 	<c:if test="${zk.ie == 6}">
 	width: 100%;
@@ -256,7 +252,6 @@ td.z-listgroup-inner div.z-listcell-cnt {
 }
 <%-- Listgroupfoot --%>
 .z-listgroupfoot{
-	height: 25px;
 	background: #E9F2FB repeat-x 0 0;
 	background-image: url(${c:encodeThemeURL('~./zul/img/grid/groupfoot_bg.gif')});
 }
@@ -265,9 +260,6 @@ td.z-listgroupfoot-inner div.z-listcell-cnt {
 	font-weight: bold;
 	font-size: ${fontSizeM};
 	font-family: ${fontFamilyT};
-}
-tr.z-listgroupfoot td.z-listgroupfoot-inner {
-	padding: 4px 2px 2px 9px;
 }
 <%-- ZK Listhead's sizing --%>
 div.z-listbox-header th.z-listheader.z-listheader-sizing,
@@ -295,6 +287,7 @@ div.z-listbox-body .z-listcell {
 div.z-listbox-footer .z-listfooter {
 	color: #00547A; 
 	background-image: url(${c:encodeThemeURL('~./zul/img/grid/groupfoot_bg.gif')});
+	line-height: 19px;
 }
 
 div.z-listbox-header th.z-listheader-sort-over {
