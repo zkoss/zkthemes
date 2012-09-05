@@ -2,6 +2,7 @@
 .z-fisheye-text,
 .z-fisheye-img {
 	position: absolute;
+	cursor: pointer;
 }
 .z-fisheye {
 	z-index: 2;
