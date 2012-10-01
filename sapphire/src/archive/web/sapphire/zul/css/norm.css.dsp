@@ -293,7 +293,8 @@ div.z-log button {
 }
 .z-temp .z-loading {
 	top: 49%;
-	left: 47%;
+	left: 46%;
+	background-color: #E3E3E3;
 }
 .z-temp .z-loading-indicator {
 	font-size: ${fontSizeM};
