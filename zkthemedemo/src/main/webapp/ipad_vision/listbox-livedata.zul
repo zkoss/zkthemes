@@ -1,0 +1,12 @@
+<zk>
+	<zscript>
+		import org.zkoss.zul.ListModel;
+		
+		ListModel strset = new org.zkoss.zkdemo.userguide.FakeListModel(20);
+	</zscript>
+	<listbox id="list" width="200px" rows="5" model="${strset}">
+		<listhead>
+			<listheader label="Load on Demend" sort="auto"/>
+		</listhead>
+	</listbox>
+</zk>
