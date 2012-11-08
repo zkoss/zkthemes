@@ -1,0 +1,10 @@
+<zk>
+	<window id="debugWin" height="200px" width="200px" border="normal">
+		Dummy Window
+	</window>
+	<script defer="true">
+		zk.load('zk.debug', function () {
+			zDebug.dumpDomTree(zk.Widget.$('$debugWin'));
+		});
+	</script>
+</zk>

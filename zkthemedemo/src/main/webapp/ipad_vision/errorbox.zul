@@ -1,0 +1,10 @@
+<zk>
+	<textbox id="tbx" constraint="/^`````````$/" />
+	
+	<zscript>
+	import org.zkoss.zk.ui.util.Clients;
+	
+	tbx.setFocus(true);
+	Clients.evalJavaScript("jq('$tbx').trigger('blur')");
+	</zscript>
+</zk>
