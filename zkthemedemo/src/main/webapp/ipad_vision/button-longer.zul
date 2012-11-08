@@ -1,0 +1,7 @@
+<vbox>
+	Trendy Mold:
+	<button label="Long Long Button" mold="trendy" />
+	<separator />
+	OS Mold:
+	<button label="Long Long Button" mold="os" />
+</vbox>

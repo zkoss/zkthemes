@@ -1,0 +1,9 @@
+<vbox>
+	Trendy Mold:
+	<button label="Button" image="/common/img/volumn.gif" 
+		hoverImage="/common/img/network.gif" mold="trendy" />
+	<separator />
+	OS Mold:
+	<button label="Button" image="/common/img/volumn.gif" 
+		hoverImage="/common/img/network.gif" mold="os" />
+</vbox>
