@@ -1,0 +1,17 @@
+<borderlayout>
+	<center margins="10,10,10,10">
+		Center Content
+	</center>
+	<north size="20%">
+		North Content
+	</north>
+	<south size="20%">
+		South Content
+	</south>
+	<east size="20%">
+		East Content
+	</east>
+	<west size="20%">
+		West Content
+	</west>
+</borderlayout>
