@@ -1,0 +1,7 @@
+<chosenbox
+	id="cbx"
+	width="300px"
+	creatable="true"
+	onSelect=""
+	noResultsText="No Result"
+	createMessage="Create New" />
