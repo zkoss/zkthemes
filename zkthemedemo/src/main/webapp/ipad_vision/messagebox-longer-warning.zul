@@ -1,0 +1,5 @@
+<zscript>
+	import org.zkoss.zul.Messagebox;
+	
+	Messagebox.show("A warning message\nEven more warning message", "Warning", Messagebox.OK, Messagebox.EXCLAMATION);
+</zscript>

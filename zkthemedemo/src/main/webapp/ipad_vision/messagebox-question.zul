@@ -1,0 +1,5 @@
+<zscript>
+	import org.zkoss.zul.Messagebox;
+	
+	Messagebox.show("A question. Are you sure?", "Question", Messagebox.OK | Messagebox.CANCEL, Messagebox.QUESTION);
+</zscript>

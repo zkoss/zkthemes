@@ -1,0 +1,3 @@
+<script>
+jq.alert('Test Alert');
+</script>

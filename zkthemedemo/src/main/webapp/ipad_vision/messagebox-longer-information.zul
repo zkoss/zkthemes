@@ -1,0 +1,5 @@
+<zscript>
+	import org.zkoss.zul.Messagebox;
+	
+	Messagebox.show("Some information\nAnd more information", "Information", Messagebox.OK, Messagebox.INFORMATION);
+</zscript>
