@@ -1,0 +1,6 @@
+<zk>
+	<script defer="true"><![CDATA[
+		zk.error('Sample error message.');
+		zk.error('Second error message.');
+	]]></script>
+</zk>

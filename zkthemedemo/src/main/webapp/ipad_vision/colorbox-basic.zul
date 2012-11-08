@@ -1,0 +1,7 @@
+<zk>
+	<colorbox />
+	<zscript>
+		import org.zkoss.zk.ui.util.Clients;
+		Clients.evalJavaScript("jq('@colorbox').click()");
+	</zscript>
+</zk>

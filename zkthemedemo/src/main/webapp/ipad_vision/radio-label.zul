@@ -1,0 +1,5 @@
+<radiogroup>
+	<radio label="Unchecked"/>
+	<radio label="Checked" checked="true"/>
+	<textbox placeholder="test alignment"/>
+</radiogroup>

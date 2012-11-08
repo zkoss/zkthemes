@@ -1,0 +1,17 @@
+<grid fixedLayout="true" width="900px">
+	<auxhead>
+		<auxheader label="A+B" colspan="2"/>
+		<auxheader label="C"/>
+	</auxhead>
+	<rows>
+		<row>
+			<label value="AA01"/>
+			<label value="BB01"/>
+			<label value="CC01"/>
+		</row>
+	</rows>
+	<foot>
+		<footer label="footer 1"/>
+		<footer label="footer 2"/>
+	</foot>
+</grid>

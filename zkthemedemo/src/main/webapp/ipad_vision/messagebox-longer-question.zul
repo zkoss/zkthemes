@@ -1,0 +1,5 @@
+<zscript>
+	import org.zkoss.zul.Messagebox;
+	
+	Messagebox.show("Is this a question?\nDoes it make sense?", "Question", Messagebox.OK | Messagebox.CANCEL, Messagebox.QUESTION);
+</zscript>

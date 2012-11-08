@@ -1,0 +1,5 @@
+<zk>
+	Unchecked: <checkbox/> 
+	Checked: <checkbox checked="true"/>
+	<textbox placeholder="test alignment"/>
+</zk>

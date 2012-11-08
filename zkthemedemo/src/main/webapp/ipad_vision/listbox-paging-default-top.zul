@@ -1,0 +1,20 @@
+<zk>
+	<zscript>
+		import java.util.List;
+		
+		List items = new org.zkoss.zkdemo.userguide.BigList(50); 
+	</zscript>
+	<listbox id="listbox" mold="paging" pageSize="5">
+		<listitem forEach="${items}">
+			<listcell label="${each}-1"/>
+			<listcell label="${each}-2"/>
+			<listcell label="${each}-3"/>
+			<listcell label="${each}-4"/>
+		</listitem>
+	</listbox>
+	
+	<zscript>
+	listbox.setPagingPosition("top");
+	listbox.getPagingChild().setMold("default");
+	</zscript>
+</zk>

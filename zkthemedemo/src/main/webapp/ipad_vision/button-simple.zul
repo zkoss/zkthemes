@@ -1,0 +1,14 @@
+<vbox>
+	Trendy Mold:
+	<div>
+		<button label="Button" mold="trendy" />
+		<button image="/common/img/volumn.gif" mold="trendy" />
+		<button label="Button" image="/common/img/volumn.gif" mold="trendy" />
+	</div>
+	OS Mold:
+	<div>
+		<button label="Button" mold="os" />
+		<button image="/common/img/volumn.gif" mold="os" />
+		<button label="Button" image="/common/img/volumn.gif" mold="os" />
+	</div>
+</vbox>

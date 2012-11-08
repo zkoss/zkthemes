@@ -1,0 +1,37 @@
+<vbox>
+	Combobox:
+	<combobox>
+		<comboitem label="Comboitem 1" />
+		<comboitem label="Comboitem 2" />
+		<comboitem label="Comboitem 3" />
+	</combobox>
+	<combobox buttonVisible="false">
+		<comboitem label="Comboitem 1" />
+		<comboitem label="Comboitem 2" />
+		<comboitem label="Comboitem 3" />
+	</combobox>
+	<separator />
+	Datebox:
+	<datebox format="yyyy/MM/dd hh:mm:ss a" />
+	<datebox buttonVisible="false" />
+	<separator />
+	Bandbox:
+	<bandbox>
+		<bandpopup>Bandpopup Content</bandpopup>
+	</bandbox>
+	<bandbox buttonVisible="false">
+		<bandpopup>Bandpopup Content</bandpopup>
+	</bandbox>
+	<separator />
+	Timebox:
+	<timebox />
+	<timebox buttonVisible="false" />
+	<separator />
+	Spinner:
+	<spinner />
+	<spinner buttonVisible="false" />
+	<separator />
+	Doublespinner:
+	<doublespinner />
+	<doublespinner buttonVisible="false" />
+</vbox>

@@ -1,0 +1,7 @@
+<vbox>
+	<div>Decimalbox: <decimalbox mold="rounded" value="123.45" readonly="true"/> (Read Only)</div>
+	<div>Doublebox: <doublebox mold="rounded" value="123.45" readonly="true"/> (Read Only)</div>
+	<div>Intbox: <intbox mold="rounded" value="123" readonly="true"/> (Read Only)</div>
+	<div>Longbox: <longbox mold="rounded" value="123" readonly="true"/> (Read Only)</div>
+	<div>Textbox: <textbox mold="rounded" value="abc" readonly="true"/> (Read Only)</div>
+</vbox>

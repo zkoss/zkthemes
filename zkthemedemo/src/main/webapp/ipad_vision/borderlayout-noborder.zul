@@ -1,0 +1,17 @@
+<borderlayout>
+	<center border="none">
+		Center Content
+	</center>
+	<north size="20%" border="none">
+		North Content
+	</north>
+	<south size="20%" border="none">
+		South Content
+	</south>
+	<east size="20%" border="none">
+		East Content
+	</east>
+	<west size="20%" border="none">
+		West Content
+	</west>
+</borderlayout>

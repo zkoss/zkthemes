@@ -1,0 +1,5 @@
+<listbox rows="1" mold="select">
+	<listitem label="Inbox"/>
+	<listitem label="Received"/>
+	<listitem label="Draft"/>
+</listbox>

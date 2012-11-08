@@ -1,0 +1,4 @@
+<div>
+	Disabled: <a href="http://www.zkoss.org" disabled="true" label="ZK" />
+	/ <a href="http://www.zkoss.xyz" disabled="true" label="Unknown" />
+</div>

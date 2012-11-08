@@ -1,0 +1,21 @@
+<borderlayout>
+	<center>
+		<label multiline="true">
+		Center Content: Line 1
+		Center Content: Line 2
+		Center Content: Line 3
+		</label>
+	</center>
+	<west title="West" size="20%" splittable="true" collapsible="true">
+		West Content
+	</west>
+	<east title="East" size="20%" splittable="true" collapsible="true" open="false">
+		East Content
+	</east>
+	<north title="North" size="20%" splittable="true" collapsible="true" open="false">
+		North Content
+	</north>
+	<south title="South" size="20%" splittable="true" collapsible="true">
+		South Content
+	</south>
+</borderlayout>

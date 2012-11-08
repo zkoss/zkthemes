@@ -1,0 +1,3 @@
+<hbox align="center">
+	Textbox: <textbox mold="rounded" multiline="true" rows="4" value="abc" /> (Multiline)
+</hbox>

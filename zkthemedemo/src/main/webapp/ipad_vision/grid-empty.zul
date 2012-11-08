@@ -1,0 +1,5 @@
+<grid emptyMessage="This Grid is empty.">
+	<columns>
+		<column label="Column Title">Column Content</column>
+	</columns>
+</grid>

@@ -1,0 +1,17 @@
+<zk>
+	<combobutton id="cbb" label="Combobutton" image="/common/img/volumn.gif">
+		<menupopup>
+			<menuitem label="Index" />
+			<menu label="About">
+				<menupopup>
+					<menuitem label="About ZK" />
+					<menuitem label="About Potix" />
+				</menupopup>
+			</menu>
+		</menupopup>
+	</combobutton>
+	
+	<zscript>
+		cbb.open();
+	</zscript>
+</zk>

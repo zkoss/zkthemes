@@ -1,0 +1,11 @@
+<zk>
+	<combobutton id="cbb" label="Combobutton" image="/common/img/volumn.gif">
+		<popup>
+			Popup Content
+		</popup>
+	</combobutton>
+	
+	<zscript>
+		cbb.open();
+	</zscript>
+</zk>

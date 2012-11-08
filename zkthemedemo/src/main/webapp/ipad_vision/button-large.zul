@@ -1,0 +1,7 @@
+<vbox>
+	Trendy Mold:
+	<button label="Button" width="100px" height="50px" mold="trendy" />
+	<separator />
+	OS Mold:
+	<button label="Button" width="100px" height="50px" mold="os" />
+</vbox>

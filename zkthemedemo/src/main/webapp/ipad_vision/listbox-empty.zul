@@ -1,0 +1,5 @@
+<listbox emptyMessage="This Listbox is empty.">
+	<listhead>
+		<listheader label="Listheader Content" />
+	</listhead>
+</listbox>

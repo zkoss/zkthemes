@@ -1,0 +1,5 @@
+<zscript>
+	import org.zkoss.zul.Messagebox;
+	
+	Messagebox.show("Some errors\nNo! Too many errors", "Error", Messagebox.OK, Messagebox.ERROR);
+</zscript>

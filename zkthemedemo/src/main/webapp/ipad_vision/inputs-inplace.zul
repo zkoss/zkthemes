@@ -1,0 +1,7 @@
+<vbox>
+	<div>Decimalbox: <decimalbox value="123.45" inplace="true"/> (Inplace)</div>
+	<div>Doublebox: <doublebox value="123.45" inplace="true"/> (Inplace)</div>
+	<div>Intbox: <intbox value="123" inplace="true"/> (Inplace)</div>
+	<div>Longbox: <longbox value="123" inplace="true"/> (Inplace)</div>
+	<div>Textbox: <textbox value="abc" inplace="true"/> (Inplace)</div>
+</vbox>

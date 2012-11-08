@@ -1,0 +1,17 @@
+<zk>
+	<menubar id="menubar" width="100%">
+		<menu id="main" image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+			<menupopup>
+				<menuitem label="Index" onClick="alert(self.label)" />
+				<menu label="Color Picker" content="#color=#184dc6"/>
+			</menupopup>
+		</menu>
+	</menubar>
+	
+	<zscript>
+		import org.zkoss.zk.ui.util.Clients;
+		
+		main.open();
+		Clients.evalJavaScript("jq('@menu:eq(1)').click()");
+	</zscript>
+</zk>
