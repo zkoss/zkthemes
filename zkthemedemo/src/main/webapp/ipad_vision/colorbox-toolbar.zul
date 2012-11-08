@@ -1,0 +1,11 @@
+<zk>
+	<toolbar orient="vertical" width="38px" height="100%">
+		<colorbox width="22px" height="12px" color="#FFFFFF" />
+	</toolbar>
+	
+	<zscript>
+		import org.zkoss.zk.ui.util.Clients;
+		
+		Clients.evalJavaScript("jq('@colorbox').click()");
+	</zscript>
+</zk>
