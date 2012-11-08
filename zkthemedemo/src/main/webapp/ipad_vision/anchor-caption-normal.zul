@@ -1,0 +1,8 @@
+<window>
+	<caption>
+		<div>
+			Normal: <a href="http://www.zkoss.org" label="ZK" />
+			/ <a href="http://www.zkoss.xyz" label="Unknown" />
+		</div>
+	</caption>
+</window>
