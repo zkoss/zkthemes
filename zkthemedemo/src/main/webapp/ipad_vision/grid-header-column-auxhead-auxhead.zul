@@ -1,0 +1,27 @@
+<grid fixedLayout="true" width="900px">
+	<columns id="cs">
+		<column label="Align Left" align="left" width="300px"/>
+		<column label="Align Center" align="center" width="300px"/>
+		<column label="Align Right" align="right" width="300px"/>
+	</columns>
+	<auxhead>
+		<auxheader label="A+B" colspan="2"/>
+		<auxheader label="C"/>
+	</auxhead>
+	<auxhead>
+		<auxheader label="C+D" colspan="2"/>
+		<auxheader label="E"/>
+	</auxhead>
+	<rows>
+		<row>
+			<label value="AA01"/>
+			<label value="BB01"/>
+			<label value="CC01"/>
+		</row>
+	</rows>
+	<foot>
+		<footer label="footer 1"/>
+		<footer label="footer 2"/>
+		<footer label="footer 3"/>
+	</foot>
+</grid>
