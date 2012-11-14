@@ -313,6 +313,21 @@ tr.z-grid-odd {
 	background: #F0FAFF;
 }
 
+<%-- Bug ZK-1234: Nested grids does not properly display alternating odd/even rows --%>
+tr.z-grid-odd tr:not(.z-grid-odd) td.z-row-inner {
+	background-color: #FFF;
+}
+
+<c:if test="${zk.ie || zk.opera}">
+tr.z-grid-odd tr.z-grid-odd td.z-row-inner {
+	background-color: #F0FAFF;
+}
+
+tr.z-grid-odd tr.z-row td.z-row-inner {
+	background-color: #FFF;
+}
+</c:if>
+
 tr.z-row-over > td.z-row-inner {
 	border: 1px solid #6BA6BF;
 }
