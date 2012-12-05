@@ -17,9 +17,8 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 package org.zkoss.theme.sapphire;
 
 import org.zkoss.zk.ui.WebApp;
+import org.zkoss.zk.ui.theme.Themes;
 import org.zkoss.zk.ui.util.WebAppInit;
-import org.zkoss.zkplus.theme.StandardThemeProvider;
-import org.zkoss.zkplus.theme.Themes;
 
 /**
  * Initial the theme relative setting, includes
@@ -33,10 +32,6 @@ public class SapphireThemeWebAppInit implements WebAppInit {
 	private final static int SAPPHIRE_PRIORITY = 700;
 	
 	public void init(WebApp webapp) throws Exception {
-		if (webapp.getConfiguration().getThemeProvider() == null)
-			webapp.getConfiguration().setThemeProvider(new StandardThemeProvider());
-		
-		Themes.register(Themes.BREEZE_NAME, Themes.BREEZE_DISPLAY, Themes.BREEZE_PRIORITY);
 		Themes.register(SAPPHIRE_NAME, SAPPHIRE_DISPLAY, SAPPHIRE_PRIORITY);
 	}
 	

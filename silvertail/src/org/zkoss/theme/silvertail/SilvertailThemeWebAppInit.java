@@ -17,9 +17,8 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 package org.zkoss.theme.silvertail;
 
 import org.zkoss.zk.ui.WebApp;
+import org.zkoss.zk.ui.theme.Themes;
 import org.zkoss.zk.ui.util.WebAppInit;
-import org.zkoss.zkplus.theme.StandardThemeProvider;
-import org.zkoss.zkplus.theme.Themes;
 
 /**
  * Initial the theme relative setting, includes
@@ -33,10 +32,6 @@ public class SilvertailThemeWebAppInit implements WebAppInit {
 	private final static int SILVERTAIL_PRIORITY = 600;
 	
 	public void init(WebApp webapp) throws Exception {
-		if (webapp.getConfiguration().getThemeProvider() == null)
-			webapp.getConfiguration().setThemeProvider(new StandardThemeProvider());
-		
-		Themes.register(Themes.BREEZE_NAME, Themes.BREEZE_DISPLAY, Themes.BREEZE_PRIORITY);
 		Themes.register(SILVERTAIL_NAME, SILVERTAIL_DISPLAY, SILVERTAIL_PRIORITY);
 	}
 	
