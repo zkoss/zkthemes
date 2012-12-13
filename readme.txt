@@ -19,4 +19,6 @@ breeze/
           /org
       /assembly (the build setting, you have to copy it as well)
 
+*** Download standalone theme zip file ***
 
+Download the latest standalone theme from google code (http://code.google.com/p/zkthemes/downloads/list)
