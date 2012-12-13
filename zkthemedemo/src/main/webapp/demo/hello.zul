@@ -1,6 +1,6 @@
 <zk>
 	<zscript>
-		import org.zkoss.zkplus.theme.Themes;
+		import org.zkoss.zul.theme.Themes;
 		String theme = Themes.getDisplayName(Themes.getCurrentTheme());
 	</zscript>
 	<window title="ZK Theme Demo: ${theme}" border="normal" height="100%">
