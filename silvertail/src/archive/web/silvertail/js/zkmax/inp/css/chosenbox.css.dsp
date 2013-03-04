@@ -75,9 +75,9 @@
 }
 .z-chosenbox-del-btn-icon {
 	height: 100%;
-	background: url(${c:encodeURL('~./zkmax/img/inp/chosenbox-del-btn.png')}) 0 center no-repeat;
+	background: url(${c:encodeThemeURL('~./zkmax/img/inp/chosenbox-del-btn.png')}) 0 center no-repeat;
 	<c:if test="${zk.ie < 8}">
-		background-image: url(${c:encodeURL('~./zkmax/img/inp/chosenbox-del-btn.gif')});
+		background-image: url(${c:encodeThemeURL('~./zkmax/img/inp/chosenbox-del-btn.gif')});
 	</c:if>
 }
 .z-chosenbox-disd {
