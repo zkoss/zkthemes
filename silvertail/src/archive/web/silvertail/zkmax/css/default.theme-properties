@@ -1,0 +1,485 @@
+G_EmptyIcon = ${c:encodeThemeURL('~./img/spacer.gif')}
+G_CloseIcon = ${c:encodeThemeURL('~./zkmax/img/tablet/close.png')}
+
+G_PlusIcon = ${c:encodeThemeURL('~./zkmax/img/tablet/plus.png')}
+G_MinusIcon = ${c:encodeThemeURL('~./zkmax/img/tablet/minus.png')}
+G_CheckboxIcon = ${c:encodeThemeURL('~./zkmax/img/tablet/checked.png')}
+
+G_TextShadow = text-shadow: 0 1px #FFFFFF;
+
+G_Background_Color1 = #FEFEFE
+G_Background_Color2 = #EEEEEE
+G_Background_Color3 = #E1E1E1
+
+G_Background = ${G_Background_Color1} 0%; ${G_Background_Color2} 100%
+G_Background_Hover = ${G_Background_Color3} 0%; ${G_Background_Color3} 100%
+G_Background_Hover_Shadow = inset 1px 1px 1px #0CBCFF, inset -1px -1px 1px #0CBCFF
+G_Background_Active = ${G_Background_Color2} 0%; ${G_Background_Color1} 100%
+G_Background_Active_Shadow_Inset = inset 1px 1px 1px rgba(210, 210, 210, 0.75)
+G_Background_Active_Shadow = ${G_Background_Active_Shadow_Inset}, 0 0 7px #CFCFCF
+
+
+G_Background_Border_Color = #A6A6A6
+G_Background_Hover_Border_Color = #AEAEAE
+G_Background_Focus_Border_Color = #0CBCFF
+G_Background_Active_Border_Color_TL = #808080
+G_Background_Active_Border_Color_BR = #B6B6B6
+
+G_Background_Button_Border_Radius = 3px
+
+G_Background_Gradient_Direction = ver
+G_Background_Button_Gradient_Direction = ver
+
+G_Font_Color1 = #363636
+G_Font_Color2 = #555555
+G_Font_Color3 = #FFFFFF
+G_Font_Color4 = #888888
+
+### Button ###
+Button_Color = black
+Button_FontSize = ${fontSizeXS}
+Button_FontFamily = ${fontFamilyT}
+Button_FontWeight = normal
+Button_Text_Shadow = ${G_TextShadow}
+
+Button_Border_Color = ${G_Background_Border_Color}
+Button_Border_Radius = ${t:borderRadius(G_Background_Button_Border_Radius)}
+Button_Border_Width = 1px
+Button_Background = ${t:gradient(G_Background_Button_Gradient_Direction, G_Background)}
+
+Button_Hover_Border_Color = ${G_Background_Focus_Border_Color}
+Button_Hover_Background =
+Button_Hover_Shadow = ${t:boxShadow(G_Background_Hover_Shadow)}
+
+Button_Focus_Border_Color = ${Button_Hover_Border_Color}
+Button_Focus_Background = ${Button_Hover_Background}
+Button_Focus_Shadow = ${Button_Hover_Shadow}
+
+Button_Active_Border_Color = ${G_Background_Active_Border_Color_TL} ${G_Background_Active_Border_Color_BR} ${G_Background_Active_Border_Color_BR} ${G_Background_Active_Border_Color_TL}
+Button_Active_Background = ${t:gradient(G_Background_Button_Gradient_Direction, G_Background_Active)}
+Button_Active_Shadow = ${t:boxShadow(G_Background_Active_Shadow)}
+
+Button_Padding = 5px 15px
+Button_Margin = 1px 1px 0 0
+Button_LineHeight = 20px
+
+### Input ###
+Input_FontSize = ${fontSizeXS}
+Input_FontFamily = ${fontFamilyC}
+Input_FontWeight = normal
+
+Input_Border_Color = #E6E6E6
+Input_Border_Top_Color = #B2B2B2
+Input_Border_Radius = ${t:borderRadius('2px')}
+Input_Border_Width = 1px
+Input_Background = #FFFFFF
+
+Input_Padding = 2px
+Input_LineHeight = 26px
+
+### Input Focus ###
+Input_Focus_Border_Color = #D5EAFD
+Input_Focus_Border_Top_Color = #94B9DA
+Input_Focus_Background = ${Input_Background}
+### Input invalid ###
+Input_Error_Border_Color = #DD7777
+Input_Error_Border_Top_Color = ${Input_Error_Border_Color}
+Input_Error_Background = ${Input_Background}
+### Input Disable ###
+Input_Disable_Border_Color = #E6E6E6
+Input_Disable_Border_Top_Color = #B2B2B2
+Input_Disable_Background = #F0F0F0
+### Input Readonly ###
+Input_Readonly_Border_Color = ${Input_Border_Color}
+Input_Readonly_Border_Top_Color = ${Input_Border_Top_Color}
+Input_Readonly_Background = #FAFAFA
+
+Input_Disable_Opacity = 0.6
+Input_Disable_Color = #AAAAAA !important
+### Input Inplace Editing ###
+Input_Inplace_Border = 0
+Input_Inplace_Padding = 3px
+Input_Inplace_Background = none
+
+
+### Combo Widget ###
+Combo_Color = black
+Combo_FontSize = ${fontSizeXS}
+Combo_FontFamily = ${fontFamilyC}
+Combo_FontWeight = normal
+Combo_Border_Radius_Size = ${G_Background_Button_Border_Radius}
+
+Combo_Border = 0
+Combo_Padding = 0
+Combo_Margin= 0
+Combo_Background = #FFFFFF
+
+### Combo Input ###
+Combo_Input_Color = ${Combo_Color}
+Combo_Input_FontSize = ${Combo_FontSize}
+Combo_Input_FontFamily = ${Combo_FontFamily}
+Combo_Input_FontWeight = ${Combo_FontWeight}
+
+Combo_Input_Border_Color = #CFCFCF
+Combo_Input_Border_Width = 1px
+Combo_Input_Border_Right_Width = 0
+Combo_Input_Border_Radius_Size = ${Combo_Border_Radius_Size} 0 0 ${Combo_Border_Radius_Size}
+Combo_Input_Padding = 2px
+Combo_Input_Margin= 0
+Combo_Input_Background = ${Combo_Background}
+Combo_Input_Shadow = ${t:boxShadow('none')}
+
+Combo_Input_Height = 26px
+Combo_Input_LineHeight = 14px
+Combo_Input_Focus_Shadow = ${t:boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)')}
+Combo_Input_Focus_Background = ${t:gradient(G_Background_Button_Gradient_Direction, 'rgba(160,160,160,0.4) 0%; rgba(255,255,255,0.4) 12%')}
+
+### Combo Input invalid ###
+Combo_Input_Error_Border_Color = ${Input_Error_Border_Color}
+Combo_Input_Error_Border_Top_Color = ${Input_Error_Border_Top_Color}
+Combo_Input_Error_Background = ${Input_Background}
+Combo_Input_Disable_Opacity = ${Input_Disable_Opacity}
+Combo_Input_Disable_Color = ${Input_Disable_Color}
+Combo_Input_Disable_Background = ${Input_Disable_Background}
+
+### Combo Input Readonly ###
+Combo_Input_Readonly_Border_Color = ${Input_Readonly_Border_Color}
+Combo_Input_Readonly_Border_Top_Color = ${Input_Readonly_Border_Top_Color}
+Combo_Input_Readonly_Background = ${Input_Readonly_Background}
+
+### Combo Input Inplace Editing ###
+Combo_Inplace_Border = ${Input_Inplace_Border}
+Combo_Inplace_Padding = 1px
+Combo_Inplace_Background = ${Input_Inplace_Background}
+Combo_Input_Inplace_Border = ${Combo_Inplace_Border}
+Combo_Input_Inplace_Padding = 2px 2px 2px 3px
+Combo_Input_Inplace_Background = ${Combo_Inplace_Background}
+
+### Combo Button ###
+Combo_Button_Background = ${t:gradValue(G_Background_Button_Gradient_Direction, G_Background)}
+Combo_Button_Border_Color = ${Combo_Input_Border_Color}
+Combo_Button_Border_Width = ${Combo_Input_Border_Width}
+Combo_Button_Border_Radius_Size = 0 ${Combo_Border_Radius_Size} ${Combo_Border_Radius_Size} 0
+
+Combo_Button_Hover_Border_Color = ${G_Background_Hover_Border_Color}
+Combo_Button_Hover_Background = ${t:gradValue(G_Background_Button_Gradient_Direction, G_Background_Hover)}
+Combo_Button_Hover_Shadow =
+
+Combo_Button_Active_Border_Color = ${Button_Active_Border_Color}
+Combo_Button_Active_Background = ${t:gradValue(G_Background_Button_Gradient_Direction, G_Background_Active)}
+Combo_Button_Active_Shadow = ${t:boxShadow(G_Background_Active_Shadow_Inset)}
+
+Combo_Button_After_Color = #707070
+Combo_Button_After_FontSize = 28px
+Combo_Button_After_FontFamily = "Open Sans",Arial
+Combo_Button_After_FontWeight = normal
+Combo_Button_Up_After_Top = 11
+Combo_Button_Down_After_Top = 15
+
+Combo_Popup_FontSizeM = ${fontSizeM}
+Combo_Popup_FontSizeS = ${fontSizeXS}
+Combo_Popup_FontFamily = ${fontFamilyC}
+Combo_Popup_FontWeight = normal
+Combo_Popup_Background = ${Combo_Background}
+Combo_Popup_Padding = 2px
+Combo_Popup_Color = ${G_Font_Color2}
+Combo_Popup_Anchor_FontSize = ${Combo_Popup_FontSizeM}
+Combo_Popup_Anchor_FontWeight = normal
+Combo_Popup_Anchor_Color = black
+Combo_Popup_Border_Color = ${Combo_Input_Border_Color}
+Combo_Popup_Border_Width = ${Combo_Input_Border_Width}
+Combo_Popup_Shadow = ${t:boxShadow('0 0 15px rgba(0, 0, 0, 0.35)')}
+Combo_Border_Radius_Size = ${G_Background_Button_Border_Radius}
+
+Combobox_Popup_Background = ${t:gradient(G_Background_Gradient_Direction, '#d3d3d3 0%;#e5e5e5 10%;#f2f2f2 25%;#ffffff 50%;#f2f2f2 75%; #e5e5e5 90%;#d3d3d3 100%')}
+Comboitem_Selected_Background = ${t:gradient(G_Background_Button_Gradient_Direction, '#f1fafe 0%; #d4f1fc 100%')}
+Timebox_Wheeltime_Background = ${t:gradValue(G_Background_Gradient_Direction, '#000 0%;#333 35%; #888 50%; #333 65%; #000 100%')}
+Timebox_Wheeltime_Margin = 4px 0
+Timebox_Wheelline_Border_Top = 1px solid #333333
+Timebox_Wheelline_Border_Bottom = 1px solid #555555
+Timebox_Wheellist_Margin = 0 2px
+Timebox_Wheellist_Color = #FFFFFF
+Timebox_Wheellist_Background = ${t:gradValue(G_Background_Gradient_Direction, '#000 0%;#444 45%; #444 55%; #000 100%')}
+Timebox_Wheellist_Text_Shadow = ${G_TextShadow}
+
+### Calendar ###
+Calendar_FontSize = ${fontSizeM}
+Calendar_FontFamily = ${fontFamilyC}
+Calendar_FontWeight = normal
+Calendar_Title_FontFamily = ${fontFamilyT}
+Calendar_Title_FontSize = ${fontSizeS}
+Calendar_Title_FontWeight = bold
+Calendar_Title_Color = #636363
+Calendar_Week_FontSize = ${fontSizeXS}
+Calendar_Weekend_Color = #F7941D
+Calendar_Weekend_Background = #F3F3F3
+Calendar_WeekOfYear_Background = #636363
+Calendar_WeekOfYear_Color = #FFFFFF
+Calendar_Content_FontSize = ${fontSizeS}
+Calendar_Background = #FFFFFF
+Calendar_Padding = 2px
+Calendar_Border_Color = #C5C5C5
+Calendar_Border_Width = 1px
+Calendar_Border_Radius_Size = ${G_Background_Button_Border_Radius}
+Calendar_Icon_Border_Width = 8
+Calendar_Icon_Border_Color = #0075A3
+Calendar_Icon_Hover_Border_Color = #00506D
+Calendar_Icon_Disable_Border_Color = #E3E3E3
+Calendar_Disable_Opacity = ${Input_Disable_Opacity}
+Calendar_Disable_Color = rgba(170,170,170,${Calendar_Disable_Opacity})
+Calendar_Selected_Border_Radius_Size = 4px
+Calendar_Selected_Background = #D9EFFA
+Calendar_Selected_Text_Shadow = 1px 1px 3px rgba(0, 0, 0, 0.35)
+
+Calendar_Wheeltime_Background = ${Timebox_Wheeltime_Background}
+Calendar_Wheeltime_Margin = ${Timebox_Wheeltime_Margin}
+Calendar_Wheelline_Border_Top = ${Timebox_Wheelline_Border_Top}
+Calendar_Wheelline_Border_Bottom = ${Timebox_Wheelline_Border_Bottom}
+Calendar_Wheellist_Color = ${Timebox_Wheellist_Color}
+Calendar_Wheellist_Background = ${Timebox_Wheellist_Background}
+Calendar_Wheellist_Text_Shadow = ${Timebox_Wheellist_Text_Shadow}
+
+### MeshWidget ###
+Mesh_Background = #FFFFFF
+Mesh_FontSize = ${fontSizeXS}
+Mesh_FontFamily = ${fontFamilyC}
+Mesh_FontWeight = normal
+Mesh_Color = #636363
+Mesh_Border_Width = 1px
+Mesh_Border_Color = #CFCFCF
+Mesh_Head_Background = ${t:gradient(G_Background_Gradient_Direction, G_Background)}
+Mesh_Head_Border = 1px solid ${Mesh_Border_Color}
+Mesh_Head_Border_Left_Color = #FFFFFF
+Mesh_Head_Border_Top = none
+Mesh_Head_Color = ${Mesh_Color}
+Mesh_Head_Padding = 0
+Mesh_Head_Content_Padding = 8px 5px 7px
+Mesh_Head_Content_FontWeight = bold
+Mesh_Head_Button_Border_Color = ${Mesh_Border_Color}
+Mesh_Head_Button_After_Border_Color = #707070
+Mesh_Head_Button_After_Border_Width = 6px
+
+Mesh_Body_Empty_FontSize = ${Mesh_FontSize}
+Mesh_Body_Empty_FontFamily = ${Mesh_FontFamily}
+Mesh_Body_Empty_FontWeight = ${Mesh_FontWeight}
+Mesh_Body_Empty_Color = #7D7D7D
+
+Mesh_Paging_Border_Top = 1px solid ${Mesh_Border_Color}
+Mesh_Paging_Border_Bottom = 1px solid ${Mesh_Border_Color}
+
+Mesh_Body_Padding = 0 2px
+
+Mesh_Foot_Color = ${Mesh_Color}
+Mesh_Foot_Border_Top = 1px solid ${Mesh_Border_Color}
+Mesh_Foot_Background = #F9F9F9
+Mesh_Foot_Padding = 5px 7px
+
+Mesh_Cell_Padding = 5px
+Mesh_Cell_Border = 1px solid transparent
+Mesh_Cell_Border_Left_Color = #FFFFFF
+
+Mesh_Row_Odd_Background = #F7F7F7
+Mesh_Row_Disable_Color = #AAAAAA
+Mesh_Row_Hover_Border_Top = 1px solid #E3F2FF
+Mesh_Row_Hover_Border_Bottom = ${Mesh_Row_Hover_Border_Top}
+Mesh_Row_Hover_Background = ${t:gradient(G_Background_Button_Gradient_Direction, '#F2F9FE 0%; #D6F0FD 100%')}
+Mesh_Row_Selected_Background = ${Mesh_Row_Hover_Background}
+
+Mesh_Anchor_Color = black
+Mesh_Anchor_FontSize = ${Mesh_FontSize}
+Mesh_Anchor_FontFamily = ${Mesh_FontFamily}
+Mesh_Anchor_FontWeight = ${Mesh_FontWeight}
+Mesh_Anchor_Disable_Border_Color = ${Mesh_Row_Disable_Color}
+
+Mesh_Menu_Grouping_Icon = ${c:encodeThemeURL('~./zul/img/grid/menu-group.png')}
+Mesh_Menu_Asc_Icon = ${c:encodeThemeURL('~./zul/img/grid/menu-arrowup.png')}
+Mesh_Menu_Dsc_Icon = ${c:encodeThemeURL('~./zul/img/grid/menu-arrowdown.png')}
+Mesh_Menu_Ungrouping_Icon = ${c:encodeThemeURL('~./zul/img/grid/menu-ungroup.png')}
+Mesh_Head_Sort_Icon = ${c:encodeThemeURL('~./zul/img/grid/arrows.png')}
+
+Mesh_Group_Background = ${t:gradient(G_Background_Gradient_Direction, '#FFFFFF 0%; #E9F2FB 100%')}
+Mesh_Group_Selected_Background = ${t:gradient(G_Background_Gradient_Direction, '#F1FAFE 0%; #D4F1FC 100%')}
+Mesh_Group_Border_Top = 1px solid ${Mesh_Border_Color}
+Mesh_Group_Border_Bottom = ${Mesh_Group_Border_Top}
+Mesh_Group_Padding = 2px 2px 0
+Mesh_Group_Cell_Color = ${Mesh_Color}
+Mesh_Group_Cell_Padding = 2px
+Mesh_Group_Cell_FontSize = ${Mesh_FontSize}
+Mesh_Group_Cell_FontFamily = ${Mesh_FontFamily}
+Mesh_Group_Cell_FontWeight = bold
+Mesh_Group_Icon = ${c:encodeThemeURL('~./zkmax/img/tablet/grid/group-arrows.png')}
+Mesh_Group_Icon_Margin = 0
+
+Mesh_Groupfoot_Background = ${t:gradient(G_Background_Gradient_Direction, '#E9F2FB 0%; #FFFFFF 100%')}
+Mesh_Groupfoot_Cell_Color = ${Mesh_Color}
+Mesh_Groupfoot_Cell_FontSize = ${Mesh_FontSize}
+Mesh_Groupfoot_Cell_FontFamily = ${fontFamilyT}
+Mesh_Groupfoot_Cell_FontWeight = bold
+Mesh_Groupfoot_Padding = 4px 2px 2px 9px
+Mesh_Groupfoot_Border_Top_Color = #E9F2FB
+
+Mesh_Head_Sort_Hover_Background = ${t:gradient(G_Background_Gradient_Direction, '#F5FCFE 0%; #DDF5FD 100%')}
+Mesh_Head_Sort_Content_Padding = 7px 5px
+
+Mesh_Checkmark_Background = ${t:gradient(G_Background_Button_Gradient_Direction, G_Background)}
+Mesh_Checkmark_Border = 1px solid ${Mesh_Border_Color}
+Mesh_Checkmark_Checkbox_Selected_Background = url(${G_CheckboxIcon}), ${Combo_Button_Background}
+Mesh_Checkmark_Checkbox_Selected_Active_Background = url(${G_CheckboxIcon}), ${t:gradValue(G_Background_Button_Gradient_Direction, G_Background_Active)}
+Mesh_Checkmark_Checkbox_Active_Background = ${t:gradient(G_Background_Button_Gradient_Direction, G_Background_Active)}
+Mesh_Checkmark_Checkbox_Active_Shadow = ${t:boxShadow('inset 0 1px 1px rgba(210, 210, 210, 0.75)')}
+
+Mesh_Checkmark_Radio_Border_Radius = 2em
+Mesh_Checkmark_Radio_Selected_Background = ${Mesh_Checkmark_Background}
+Mesh_Checkmark_Radio_Selected_Active_Background = ${Mesh_Checkmark_Checkbox_Active_Background}
+Mesh_Checkmark_Radio_After_Border = 5px solid #0076A3
+Mesh_Checkmark_Radio_Active_Background = ${Mesh_Checkmark_Checkbox_Active_Background}
+Mesh_Checkmark_Radio_Active_Shadow = ${Mesh_Checkmark_Checkbox_Active_Shadow}
+
+Tree_Icon_Background = ${c:encodeThemeURL('~./zkmax/img/tablet/tree/arrow-toggle.png')}
+Tree_Cell_Padding = 2px 5px
+
+Detail_Icon_Background = ${Mesh_Checkmark_Background}
+Detail_Icon_Border_Radius = ${Button_Border_Radius}
+Detail_Icon_Plus = ${G_PlusIcon}
+Detail_Icon_Color = ${Mesh_Head_Button_After_Border_Color}
+Detail_Icon_Minus = ${G_MinusIcon}
+Detail_Icon_Active_Border_Color = ${Button_Active_Border_Color}
+Detail_Icon_Active_Background = ${Button_Active_Background}
+Detail_Icon_Active_Shadow = ${Button_Active_Shadow}
+Detail_Row_Background = ${t:gradient('hor', '#FFFFFF 0%; #F8F8F8 100%')}
+Detail_Row_Border = 1px solid transparent
+Detail_Row_Border_Color = transparent #C0C0C0 #D0D0D0 #FFFFFF
+Detail_Row_Padding = 2px
+
+### Menu ###
+Menubar_Border_Top = 1px solid #D8D8D8
+Menubar_Border_Bottom = ${Menubar_Border_Top}
+Menubar_Background = ${Mesh_Head_Background}
+Menubar_Padding = 5px 0;
+
+Menubar_Ver_Margin = 3px 2px 4px
+
+Menu_Border_Radius = ${Button_Border_Radius}
+Menu_Border_Color = ${G_Background_Color3}
+Menu_Border_Width = 1px
+Menu_Background = ${Button_Background}
+Menu_Padding = 1px 6px
+Menu_Active_Border = ${Button_Active_Border_Color}
+Menu_Active_Background = ${Button_Active_Background}
+Menu_Active_Shadow = ${t:boxShadow(G_Background_Active_Shadow_Inset)}
+
+Menu_Color = ${G_Font_Color2}
+Menu_FontSize = ${fontSizeXS}
+Menu_FontFamily = ${fontFamilyT}
+Menu_FontWeight = normal
+Menu_Text_Shadow = ${G_TextShadow}
+
+Menubar_Arrow_Border_Color = #363636
+Menubar_Scroll_Button_Border_Color = #E1E1E1
+Menubar_Scroll_Button_Border_Width = 1px
+Menubar_Scroll_Button_Border_Radius = ${t:borderRadius('3px 3px 0 0')}
+Menubar_Scroll_Button_Background = ${Button_Background}
+Menubar_Scroll_Button_After_Border_Color = #CCCCCC
+Menubar_Scroll_Button_After_Active_Border_Color = #91CBFD
+Menubar_Scroll_Button_After_Active_Shadow = ${Combo_Input_Focus_Shadow}
+
+Menupopup_Shadow = ${t:boxShadow('1px 1px 2px rgba(0, 0, 0, 0.2)')}
+Menupopup_Background = none
+Menupopup_Background_Color = #FAFAFA
+Menupopup_Border_Width = 1px
+Menupopup_Border_Color = #C2C2C2
+Menupopup_Padding = 1px
+Menupopup_FontSize = ${fontSizeMS}
+Menupopup_FontFamily = ${fontFamilyT}
+Menupopup_FontWeight = normal
+Menupopup_Content_Background = ${t:gradient('hor', '#FAFAFA 0%; #F6F5F5 28px; #D8D7D7 28px; #D8D7D7 29px; #FFFFFF 29px; #FFFFFF 30px; #F6F5F5 30px; #FAFAFA 100%')}
+
+Menupopup_Menu_Margin = 2px
+Menupopup_Menu_Padding = 2px
+Menupopup_Menu_Background = transparent
+Menupopup_Menu_Border_Color = transparent
+Menupopup_Menu_Text_Padding_Left = 10px
+Menupopup_Menuseparator_Padding = 1px
+Menupopup_Menu_Content_Color = #222222
+Menupopup_Menu_Content_Padding = 1px 21px 1px 3px
+Menupopup_Menuitem_Content_Padding = 1px 6px 1px 1px
+
+Menupopup_Menu_Active_Border_Color = #C6DBE6
+Menupopup_Menu_Active_Padding = 1px
+Menupopup_Menu_Active_Background = ${t:gradient(G_Background_Button_Gradient_Direction, '#F4FAFD 0%; #E2EFF6 100%')}
+Menupopup_Menu_Active_Shadow = ${t:boxShadow('0 0 7px #C6DBE6')}
+
+Menupopup_Menu_Disable_Border_Color = transparent
+
+Menuitem_Checkmark_Background = ${Mesh_Checkmark_Background}
+Menuitem_Checkmark_Border = ${Mesh_Checkmark_Border}
+Menuitem_Checkmark_Checkbox_Selected_Background = url(${c:encodeThemeURL('~./zkmax/img/tablet/menu/checked.png')}), ${Combo_Button_Background}
+
+Menuseparator_Background_Color = #E0E0E0
+Menuseparator_Border_Color = #FFFFFF
+Menuseparator_Border_Color_TL = ${G_Background_Active_Border_Color_TL}
+
+### Tabbox ###
+Tabbox_Border_Color = #E1E1E1
+Tabs_Border_Bottom_Color = ${Tabbox_Border_Color}
+Tab_FontSize = ${fontSizeXS}
+Tab_FontFamily = ${fontFamilyT}
+Tab_FontWeight = normal
+Tab_Text_Shadow = ${G_TextShadow}
+Tab_Border_Color = ${Tabs_Border_Bottom_Color}
+Tab_Border_Width = 1px
+Tab_Border_Bottom_Color = #EEEEEE
+Tab_Border_Radius = ${t:borderRadius('3px 3px 0 0')}
+Tab_Background = ${Button_Background}
+Tab_Color = ${G_Font_Color2}
+Tab_Text_Padding = 3px 4px 3px 8px
+
+Tabs_Scroll_Border_Color = ${Tabs_Border_Bottom_Color}
+Tabs_Scroll_Border_Width = 1px
+Tabs_Scroll_Border_Radius = ${Tab_Border_Radius}
+Tabs_Scroll_Icon = ${c:encodeThemeURL('~./zkmax/img/tablet/tab/scroll.png')}
+Tabs_Scroll_Right_Background = url(${Tabs_Scroll_Icon}) no-repeat 0 -32px, ${Combo_Button_Background}
+Tabs_Scroll_Left_Background = url(${Tabs_Scroll_Icon}) no-repeat 0 0,	${Combo_Button_Background}
+Tabs_Scroll_Active_Shadow = ${Combo_Input_Focus_Shadow}
+
+Tabs_Ver_Scroll_Icon = ${c:encodeThemeURL('~./zkmax/img/tablet/tab/scroll-v.png')}
+Tabs_Ver_Scroll_Down_Background = url(${Tabs_Ver_Scroll_Icon}) no-repeat center -64px, ${Combo_Button_Background}
+Tabs_Ver_Scroll_Up_Background = url(${Tabs_Ver_Scroll_Icon}) no-repeat center 0, ${Combo_Button_Background}
+
+Tab_Active_Background = ${t:gradient(G_Background_Button_Gradient_Direction, '#F1F1F1 0%; #DDDDDD 100%')}
+Tab_Active_Border_Bottom_Color = #DDDDDD
+Tab_Selected_Background = #FFFFFF
+Tab_Selected_Shadow = ${t:boxShadow(c:cat('0 1px 0 ', Tab_Selected_Background))}
+Tab_Selected_Border_Bottom_Color = ${Tab_Selected_Background}
+Tab_Selected_FirstChild_Shadow = ${t:boxShadow(c:cat('1px 1px 0 ', Tab_Selected_Background))}
+Tab_Selected_Color = ${Tab_Color}
+Tab_Selected_FontWeight = bold
+Tab_Selected_Padding_Left = 6px
+
+Tab_Ver_Border_Radius = ${t:borderRadius('3px 0 0 3px')}
+Tab_Ver_Selected_Border_Right_Color = ${Tab_Selected_Background}
+Tab_Ver_Selected_Shadow =  ${t:boxShadow(c:cat('1px 0 0 ', Tab_Selected_Background))}
+Tab_Ver_Selected_FirstChild_Shadow = ${t:boxShadow(c:cat('1px 1px 0 ', Tab_Selected_Background))}
+
+Tab_Close_Icon = ${G_CloseIcon}
+
+Tabpanel_Border = 1px solid ${Tabbox_Border_Color}
+Tabpanel_Padding = 5px
+
+Tab_Accordion_Background = ${Mesh_Head_Background}
+Tab_Accordion_Border_Color = #CFCFCF
+Tab_Accordion_Border_Width = 1px
+Tab_Accordion_Shadow = ${t:boxShadow('inset 0px 1px 2px #FFFFFF')}
+Tab_Accordion_FirstChild_Border_Radius = ${Tab_Border_Radius}
+Tab_Accordion_Color = ${G_Font_Color2}
+Tab_Accordion_FontSize = ${fontSizeXS}
+Tab_Accordion_FontFamily = ${fontFamilyT}
+Tab_Accordion_FontWeight = bold
+Tab_Accordion_Padding = 2px 30px 0 5px
+Tab_Accordion_Text_Shadow = ${G_TextShadow}
+
+Tab_Accordion_Selected_Background = ${t:gradient(G_Background_Gradient_Direction, '#F1F1F1 0%; #DDDDDD 100%')}
+
+Tabpanel_Accordion_Background = #FFFFFF
+Tabpanel_Accordion_Padding = 5px 6px
+Tabpanel_Accordion_Border_Top = 0

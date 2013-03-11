@@ -92,14 +92,14 @@
 	z-index: 999;
 }
 .z-scrollview-load-up {
-	background-image: url(${c:encodeURL('~./zkmax/img/tablet/layout/load-up.png')});
+	background-image: url(${c:encodeThemeURL('~./zkmax/img/tablet/layout/load-up.png')});
 }
 .z-scrollview-load-down {
-	background-image: url(${c:encodeURL('~./zkmax/img/tablet/layout/load-down.png')});
+	background-image: url(${c:encodeThemeURL('~./zkmax/img/tablet/layout/load-down.png')});
 }
 .z-scrollview-load-left {
-	background-image: url(${c:encodeURL('~./zkmax/img/tablet/layout/load-left.png')});
+	background-image: url(${c:encodeThemeURL('~./zkmax/img/tablet/layout/load-left.png')});
 }
 .z-scrollview-load-right {
-	background-image: url(${c:encodeURL('~./zkmax/img/tablet/layout/load-right.png')});
+	background-image: url(${c:encodeThemeURL('~./zkmax/img/tablet/layout/load-right.png')});
 }

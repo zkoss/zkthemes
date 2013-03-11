@@ -71,7 +71,7 @@
 	cursor: crosshair;
 }
 .z-colorpicker-overlay {
-	background-image: url(${c:encodeURL('~./zkex/img/colorbox/colorpicker_gradient.png')});
+	background-image: url(${c:encodeThemeURL('~./zkex/img/colorbox/colorpicker_gradient.png')});
 }
 .z-colorpicker-circle {
 	position: absolute;
@@ -80,7 +80,7 @@
 	width: 11px;
 	height: 11px;
 	overflow: hidden;
-	background-image: url(${c:encodeURL('~./zkex/img/colorbox/colorpicker_select.gif')});
+	background-image: url(${c:encodeThemeURL('~./zkex/img/colorbox/colorpicker_select.gif')});
 	margin: -5px 0 0 -5px;
 }
 <%-- Colorpicker hue--%>
@@ -100,12 +100,12 @@
 	width: 12px;
 	height: 256px;
 	left: 7px;
-	background-image: url(${c:encodeURL('~./zkex/img/colorbox/colorpicker_hue.png')});
+	background-image: url(${c:encodeThemeURL('~./zkex/img/colorbox/colorpicker_hue.png')});
 }
 .z-colorpicker-arrows {
 	width: 27px;
 	height: 9px;
-	background-image: url(${c:encodeURL('~./zkex/img/colorbox/colorpicker_arrows.gif')});
+	background-image: url(${c:encodeThemeURL('~./zkex/img/colorbox/colorpicker_arrows.gif')});
 	margin: -4px 0 0 0;
 	left: 0;
 }
@@ -224,7 +224,7 @@
 	height: 22px;
 	cursor: pointer;
 	position: absolute;
-	background: url(${c:encodeURL('~./zkex/img/colorbox/cb-buttons.gif')});
+	background: url(${c:encodeThemeURL('~./zkex/img/colorbox/cb-buttons.gif')});
 }
 
 .z-colorbox-palette-btn,
