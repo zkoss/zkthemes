@@ -68,6 +68,12 @@
 			<version>${project.version}</version>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkmax</artifactId>
+			<version>${project.version}</version>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
