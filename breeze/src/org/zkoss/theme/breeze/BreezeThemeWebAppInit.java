@@ -16,17 +16,10 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.theme.breeze;
 
-import java.io.IOException;
-import java.io.Writer;
-
-import org.zkoss.zk.ui.Desktop;
-import org.zkoss.zk.ui.Executions;
-import org.zkoss.zk.ui.Page;
 import org.zkoss.zk.ui.WebApp;
-import org.zkoss.zk.ui.sys.SEORenderer;
 import org.zkoss.zk.ui.util.WebAppInit;
-import org.zkoss.zkplus.theme.StandardThemeProvider;
-import org.zkoss.zkplus.theme.Themes;
+import org.zkoss.zul.theme.StandardThemeProvider;
+import org.zkoss.zul.theme.Themes;
 
 /**
  * Initial the theme relative setting, includes
