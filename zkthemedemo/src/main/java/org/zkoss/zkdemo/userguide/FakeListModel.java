@@ -70,7 +70,6 @@ public class FakeListModel extends AbstractListModel implements Sortable {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	protected void fireSelectionEvent(Object e) {
 		if (e instanceof String) {
 			String s = ((String) e).replace( "Option ", "");

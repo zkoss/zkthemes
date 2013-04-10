@@ -71,7 +71,7 @@ public class MainController extends SelectorComposer<Component> {
 		return (String) (set.isEmpty() ? null : set.iterator().next().getValue());
 	}
 	
-	@Override
+	
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
 		
