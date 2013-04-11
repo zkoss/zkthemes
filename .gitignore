@@ -2,3 +2,9 @@ codegen
 debug
 .settings
 target
+.classpath
+.project
+*/.settings/*.prefs
+*/.settings/*.component
+*/.settings/*.xml
+*/nbactions.xml
