@@ -8,3 +8,4 @@ target
 */.settings/*.component
 */.settings/*.xml
 */nbactions.xml
+*/bin/

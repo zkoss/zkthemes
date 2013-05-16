@@ -60,4 +60,19 @@
 			<separator />
 		</window>
 	</hbox>
+	<separator />
+	<hbox>
+		<window title="Button with Disable" sclass="center-bg-win"
+			border="normal" width="300px" height="300px">
+			<vbox>
+				Trendy Mold:
+				<button label="Button" disabled="true" image="/common/img/volumn.gif"
+					mold="trendy" />
+				<separator />
+				OS Mold:
+				<button label="Button" disabled="true" mold="os" />
+			</vbox>
+			<separator />
+		</window>
+	</hbox>
 </zk>
