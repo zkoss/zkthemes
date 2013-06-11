@@ -56,6 +56,14 @@
 									onClick="alert(self.label)" />
 							</menupopup>
 						</menu>
+						<menu label="Long text text">
+							<menupopup>
+								<menuitem label="About ZK"
+									onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+									onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
 					</menupopup>
 				</menu>
 				<menu
@@ -190,6 +198,7 @@
 							content="#color=#184dc6" />
 					</menupopup>
 				</menu>
+				<menuitem label="Exit"/>
 			</menubar>
 		</window>
 	</hbox>
@@ -232,6 +241,14 @@
 									onClick="alert(self.label)" />
 							</menupopup>
 						</menu>
+						<menu label="Long text text">
+							<menupopup>
+								<menuitem label="About ZK"
+									onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+									onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
 					</menupopup>
 				</menu>
 				<menu
@@ -250,6 +267,33 @@
 			<menubar id="menubar" width="100%">
 				<menu
 					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="Color Picker"
+							content="#color=#184dc6" />
+					</menupopup>
+				</menu>
+			</menubar>
+			<checkbox label="Vertical orient">
+				<attribute name="onCheck">
+					menubar.orient = self.checked ? "vertical" : "horizontal";
+				</attribute>
+			</checkbox>
+		</window>
+		<window title="Menu with Click" border="normal" width="350px"
+			height="300px">
+			<menubar id="menubar" width="100%">
+				<menu onClick=""
+					image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+							onClick="alert(self.label)" />
+						<menu label="Color Picker"
+							content="#color=#184dc6" />
+					</menupopup>
+				</menu>
+				<menu onClick="" label="Click Event">
 					<menupopup>
 						<menuitem label="Index"
 							onClick="alert(self.label)" />
