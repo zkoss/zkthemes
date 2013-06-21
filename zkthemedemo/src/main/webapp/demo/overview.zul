@@ -82,6 +82,7 @@
 		<panel hflex="1" vflex="1" border="normal" title="Panel" framable="true"
 			closable="true" maximizable="true" minimizable="true" collapsible="true">
 			<panelchildren>
+				<vlayout vflex="1" spacing="0">
 				<menubar>
 					<menu label="Menu">
 						<menupopup>
@@ -92,7 +93,7 @@
 					</menu>
 					<menuitem label="Menuitem" />
 				</menubar>
-				<borderlayout>
+				<borderlayout vflex="1">
 					<south title="South" size="30%" splittable="true" collapsible="true">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
 						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -131,6 +132,7 @@
 					</center>
 				</borderlayout>
 				Panel Content
+				</vlayout>
 			</panelchildren>
 			<toolbar mold="panel">
 				<toolbarbutton label="Toolbarbutton" />
