@@ -1,0 +1,41 @@
+<zk xmlns:ca="client/attribute">
+	<zscript><![CDATA[
+		Object o = new Object[100];
+		Object o1 = new Object[100];
+		Object o2 = new Object[100];
+		Object o3 = new Object[100];
+	]]></zscript>
+	<grid width="200px" height="200px" ca:data-embedscrollbar="true">
+		<columns>
+			<column label="col 1" width="100px" />
+			<column label="col 2" width="100px" />
+			<column label="col 3" width="100px" />
+			<column label="col 4" width="100px" />
+		</columns>
+		<rows>
+			<row forEach="${o}">
+				<label value="item ${forEachStatus.index}" />
+				<label value="item ${forEachStatus.index}" />
+				<label value="item ${forEachStatus.index}" />
+				<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+			</row>
+		</rows>
+	</grid>
+	<separator spacing="10px" />
+	<grid width="200px" height="200px">
+		<columns>
+			<column label="col 1" width="100px" />
+			<column label="col 2" width="100px" />
+			<column label="col 3" width="100px" />
+			<column label="col 4" width="100px" />
+		</columns>
+		<rows>
+			<row forEach="${o}">
+				<label value="item ${forEachStatus.index}" />
+				<label value="item ${forEachStatus.index}" />
+				<label value="item ${forEachStatus.index}" />
+				<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+			</row>
+		</rows>
+	</grid>
+</zk>
