@@ -16,6 +16,35 @@
 			FakerMatrixModel HugeRow = new FakerMatrixModel(10, 10000);
 			FakerMatrixModel BigData = new FakerMatrixModel(1000000, 1000000);
 			
+			public class MyMatrixComparatorProvider implements MatrixComparatorProvider {
+				private int _x = -1;
+				private boolean _acs;
+				private MyComparator _cmpr;
+				
+				public MyMatrixComparatorProvider(boolean asc) {
+				    _acs = asc;
+				    _cmpr = new MyComparator(this);
+				}
+				
+				public Comparator getColumnComparator(int columnIndex) {
+				    this._x = columnIndex;
+				    return _cmpr;
+				}
+				
+				public class MyComparator implements Comparator {
+				    private MyMatrixComparatorProvider _mmc;
+				    public MyComparator(MyMatrixComparatorProvider mmc) {
+				        _mmc = mmc;
+				    }
+				    public int compare(Object o1, Object o2) {
+				        return ((List)o1).get(_mmc._x).compareTo(((List)o2).get(_mmc._x))
+				                * (_acs ? 1 : -1);
+				    }
+				}
+			}
+			MyMatrixComparatorProvider ascCmpr = new MyMatrixComparatorProvider(true);
+			MyMatrixComparatorProvider dscCmpr = new MyMatrixComparatorProvider(false);
+			
 			Pair[] models = new Pair[] {
 					new Pair("NonHeader", NonHeader), 
 					new Pair("MultipleHeader", MultipleHeader),
@@ -89,7 +118,7 @@
 				Invalidate should look the same as before: <button label="invalidate" onClick="biglist.invalidate()"/>
 			</hlayout>
 		</vlayout>
-		<biglistbox id="biglist" hflex="1" vflex="1" colWidth="130px" model="${NonHeader}">
+		<biglistbox id="biglist" hflex="1" vflex="1" colWidth="130px" model="${NonHeader}" sortAscending="${ascCmpr}" sortDescending="${dscCmpr}">
 			<!-- Template example -->
 			<template name="heads">
 				<html><![CDATA[
