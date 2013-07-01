@@ -70,6 +70,7 @@
 							<item label="Tree"                     topic="demo/tree" />
 							<item label="Tree (Header, Footer)"    topic="demo/tree-header"/>
 							<item label="Paging"                   topic="demo/paging" />
+							<item label="Scrollbar"                topic="demo/scrollbar" />
 						
 						<category value="Big Data" />
 							<item label="Biglistbox"    topic="demo/biglistbox" />
