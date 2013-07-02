@@ -7,12 +7,12 @@
 	<parent>
 		<groupId>org.zkoss.theme</groupId>
 		<artifactId>zktheme</artifactId>
-		<version>6.5.3-SNAPSHOT</version>
+		<version>6.5.3</version>
 	</parent>
 	<groupId>org.zkoss.theme</groupId>
 	<artifactId>sapphire</artifactId>
 	<packaging>jar</packaging>
-	<version>6.5.3-SNAPSHOT</version>
+	<version>6.5.3</version>
 	<name>ZK Sapphire Theme</name>
 	<url>http://www.zkoss.org/themes/sapphire</url>
 	<description>ZK Sapphire Theme</description>
