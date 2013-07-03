@@ -299,23 +299,20 @@ tr.z-groupfoot td.z-groupfoot-inner {
 tr.z-groupfoot td.z-groupfoot-inner {
 	padding: 5px 4px 5px 6px;
 }
-tr.z-grid-odd td.z-row-inner,
-tr.z-grid-odd .z-cell {
+
+<%-- Bug ZK-1234: use child selector for nested grids does not properly display alternating odd/even rows --%>
+tr.z-grid-odd > td.z-row-inner,
+tr.z-grid-odd > .z-cell {
 	border-left: 1px solid transparent;
 	background-color: #F0FAFF;
 	border-top: 1px solid #F0FAFF;
 	border-bottom: 1px solid #F0FAFF;
 	border-left: 1px solid #FFF;
 }
-tr.z-grid-odd td.z-row-inner,
-tr.z-grid-odd .z-cell,
+tr.z-grid-odd > td.z-row-inner,
+tr.z-grid-odd > .z-cell,
 tr.z-grid-odd {
 	background: #F0FAFF;
-}
-
-<%-- Bug ZK-1234: Nested grids does not properly display alternating odd/even rows --%>
-tr.z-grid-odd tr:not(.z-grid-odd) td.z-row-inner {
-	background-color: #FFF;
 }
 
 <c:if test="${zk.ie > 6 || zk.opera > 0}">
@@ -362,12 +359,7 @@ tr.z-row-over > td.z-row-inner {
 	border: 1px solid #6BA6BF;
 }
 
-<%-- IE6 not support row over --%>
-<c:if test="${not c:browser('ie6-')}">
-tr.z-row-over > td.z-row-inner > .z-row-cnt {
-	color: #FFFFFF;
-}
-</c:if>
+
 tr.z-row-over > td.z-row-inner, tr.z-row-over > .z-cell {
 	background-color: #6BA6BF;
 }
