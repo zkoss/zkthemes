@@ -66,9 +66,9 @@
 	<hbox>
 		<window title="Auto Scroll" sclass="center-bg-win"
 			border="normal" width="300px" height="300px">
-			<borderlayout>
-				<center autoscroll="true">
-					<vbox>
+			<borderlayout xmlns:ca="client/attribute">
+				<center autoscroll="true" ca:data-embedscrollbar="true">
+					<vbox id="box">
 						<label value="Center" />
 						<label value="Content" />
 						<label value="is" />
