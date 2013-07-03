@@ -4,11 +4,11 @@
 	<parent>
 		<artifactId>zktheme</artifactId>
 		<groupId>org.zkoss.theme</groupId>
-		<version>6.5.3</version>
+		<version>6.5.4-SNAPSHOT</version>
 	</parent>
 	<groupId>org.zkoss.theme</groupId>
 	<artifactId>breeze</artifactId>
-	<version>6.5.3</version>
+	<version>6.5.4-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>ZK Breeze Theme</name>
 	<url>http://www.zkoss.org/themes/breeze</url>
