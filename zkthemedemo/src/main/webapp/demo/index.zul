@@ -57,6 +57,7 @@
 							<item label="Menubar"    topic="demo/menu" />
 							<item label="Toolbar"    topic="demo/toolbar" />
 							<item label="Fisheyebar" topic="demo/fisheyebar" />
+							<item label="Navbar" topic="demo/navbar" />	
 							
 						<category value="Mesh" />
 							<item label="Grid"                     topic="demo/grid" />
