@@ -63,16 +63,102 @@
 		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.zkoss.maven</groupId>
-				<artifactId>yuicompressor-maven-plugin-zk</artifactId>
-				<version>1.2.0</version>
+				<groupId>org.bitstrings.maven.plugins</groupId>
+				<artifactId>dependencypath-maven-plugin</artifactId>
+				<version>1.1.1</version>
 				<executions>
 					<execution>
+						<id>set-all</id>
 						<goals>
-							<goal>compress</goal>
+							<goal>set</goal>
 						</goals>
+						<configuration>
+							<propertySets>
+								<propertySet>
+									<includes>
+										<include>org.zkoss.zk:zul:jar</include>
+										<include>org.zkoss.zk:zkex:jar</include>
+										<include>org.zkoss.zk:zkmax:jar</include>
+									</includes>
+								</propertySet>
+							</propertySets>
+						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<id>compile-less-from-zul</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<includePluginDependencies>true</includePluginDependencies>
+							<executableDependency>
+								<groupId>org.zkoss.maven</groupId>
+								<artifactId>zkless-engine</artifactId>
+							</executableDependency>
+							<mainClass>org.zkoss.maven.CpLess</mainClass>
+							<arguments>
+								<argument>${org.zkoss.zk:zul:jar}</argument>
+								<argument>${project.basedir}/src/archive</argument>
+								<argument>${project.artifactId}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>compile-less-from-zkex</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<includePluginDependencies>true</includePluginDependencies>
+							<executableDependency>
+								<groupId>org.zkoss.maven</groupId>
+								<artifactId>zkless-engine</artifactId>
+							</executableDependency>
+							<mainClass>org.zkoss.maven.CpLess</mainClass>
+							<arguments>
+								<argument>${org.zkoss.zk:zkex:jar}</argument>
+								<argument>${project.basedir}/src/archive</argument>
+								<argument>${project.artifactId}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>compile-less-from-zkmax</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<includePluginDependencies>true</includePluginDependencies>
+							<executableDependency>
+								<groupId>org.zkoss.maven</groupId>
+								<artifactId>zkless-engine</artifactId>
+							</executableDependency>
+							<mainClass>org.zkoss.maven.CpLess</mainClass>
+							<arguments>
+								<argument>${org.zkoss.zk:zkmax:jar}</argument>
+								<argument>${project.basedir}/src/archive</argument>
+								<argument>${project.artifactId}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.zkoss.maven</groupId>
+						<artifactId>zkless-engine</artifactId>
+						<version>0.8.0</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -108,16 +194,6 @@
 					</instructions>
 				</configuration>
 			</plugin>
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.1</version>
-				<configuration>
-					<archive>
-						<manifestFile>${project.basedir}/src/archive/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
-				</configuration>
-			</plugin> -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.2</version>
@@ -163,15 +239,15 @@
 							<pluginExecutions>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId>org.zkoss.maven</groupId>
-										<artifactId>yuicompressor-maven-plugin-zk</artifactId>
-										<versionRange>[1.2.0,)</versionRange>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>exec-maven-plugin</artifactId>
+										<versionRange>[1.2.1,)</versionRange>
 										<goals>
-											<goal>compress</goal>
+											<goal>java</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<execute />
+										<ignore></ignore>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
