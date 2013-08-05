@@ -23,11 +23,11 @@
 // Component sizing
 // -------------------------
 // Based on 14px font-size and 20px line-height
-@fontSizeXLarge:               18px;
-@fontSizeLarge:                16px;
-@fontSizeMedium:               12px;
-@fontSizeSmall:                11px;
-@fontSizeXSmall:               10px;
+@fontSizeXLarge:               ceil(@baseFontSize * 1.25); // 18px
+@fontSizeLarge:                floor(@baseFontSize * 1.15); // 16px
+@fontSizeMedium:               ceil(@baseFontSize * 0.85); // 12px
+@fontSizeSmall:                floor(@baseFontSize * 0.8); // 11px
+@fontSizeXSmall:               ceil(@baseFontSize * 0.7); // 10px
 
 @baseBorderRadius:             4px;
 @borderRadiusLarge:            6px;
@@ -35,7 +35,7 @@
 
 @basePopupZIndex:              88000;
 
-// Component Basic Coloring for sapphire
+// Component Basic Coloring for silvertail
 // ---------------------------
 // Font color
 @baseTextColor:                #000000;
@@ -52,7 +52,7 @@
 @baseGradientStart:            #FEFEFE;
 @baseGradientEnd:              #EEEEEE;
 
-// Icon font color
+// Icon font color (used for font-awesome)
 // --------------------
 @iconColor:                    #707070;
 @iconHoverColor:               #363636;
@@ -61,25 +61,23 @@
 // Component State
 // --------------------
 // Active
+@activeColor:                  @baseTextColor;
 @activeBorderColor:            #7D7D7D;
+@activeBackgroundColor:        #EFEFEF;
 @activeGradientStart:          #FDFDFD;
 @activeGradientEnd:            #EFEFEF;
-// Focus
+// Focus (used on button, combobutton)
+@focusColor:                   @baseTextColor;
 @focusBorderColor:             #00B9FF;
+@focusBackgroundColor:         @baseGradientEnd;
+@focusGradientStart:           @baseGradientStart;
+@focusGradientEnd:             @baseGradientEnd;
 // Hover
 @hoverColor:                   #000000;
 @hoverBorderColor:             #AEAEAE;
 @hoverBackgroundColor:         #CFCFCF;
 @hoverGradientStart:           #E9E9E9;
 @hoverGradientEnd:             #CFCFCF;
-// Selected
-@selectedBackgroundColor:      #CCCCCC;
-@selectedGradientStart:        #CCCCCC;
-@selectedGradientEnd:          #CCCCCC;
-// Selected Hover
-@selectedHoverBackgroundColor: #E1E1E1; //darken(@selectedGradientEnd, 3%)
-@selectedHoverGradientStart:   #E1E1E1; //darken(@selectedGradientStart, 5%)
-@selectedHoverGradientEnd:     #E1E1E1; //darken(@selectedGradientEnd, 10%)
 // Disabled
 @disabledColor:                #AAAAAA;
 @disabledBackgroundColor:      #F0F0F0;
@@ -89,14 +87,24 @@
 // Read-only
 @readonlyBorderColor:          #E6E6E6;
 @readonlyBackgroundColor:      #FAFAFA;
+// Selected
+@selectedBackgroundColor:      #CCCCCC;
+@selectedGradientStart:        #CCCCCC;
+@selectedGradientEnd:          #CCCCCC;
+// Selected Hover
+@selectedHoverBackgroundColor: #E1E1E1;
+@selectedHoverGradientStart:   #E1E1E1;
+@selectedHoverGradientEnd:     #E1E1E1;
 // Checked
 @checkedColor:                 #2A2A2A;
 @checkedBorderColor:           #707070;
+@checkedBackgroundColor:       #F4F4F4;
 @checkedGradientStart:         #FFFFFF;
 @checkedGradientEnd:           #F4F4F4;
 
 // Component independent variables
 //------------------------------------------
+// mask and loading
 @maskBackgroundColor:          #E0E1E3;
 @loadingBackgroundColor:       #FFFFFF;
 // scrollbar
@@ -123,7 +131,7 @@
 @errorboxColor:                #FFFFFF;
 @errorboxBorderColor:          #CD0A0A;
 @errorboxBackgroundColor:      #CD0A0A;
-// notification (bug ZK-1135: IE8 does not support rgba)
+// notification
 @notificationInfoColor:        rgba(33, 155, 166, 0.88);
 @notificationWarningColor:     rgba(234, 67, 23, 0.88);
 @notificationErrorColor:       rgba(190, 0, 5, 0.88);
@@ -141,7 +149,7 @@
 @navImageSize:                 16px;
 @navColor:                     #333333;
 @navBorderColor:               #F4F4F3;
-@navBackgroundColor:           #FFFFFF;
+@navBackgroundColor:           #FFFFFF; //first level, each level is 3% darker (darken(@navBackgroundColor, 3 * level));
 @navHoverBackgroundColor:      #E8E8E8;
 @navSelectedColor:             #FFFFFF;
 @navSelectedBackgroundColor:   #372F2B;
