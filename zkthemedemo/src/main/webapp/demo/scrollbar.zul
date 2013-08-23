@@ -5,8 +5,9 @@
 		Object o2 = new Object[100];
 		Object o3 = new Object[100];
 	]]></zscript>
+	Default Scroll-bar (mouse over)
 	<hlayout>
-		<grid width="200px" height="200px" ca:data-embedscrollbar="true">
+		<grid width="200px" height="200px">
 			<columns>
 				<column label="col 1" width="100px" />
 				<column label="col 2" width="100px" />
@@ -22,7 +23,7 @@
 				</row>
 			</rows>
 		</grid>
-		<grid width="200px" height="200px" ca:data-embedscrollbar="true">
+		<grid width="200px" height="200px">
 			<columns>
 				<column label="col 1" width="100px" />
 				<column label="col 2" width="100px" />
@@ -44,10 +45,7 @@
 				<footer label="footer 4" />
 			</foot>
 		</grid>
-	</hlayout>
-	<separator spacing="10px" />
-	<hlayout>
-		<grid width="350px" mold="paging" pageSize="5" ca:data-embedscrollbar="true">
+		<grid width="300px" mold="paging" pageSize="5">
 			<columns>
 				<column label="col 1" width="100px" />
 				<column label="col 2" width="100px" />
@@ -62,45 +60,125 @@
 					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
 				</row>
 			</rows>
-		</grid>
-		<grid width="350px" mold="paging" pageSize="5" ca:data-embedscrollbar="true">
-			<columns>
-				<column label="col 1" width="100px" />
-				<column label="col 2" width="100px" />
-				<column label="col 3" width="100px" />
-				<column label="col 4" width="100px" />
-			</columns>
-			<rows>
-				<row forEach="${o}">
-					<label value="item ${forEachStatus.index}" />
-					<label value="item ${forEachStatus.index}" />
-					<label value="item ${forEachStatus.index}" />
-					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
-				</row>
-			</rows>
-			<foot>
-				<footer label="footer 1" />
-				<footer label="footer 2" />
-				<footer label="footer 3" />
-				<footer label="footer 4" />
-			</foot>
 		</grid>
 	</hlayout>
 	<separator bar="true" spacing="10px" />
-	<grid width="200px" height="200px">
-		<columns>
-			<column label="col 1" width="100px" />
-			<column label="col 2" width="100px" />
-			<column label="col 3" width="100px" />
-			<column label="col 4" width="100px" />
-		</columns>
-		<rows>
-			<row forEach="${o}">
-				<label value="item ${forEachStatus.index}" />
-				<label value="item ${forEachStatus.index}" />
-				<label value="item ${forEachStatus.index}" />
-				<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
-			</row>
-		</rows>
-	</grid>
+	Embedded Scroll-bar (mouse over)
+	<hlayout>
+		<grid width="200px" height="200px" ca:data-embedscrollbar="true">
+			<columns>
+				<column label="col 1" width="100px" />
+				<column label="col 2" width="100px" />
+				<column label="col 3" width="100px" />
+				<column label="col 4" width="100px" />
+			</columns>
+			<rows>
+				<row forEach="${o}">
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+				</row>
+			</rows>
+		</grid>
+		<grid width="200px" height="200px" ca:data-embedscrollbar="true">
+			<columns>
+				<column label="col 1" width="100px" />
+				<column label="col 2" width="100px" />
+				<column label="col 3" width="100px" />
+				<column label="col 4" width="100px" />
+			</columns>
+			<rows>
+				<row forEach="${o}">
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+				</row>
+			</rows>
+			<foot>
+				<footer label="footer 1" />
+				<footer label="footer 2" />
+				<footer label="footer 3" />
+				<footer label="footer 4" />
+			</foot>
+		</grid>
+		<grid width="300px" mold="paging" pageSize="5" ca:data-embedscrollbar="true">
+			<columns>
+				<column label="col 1" width="100px" />
+				<column label="col 2" width="100px" />
+				<column label="col 3" width="100px" />
+				<column label="col 4" width="100px" />
+			</columns>
+			<rows>
+				<row forEach="${o}">
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+				</row>
+			</rows>
+		</grid>
+	</hlayout>
+	<separator bar="true" spacing="10px" />
+	Browser Native Scroll-bar
+	<hlayout>
+		<grid width="200px" height="200px">
+			<custom-attributes org.zkoss.zul.nativebar="true" />
+			<columns>
+				<column label="col 1" width="100px" />
+				<column label="col 2" width="100px" />
+				<column label="col 3" width="100px" />
+				<column label="col 4" width="100px" />
+			</columns>
+			<rows>
+				<row forEach="${o}">
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+				</row>
+			</rows>
+		</grid>
+		<grid width="200px" height="200px">
+			<custom-attributes org.zkoss.zul.nativebar="true" />
+			<columns>
+				<column label="col 1" width="100px" />
+				<column label="col 2" width="100px" />
+				<column label="col 3" width="100px" />
+				<column label="col 4" width="100px" />
+			</columns>
+			<rows>
+				<row forEach="${o}">
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+				</row>
+			</rows>
+			<foot>
+				<footer label="footer 1" />
+				<footer label="footer 2" />
+				<footer label="footer 3" />
+				<footer label="footer 4" />
+			</foot>
+		</grid>
+		<grid width="300px" mold="paging" pageSize="5">
+			<custom-attributes org.zkoss.zul.nativebar="true" />
+			<columns>
+				<column label="col 1" width="100px" />
+				<column label="col 2" width="100px" />
+				<column label="col 3" width="100px" />
+				<column label="col 4" width="100px" />
+			</columns>
+			<rows>
+				<row forEach="${o}">
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index}" />
+					<label value="item ${forEachStatus.index} item ${forEachStatus.index}" />
+				</row>
+			</rows>
+		</grid>
+	</hlayout>
 </zk>
