@@ -1,27 +1,28 @@
 // Global Variables
-
+// -------------------------------------
 // Typography
-// ---------------
+// -------------------------------------
 @baseFontSize:                 14px;
 @baseTitleFontFamily:          "Helvetica Neue", Helvetica, Arial, sans-serif;
 @baseContentFontFamily:        Arial, Sans-serif;
 @baseLineHeight:               14px;
 
-// component height            
+// Component height
 @baseHeight:                   8px;
 @baseIconHeight:               @baseHeight * 2; // 16px
 @baseButtonHeight:             @baseHeight * 3; // 24px
 @baseBarHeight:                @baseHeight * 4; // 32px
 @baseTitleHeight:              @baseHeight * 5; // 40px
 
-// component width             
+// Component width             
 @baseWidth:                    8px;
 @baseIconWidth:                @baseWidth * 2; // 16px
 @baseButtonWidth:              @baseWidth * 3; // 24px
 @baseBarWidth:                 @baseWidth * 4; // 32px
 
+// -------------------------------------
 // Component sizing
-// -------------------------
+// -------------------------------------
 // Based on 14px font-size and 20px line-height
 @fontSizeXLarge:               ceil(@baseFontSize * 1.25); // 18px
 @fontSizeLarge:                floor(@baseFontSize * 1.15); // 16px
@@ -35,8 +36,9 @@
 
 @basePopupZIndex:              88000;
 
+// -------------------------------------
 // Component Basic Coloring for sapphire (all gray colors are changed to blue)
-// ---------------------------
+// -------------------------------------
 // Font color
 @baseTextColor:                #000000;
 @textColorGray:                #00547A;
@@ -45,106 +47,222 @@
 @textColorBlue:                #00547A;
 @textColorGreen:               #46A546;
 @textColorOrange:              #F7941D;
+
 // Border color
 @baseBorderColor:              #8FB9D0;
-// Background and Gradient
+@outerBorderColor:             @baseBorderColor;
+@headerBorderColor:            #8FB9D0;
+@bodyBorderColor:              #8FB9D0;
+@innerBorderColor:             #8FB9D0;
+@contentBorderColor:           @baseBorderColor;
+@footerBorderColor:            @baseBorderColor;
+
+// Background color
 @baseBackgroundColor:          #FFFFFF;
+@outerBackgroundColor:         @baseBackgroundColor;
+@headerBackgroundColor:        @baseBackgroundColor;
+@bodyBackgroundColor:          @baseBackgroundColor;
+@innerBackgroundColor:         @baseBackgroundColor;
+@contentBackgroundColor:       @baseBackgroundColor;
+@footerBackgroundColor:        @baseBackgroundColor;
+
+// Gradient background
 @baseGradientStart:            #E7F6FD;
 @baseGradientEnd:              #C6E9FA;
 
+// -------------------------------------
 // Icon font color (used for font-awesome)
-// --------------------
+// -------------------------------------
 @iconColor:                    #636363;
 @iconHoverColor:               #636363;
 @iconDisabledColor:            #AAAAAA;
 
+// -------------------------------------
+// Button (used for button, combobutton)
+// -------------------------------------
+@buttonBorderColor:            #A9A9A9;
+@buttonGradientStart:          #FEFEFE;
+@buttonGradientEnd:            #EEEEEE;
+
+// -------------------------------------
+// Input (used for textbox, intbox, spinner, ...)
+// -------------------------------------
+@inputBorderColor:             @baseBorderColor;
+@inputBackgroundColor:         @baseBackgroundColor;
+
+// -------------------------------------
+// Table (used for grid, listbox, tree, biglistbox)
+// -------------------------------------
+@tableTitleBorderColor:        @baseBorderColor;
+@tableContentBorderColor:      #FFFFFF;
+@tableBackgroundColor:         #FFFFFF;
+@tableStripeBackgroundColor:   #F0FAFF;
+@tableFootBackgroundColor:     #FAFAFA;
+@tableTitleHoverStart:         #F0F9FF;
+@tableTitleHoverEnd:           #A2DCFF;
+@tableContentHoverStart:       #6BA6BF;
+@tableContentHoverEnd:         #6BA6BF;
+
+// -------------------------------------
 // Component State
-// --------------------
+// -------------------------------------
 // Active
 @activeColor:                  @baseTextColor;
 @activeBorderColor:            #499EB3;
 @activeBackgroundColor:        #86E2F9;
 @activeGradientStart:          #C3F5FE;
 @activeGradientEnd:            #86E2F9;
-// Focus (used on button, combobutton)
+
+// Focus
 @focusColor:                   @baseTextColor;
 @focusBorderColor:             #00B9FF;
 @focusBackgroundColor:         @baseGradientEnd;
 @focusGradientStart:           @baseGradientStart;
 @focusGradientEnd:             @baseGradientEnd;
+
 // Hover
 @hoverColor:                   #FFFFFF;
 @hoverBorderColor:             #8FB9D0;
 @hoverBackgroundColor:         #6BA6BF;
 @hoverGradientStart:           #E2F3FC;
 @hoverGradientEnd:             #C8E9FA;
+
 // Disabled
 @disabledColor:                #AAAAAA;
 @disabledBackgroundColor:      #F0F0F0;
 @disabledOpacity:              0.6;
+
 // Invalid
 @invalidBorderColor:           #DD7777;
+
 // Read-only
 @readonlyBorderColor:          #E6E6E6;
 @readonlyBackgroundColor:      #FAFAFA;
+
 // Selected (used on listbox, tree, comboitem)
+@selectedColor:                #FFFFFF;
+@selectedBorderColor:          @baseBorderColor;
 @selectedBackgroundColor:      darken(@hoverBackgroundColor, 5%);
 @selectedGradientStart:        #3E697C;
 @selectedGradientEnd:          #3E697C;
+
 // Selected Hover (used on listbox, tree, comboitem)
+@selectedHoverColor:           #FFFFFF;
+@selectedHoverBorderColor:     @baseBorderColor;
 @selectedHoverBackgroundColor: darken(@selectedGradientEnd, 3%);
 @selectedHoverGradientStart:   #548DA7;
 @selectedHoverGradientEnd:     #548DA7;
-// Checked (used on menu, listbox, tree, toolbarbutton)
+
+// Checked (used on menuitem, listbox, tree, toolbarbutton)
 @checkedColor:                 #2184BA;
 @checkedBorderColor:           #C6DBE6;
 @checkedBackgroundColor:       #E2EFF6;
 @checkedGradientStart:         #F4FAFD;
 @checkedGradientEnd:           #E2EFF6;
 
+// Collapsed (used on Borderlayout)
+@collapsedBorderColor:         @baseBorderColor;
+@collapsedBackgroundColor:     #FCFCFC;
+
+// -------------------------------------
 // Component independent variables
-//------------------------------------------
+// -------------------------------------
 // mask and loading
 @maskBackgroundColor:          #E0E1E3;
 @loadingBackgroundColor:       #E3E3E3;
+
 // scrollbar
 @scrollbarWidth:               16px;
 @scrollbarHeight:              16px;
+@scrollbarBorderColor:         #838383;
 @scrollbarBackgroundColor:     #DDDDDD;
 @scrollbarGradientStart:       #FFFFFF;
 @scrollbarGradientEnd:         #CFCFCF;
+
 // drag and drop
+@dragColor:                    #888888;
 @dragBackgroundColor:          #E0EAF0;
 @dragHoverBackgroundColor:     #ADD2FF;
 @dragAllowBorderColor:         #99CC99;
 @dragAllowBackgroundColor:     #EEFFEE;
 @dragDisAllowBorderColor:      #CC6666;
 @dragDisAllowBackgroundColor:  #FFEEEE;
+
 // splitter (hbox, vbox, borderlayout)
 @splitterSize:                 8px;
 @splitterGradientStart:        #E2F4FC;
 @splitterGradientEnd:          #CBEAFB;
+
+// calendar
+@calendarTitleColor:           @textColorGrayLight;
+@calendarTitleHoverColor:      @textColorGrayLight;
+@calendarCellColor:            @textColorGrayLight;
+@weekendColor:                 @textColorOrange;
+@weekendBackgroundColor:       #F2F2F2;
+@weekColor:                    @textColorGrayLight;
+@weekofyearColor:              #FFFFFF;
+@weekofyearBackgroundColor:    #636363;
+
+// popup
+@popupBorderColor:             @baseBorderColor;
+@popupBackgroundColor:         @baseBackgroundColor;
+@popupGradientStart:           @baseBackgroundColor;
+@popupGradientEnd:             #F5F5F5;
+
 // group (group, listgroup)
 @groupGradientStart:           #E7F6FD;
 @groupGradientEnd:             #C6E9FA;
-// errorbox
+
+// paging
+@pagingColor:                  @textColorBlue;
+@pagingSelectedColor:          @textColorGrayDark;
+@pagingBorderColor:            @baseBorderColor;
+@pagingActiveBorderColor:      #A9A9A9;
+@pagingBackgroundColor:        #FAFAFA;
+@pagingSelectedBackgroundColor:#E6E6E6;
+
+// slider
+@sliderBorderColor:            @baseBorderColor;
+@sliderActiveBorderColor:      #838383;
+
+// errorbox (input constraint)
 @errorboxColor:                #990000;
 @errorboxBorderColor:          #990000;
 @errorboxBackgroundColor:      #FFEEEE;
+
 // notification
 @notificationInfoColor:        rgba(33, 155, 166, 0.88);
 @notificationWarningColor:     rgba(234, 67, 23, 0.88);
 @notificationErrorColor:       rgba(190, 0, 5, 0.88);
 @notificationArrowColor:       rgba(51, 51, 51, 0.9);
+@notificationInfoColorIE8:     rgb(33, 155, 166);
+@notificationWarningColorIE8:  rgb(234, 67, 23);
+@notificationErrorColorIE8:    rgb(190, 0, 5);
+@notificationArrowColorIE8:    rgb(51, 51, 51);
+
 // progressmeter
 @progressmeterGradientStart:   #AFD3E2;
 @progressmeterGradientEnd:     #8DBDD1;
+
 // window
+@windowBorderColor:            #9C9C9C;
 @windowBackgroundColor:        #B6E1EA;
+@windowHeaderBackground:       @windowBackgroundColor;
+
 // panel
 @panelBackgroundColor:         #B6E1EA;
+@panelBodyBackground:          #F0F6F9;
+
 // menu
 @menuImageSize:                16px;
+@menuActiveBorderColorTR:      #838383;
+@menuActiveBorderColorBL:      #B6B6B6;
+@menuPopupBackground:          #C5E8FA;
+@menuSeparatorBorderColor:     #838383;
+@menuSeparatorBackgroundColor: #B8B8B8;
+@menuPopupSeparatorBorder:     #D9F0FC;
+@menuPopupSeparatorBackground: #A2C0CE;
+
 // navbar
 @navImageSize:                 16px;
 @navColor:                     #333333;
@@ -153,3 +271,10 @@
 @navHoverBackgroundColor:      #E8E8E8;
 @navSelectedColor:             #FFFFFF;
 @navSelectedBackgroundColor:   #372F2B;
+
+// colorbox
+@colorboxBorderColor:          #9C9C9C;
+
+// biglistbox
+@biglistboxBackgroundColor:    #F0F0F0;
+@biglistboxFrozenBackground:   #E0E0E0;
