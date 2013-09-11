@@ -1,8 +1,15 @@
+<?link rel="stylesheet" type="text/css" href="/less/combobutton.css.dsp"?>
 <?page title="Combobutton" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hlayout>
 		<window title="Combobutton" border="normal" width="300px" height="300px">
 			<combobutton label="Combobutton" image="/common/img/volumn.gif">
+				<popup>
+					Popup Content
+				</popup>
+			</combobutton>
+			<separator />
+			<combobutton label="Combobutton" disabled="true" image="/common/img/volumn.gif">
 				<popup>
 					Popup Content
 				</popup>
@@ -19,10 +26,33 @@
 					</menu>
 				</menupopup>
 			</combobutton>
+			<separator />
+			<combobutton label="Combobutton" disabled="true" image="/common/img/volumn.gif">
+				<menupopup>
+					<menuitem label="Index" />
+					<menu label="About">
+						<menupopup>
+							<menuitem label="About ZK" />
+							<menuitem label="About Potix" />
+						</menupopup>
+					</menu>
+				</menupopup>
+			</combobutton>
 		</window>
 		<window title="Combobutton mold=toolbar" border="normal" width="300px" height="300px">
 			<toolbar>
 				<combobutton label="Combobutton" image="/common/img/volumn.gif" mold="toolbar">
+					<menupopup>
+						<menuitem label="Index" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK" />
+								<menuitem label="About Potix" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</combobutton>
+				<combobutton label="Combobutton" disabled="true" image="/common/img/volumn.gif" mold="toolbar">
 					<menupopup>
 						<menuitem label="Index" />
 						<menu label="About">
