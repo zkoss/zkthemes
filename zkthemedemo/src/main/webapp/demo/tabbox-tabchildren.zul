@@ -42,18 +42,18 @@
 	<separator />
 	<tabbox width="450px">
 		<tabs>
-			<tab height="28px" label="Tab 1" closable="true" />
-			<tab height="28px" label="Tab 2" closable="true" image="/img/live.gif">
+			<tab label="Tab 1" closable="true" />
+			<tab label="Tab 2" closable="true" image="/img/live.gif">
 				<caption label="search" hflex="min" image="/img/live.gif">
 					<custom-attributes org.zkoss.zul.image.preload="true" />
 				</caption>
 			</tab>
-			<tab height="28px" closable="true">
+			<tab closable="true">
 				<caption hflex="min" label="search">
 					<textbox />
 				</caption>
 			</tab>
-			<tab height="28px" label="Tab 4" closable="true">
+			<tab label="Tab 4" closable="true">
 				<caption hflex="min" label="search">
 					<combobox>
 						<comboitem label="item 1" />
@@ -63,7 +63,7 @@
 					</combobox>
 				</caption>
 			</tab>
-			<tab height="28px" label="Tab 5" closable="true" />
+			<tab label="Tab 5" closable="true" />
 		</tabs>
 		<toolbar width="90px">
 			<toolbarbutton image="/img/live.gif" onClick='alert("Live")' />
