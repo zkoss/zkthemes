@@ -3,7 +3,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.zkoss.theme</groupId>
 		<artifactId>zktheme</artifactId>
@@ -38,7 +37,6 @@
 			<timezone>8</timezone>
 			<properties>
 				<picUrl>http://www.zkoss.org</picUrl>
-
 			</properties>
 		</developer>
 	</developers>
@@ -184,7 +182,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<excludeDependencies>*;scope=provided|compile</excludeDependencies>
+					<excludeDependencies>*;scope=provided|compile|runtime</excludeDependencies>
 					<instructions>
 						<_include>${project.basedir}/src/archive/META-INF/MANIFEST.MF</_include>
 						<Bundle-Version>${project.version}</Bundle-Version>

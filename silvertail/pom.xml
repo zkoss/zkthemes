@@ -183,7 +183,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<excludeDependencies>*;scope=provided|compile</excludeDependencies>
+					<excludeDependencies>*;scope=provided|compile|runtime</excludeDependencies>
 					<instructions>
 						<_include>${project.basedir}/src/archive/META-INF/MANIFEST.MF</_include>
 						<Bundle-Version>${project.version}</Bundle-Version>
