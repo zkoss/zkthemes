@@ -19,12 +19,12 @@
 				<navseparator/>
 				<nav label="Settings" iconSclass="z-icon-cog" badgeText=">>">
 					<navitem label="Edit profile" iconSclass="z-icon-user"/>
-					<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard"/>
+					<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard-o"/>
 					<navitem label="Change password" iconSclass="z-icon-key"/>
 				</nav>
 			</nav>
 			<navitem label="Freeze" iconSclass="z-icon-asterisk" disabled="true"/>
-			<navitem label="Logout" iconSclass="z-icon-off"/>
+			<navitem label="Logout" iconSclass="z-icon-power-off"/>
 		</navbar>
 	</window>
 	<window title="Navbar (horizontal, collapsed, badge)" border="normal" width="1120px" height="400px">
@@ -50,12 +50,12 @@
 				<navseparator/>
 				<nav label="Settings" iconSclass="z-icon-cog" badgeText=">>">
 					<navitem label="Edit profile" iconSclass="z-icon-user"/>
-					<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard"/>
+					<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard-o"/>
 					<navitem label="Change password" iconSclass="z-icon-key"/>
 				</nav>
 			</nav>
 			<navitem label="Freeze" iconSclass="z-icon-asterisk" disabled="true"/>
-			<navitem label="Logout" iconSclass="z-icon-off"/>
+			<navitem label="Logout" iconSclass="z-icon-power-off"/>
 		</navbar>
 	</window>
 	<hbox>
@@ -78,12 +78,12 @@
 					<navseparator/>
 					<nav label="Settings" iconSclass="z-icon-cog" badgeText=">>">
 						<navitem label="Edit profile" iconSclass="z-icon-user"/>
-						<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard"/>
+						<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard-o"/>
 						<navitem label="Change password" iconSclass="z-icon-key"/>
 					</nav>
 				</nav>
 				<navitem label="Freeze" iconSclass="z-icon-asterisk" disabled="true"/>
-				<navitem label="Logout" iconSclass="z-icon-off"/>
+				<navitem label="Logout" iconSclass="z-icon-power-off"/>
 			</navbar>
 		</window>
 		<window title="Navbar (vertical, collapsed, badge)" border="normal"
@@ -111,12 +111,12 @@
 						<navseparator/>
 						<nav label="Settings" iconSclass="z-icon-cog" badgeText=">>">
 							<navitem label="Edit profile" iconSclass="z-icon-user"/>
-							<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard"/>
+							<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard-o"/>
 							<navitem label="Change password" iconSclass="z-icon-key"/>
 						</nav>
 					</nav>
 					<navitem label="Freeze" iconSclass="z-icon-asterisk" disabled="true"/>
-					<navitem label="Logout" iconSclass="z-icon-off"/>
+					<navitem label="Logout" iconSclass="z-icon-power-off"/>
 				</navbar>
 			</hbox>
 		</window>
@@ -138,12 +138,12 @@
 					<navseparator/>
 					<nav label="Settings" iconSclass="z-icon-cog">
 						<navitem label="Edit profile" iconSclass="z-icon-user"/>
-						<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard"/>
+						<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard-o"/>
 						<navitem label="Change password" iconSclass="z-icon-key"/>
 					</nav>
 				</nav>
 				<navitem label="Freeze" iconSclass="z-icon-asterisk" disabled="true"/>
-				<navitem label="Logout" iconSclass="z-icon-off"/>
+				<navitem label="Logout" iconSclass="z-icon-power-off"/>
 			</navbar>
 		</window>
 		<window title="Navbar (vertical, collapsed, no badge)" border="normal"
@@ -165,12 +165,12 @@
 					<navseparator/>
 					<nav label="Settings" iconSclass="z-icon-cog">
 						<navitem label="Edit profile" iconSclass="z-icon-user"/>
-						<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard"/>
+						<navitem label="Keyboard shortcuts" iconSclass="z-icon-keyboard-o"/>
 						<navitem label="Change password" iconSclass="z-icon-key"/>
 					</nav>
 				</nav>
 				<navitem label="Freeze" iconSclass="z-icon-asterisk" disabled="true"/>
-				<navitem label="Logout" iconSclass="z-icon-off"/>
+				<navitem label="Logout" iconSclass="z-icon-power-off"/>
 			</navbar>
 		</window>
 	</hbox>
