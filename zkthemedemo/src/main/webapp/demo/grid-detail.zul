@@ -45,7 +45,6 @@
 				value="US $202.50" />
 			<label value="tulsa, ok, United States" />
 		</row>
-		
 		<row>
 			<detail fulfill="onOpen">
 				<hbox>
@@ -132,7 +131,6 @@
 				value="US $350.00" />
 			<label value="middletown, PA, United States" />
 		</row>
-		
 		<row>
 			<detail fulfill="onOpen">
 				<hbox>
@@ -183,5 +181,35 @@
 		</row>
 	</rows>
 </grid>
+<separator />
+Nested Grid
+<grid fixedLayout="true" width="600px">
+	<columns menupopup="auto">
+		<column width="40px" />
+		<column label="Product Name"/>
+		<column width="100px" label="Price"/>
+		<column label="Item location"/>
+	</columns>
+	<rows>
+		<row>
+			<detail open="true">
+				<grid>
+					<columns>
+						<column forEach="1,2,3" label="column ${each}" />
+					</columns>
+					<rows>
+						<row forEach="1,2,3">
+							<label forEach="1,2,3" value="${each}" />
+						</row>
+					</rows>
+				</grid>
+			</detail>
+			<label
+				value="Apple iPhone 8GB - 1st Generation, Version 2.0" />
+			<label style="color:green;float:right;"
+				value="US $300.00" />
+			<label value="Aspen, Co, United States" />
+		</row>
+	</rows>
+</grid>
 </zk>
-			
