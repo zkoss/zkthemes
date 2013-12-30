@@ -27,6 +27,9 @@
 	border-bottom: 1px solid #D8D8D8;
 	background: #F5F5F5 repeat-x 0 0;
 	background-image: url(${c:encodeThemeURL('~./zul/img/menu/menu-bg.png')});
+	<c:if test="${zk.ie > 8}"> <%-- B65-ZK-1880: Add line height to prevent image getting cut off on IE9/IE10/IE11 --%>
+		line-height: 17px;
+	</c:if>
 }
 .z-menubar-ver {
 	background-color: #f5f5f5;
