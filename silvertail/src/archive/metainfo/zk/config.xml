@@ -5,7 +5,7 @@
 	<depends>zul</depends>
 	<version>
 		<version-class>org.zkoss.theme.silvertail.Version</version-class>
-		<version-uid>6.5.6</version-uid>
+		<version-uid>6.5.7</version-uid>
 	</version>
 	
 	<listener>
