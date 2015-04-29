@@ -1,0 +1,36 @@
+<zk>
+	<zscript><![CDATA[
+		import java.util.Calendar;
+		import java.util.Date;
+		
+		Date time = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.set(0, 0, 0, 10, 10);
+		Date min = calendar.getTime();
+		calendar.set(0, 0, 0, 12, 10);
+		Date max = calendar.getTime();
+	]]></zscript>
+	<vlayout>
+		<hlayout>
+			<label value="HH:mm" />
+			<timepicker format="HH:mm" value="${time}" width="200px"/>
+		</hlayout>
+		<hlayout>
+			<label value="HH:mm a" />
+			<timepicker format="HH:mm a" value="${time}" min="${min}" width="200px" interval="3600" />
+		</hlayout>
+		<hlayout>
+			<label value="HH:mm:ss" />
+			<timepicker format="HH:mm:ss" value="${time}" min="${min}" max="${max}" width="200px" interval="3600" />
+		</hlayout>
+		<hlayout>
+			<label value="HH:mm:ss a" />
+			<timepicker format="HH:mm:ss a" value="${time}" width="200px"/>
+		</hlayout>
+		<hlayout>
+			<label value="hh:mm:ss a" />
+			<timepicker format="hh:mm:ss a" value="${time}" width="200px"/>
+		</hlayout>
+	</vlayout>
+</zk>
