@@ -85,6 +85,7 @@
 							<item label="Combobox"              topic="demo/inputs-combobox" />
 							<item label="Chosenbox"             topic="demo/chosenbox" />
 							<item label="Checkbox"             topic="demo/checkbox" />
+							<item label="Timepicker"             topic="demo/timepicker" />
 							
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />
