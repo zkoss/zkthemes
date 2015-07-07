@@ -9,3 +9,5 @@ target
 */.settings/*.xml
 */nbactions.xml
 */bin/
+.idea
+*/*.iml
