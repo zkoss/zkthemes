@@ -8,3 +8,5 @@ target
 */.settings/*.component
 */.settings/*.xml
 */nbactions.xml
+.idea
+*/*.iml
