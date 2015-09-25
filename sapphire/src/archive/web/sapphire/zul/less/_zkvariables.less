@@ -90,6 +90,8 @@
 @meshTitleHoverEnd:            #A2DCFF;
 @meshContentHoverStart:        #6BA6BF;
 @meshContentHoverEnd:          #6BA6BF;
+@meshContentFocusStart:        @selectedGradientStart;
+@meshContentFocusEnd:          @selectedGradientEnd;
 
 // -------------------------------------
 // Component State
@@ -140,6 +142,13 @@
 @selectedHoverBackgroundColor: darken(@selectedGradientEnd, 3%);
 @selectedHoverGradientStart:   #548DA7;
 @selectedHoverGradientEnd:     #548DA7;
+
+// Selected Focus (used on listbox, tree, comboitem)
+@selectedFocusColor:           @selectedColor;
+@selectedFocusBorderColor:     @selectedBorderColor;
+@selectedFocusBackgroundColor: @selectedBackgroundColor;
+@selectedFocusGradientStart:   @selectedGradientStart;
+@selectedFocusGradientEnd:     @selectedGradientEnd;
 
 // Checked (used on menuitem, listbox, tree, toolbarbutton)
 @checkedColor:                 #2184BA;
