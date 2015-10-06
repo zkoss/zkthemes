@@ -7,12 +7,12 @@
 	<parent>
 		<groupId>org.zkoss.theme</groupId>
 		<artifactId>zktheme</artifactId>
-		<version>8.0.0</version>
+		<version>8.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>org.zkoss.theme</groupId>
 	<artifactId>silvertail</artifactId>
 	<packaging>jar</packaging>
-	<version>8.0.0</version>
+	<version>8.0.1-SNAPSHOT</version>
 	<name>ZK Silvertail Theme</name>
 	<url>http://www.zkoss.org/themes/silvertail</url>
 	<description>ZK Silvertail Theme</description>
