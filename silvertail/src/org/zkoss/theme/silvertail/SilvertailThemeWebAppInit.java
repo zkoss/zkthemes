@@ -17,7 +17,9 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 package org.zkoss.theme.silvertail;
 
 import org.zkoss.zk.ui.WebApp;
+import org.zkoss.zk.ui.WebApps;
 import org.zkoss.zk.ui.util.WebAppInit;
+import org.zkoss.zkmax.theme.ResponsiveThemeRegistry;
 import org.zkoss.zul.theme.Themes;
 
 /**
@@ -33,6 +35,11 @@ public class SilvertailThemeWebAppInit implements WebAppInit {
 	
 	public void init(WebApp webapp) throws Exception {
 		Themes.register(SILVERTAIL_NAME, SILVERTAIL_DISPLAY, SILVERTAIL_PRIORITY);
+		// Bug ZK-2963: register silvertail theme for tablet responsive theme
+		String edition = WebApps.getEdition();
+		if ("EE".equals(edition)) {
+			Themes.register(ResponsiveThemeRegistry.TABLET_PREFIX + SILVERTAIL_NAME, SILVERTAIL_DISPLAY, SILVERTAIL_PRIORITY);
+		}
 	}
 	
 }
