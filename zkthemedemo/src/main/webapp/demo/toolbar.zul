@@ -23,7 +23,7 @@
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" image="/common/img/network.gif"/>
 			</toolbar>
 		</panel>
-		<tabbox height="300px" width="300px" >
+		<tabbox height="300px" width="350px" >
 			<tabs>
 				<tab label="Tab 1"/>
 				<tab label="Tab 2"/>
@@ -65,7 +65,7 @@
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" />
 			</toolbar>
 		</panel>
-		<tabbox height="300px" width="300px" >
+		<tabbox height="300px" width="350px" >
 			<tabs>
 				<tab label="Tab 1"/>
 				<tab label="Tab 2"/>

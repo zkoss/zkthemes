@@ -65,7 +65,7 @@
 		<window
 			title="auxhead, column, auxhead"
 			border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid fixedLayout="true" hflex="min">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
 					<auxheader label="C"/>
@@ -95,7 +95,7 @@
 		</window>
 		
 		<window title="column, auxhead, auxhead" border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid fixedLayout="true" hflex="min">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
 					<column label="Align Center" align="center" width="100px"/>
@@ -125,7 +125,7 @@
 		</window>
 		
 		<window title="column, auxhead, auxhead" border="normal">
-			<grid fixedLayout="true" width="300px">
+			<grid fixedLayout="true" hflex="min">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
 					<auxheader label="C"/>
@@ -157,7 +157,7 @@
 	
 	<hbox>
 		<window title="Only column" border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid fixedLayout="true" hflex="min">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
 					<column label="Align Center" align="center" width="100px"/>
@@ -219,7 +219,7 @@
 	</hbox>
 	<hbox>
 		<window title="Textbox and datebox in auxheader" border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid fixedLayout="true" hflex="min">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
 					<column label="Align Center" align="center" width="100px"/>

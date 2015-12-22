@@ -2,7 +2,7 @@
 <zk>
 	<hbox>
 		<window title="Tabbox Horizontal with Toolbar" sclass="center-bg-win" 
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%">
 				<toolbar>
 					<toolbarbutton label="Button 1" image="/common/img/volumn.gif" />
@@ -26,7 +26,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Horizontal with images on Tabs" sclass="center-bg-win" 
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%">
 				<toolbar>
 					<toolbarbutton label="Button 1" image="/common/img/volumn.gif" />
@@ -50,7 +50,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Horizontal" border="normal" sclass="center-bg-win"
-			width="300px" height="300px" >
+			width="350px" height="300px" >
 			<tabbox height="100%">
 				<tabs>
 					<tab label="Tab1" closable="true" />
@@ -71,7 +71,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Vertical Left" border="normal" sclass="center-bg-win" 
-			width="300px" height="300px" >
+			width="350px" height="300px" >
 			<tabbox height="100%" orient="vertical">
 				<tabs width="80px">
 					<tab label="Tab1" closable="true" />
@@ -107,7 +107,7 @@
 	<separator />
 	<hbox>
 		<window title="Tabbox Horizontal with Toolbar" sclass="center-bg-win" 
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%">
 				<toolbar>
 					<toolbarbutton label="Button 1" image="/common/img/volumn.gif" />
@@ -127,7 +127,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Horizontal with images on Tabs" sclass="center-bg-win" 
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%">
 				<toolbar>
 					<toolbarbutton label="Button 1" image="/common/img/volumn.gif" />
@@ -145,7 +145,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Horizontal" sclass="center-bg-win"
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%">
 				<tabs>
 					<tab label="Tab1" closable="true" />
@@ -162,7 +162,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Vertical" border="normal" sclass="center-bg-win" 
-			width="300px" height="300px" >
+			width="350px" height="300px" >
 			<tabbox height="100%" orient="vertical">
 				<tabs width="80px">
 					<tab label="Tab1 ZK" closable="true" />
@@ -189,7 +189,7 @@
 	<separator />
 	<hbox>
 		<window title="Tabbox Vertical Right" border="normal" sclass="center-bg-win" 
-			width="300px" height="300px" >
+			width="350px" height="300px" >
 			<tabbox height="100%" orient="right">
 				<tabs width="80px">
 					<tab label="Tab1" closable="true" />
@@ -222,7 +222,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Vertical Right" border="normal" sclass="center-bg-win" 
-			width="300px" height="300px" >
+			width="350px" height="300px" >
 			<tabbox height="100%" orient="right">
 				<tabs width="80px">
 					<tab label="Tab1 ZK" closable="true" />
@@ -246,7 +246,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Horizontal Bottom with Toolbar" sclass="center-bg-win" 
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%" orient="bottom">
 				<toolbar>
 					<toolbarbutton label="Button 1" image="/common/img/volumn.gif" />
@@ -270,7 +270,7 @@
 			</tabbox>
 		</window>
 		<window title="Tabbox Horizontal Bottom with Toolbar" sclass="center-bg-win" 
-			border="normal" width="300px" height="300px" >
+			border="normal" width="350px" height="300px" >
 			<tabbox height="100%" orient="bottom">
 				<toolbar>
 					<toolbarbutton label="Button 1" image="/common/img/volumn.gif" />

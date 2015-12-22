@@ -2,7 +2,7 @@
 <zk>
 	<hbox>
 		<window title="Combobox (default mold)" sclass="center-bg-win"
-			border="normal" width="300px" height="300px">
+			border="normal" width="300px" vflex="min">
 			<vbox>
 				Simple Combobox:
 				<combobox>

@@ -89,20 +89,21 @@
 			<tabpanels>
 				<tabpanel>
 					<tabbox id="tb2" orient="vertical">
+						<custom-attributes org.zkoss.zul.image.preload="true"/>
 						<tabs width="250px">
 							<tab label="Tab 2" closable="true" image="/img/live.gif">
-								<caption hflex="min" label="search" image="/img/live.gif">
-									<textbox />
+								<caption hflex="1" label="search" image="/img/live.gif">
+									<textbox hflex="1" />
 								</caption>
 							</tab>
 							<tab closable="true">
-								<caption hflex="min" label="search" image="/img/live.gif">
-									<textbox />
+								<caption hflex="1" label="search" image="/img/live.gif">
+									<textbox hflex="1" />
 								</caption>
 							</tab>
 							<tab>
-								<caption hflex="min" label="search" image="/img/live.gif">
-									<textbox />
+								<caption hflex="1" label="search" image="/img/live.gif">
+									<textbox hflex="1" />
 								</caption>
 							</tab>
 							<tab label="D" closable="true" />
@@ -124,7 +125,5 @@
 				</tabpanel>
 			</tabpanels>
 		</tabbox>
-		<checkbox label="Use light mold"
-			onCheck='tb.mold=self.checked?"accordion-lite":"accordion"' />
 	</vbox>
 </zk>
