@@ -16,16 +16,18 @@ Copyright (C) 2011 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.theme.demo;
 
+import java.util.Comparator;
 import java.util.Set;
 
-import org.zkoss.lang.Library;
 import org.zkoss.lang.Strings;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.event.SelectEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.ComboitemRenderer;
@@ -43,26 +45,17 @@ public class MainController extends SelectorComposer<Component> {
 	
 	@Wire("#xcontents")
 	private Include _inc;
-	@Wire("#themeCookieCombobox")
-	private Combobox _themeCookieBox;
-	@Wire("#themeLibraryCombobox")
-	private Combobox _themeLibraryBox;
+	@Wire("#themeCombobox")
+	private Combobox _themeBox;
 	
 	private ListModelList<String> _model = 
 		new ListModelList<String>(Themes.getThemes());
 	
-	@Listen("onSelect = #themeCookieCombobox")
-	public void selectByCookie(SelectEvent<Comboitem, String> event) {
-		String key = getSelectValue(event);
-		Themes.setTheme(Executions.getCurrent(), key);
-		Executions.sendRedirect(null);
-	}
-	
-	@Listen("onSelect = #themeLibraryCombobox")
+	@Listen("onSelect = #themeCombobox")
 	public void selectByLibrary(SelectEvent<Comboitem, String> event) {
-		Themes.setTheme(Executions.getCurrent(), ""); // remove cookie
 		String key = getSelectValue(event);
-		Library.setProperty("org.zkoss.theme.preferred", key);
+		Sessions.getCurrent().setAttribute("currentTheme", key);
+		Themes.setTheme(Executions.getCurrent(), key);
 		Executions.sendRedirect(null);
 	}
 	
@@ -71,23 +64,29 @@ public class MainController extends SelectorComposer<Component> {
 		return (String) (set.isEmpty() ? null : set.iterator().next().getValue());
 	}
 	
-	
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
-		
+		this._model.sort(new Comparator<String>() {
+			public int compare(String o1, String o2) {
+				return o1.toLowerCase().compareTo(o2.toLowerCase());
+			}
+		}, true);
+
 		String topic = Executions.getCurrent().getParameter("topic");
 		comp.getDesktop().setAttribute("topic", topic);
-		String src = Strings.isEmpty(topic) ? "/demo/hello.zul" : ("/" + topic + ".zul");
+		 String src = Strings.isEmpty(topic) ? "/demo/hello.zul" : ("/" + topic + ".zul");
 		_inc.setSrc(src);
-		
-		String curr = Themes.getTheme(Executions.getCurrent());
+
+		String curr = Themes.getCurrentTheme();
 		_model.addToSelection(curr);
-		
-		_themeCookieBox.setItemRenderer(COMBO_REND);
-		_themeLibraryBox.setItemRenderer(COMBO_REND);
-		_themeCookieBox.setModel(_model);
-		_themeLibraryBox.setModel(_model);
-		
+		if (curr.equals("atlantic")) {
+			Clients.evalJavaScript("jq('body').addClass('grey');");
+		} else {
+			Clients.evalJavaScript("jq('body').removeClass('grey');");
+		}
+		_themeBox.setItemRenderer(COMBO_REND);
+		_themeBox.setModel(_model);
+
 	}
 	
 	public static final ComboitemRenderer<String> COMBO_REND = 

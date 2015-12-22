@@ -12,9 +12,12 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 -->
 
 <zk>
+	<listener>
+		<listener-class>org.zkoss.theme.demo.ThemeDemoSessionCleanup</listener-class>
+	</listener>
 	
 	<client-config>
-		<debug-js>true</debug-js>
+		<debug-js>false</debug-js>
 	</client-config>
 	
 	<library-property>
@@ -25,20 +28,20 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 	<library-property>
 		<name>org.zkoss.zk.WPD.cache</name>
 		<value>false</value>
-	</library-property> 
+	</library-property>
 	
 	<library-property>
 		<name>org.zkoss.zk.WCS.cache</name>
 		<value>false</value>
-	</library-property> 
+	</library-property>
 	
 	<library-property>
-		<name>org.zkoss.zul.Button.mold</name>
-		<value>trendy</value>
+		<name>org.zkoss.theme.preferred</name>
+		<value>atlantic</value>
 	</library-property>
 	
 	<session-config>
 		<timeout-uri></timeout-uri>
 	</session-config>
-	
+
 </zk>

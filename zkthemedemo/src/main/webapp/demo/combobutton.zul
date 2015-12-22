@@ -2,20 +2,14 @@
 <?page title="Combobutton" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hlayout>
-		<window title="Combobutton" border="normal" width="300px" height="300px">
-			<combobutton label="Combobutton" image="/common/img/volumn.gif">
+		<window title="Combobutton" border="normal" hflex="1" height="300px">
+			<combobutton label="Combobutton Popup" image="/common/img/volumn.gif">
 				<popup>
 					Popup Content
 				</popup>
 			</combobutton>
 			<separator />
-			<combobutton label="Combobutton" disabled="true" image="/common/img/volumn.gif">
-				<popup>
-					Popup Content
-				</popup>
-			</combobutton>
-			<separator />
-			<combobutton label="Combobutton" image="/common/img/volumn.gif">
+			<combobutton label="Combobutton Menupopup" image="/common/img/volumn.gif">
 				<menupopup>
 					<menuitem label="Index" />
 					<menu label="About">
@@ -27,19 +21,10 @@
 				</menupopup>
 			</combobutton>
 			<separator />
-			<combobutton label="Combobutton" disabled="true" image="/common/img/volumn.gif">
-				<menupopup>
-					<menuitem label="Index" />
-					<menu label="About">
-						<menupopup>
-							<menuitem label="About ZK" />
-							<menuitem label="About Potix" />
-						</menupopup>
-					</menu>
-				</menupopup>
+			<combobutton label="Disabled Combobutton" disabled="true" image="/common/img/volumn.gif">
 			</combobutton>
 		</window>
-		<window title="Combobutton mold=toolbar" border="normal" width="300px" height="300px">
+		<window title="Combobutton mold=toolbar" border="normal" hflex="2" height="300px">
 			<toolbar>
 				<combobutton label="Combobutton" image="/common/img/volumn.gif" mold="toolbar">
 					<menupopup>
@@ -52,7 +37,7 @@
 						</menu>
 					</menupopup>
 				</combobutton>
-				<combobutton label="Combobutton" disabled="true" image="/common/img/volumn.gif" mold="toolbar">
+				<combobutton label="Disabled Combobutton" disabled="true" image="/common/img/volumn.gif" mold="toolbar">
 					<menupopup>
 						<menuitem label="Index" />
 						<menu label="About">

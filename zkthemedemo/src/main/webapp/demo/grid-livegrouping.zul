@@ -1,10 +1,8 @@
 <zk>
-	<zscript>
-	import org.zkoss.zkdemo.userguide.*;
-	LiveGroupRenderer renderer = new LiveGroupRenderer();
-	</zscript>
-	
-	<zscript>
+	<grid id="lb1" height="400px" fixedLayout="true">
+		<zscript><![CDATA[
+		import org.zkoss.zkdemo.userguide.LiveGroupRenderer;
+		import org.zkoss.zul.SimpleGroupsModel;
 		String[][][] datas = new String[][][]{
 			new String[][] {
 				// Today
@@ -60,9 +58,9 @@
 				new String[]{"14","[zk1 - Help] RE: SelectedItemConverter Question","2008/11/13 02:14:27","14KB"},
 			}			
 		};
-		GroupsModel model = new SimpleGroupsModel(datas,new String[]{"Date: Today", "Date: Yesterday", "Date: Last Week"});
-	</zscript>
-	<grid id="lb1" height="400px" fixedLayout="true" model="&#36;{model}" rowRenderer="&#36;{renderer}">
+		lb1.setModel(new SimpleGroupsModel(datas, new String[]{"Date: Today", "Date: Yesterday", "Date: Last Week"}));
+		lb1.setRowRenderer(new LiveGroupRenderer());
+		]]></zscript>
 	 	<columns sizable="true">
 	       <column width="80px" label="From"/>
 	       <column label="Subject"/>

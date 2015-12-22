@@ -1,10 +1,8 @@
 .content .item {
-	padding: 0;
 	margin-left: 22px;
 	color: #333333;
 	font-size: 11px;
 	text-decoration:none;
-	line-height: 12px;
 }
 .content .z-vbox .item:hover {
 	text-decoration: underline;
@@ -44,4 +42,7 @@
 .green .center-bg-win .z-window-embedded-cnt,
 .green .center-bg-win .z-panel-children {
 	background: #7FFF7F;
+}
+.grey .center-bg {
+	background: #EDEDED;
 }

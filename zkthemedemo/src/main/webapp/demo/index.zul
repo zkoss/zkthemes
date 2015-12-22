@@ -1,35 +1,21 @@
+<?init class="org.zkoss.theme.demo.ThemeDemoInitiator" ?>
 <?page title="ZK Theme Demo" ?>
 <?style src="/base.css" ?>
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
 <?component name="item" inline="true" macroURI="/demo/_macro/_sidebar_item.zul" ?>
-<zk xmlns:w="client" xmlns:n="native">
+<zk>
 	<window vflex="1" apply="org.zkoss.theme.demo.MainController">
 		<borderlayout>
 			<north sclass="banner" border="none" size="60px" collapsible="true" style="background: #FFFFFF;">
-				<hbox width="100%" height="100%" align="center">
-					<separator width="10px" />
-					<n:h1 style="top:5px; left:-120px; font-size:24px">ZK Theme</n:h1>
-					<separator width="3px" />
-					Set theme by cookie
-					<combobox id="themeCookieCombobox" />
-					Set theme by Library Property
-					<combobox id="themeLibraryCombobox" />
-					Set background color
-					<listbox name="bg-color-box" mold="select">
-						<attribute w:name="onSelect">
-							var sclass = this.getChildAt(this.getSelectedIndex()).getValue(),
-								body = jq('body');
-							if (this._currBgClass)
-								body.removeClass(this._currBgClass);
-							if (sclass)
-								body.addClass(sclass);
-							this._currBgClass = sclass;
-						</attribute>
-						<listitem label="N/A" value="" selected="true" />
-						<listitem label="yellow" value="yellow" />
-						<listitem label="green" value="green" />
-					</listbox>
-				</hbox>
+				<div hflex="1" vflex="1" style="display: inline-block">
+					<separator spacing="10px" />
+					<separator orient="vertical" spacing="10px" />
+					<label style="font-size:24px" value="ZK Theme" />
+					<hbox align="center" style="float:right">
+						<label value="Switch theme" />
+						<combobox id="themeCombobox" />
+					</hbox>
+				</div>
 			</north>
 			<west title="Design Patterns Home" size="200px" border="0" sclass="sidebar-left" autoscroll="true">
 				<div sclass="content">
@@ -73,8 +59,8 @@
 							<item label="Paging"                   topic="demo/paging" />
 							<item label="Scrollbar"                topic="demo/scrollbar" />
 						
-						<category value="Big Data" />
-							<item label="Biglistbox"    topic="demo/biglistbox" />
+<!-- 						<category value="Big Data" /> -->
+<!-- 							<item label="Biglistbox"    topic="demo/biglistbox" /> -->
 							
 						<category value="Input" />
 							<item label="Input (Basic, Errbox)" topic="demo/inputs-basic" />
@@ -85,7 +71,6 @@
 							<item label="Combobox"              topic="demo/inputs-combobox" />
 							<item label="Chosenbox"             topic="demo/chosenbox" />
 							<item label="Checkbox"             topic="demo/checkbox" />
-							<item label="Timepicker"             topic="demo/timepicker" />
 							
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />
@@ -114,4 +99,37 @@
 			</center>
 		</borderlayout>
 	</window>
+
+<script if='${execution.serverName == "www.zkoss.org" or execution.serverName == "www.potix.com"}'><![CDATA[
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+var gafn = function () {
+if (window._gat) {
+	gafn = null;
+	try {
+		var pageTracker = _gat._getTracker("UA-121377-3");
+		pageTracker._setDomainName("zkoss.org");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+
+zk.override(zAu, "beforeSend", function (uri, req) {
+	try {
+		var t = req.target;
+		if (t && t.id && (!req.opts || !req.opts.ignorable)) {
+			var data = req.data||{},
+				value = data.items && data.items[0]?data.items[0].id:data.value;
+			pageTracker._trackPageview(uri +"/" + t.id + "/" + req.name + (value?"/"+value:""));
+		}
+	} catch (e) {
+	}
+	return zAu.$beforeSend(uri, req);
+});
+	} catch (e) {
+	}
+} else
+	setTimeout(gafn, 1000);
+};
+gafn();
+]]></script>
 </zk>
