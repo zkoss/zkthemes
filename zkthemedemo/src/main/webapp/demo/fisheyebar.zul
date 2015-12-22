@@ -1,6 +1,6 @@
 <?page title="Fisheyebar" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window width="300px" height="300px">
+<window width="300px" height="100px">
 	<div>
 		<checkbox label="AttachEdge bottom" onCheck='fsb.attachEdge=self.checked?"bottom":"top"' />
 		<checkbox label="Vertical orient" onCheck='fsb.orient=self.checked?"vertical":"horizontal"' />

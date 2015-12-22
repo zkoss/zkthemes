@@ -3,76 +3,31 @@
 	<hbox>
 		<window title="Button" sclass="center-bg-win"
 			border="normal" width="300px" height="300px">
-			<vbox>
-				Trendy Mold:
-				<div>
-					<button label="Button" mold="trendy" />
-					<button image="/common/img/volumn.gif" mold="trendy" />
-					<button label="Button" image="/common/img/volumn.gif" mold="trendy" />
-				</div>
-				<separator />
-				OS Mold:
-				<div>
-					<button label="Button" mold="os" />
-					<button image="/common/img/volumn.gif" mold="os" />
-					<button label="Button" image="/common/img/volumn.gif" mold="os" />
-				</div>
-			</vbox>
-			<separator />
-			Note: keeps the original design for OS mold
+			<div>
+				<button label="Button" />
+				<button image="/common/img/volumn.gif" />
+				<button label="Button" image="/common/img/volumn.gif" />
+			</div>
 		</window>
 		<window title="Button with longer label" sclass="center-bg-win"
 			border="normal" width="300px" height="300px">
-			<vbox>
-				Trendy Mold:
-				<button label="Long Long Button" mold="trendy" />
-				<separator />
-				OS Mold:
-				<button label="Long Long Button" mold="os" />
-			</vbox>
-			<separator />
+			<button label="Long Long Button" />
 		</window>
 		<window title="Large Button" sclass="center-bg-win"
 			border="normal" width="300px" height="300px">
-			<vbox>
-				Trendy Mold:
-				<button label="Button" width="100px" height="50px" mold="trendy" />
-				<separator />
-				OS Mold:
-				<button label="Button" width="100px" height="50px" mold="os" />
-			</vbox>
-			<separator />
+			<button label="Button" width="100px" height="50px" />
 		</window>
 	</hbox>
 	<separator />
 	<hbox>
 		<window title="Button with Hover Image" sclass="center-bg-win"
 			border="normal" width="300px" height="300px">
-			<vbox>
-				Trendy Mold:
-				<button label="Button" image="/common/img/volumn.gif" 
-					hoverImage="/common/img/network.gif" mold="trendy" />
-				<separator />
-				OS Mold:
-				<button label="Button" image="/common/img/volumn.gif" 
-					hoverImage="/common/img/network.gif" mold="os" />
-			</vbox>
-			<separator />
+			<button label="Button" image="/common/img/volumn.gif" 
+					hoverImage="/common/img/network.gif" />
 		</window>
-	</hbox>
-	<separator />
-	<hbox>
 		<window title="Button with Disable" sclass="center-bg-win"
 			border="normal" width="300px" height="300px">
-			<vbox>
-				Trendy Mold:
-				<button label="Button" disabled="true" image="/common/img/volumn.gif"
-					mold="trendy" />
-				<separator />
-				OS Mold:
-				<button label="Button" disabled="true" mold="os" />
-			</vbox>
-			<separator />
+			<button label="Button" disabled="true" />
 		</window>
 	</hbox>
 </zk>

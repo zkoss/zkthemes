@@ -52,6 +52,7 @@
 		<timelinez.version>2.3.1_50</timelinez.version>
 		<timeplotz.version>1.1_50</timeplotz.version>
 		<packname>-${maven.build.timestamp}</packname>
+		<atlantic.version>1.1.2</atlantic.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -68,7 +69,11 @@
 		</repository>
 	</repositories>
 	<dependencies>
-		
+		<dependency>
+			<groupId>org.zkoss.theme</groupId>
+			<artifactId>atlantic</artifactId>
+			<version>${atlantic.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>sapphire</artifactId>

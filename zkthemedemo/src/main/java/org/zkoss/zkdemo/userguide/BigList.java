@@ -16,22 +16,24 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 */
 package org.zkoss.zkdemo.userguide;
 
+import java.util.AbstractList;
+
 /**
  * A big list.
  *
  * @author tomyeh
  */
-public class BigList extends java.util.AbstractList {
+public class BigList extends AbstractList<Integer> {
 	private int _sz;
 	public BigList(int sz) {
 		if (sz < 0)
-			throw new IllegalArgumentException("Negative not allowed: "+sz);
+			throw new IllegalArgumentException("Negative not allowed: " + sz);
 		_sz = sz;
 	}
 	public int size() {
 		return _sz;
 	}
-	public Object get(int j) {
+	public Integer get(int j) {
 		return new Integer(j);
 	}
 }
