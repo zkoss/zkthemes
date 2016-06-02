@@ -1,0 +1,287 @@
+@import "~./zul/less/_header.less";
+
+.z-colorbox {
+	width: @baseWidth * 5;
+	height: @baseButtonHeight;
+	.borderRadius(@borderRadiusSmall);
+	margin: 0 2px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid darken(@baseBorderColor, 50%);
+	padding: 3px;
+	background: @baseBackgroundColor;
+	position: relative;
+	cursor: pointer;
+	
+	&-current {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+	
+	&-button {
+		overflow: hidden;
+		position: absolute;
+		bottom: 1px;
+		right: 0;
+		background: @baseBackgroundColor;
+		display: inline-block;
+		width: 13px;
+		height: 7px;
+		line-height: normal;
+	}
+	
+	&-icon {
+		font-size: @baseFontSize;
+		color: @iconColor;
+		position: relative;
+		top: -3px;
+		left: 3px;
+	}
+	
+	&-disabled,
+	&-disabled * {
+		.disabledOpacity();
+		cursor: default !important;
+		color: @disabledColor !important;
+	}
+}
+// Popup shadow
+.z-colorbox-popup,
+.z-menu-popup {
+	position: absolute;
+	display: none;
+	overflow: auto;
+	z-index: @basePopupZIndex;
+	.boxShadow('1px 1px 3px rgba(0, 0, 0, 0.5)');
+}
+// Colorpicker
+.z-colorpicker {
+	width: 384px;
+	height: 332px;
+	overflow: hidden;
+	position: relative;
+	background: @baseBackgroundColor;
+	border: 1px solid darken(@baseBorderColor, 50%);
+	
+	&-gradient {
+		border: 1px solid darken(@baseBorderColor, 50%);
+		width: 256px;
+		height: 256px;
+		left: 7px;
+		top: 31px;
+		position: absolute;
+		cursor: crosshair;
+	}
+	
+	&-overlay {
+		width: 256px;
+		height: 256px;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_gradient.png');
+	}
+	
+	&-bar {
+		border: 1px solid darken(@baseBorderColor, 50%);
+		position: absolute;
+		overflow: hidden;
+		cursor: n-resize;
+		width: 12px;
+		height: 256px;
+		left: 7px;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_hue.png');
+	}
+	
+	&-circle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 11px;
+		height: 11px;
+		overflow: hidden;
+		margin: -5px 0 0 -5px;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_select.gif');
+	}
+	
+	&-hue {
+		position: absolute;
+		top: 31px;
+		left: 272px;
+		width: 27px;
+		height: 256px;
+	}
+	
+	&-arrows {
+		position: absolute;
+		overflow: hidden;
+		cursor: n-resize;
+		width: 27px;
+		height: 9px;
+		margin: -4px 0 0 0;
+		left: 0;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_arrows.gif');
+	}
+	
+	&-color {
+		top: 34px;
+		left: 315px;
+		border: double;
+		position: absolute;
+		background: transparent;
+	}
+	
+	&-newcolor {
+		position: relative;
+		width: 48px;
+		height: 32px;
+		border-bottom: 1px solid;
+	}
+	
+	&-current {
+		position: relative;
+		width: 48px;
+		height: 32px;
+		border-top: 1px solid;
+	}
+	
+	&-r, &-g, &-b, &-h, &-s, &-v {
+		position: absolute;
+		left: 310px;
+		width: 55px;
+	}
+	
+	&-r {top: 122px;}
+	&-g {top: 147px;}
+	&-b {top: 172px;}
+	&-h {top: 212px;}
+	&-s {top: 237px;}
+	&-v {top: 262px;}
+	
+	&-text,
+	&-input {
+		font-family: @baseContentFontFamily;
+		font-size: @fontSizeMedium;
+		font-weight: normal;
+	}
+	
+	&-input {
+		float: right;
+		width: @baseWidth * 5;
+		height: @baseButtonHeight;
+		background: @baseBackgroundColor;
+		font-family: @baseContentFontFamily;
+		font-size: @baseFontSize;
+		font-weight: normal;
+		padding: 2px;
+		border: 1px solid @baseBorderColor;
+	}
+	
+	&-hex {
+		position: absolute;
+		top: 300px;
+		left: 10px;
+		.z-colorpicker-input {
+			margin-left: 5px;
+			width: @baseWidth * 8;
+		}
+	}
+	
+	&-button {
+		cursor: pointer;
+		top: 300px;
+		position: absolute;
+		left: 328px;
+		width: 42px;
+	}
+	
+	&-icon {
+		color: @textColorGreen;
+	}
+}
+// Color Palette
+.z-colorpalette {
+	width: 262px; 
+	height: 222px;
+	border: 1px solid darken(@baseBorderColor, 50%);
+	background: @baseBackgroundColor;
+	padding-left: 4px;
+	
+	&-newcolor {
+		width: 50px;
+		height: 24px;
+		border: 1px solid darken(@baseBorderColor, 50%);
+		margin: 4px 2px;
+		position: relative;
+		left: 123px;
+	}
+	
+	&-input, &-button {
+		position: absolute;
+		top: 5px;
+		left: 185px;
+	}
+	
+	&-input {
+		width: 65px;
+		height: @baseButtonHeight;
+		background: @baseBackgroundColor;
+		font-family: @baseContentFontFamily;
+		font-size: @baseFontSize;
+		font-weight: normal;
+		padding: 2px;
+		border: 1px solid @baseBorderColor;
+	}
+	
+	&-color {
+		width: 14px; 
+		height: 14px; 
+		float: left; 
+		border: 1px solid #FFFFFF;
+		display: inline-block;
+		cursor: pointer;
+		&:hover {
+			border: 1px solid #000000;
+		}
+	}
+	
+	&-selected {
+		border: 1px solid #000000;
+	}
+}
+.z-colorbox-paletteicon,
+.z-menu-paletteicon,
+.z-colorbox-pickericon,
+.z-menu-pickericon {
+	z-index: 10;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	position: absolute;
+	.encodeURL(background, '~./zkex/img/colorbox/cb-buttons.gif');
+}
+.z-colorbox-paletteicon,
+.z-menu-paletteicon {
+	left: 6px;
+	top: 5px;
+	background-position: 0 0;
+}
+.z-colorbox-pickericon,
+.z-menu-pickericon {
+	left: 31px;
+	top: 5px;
+	background-position: 0 -44px;
+}
+.z-colorpalette-popup .z-colorbox-paletteicon,
+.z-colorpalette-popup .z-menu-paletteicon {
+	left: 6px;
+	background-position: 0 -22px;
+}
+.z-colorpalette-popup .z-colorbox-pickericon,
+.z-colorpalette-popup .z-menu-pickericon {
+	left: 31px;
+}
+.z-colorpicker-popup .z-colorbox-pickericon,
+.z-colorpicker-popup .z-menu-pickericon {
+	background-position: 0 -66px;
+}

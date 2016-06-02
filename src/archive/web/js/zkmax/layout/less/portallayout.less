@@ -1,0 +1,21 @@
+@import "~./zul/less/_header.less";
+
+.z-portallayout,
+.z-portalchildren,
+.z-portalchildren-content {
+	overflow: hidden;
+}
+.z-portalchildren {
+	height: 100%;
+    float: left;
+	&-content {
+		height: 100%;
+		width: 100%;
+	}
+}
+<c:if test="${zk.ie > 0}">
+.z-portallayout,
+.z-portalchildren {
+	zoom: 1;
+}
+</c:if>

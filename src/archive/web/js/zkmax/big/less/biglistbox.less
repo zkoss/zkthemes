@@ -1,0 +1,279 @@
+@import "~./zul/less/_header.less";
+
+.resetTable() {
+	table {
+		border-spacing: 0;
+		th, td {
+			background-clip: padding-box;
+		}
+	}
+}
+.z-biglistbox {
+	overflow: hidden;
+	zoom: 1;
+	border: 1px solid @baseBorderColor;
+	background: darken(@baseBackgroundColor, 6%);
+	position: relative;
+	&-outer {
+		position: relative;
+		background: @baseBackgroundColor;
+		margin: 0 15px 15px 0;
+		border: 1px solid @baseBorderColor;
+		border-top: none;
+		border-left: none;
+	}
+	&-faker th {
+		border: 0;
+		height: 0;
+		margin: 0;
+		line-height: 0;
+		font-size: 0;
+		padding: 0;
+		width: 45px;
+		overflow: hidden;
+	}
+	//head
+	&-head-outer {
+		overflow: hidden;
+	}
+	&-head {
+		.resetTable();
+		border: 0;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+	}
+	&-header {
+		overflow: hidden;
+		cursor: default;
+		position: relative;
+		white-space: nowrap;
+		border: 1px solid @baseBorderColor;
+		border-left-color: #FFFFFF;
+		border-top: none;
+		text-align: left;
+		.verGradient();
+		//header content
+		&-content {
+			white-space: nowrap;
+			position: relative;
+			padding: 4px 5px;
+			line-height: @baseButtonHeight - 1;
+			color: @textColorGrayLight;
+			font-size: @fontSizeMedium;
+			font-family: @baseContentFontFamily;
+			font-weight: bold;
+		}
+	}
+	//body
+	&-body-outer {
+		overflow: hidden;
+	}
+	&-body {
+		.resetTable();
+		background: @baseBackgroundColor;
+		border: 0;
+		width: 100%;
+		overflow: hidden;
+		float: left;
+		position: relative;
+		//body content
+		td {
+			padding: 4px 5px;
+			line-height: @baseButtonHeight;
+			border-left: 1px solid #FFFFFF;
+			overflow: hidden;
+			font-size: @fontSizeMedium;
+			font-family: @baseContentFontFamily;
+			cursor: pointer;
+			white-space: nowrap;
+		}
+	}
+	&-row {
+		&:hover td {
+			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			background-clip: padding-box;
+			position: relative;
+		}
+		&.z-biglistbox-selected {
+			td {
+				.verGradient(@selectedGradientStart, @selectedGradientEnd);
+				background-clip: padding-box;
+				position: relative;
+			}
+			&:hover td {
+				.resetGradient();
+				background: @selectedHoverBackgroundColor;
+				position: relative;
+			}
+		}
+	}
+	//odd rows
+	&-odd {
+		background: darken(@baseBackgroundColor, 3%);
+	}
+	//sort
+	&-sort {
+		cursor: pointer;
+	}
+	&-sorticon {
+		position: absolute;
+		top: -7px;
+		left: 50%;
+		color: @iconColor;
+	}
+	&-hover { //sortable header hover status
+		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		background-clip: padding-box;
+		position: relative;
+	}
+	//frozen
+	&-head-shim,
+	&-body-shim {
+		width: 3px;
+		height: 1px;
+		overflow: hidden;
+		float: left;
+	}
+	&-verticalbar-frozen {
+		position: absolute;
+		top: -3px;
+		background: darken(@baseBackgroundColor, 12%);
+		border: 1px solid @baseBorderColor;
+		width: 3px;
+		height: 100%;
+	}
+	&-verticalbar-tick {
+		position: absolute;
+		bottom: 1px;
+		.encodeURL(background, '~./zkmax/img/big/vbar-tick.png', -0px -0px no-repeat);
+		height: 16px;
+		overflow: hidden;
+		width: 8px;
+		z-index: 20;
+		cursor: w-resize;
+	}
+	//WScroll bar
+	&-wscroll {
+		// vertical
+		&-vertical {
+			position: absolute;
+			top: 0;
+			z-index: 10;
+			width: 15px;
+			height: 100%;
+			right: -16px;
+			.z-biglistbox-wscroll-drag {
+				height: 115px;
+				width: 15px;
+				overflow: hidden;
+				.encodeURL(background, '~./zkmax/img/big/drag-v.png', no-repeat scroll 0 0 transparent);
+				position: absolute;
+				z-index: 15;
+				cursor: pointer;
+				.z-biglistbox-wscroll-home,
+				.z-biglistbox-wscroll-up,
+				.z-biglistbox-wscroll-down,
+				.z-biglistbox-wscroll-end {
+					position: absolute;
+					width: 15px;
+					height: 15px;
+				}
+				.z-biglistbox-wscroll-home {
+					top: 0;
+				}
+				.z-biglistbox-wscroll-up {
+					top: 15px;
+				}
+				.z-biglistbox-wscroll-down {
+					bottom: 15px;
+				}
+				.z-biglistbox-wscroll-end {
+					bottom: 0;
+				}
+			}
+			.z-biglistbox-wscroll-pos {
+				position: absolute;
+				z-index: 10;
+				width: 15px;
+				height: 115px;
+				left: 0;
+				background: contrast(@baseBackgroundColor);
+				.borderRadius(2px);
+				top: 0;
+				.opacity(0.25);
+				visibility: visible;
+			}
+			.z-biglistbox-wscroll-endbar {
+				.horGradient();
+				border: 1px solid @baseBorderColor;
+				height: 7px;
+				overflow: hidden;
+				position: absolute;
+				width: 15px;
+				z-index: 20;
+				right: 0;
+			}
+		}
+		// horizontal
+		&-horizontal {
+			position: absolute;
+			left: 0;
+			z-index: 10;
+			width: 100%;
+			height: 15px;
+			bottom: -16px;
+			.z-biglistbox-wscroll-drag {
+				height: 15px;
+				width: 115px;
+				overflow: hidden;
+				.encodeURL(background, '~./zkmax/img/big/drag-h.png', no-repeat scroll 0 0 transparent);
+				position: absolute;
+				z-index: 15;
+				cursor: pointer;
+				.z-biglistbox-wscroll-home,
+				.z-biglistbox-wscroll-up,
+				.z-biglistbox-wscroll-down,
+				.z-biglistbox-wscroll-end {
+					position: absolute;
+					width: 15px;
+					height: 15px;
+				}
+				.z-biglistbox-wscroll-home {
+					left: 0;
+				}
+				.z-biglistbox-wscroll-up {
+					left: 15px;
+				}
+				.z-biglistbox-wscroll-down {
+					right: 15px;
+				}
+				.z-biglistbox-wscroll-end {
+					right: 0;
+				}
+			}
+			.z-biglistbox-wscroll-pos {
+				position: absolute;
+				z-index: 10;
+				width: 115px;
+				height: 15px;
+				top: 0;
+				background: contrast(@baseBackgroundColor);
+				.borderRadius(2px);
+				left: 0;
+				.opacity(0.25);
+				visibility: visible;
+			}
+			.z-biglistbox-wscroll-endbar {
+				.verGradient();
+				border: 1px solid @baseBorderColor;
+				height: 15px;
+				overflow: hidden;
+				position: absolute;
+				width: 7px;
+				z-index: 20;
+				right: -12px;
+			}
+		}
+	}
+}

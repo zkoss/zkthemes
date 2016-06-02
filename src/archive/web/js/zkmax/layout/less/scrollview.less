@@ -1,0 +1,102 @@
+@import "~./zul/less/_header.less";
+
+.z-scrollview {
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+	&-horizontal {
+		.z-scrollview-content {
+			height: 100%;
+		}
+		.z-scrollview-inner {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.z-scrollview-scrollbar {
+			height: 7px;
+			bottom: 1px;
+			left: 2px;
+			right: 2px;
+			&-indicator {
+				height: 100%;
+			}
+		}
+	}
+	&-vertical {
+		.z-scrollview-content {
+			width: 100%;
+		}
+		.z-scrollview-scrollbar {
+			width: 7px;
+			bottom: 2px;
+			top: 2px;
+			right: 1px;
+			&-indicator {
+				width: 100%;
+			}
+		}
+	}
+	//content and child
+	&-content {
+		.applyCSS3('transition-duration', '0');
+		.applyCSS3('transform-origin', '0 0');
+		.applyCSS3('transition-timing-function', 'cubic-bezier(0.33, 0.66, 0.66, 1)');
+		.applyCSS3('transition-delay', '0');
+		.transform('translate3d(0, 0, 0)');
+	}
+	&-inner {
+		position: relative;
+		zoom: 1;
+	}
+	//scrollbar
+	&-scrollbar {
+		position: absolute;
+		z-index: 100;
+		pointer-events: none;
+		opacity: 0;
+		overflow: hidden;
+		.applyCSS3('transition-property', 'opacity');
+		.applyCSS3('transition-duration', '0');
+		&-indicator {
+			position: absolute;
+			z-index: 100;
+			background: rgba(0, 0, 0, 0.5);
+			border: 1px solid rgba(255, 255, 255, 0.9);
+			pointer-events: none;
+			.applyCSS3('background-clip', 'padding-box');
+			.applyCSS3('box-sizing', 'border-box');
+			.borderRadius('3px');
+			.applyCSS3('transition-timing-function', 'cubic-bezier(0.33, 0.66, 0.66, 1)');
+			.applyCSS3('transition-duration', '0');
+			.transform('translate3d(0, 0, 0)');
+		}
+	}
+	//loading image
+	&-load {
+		display: none;
+		position: absolute;
+		vertical-align : middle;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		&-up, &-down,
+		&-left, &-right {
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			z-index: 999;
+		}
+		&-up {
+			.encodeThemeURL(background-image, '~./zkmax/img/tablet/layout/load-up.png');
+		}
+		&-down {
+			.encodeThemeURL(background-image, '~./zkmax/img/tablet/layout/load-down.png');
+		}
+		&-left {
+			.encodeThemeURL(background-image, '~./zkmax/img/tablet/layout/load-left.png');
+		}
+		&-right {
+			.encodeThemeURL(background-image, '~./zkmax/img/tablet/layout/load-right.png');
+		}
+	}
+}

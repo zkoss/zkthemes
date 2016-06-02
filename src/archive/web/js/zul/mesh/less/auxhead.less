@@ -1,0 +1,26 @@
+@import "~./zul/less/_header.less";
+
+.z-auxhead {
+	th:last-child {
+		border-right: none;
+	}
+}
+.z-auxheader {
+	.verGradient();
+	background-clip: padding-box;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0;
+	border-right: 1px solid @baseBorderColor;
+	border-bottom: 1px solid @baseBorderColor;
+	position: relative;
+	&-content {
+		font-family: @baseContentFontFamily;
+		font-size: @fontSizeMedium;
+		font-weight: bold;
+		color: @textColorGrayLight;
+		overflow: hidden;
+		padding: 4px 5px 3px;
+		line-height: @baseButtonHeight;
+	}
+}

@@ -1,0 +1,29 @@
+@import "~./zul/less/_header.less";
+
+.z-row .z-detail-outer {
+	border: 1px solid @baseBorderColor;
+	border-top: none;
+	border-left: none;
+	vertical-align: top;
+	padding: 18px 6px;
+	.horGradient(@baseBackgroundColor, darken(@baseBackgroundColor, 5%));
+	width: 40px;
+}
+
+.z-detail {
+	height: @baseIconHeight;
+	width: @baseIconWidth;
+	border: 1px solid @baseBorderColor;
+	padding: 0;
+	line-height: @baseLineHeight;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	text-align: center;
+	.verGradient();
+}
+
+.z-detail-icon {
+	font-size: @fontSizeXSmall;
+	color: @iconColor;
+}

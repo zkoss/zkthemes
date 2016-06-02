@@ -1,0 +1,156 @@
+@import "~./zul/less/_header.less";
+
+.z-chosenbox {
+	display: inline-block;
+	overflow: hidden;
+	background: @baseBackgroundColor;
+	border: 1px solid @baseBorderColor;
+	padding: 1px;
+	line-height: normal;
+	
+	&-focus {
+		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
+	}
+	
+	&-item {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: nowrap;
+		.borderRadius(@borderRadiusSmall);
+		margin: -2px 1px 1px 1px;
+		border: 1px solid darken(@baseBorderColor, 11%);
+		cursor: pointer;
+		height: 18px;
+		.verGradient();
+		position: relative;
+		
+		&-content {
+			display: inline-block;
+			float: left;
+			padding: 0px 15px 0px 3px;
+			height: 16px;
+			line-height: 18px;
+			font-size: @fontSizeMedium;
+			font-family: @baseContentFontFamily;
+			font-style: normal;
+			color: @textColorGrayDark;	
+		}
+		
+		&-focus {
+			background: @hoverBackgroundColor;
+			border-color: @hoverBorderColor;
+		}
+	}
+	
+	&-button {
+		width: 11px;
+		height: 11px;
+		line-height: 11px;
+		font-size: 11px;
+		text-align: center;
+		color: @iconColor;
+		.borderRadius(2px);
+		position: absolute;
+		right: 2px;
+		top: 3px;
+		<c:if test="${zk.ie > 0}">
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+		top: 2px;
+		</c:if>
+		
+		&:hover {
+			color: @iconHoverColor;
+		}
+	}
+	
+	&-input {
+		display: inline-block;
+		background: transparent !important;
+		border: 0 !important;
+		outline: 0;
+		.boxShadow('none');
+		padding: 2px;
+		width: 30px;
+		height: 15px;
+		color: @textColorGrayDark;
+		font-size: @fontSizeMedium;
+		font-family: @baseContentFontFamily;
+	}
+	
+	&-disabled {
+		.disabledOpacity();
+		background: @disabledBackgroundColor;
+		
+		.z-chosenbox-item {
+			cursor: default !important;
+		}
+		
+		.z-chosenbox-item-content {
+			padding-right: 3px !important;
+		}
+		
+		.z-chosenbox-button {
+			display: none !important;
+		}
+	}
+
+	&-textcontent {
+		display: none;
+		font-size: @fontSizeMedium;
+		font-family: @baseContentFontFamily;
+		white-space: nowrap;
+	}
+
+	&-popup {
+		display: block;
+		position: absolute;
+		background: @baseBackgroundColor;
+		border: 1px solid @baseBorderColor;
+		padding: 2px;
+		font-family: @baseContentFontFamily;
+		font-weight: normal;
+		font-size: @fontSizeMedium;
+		overflow: auto;
+
+		&-hidden {
+			display: none;
+		}
+	}
+	
+	&-shadow {
+		.borderRadius(@borderRadiusSmall);
+		.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
+	}
+	
+	&-option {
+		cursor: pointer;
+		padding: 1px 5px;
+
+		&-hover {
+			background: @hoverBackgroundColor;
+		}
+	}
+	
+	&-empty {
+		padding: 1px 5px;
+		font-style: italic;
+		color: @disabledColor;
+		
+		&-creatable {
+			cursor: pointer;
+			background: @hoverBackgroundColor;
+			color: @textColorGrayDark;
+			padding-top: 2px;			
+		}
+	}
+	
+	&-create {
+		font-size: @baseFontSize;
+		color: @textColorGreen;
+		width: 14px;
+		height: 14px;
+		margin-right: 2px;
+	}
+}
