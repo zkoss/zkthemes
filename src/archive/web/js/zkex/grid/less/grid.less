@@ -2,8 +2,9 @@
 
 .z-row {
 	.z-detail-outer {
+		width: 40px;
 		min-width: 40px;
-		border-top: 1px solid @tableTitleBorderColor;
+		border-top: 1px solid @meshTitleBorderColor;
 		padding: 18px 6px;
 		line-height: normal;
 		<c:if test="${zk.ie != 8}">
@@ -18,14 +19,14 @@
 
 	.z-detail-outer + td,
 	.z-detail-inner:first-child {
-		border-left: 1px solid @tableTitleBorderColor;
+		border-left: 1px solid @meshTitleBorderColor;
 	}
 }
 
 .z-detail {
 	font-size: @baseFontSize;
 	.size(@baseIconWidth, @baseIconHeight);
-	border: 1px solid @tableTitleBorderColor;
+	border: 1px solid @meshTitleBorderColor;
 	padding: 0;
 	line-height: @baseLineHeight;
 	.verGradient(@baseGradientStart, @baseGradientEnd);

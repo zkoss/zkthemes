@@ -50,21 +50,9 @@
 
 // Border color
 @baseBorderColor:              #CFCFCF;
-@outerBorderColor:             @baseBorderColor;
-@headerBorderColor:            #9C9C9C;
-@bodyBorderColor:              #9C9C9C;
-@innerBorderColor:             #B3B3B3;
-@contentBorderColor:           @baseBorderColor;
-@footerBorderColor:            @baseBorderColor;
 
 // Background color
 @baseBackgroundColor:          #FFFFFF;
-@outerBackgroundColor:         @baseBackgroundColor;
-@headerBackgroundColor:        @baseBackgroundColor;
-@bodyBackgroundColor:          @baseBackgroundColor;
-@innerBackgroundColor:         @baseBackgroundColor;
-@contentBackgroundColor:       @baseBackgroundColor;
-@footerBackgroundColor:        @baseBackgroundColor;
 
 // Gradient background
 @baseGradientStart:            #FEFEFE;
@@ -91,17 +79,17 @@
 @inputBackgroundColor:         @baseBackgroundColor;
 
 // -------------------------------------
-// Table (used for grid, listbox, tree, biglistbox)
+// Mesh Table (used for grid, listbox, tree, biglistbox)
 // -------------------------------------
-@tableTitleBorderColor:        @baseBorderColor;
-@tableContentBorderColor:      #FFFFFF;
-@tableBackgroundColor:         #FFFFFF;
-@tableStripeBackgroundColor:   #F7F7F7;
-@tableFootBackgroundColor:     #FAFAFA;
-@tableTitleHoverStart:         #F2F9FE;
-@tableTitleHoverEnd:           #D6F0FD;
-@tableContentHoverStart:       #F2F9FE;
-@tableContentHoverEnd:         #D6F0FD;
+@meshTitleBorderColor:         @baseBorderColor;
+@meshContentBorderColor:       #FFFFFF;
+@meshBackgroundColor:          #FFFFFF;
+@meshStripeBackgroundColor:    #F7F7F7;
+@meshFootBackgroundColor:      #FAFAFA;
+@meshTitleHoverStart:          #F2F9FE;
+@meshTitleHoverEnd:            #D6F0FD;
+@meshContentHoverStart:        #F2F9FE;
+@meshContentHoverEnd:          #D6F0FD;
 
 // -------------------------------------
 // Component State
@@ -251,7 +239,11 @@
 @windowBackgroundColor:        #D9E5EF;
 @windowFramePadding:           4px;
 
+// tabbox
+@tabSelectedBackgroundColor:   #FFFFFF;
+
 // panel
+@panelBorderColor:             #9C9C9C;
 @panelBackgroundColor:         #E1EDF4;
 @panelBodyBackground:          #F0F6F9;
 
@@ -279,14 +271,18 @@
 // colorbox
 @colorboxBorderColor:          #9C9C9C;
 
+// chosenbox
+@chosenboxItemBorderColor:     #B3B3B3;
+@chosenboxCreateIconColor:     @textColorGreen;
+
 // biglistbox
 @biglistboxBackgroundColor:    #F0F0F0;
 @biglistboxFrozenBackground:   #E0E0E0;
 
 // mesh for ie8
-@meshBackgroundColor:              #F5F5F5;
-@meshHoverBackgroundColor:         #E5F7FF;
-@meshSelectedBackgroundColor:      #E5F7FF;
-@meshSelectedHoverBackgroundColor: #D9F2FF;
-@meshGroupBackgroundColor:         #EDF6FF;
-@meshGroupFooterBackgroundColor:   #F2F9FF;
+@meshBackgroundColorIE8:              #F5F5F5;
+@meshHoverBackgroundColorIE8:         #E5F7FF;
+@meshSelectedBackgroundColorIE8:      #E5F7FF;
+@meshSelectedHoverBackgroundColorIE8: #D9F2FF;
+@meshGroupBackgroundColorIE8:         #EDF6FF;
+@meshGroupFooterBackgroundColorIE8:   #F2F9FF;

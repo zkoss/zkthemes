@@ -4,12 +4,13 @@
 .z-listheader-button {
 	.iconFontStyle(16px, #707070);
 	display: block;
-	border-left-color: @tableTitleBorderColor;
+	border-left-color: @meshTitleBorderColor;
 	right: 1px;
 }
 
 .z-listheader-checkable,
-.z-listitem-checkable {
+.z-listitem-checkable,
+.z-listgroup-checkable {
 	.size(24px, 24px);
 	vertical-align: middle;
 }
@@ -18,6 +19,10 @@
 	font-size: @fontSizeXLarge;
 	line-height: 22px;
 	padding-left: 2px;
+}
+.z-listgroup-selected .z-listgroup-checkable .z-listgroup-icon {
+	font-size: @fontSizeXLarge;
+	line-height: 22px;
 }
 .z-listitem-checkable.z-listitem-radio {
 	.borderRadius(12px);
@@ -31,12 +36,15 @@
 .z-listgroup-icon {
 	font-size: 20px;
 	.size(24px, 24px);
-	vertical-align: top;
+	vertical-align: middle;
 	
 	&-open,
 	&-close {
 		position: absolute;
 		left: 6px;
 		top: 4px;
+	}
+	&-close {
+		left: 9px;
 	}
 }

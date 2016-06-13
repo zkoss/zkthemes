@@ -43,13 +43,8 @@ input[type=radio] {
 		.boxShadow('inset 0 1px 1px rgba(210, 210, 210, 0.75)');
 	}
 }
-input[type=checkbox] {
-	&:checked.z-icon-ok:before {
-		.iconFontStyle(20px, #2184BA);
-		position: relative;
-		top: 1px;
-		left: 1px;
-	}
+input[type=checkbox]:checked {
+	.iconFontStyle(20px, #2184BA);
 }
 input[type=radio] {
 	.borderRadius('2em');

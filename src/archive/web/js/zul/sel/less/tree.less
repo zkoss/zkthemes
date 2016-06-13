@@ -30,7 +30,7 @@
 		.resetTable();
 	}
 	&-header-border {
-		border-bottom: 1px solid @tableTitleBorderColor;
+		border-bottom: 1px solid @meshTitleBorderColor;
 		margin-top: -1px;
 		position: relative;
 	}
@@ -48,7 +48,7 @@
 	//tree footer div
 	&-footer {
 		border-top: 1px solid @baseBorderColor;
-		background: @tableFootBackgroundColor;
+		background: @meshFootBackgroundColor;
 		overflow: hidden;
 		.resetTable();
 	}
@@ -59,7 +59,7 @@
 	&-line {
 		.displaySize(inline-block, @baseIconWidth, @baseIconHeight);
 		line-height: @baseIconHeight;
-		vertical-align: text-top;
+		vertical-align: middle;
 	}
 	&-icon {
 		.iconFontStyle(@baseFontSize, @iconColor);
@@ -78,17 +78,17 @@
 
 		// B50-3306729: the first header should have border-left when the first column is covered with other header
 		&.z-treecols-border {
-			border-left: 1px solid @tableTitleBorderColor;
+			border-left: 1px solid @meshTitleBorderColor;
 		}
 	}
 	&-bar {
-		border-left: 1px solid @tableTitleBorderColor;
-		border-bottom: 1px solid @tableTitleBorderColor;
+		border-left: 1px solid @meshTitleBorderColor;
+		border-bottom: 1px solid @meshTitleBorderColor;
 	}
 }
 .z-treecol {
-	border-left: 1px solid @tableTitleBorderColor;
-	border-bottom: 1px solid @tableTitleBorderColor;
+	border-left: 1px solid @meshTitleBorderColor;
+	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
 	<c:if test="${zk.ie != 8}">
 		.verGradient(@baseGradientStart, @baseGradientEnd);
@@ -103,7 +103,7 @@
 		
 		&:hover {
 			<c:if test="${zk.ie != 8}">
-				.verGradient(@tableTitleHoverStart, @tableTitleHoverEnd);
+				.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
 			</c:if>
 		}
 	}
@@ -122,7 +122,7 @@
 	&:hover {
 		> .z-treecell {
 			<c:if test="${zk.ie != 8}">
-				.verGradient(@tableContentHoverStart, @tableContentHoverEnd);
+				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
 			</c:if>
 			background-clip: padding-box;
 			position: relative;
@@ -177,7 +177,7 @@
 			padding-left: 1px;
 			line-height: @baseLineHeight;
 			
-			&.z-icon-ok {} //for checkbox, use font-awesome
+			&.z-icon-check {} //for checkbox, use font-awesome
 			&.z-icon-radio { //for radio
 				.size(@baseIconWidth / 2, @baseIconWidth / 2);
 				.borderRadius(@baseIconWidth / 4);
@@ -236,27 +236,27 @@
 // IE8
 .ie8 {
 	.z-tree-header {
-		background: @meshBackgroundColor;
+		background: @meshBackgroundColorIE8;
 	}
 	.z-treecol {
 		position: static;
-		background: @meshBackgroundColor;
+		background: @meshBackgroundColorIE8;
 		&-hover, &-sort:hover {
-			background: @meshHoverBackgroundColor;
+			background: @meshHoverBackgroundColorIE8;
 		}
 	}
 	.z-treerow {
 		&:hover > .z-treecell {
-			background: @meshHoverBackgroundColor;
+			background: @meshHoverBackgroundColorIE8;
 		}
 		&.z-treerow-selected {
 			.z-treecell {
 				position: static;
-				background: @meshSelectedBackgroundColor;
+				background: @meshSelectedBackgroundColorIE8;
 			}
 			&:hover > .z-treecell {
 				position: static;
-				background: @meshSelectedHoverBackgroundColor;
+				background: @meshSelectedHoverBackgroundColorIE8;
 			}
 		}
 		// radio icon fallback

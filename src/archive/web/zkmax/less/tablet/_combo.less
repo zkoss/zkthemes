@@ -20,6 +20,23 @@
 		opacity: 0.9;
 	}
 }
+.z-timebox-button {
+	&:hover {
+		border-color: @hoverBorderColor;
+		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		
+		> i {
+			.size(auto, auto);
+			border-top-width: 0;
+			position: static;
+		}
+	}
+	&:active {
+		border-color: @activeBorderColor;
+		.verGradient(@activeGradientStart, @activeGradientEnd);
+		.boxShadow('inset 1px 1px 1px #91AAB7');
+	}
+}
 .z-spinner-button,
 .z-doublespinner-button {
 	padding: 0px;

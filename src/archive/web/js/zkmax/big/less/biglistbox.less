@@ -16,11 +16,11 @@
 	zoom: 1;
 	
 	&-outer {
-		border: 1px solid @outerBorderColor;
+		border: 1px solid @baseBorderColor;
 		border-top: none;
 		border-left: none;
 		margin: 0 15px 15px 0;
-		background: @outerBackgroundColor;
+		background: @baseBackgroundColor;
 		position: relative;
 	}
 	&-faker th {
@@ -44,9 +44,10 @@
 		.resetTable();
 	}
 	&-header {
-		border: 1px solid @tableTitleBorderColor;
+		border: 1px solid @meshTitleBorderColor;
 		border-left-color: #FFFFFF;
 		border-top: 0;
+		padding: 0;
 		text-align: left;
 		position: relative;
 		overflow: hidden;
@@ -69,7 +70,7 @@
 	&-body {
 		width: 100%;
 		border: 0;
-		background: @bodyBackgroundColor;
+		background: @baseBackgroundColor;
 		position: relative;
 		overflow: hidden;
 		float: left;
@@ -78,7 +79,7 @@
 		//body content
 		td {
 			.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayLight);
-			border-left: 1px solid @tableContentBorderColor;
+			border-left: 1px solid @meshContentBorderColor;
 			padding: 4px 5px;
 			line-height: @baseButtonHeight;
 			overflow: hidden;
@@ -89,9 +90,9 @@
 	&-row {
 		&:hover td {
 			color: @hoverColor;
-			border-color: @tableContentHoverStart;
+			border-color: @meshContentHoverStart;
 			<c:if test="${zk.ie != 8}">
-				.verGradient(@tableContentHoverStart, @tableContentHoverEnd);
+				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
 			</c:if>
 			background-clip: padding-box;
 			position: relative;
@@ -117,7 +118,7 @@
 	}
 	//odd rows
 	&-odd {
-		background: @tableStripeBackgroundColor;
+		background: @meshStripeBackgroundColor;
 	}
 	//sort
 	&-sort {
@@ -130,7 +131,7 @@
 		left: 50%;
 	}
 	&-hover { //sortable header hover status
-		.verGradient(@tableTitleHoverStart, @tableTitleHoverEnd);
+		.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
 		background-clip: padding-box;
 		position: relative;
 	}
@@ -279,17 +280,17 @@
 .ie8 {
 	.z-biglistbox-row {
 		&:hover td {
-			background: @meshHoverBackgroundColor;
+			background: @meshHoverBackgroundColorIE8;
 		}
 
 		&.z-biglistbox-selected {
 			td {
 			 	position: static;
-			 	background: @meshSelectedBackgroundColor;
+			 	background: @meshSelectedBackgroundColorIE8;
 			}
 			&:hover td {
 			 	position: static;
-				background: @meshSelectedHoverBackgroundColor;
+				background: @meshSelectedHoverBackgroundColorIE8;
 			}
 		}
 	}

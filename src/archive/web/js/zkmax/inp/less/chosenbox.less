@@ -3,10 +3,10 @@
 .z-chosenbox {
 	display: inline-block;
 	border: 1px solid @inputBorderColor;
-	padding: 1px;
 	line-height: normal;
 	background: @inputBackgroundColor;
 	overflow: hidden;
+	min-height: @baseButtonHeight;
 
 	&-focus {
 		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
@@ -15,9 +15,9 @@
 	&-item {
 		display: inline-block;
 		height: 18px;
-		border: 1px solid @innerBorderColor;
+		border: 1px solid @chosenboxItemBorderColor;
 		.borderRadius(@borderRadiusSmall);
-		margin: -2px 1px 1px 1px;
+		margin: -1px 1px 1px 1px;
 		.verGradient(@baseGradientStart, @baseGradientEnd);
 		vertical-align: middle;
 		position: relative;
@@ -65,10 +65,12 @@
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
 		.displaySize(inline-block, 30px, 15px);
 		border: 0 !important;
-		padding: 2px;
+		height: 17px;
+		padding: 1px 2px 2px 2px;
 		background: transparent !important;
 		outline: 0;
 		.boxShadow('none');
+		margin: 2px;
 	}
 
 	&-disabled {
@@ -137,7 +139,7 @@
 	}
 
 	&-create {
-		.iconFontStyle(@baseFontSize, @textColorGreen);
+		.iconFontStyle(@baseFontSize, @chosenboxCreateIconColor);
 		.size(14px, 14px);
 		margin-right: 2px;
 	}

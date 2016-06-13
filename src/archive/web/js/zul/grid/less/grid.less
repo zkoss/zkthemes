@@ -30,7 +30,7 @@
 		.resetTable();
 	}
 	&-header-border {
-		border-bottom: 1px solid @tableTitleBorderColor;
+		border-bottom: 1px solid @meshTitleBorderColor;
 		margin-top: -1px;
 		position: relative;
 	}
@@ -49,7 +49,7 @@
 	//grid footer
 	&-footer {
 		border-top: 1px solid @baseBorderColor;
-		background: @tableFootBackgroundColor;
+		background: @meshFootBackgroundColor;
 		overflow: hidden;
 		.resetTable();
 		
@@ -59,7 +59,7 @@
 	}
 	&-odd > .z-row-inner,
 	&-odd > .z-cell {
-		background: @tableStripeBackgroundColor;
+		background: @meshStripeBackgroundColor;
 	}
 }
 //column
@@ -69,17 +69,17 @@
 
 		// B50-3306729: the first header should have border-left when the first column is covered with other header
 		&.z-columns-border {
-			border-left: 1px solid @tableTitleBorderColor;
+			border-left: 1px solid @meshTitleBorderColor;
 		}
 	}
 	&-bar {
-		border-left: 1px solid @tableTitleBorderColor;
-		border-bottom: 1px solid @tableTitleBorderColor;
+		border-left: 1px solid @meshTitleBorderColor;
+		border-bottom: 1px solid @meshTitleBorderColor;
 	}
 }
 .z-column {
-	border-left: 1px solid @tableTitleBorderColor;
-	border-bottom: 1px solid @tableTitleBorderColor;
+	border-left: 1px solid @meshTitleBorderColor;
+	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
 	<c:if test="${zk.ie != 8}">
 		.verGradient(@baseGradientStart, @baseGradientEnd);
@@ -91,7 +91,7 @@
 
 	&-hover {
 		<c:if test="${zk.ie != 8}">
-			.verGradient(@tableTitleHoverStart, @tableTitleHoverEnd);
+			.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
 		</c:if>
 		.z-column-button {
 			display: block;
@@ -107,7 +107,7 @@
 		.z-column-sorticon {
 			color: @iconColor;
 			position: absolute;
-			top: -3px;
+			top: -7px;
 			left: 50%;
 		}
 	}
@@ -115,7 +115,7 @@
 		color: @iconColor;
 		display: none;
 		.size(@baseButtonWidth - 1, @baseBarHeight);
-		border-left: 1px solid darken(@tableTitleHoverStart, 15%);
+		border-left: 1px solid darken(@meshTitleHoverStart, 15%);
 		line-height: @baseBarHeight;
 		text-align: center;
 		position: absolute;
@@ -128,7 +128,7 @@
 		
 		&:hover {
 			<c:if test="${zk.ie != 8}">
-				.verGradient(darken(@tableTitleHoverStart, 5%), darken(@tableTitleHoverEnd, 10%));
+				.verGradient(darken(@meshTitleHoverStart, 5%), darken(@meshTitleHoverEnd, 10%));
 			</c:if>
 		}
 	}
@@ -145,19 +145,19 @@
 	}
 	.z-row-inner,
 	.z-cell {
-		border-left: 1px solid @tableContentBorderColor;
+		border-left: 1px solid @meshContentBorderColor;
 		overflow: hidden;
 	}
 	&:hover {
 		> .z-row-inner,
 		> .z-cell {
 			<c:if test="${zk.ie != 8}">
-				.verGradient(@tableContentHoverStart, @tableContentHoverEnd);
+				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
 			</c:if>
 			background-clip: padding-box;
 			position: relative;
 		}
-		.z-row-content {
+		> .z-row-inner > .z-row-content { //for nest issue
 			color: @hoverColor;
 		}
 	}
@@ -165,8 +165,8 @@
 //Group
 .z-group {
 	&-inner {
-		border-top: 1px solid @tableTitleBorderColor;
-		border-bottom: 1px solid @tableTitleBorderColor;
+		border-top: 1px solid @meshTitleBorderColor;
+		border-bottom: 1px solid @meshTitleBorderColor;
 		<c:if test="${zk.ie != 8}">
 			.verGradient(@groupGradientStart, @groupGradientEnd);
 		</c:if>
@@ -257,30 +257,30 @@
 // IE 8
 .ie8 {
 	.z-grid-header {
-		background: @meshBackgroundColor;
+		background: @meshBackgroundColorIE8;
 	}
 	.z-column {
 		position: static;
-		background: @meshBackgroundColor;
+		background: @meshBackgroundColorIE8;
 		&-hover {
-			background: @meshHoverBackgroundColor;
+			background: @meshHoverBackgroundColorIE8;
 		}
 
 		&-button:hover {
-			background: darken(@meshHoverBackgroundColor, 3%);
+			background: darken(@meshHoverBackgroundColorIE8, 3%);
 		}
 	}
 	.z-row:hover {
 		> .z-row-inner,
 		> .z-cell {
 			position: static;
-			background: @meshHoverBackgroundColor;
+			background: @meshHoverBackgroundColorIE8;
 		}
 	}
 	.z-group-inner {
-		background: @meshGroupBackgroundColor;
+		background: @meshGroupBackgroundColorIE8;
 	}
 	.z-groupfoot-inner {
-		background: @meshGroupFooterBackgroundColor;
+		background: @meshGroupFooterBackgroundColorIE8;
 	}
 }
