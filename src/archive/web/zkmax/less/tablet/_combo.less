@@ -3,8 +3,7 @@
 .z-datebox,
 .z-timebox,
 .z-spinner,
-.z-doublespinner, 
-.z-timepicker {
+.z-doublespinner {
 	min-height: 32px;
 	
 	&-input {
@@ -73,12 +72,12 @@
 	}
 }
 
-.z-combobox-popup, .z-timepicker-popup {
+.z-combobox-popup {
 	padding: 0;
 	.gradient('ver', '#D3D3D3 0%; #E5E5E5 10%; #F2F2F2 25%; #FFFFFF 50%; #F2F2F2 75%; #E5E5E5 90%; #D3D3D3 100%');
 	overflow: hidden;
 }
-.z-comboitem, .z-timepicker-option {
+.z-comboitem {
 	font-size: @fontSizeXLarge;
 	padding: 15px 10px;
 	
@@ -217,9 +216,10 @@ li.z-timebox-wheel-list-selected {
 		&-button {
 			font-size: 22px;
 		}
-		&-footer {
-			height: 35px;
-		}
+		// Bug ZK-Z773
+		//&-footer {
+		//	height: 35px;
+		//}
 	}
 }
 //Android
