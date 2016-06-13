@@ -16,22 +16,22 @@
 }
 
 .z-borderlayout {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background: @baseBackgroundColor;
+	.size(100%, 100%);
 	border: 0;
+	background: @baseBackgroundColor;
+	overflow: hidden;
 
 	&-icon {
-		margin: 2px 2px 0 0;
+		.iconFontStyle(@baseFontSize, @iconColor);
+		.displaySize(block, @baseButtonWidth, @baseButtonHeight);
+		line-height: @baseButtonHeight;
+		.opacity(0.5);
+		text-align: center;
+		position: absolute;
+		right: 3px;
 		overflow: hidden;
 		cursor: pointer;
-		position: relative;
-		float: right;
-		line-height: @baseLineHeight + 3;
-		font-size: @fontSizeLarge + 1;
-		color: @iconColor;
-		.opacity(0.5);
+		
 		&:hover {
 			.opacity(1);
 		}
@@ -44,26 +44,23 @@
 .z-center,
 .z-east {
 	border: 1px solid @baseBorderColor;
+	background: @baseBackgroundColor;
 	position: absolute;
 	overflow: hidden;
-	background: @baseBackgroundColor;
 
 	&-noborder {
 		border: 0;
 	}
 	&-header {
-		color: @textColorGray;
-		font-size: @fontSizeMedium;
-		font-family: @baseTitleFontFamily;
-		font-weight: bold;
-		padding: 5px;
+		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, bold, @textColorGray);
+		height: @baseBarHeight;
 		border-bottom: 1px solid @baseBorderColor;
-		white-space: nowrap;
+		padding: 4px 4px 3px;
+		line-height: @baseBarHeight - 8; // 24px = 32 - (padding + border)
+		.verGradient(@baseGradientStart, @baseGradientEnd);
 		overflow: hidden;
 		cursor: default;
-		.verGradient();
-		line-height: @baseLineHeight + 8; // 22px = 32 - padding-top/bottom
-		height: @baseBarHeight;
+		white-space: nowrap;
 	}
 
 	&-body {
@@ -71,14 +68,13 @@
 	}
 
 	&-collapsed {
-		background: darken(@baseBackgroundColor, 1%);
-		width: @baseBarWidth;
-		height: @baseBarHeight;
-	 	cursor: pointer; // ios issue
+		.size(@baseBarWidth, @baseBarHeight);
+		border: 1px solid @collapsedBorderColor;
 		padding: 5px;
-		border: 1px solid @baseBorderColor;
-		overflow: hidden;
+		background: @collapsedBackgroundColor;
 		position: absolute;
+		overflow: hidden;
+	 	cursor: pointer; // ios issue
 	}
 
 	&-caption {
@@ -88,15 +84,12 @@
 .z-north,
 .z-south,
 .z-center {
-	width: 100%;
-	// Fixed for B30-1902533.zul
+	width: 100%; // Fixed for B30-1902533.zul
 }
 .z-west,
 .z-east {
-	height: 100%;
-	// Fixed for B30-1902533.zul
+	height: 100%; // Fixed for B30-1902533.zul
 }
-
 
 .z-west,
 .z-west-collapsed,
@@ -126,23 +119,21 @@
 .z-west,
 .z-north,
 .z-south {
-
 	&-splitter {
+		.size(@baseWidth, @baseHeight);
 		.horGradient(@splitterGradientStart, @splitterGradientEnd);
-		height: @baseHeight;
-		width: @baseWidth;
 		position: absolute;
-		cursor: e-resize;
 		overflow: hidden;
+		cursor: e-resize;
 
 		// splitter-button
 		&-button {
 			color: @iconColor;
-			vertical-align: top;// vertical-align: make it looks same in diff browsers
 			display: inline-block;
-			cursor: pointer;
-			position: relative;
 			border: 1px solid @baseBorderColor;
+			vertical-align: top;// vertical-align: make it looks same in diff browsers
+			position: relative;
+			cursor: pointer;
 		}
 		&-button-disabled {
 			border: 0;
@@ -150,18 +141,31 @@
 	}
 
 	&-icon {
-		position: absolute;
 		font-size: @fontSizeXSmall;
+		line-height: @baseLineHeight;
 		.opacity(0.5);
+		position: absolute;
 	}
 }
 .z-north-splitter,
 .z-south-splitter {
-	.verGradient(@splitterGradientStart, @splitterGradientEnd);
-	cursor: s-resize;
 	border-left: 1px solid @baseBorderColor;
 	border-right: 1px solid @baseBorderColor;
+	.verGradient(@splitterGradientStart, @splitterGradientEnd);
+	cursor: s-resize;
 }
+
+<c:if test="${zk.ie == 8}">
+.z-west-icon.z-icon-caret-left,
+.z-south-icon.z-icon-caret-down,
+.z-east-icon.z-icon-caret-right,
+.z-north-icon.z-icon-caret-up {
+	font-size: @fontSizeMedium;
+}
+.z-south-icon.z-icon-caret-down {
+	top: -2px;
+}
+</c:if>
 .z-north-splitter-button:hover .z-icon-caret-up,
 .z-south-splitter-button:hover .z-icon-caret-down,
 .z-west-splitter-button:hover .z-icon-caret-left,
@@ -195,41 +199,45 @@
 	top: -21px;
 	left: 3px;
 	cursor: e-resize;
+	<c:if test="${zk.ie == 8}">
+		font-size: @baseFontSize;
+	</c:if>
 }
 .z-north-icon,
 .z-south-icon {
 	left: 11px;
-	top: -2px;
+	top: -3px;
 }
-.z-west-icon.z-icon-ellipsis-vertical ~
-.z-west-icon.z-icon-ellipsis-vertical,
-.z-east-icon.z-icon-ellipsis-vertical ~
-.z-east-icon.z-icon-ellipsis-vertical {
+.z-west-icon.z-icon-ellipsis-vertical ~ .z-west-icon.z-icon-ellipsis-vertical,
+.z-east-icon.z-icon-ellipsis-vertical ~ .z-east-icon.z-icon-ellipsis-vertical {
 	top: 39px;
 }
 
 .z-north-icon.z-icon-ellipsis-horizontal,
 .z-south-icon.z-icon-ellipsis-horizontal {
-	top: -1px;
+	top: -2px;
 	left: -20px;
 	cursor: s-resize;
+	<c:if test="${zk.ie == 8}">
+		font-size: @baseFontSize;
+	</c:if>
 }
-.z-north-icon.z-icon-ellipsis-horizontal ~
-.z-north-icon.z-icon-ellipsis-horizontal,
-.z-south-icon.z-icon-ellipsis-horizontal ~
-.z-south-icon.z-icon-ellipsis-horizontal {
+.z-north-icon.z-icon-ellipsis-horizontal ~ .z-north-icon.z-icon-ellipsis-horizontal,
+.z-south-icon.z-icon-ellipsis-horizontal ~ .z-south-icon.z-icon-ellipsis-horizontal {
 	left: 40px;
 }
 
 .z-west-splitter-button,
 .z-east-splitter-button {
+	.size(8px, 30px);
 	border-width: 1px 0;
-	width: 8px;
-	height: 30px;
 }
 .z-north-splitter-button,
 .z-south-splitter-button {
+	.size(30px, 8px);
 	border-width: 0 1px;
-	width: 30px;
-	height: 8px;
+}
+
+.ie8 .z-borderlayout > div {
+	border: 0;
 }

@@ -9,27 +9,27 @@
 	}
 }
 .z-biglistbox {
+	border: 1px solid @baseBorderColor;
+	background: @biglistboxBackgroundColor;
+	position: relative;
 	overflow: hidden;
 	zoom: 1;
-	border: 1px solid @baseBorderColor;
-	background: darken(@baseBackgroundColor, 6%);
-	position: relative;
+	
 	&-outer {
-		position: relative;
-		background: @baseBackgroundColor;
-		margin: 0 15px 15px 0;
-		border: 1px solid @baseBorderColor;
+		border: 1px solid @outerBorderColor;
 		border-top: none;
 		border-left: none;
+		margin: 0 15px 15px 0;
+		background: @outerBackgroundColor;
+		position: relative;
 	}
 	&-faker th {
-		border: 0;
-		height: 0;
-		margin: 0;
-		line-height: 0;
 		font-size: 0;
+		.size(45px, 0);
+		border: 0;
+		margin: 0;
 		padding: 0;
-		width: 45px;
+		line-height: 0;
 		overflow: hidden;
 	}
 	//head
@@ -37,32 +37,29 @@
 		overflow: hidden;
 	}
 	&-head {
-		.resetTable();
-		border: 0;
 		width: 100%;
+		border: 0;
 		overflow: hidden;
 		float: left;
+		.resetTable();
 	}
 	&-header {
+		border: 1px solid @tableTitleBorderColor;
+		border-left-color: #FFFFFF;
+		border-top: 0;
+		text-align: left;
+		position: relative;
 		overflow: hidden;
 		cursor: default;
-		position: relative;
 		white-space: nowrap;
-		border: 1px solid @baseBorderColor;
-		border-left-color: #FFFFFF;
-		border-top: none;
-		text-align: left;
-		.verGradient();
-		//header content
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+		
 		&-content {
-			white-space: nowrap;
-			position: relative;
+			.fontStyle(@baseTitleFontFamily, @fontSizeMedium, bold, @textColorGrayLight);
 			padding: 4px 5px;
 			line-height: @baseButtonHeight - 1;
-			color: @textColorGrayLight;
-			font-size: @fontSizeMedium;
-			font-family: @baseContentFontFamily;
-			font-weight: bold;
+			position: relative;
+			white-space: nowrap;
 		}
 	}
 	//body
@@ -70,38 +67,48 @@
 		overflow: hidden;
 	}
 	&-body {
-		.resetTable();
-		background: @baseBackgroundColor;
-		border: 0;
 		width: 100%;
+		border: 0;
+		background: @bodyBackgroundColor;
+		position: relative;
 		overflow: hidden;
 		float: left;
-		position: relative;
+		.resetTable();
+		
 		//body content
 		td {
+			.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayLight);
+			border-left: 1px solid @tableContentBorderColor;
 			padding: 4px 5px;
 			line-height: @baseButtonHeight;
-			border-left: 1px solid #FFFFFF;
 			overflow: hidden;
-			font-size: @fontSizeMedium;
-			font-family: @baseContentFontFamily;
 			cursor: pointer;
 			white-space: nowrap;
 		}
 	}
 	&-row {
 		&:hover td {
-			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			color: @hoverColor;
+			border-color: @tableContentHoverStart;
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@tableContentHoverStart, @tableContentHoverEnd);
+			</c:if>
 			background-clip: padding-box;
 			position: relative;
 		}
 		&.z-biglistbox-selected {
 			td {
-				.verGradient(@selectedGradientStart, @selectedGradientEnd);
+				color: @selectedColor;
+				border-color: @selectedGradientStart;
+				<c:if test="${zk.ie != 8}">
+					.verGradient(@selectedGradientStart, @selectedGradientEnd);
+				</c:if>
 				background-clip: padding-box;
 				position: relative;
 			}
 			&:hover td {
+				color: @selectedHoverColor;
+				border-color: @selectedHoverBackgroundColor;
 				.resetGradient();
 				background: @selectedHoverBackgroundColor;
 				position: relative;
@@ -110,74 +117,70 @@
 	}
 	//odd rows
 	&-odd {
-		background: darken(@baseBackgroundColor, 3%);
+		background: @tableStripeBackgroundColor;
 	}
 	//sort
 	&-sort {
 		cursor: pointer;
 	}
 	&-sorticon {
+		color: @iconColor;
 		position: absolute;
 		top: -7px;
 		left: 50%;
-		color: @iconColor;
 	}
 	&-hover { //sortable header hover status
-		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		.verGradient(@tableTitleHoverStart, @tableTitleHoverEnd);
 		background-clip: padding-box;
 		position: relative;
 	}
 	//frozen
 	&-head-shim,
 	&-body-shim {
-		width: 3px;
-		height: 1px;
+		.size(3px, 1px);
 		overflow: hidden;
 		float: left;
 	}
 	&-verticalbar-frozen {
+		.size(3px, 100%);
+		border: 1px solid @baseBorderColor;
+		background: @biglistboxFrozenBackground;
 		position: absolute;
 		top: -3px;
-		background: darken(@baseBackgroundColor, 12%);
-		border: 1px solid @baseBorderColor;
-		width: 3px;
-		height: 100%;
 	}
 	&-verticalbar-tick {
+		.size(8px, 16px);
+		.encodeURL(background, '~./zkmax/img/big/vbar-tick.png', -0px -0px no-repeat);
 		position: absolute;
 		bottom: 1px;
-		.encodeURL(background, '~./zkmax/img/big/vbar-tick.png', -0px -0px no-repeat);
-		height: 16px;
 		overflow: hidden;
-		width: 8px;
-		z-index: 20;
 		cursor: w-resize;
+		z-index: 20;
 	}
 	//WScroll bar
 	&-wscroll {
 		// vertical
 		&-vertical {
+			.size(15px, 100%);
 			position: absolute;
 			top: 0;
-			z-index: 10;
-			width: 15px;
-			height: 100%;
 			right: -16px;
+			z-index: 10;
+			
 			.z-biglistbox-wscroll-drag {
-				height: 115px;
-				width: 15px;
-				overflow: hidden;
+				.size(15px, 115px);
 				.encodeURL(background, '~./zkmax/img/big/drag-v.png', no-repeat scroll 0 0 transparent);
 				position: absolute;
-				z-index: 15;
+				overflow: hidden;
 				cursor: pointer;
+				z-index: 15;
+				
 				.z-biglistbox-wscroll-home,
 				.z-biglistbox-wscroll-up,
 				.z-biglistbox-wscroll-down,
 				.z-biglistbox-wscroll-end {
+					.size(15px, 15px);
 					position: absolute;
-					width: 15px;
-					height: 15px;
 				}
 				.z-biglistbox-wscroll-home {
 					top: 0;
@@ -193,51 +196,48 @@
 				}
 			}
 			.z-biglistbox-wscroll-pos {
-				position: absolute;
-				z-index: 10;
-				width: 15px;
-				height: 115px;
-				left: 0;
-				background: contrast(@baseBackgroundColor);
-				.borderRadius(2px);
-				top: 0;
-				.opacity(0.25);
 				visibility: visible;
+				.size(15px, 115px);
+				.borderRadius(2px);
+				background: contrast(@baseBackgroundColor);
+				.opacity(0.25);
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 10;
 			}
 			.z-biglistbox-wscroll-endbar {
-				.horGradient();
+				.size(15px, 7px);
 				border: 1px solid @baseBorderColor;
-				height: 7px;
+				.horGradient(@baseGradientStart, @baseGradientEnd);
 				overflow: hidden;
 				position: absolute;
-				width: 15px;
-				z-index: 20;
 				right: 0;
+				z-index: 20;
 			}
 		}
 		// horizontal
 		&-horizontal {
+			.size(100%, 15px);
 			position: absolute;
 			left: 0;
-			z-index: 10;
-			width: 100%;
-			height: 15px;
 			bottom: -16px;
+			z-index: 10;
+			
 			.z-biglistbox-wscroll-drag {
-				height: 15px;
-				width: 115px;
-				overflow: hidden;
+				.size(115px, 15px);
 				.encodeURL(background, '~./zkmax/img/big/drag-h.png', no-repeat scroll 0 0 transparent);
 				position: absolute;
-				z-index: 15;
+				overflow: hidden;
 				cursor: pointer;
+				z-index: 15;
+				
 				.z-biglistbox-wscroll-home,
 				.z-biglistbox-wscroll-up,
 				.z-biglistbox-wscroll-down,
 				.z-biglistbox-wscroll-end {
+					.size(15px, 15px);
 					position: absolute;
-					width: 15px;
-					height: 15px;
 				}
 				.z-biglistbox-wscroll-home {
 					left: 0;
@@ -253,26 +253,43 @@
 				}
 			}
 			.z-biglistbox-wscroll-pos {
-				position: absolute;
-				z-index: 10;
-				width: 115px;
-				height: 15px;
-				top: 0;
-				background: contrast(@baseBackgroundColor);
-				.borderRadius(2px);
-				left: 0;
-				.opacity(0.25);
 				visibility: visible;
+				.size(115px, 15px);
+				.borderRadius(2px);
+				background: contrast(@baseBackgroundColor);
+				.opacity(0.25);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
 			}
 			.z-biglistbox-wscroll-endbar {
-				.verGradient();
+				.size(7px, 15px);
 				border: 1px solid @baseBorderColor;
-				height: 15px;
-				overflow: hidden;
+				.verGradient(@baseGradientStart, @baseGradientEnd);
 				position: absolute;
-				width: 7px;
-				z-index: 20;
 				right: -12px;
+				overflow: hidden;
+				z-index: 20;
+			}
+		}
+	}
+}
+
+.ie8 {
+	.z-biglistbox-row {
+		&:hover td {
+			background: @meshHoverBackgroundColor;
+		}
+
+		&.z-biglistbox-selected {
+			td {
+			 	position: static;
+			 	background: @meshSelectedBackgroundColor;
+			}
+			&:hover td {
+			 	position: static;
+				background: @meshSelectedHoverBackgroundColor;
 			}
 		}
 	}

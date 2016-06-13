@@ -1,41 +1,35 @@
 @import "~./zul/less/_header.less";
 
 .z-colorbox {
-	width: @baseWidth * 5;
-	height: @baseButtonHeight;
+	.displaySize(inline-block, @baseWidth * 5, @baseButtonHeight);
+	border: 1px solid @colorboxBorderColor;
 	.borderRadius(@borderRadiusSmall);
 	margin: 0 2px;
-	overflow: hidden;
-	display: inline-block;
-	vertical-align: middle;
-	border: 1px solid darken(@baseBorderColor, 50%);
 	padding: 3px;
 	background: @baseBackgroundColor;
+	vertical-align: middle;
 	position: relative;
+	overflow: hidden;
 	cursor: pointer;
 	
 	&-current {
+		.displaySize(inline-block, 100%, 100%);
 		position: relative;
-		display: inline-block;
-		width: 100%;
-		height: 100%;
 	}
 	
 	&-button {
-		overflow: hidden;
+		font-size: 11px;
+		.displaySize(inline-block, 13px, 7px);
+		line-height: normal;
+		background: @baseBackgroundColor;
 		position: absolute;
 		bottom: 1px;
 		right: 0;
-		background: @baseBackgroundColor;
-		display: inline-block;
-		width: 13px;
-		height: 7px;
-		line-height: normal;
+		overflow: hidden;
 	}
 	
 	&-icon {
-		font-size: @baseFontSize;
-		color: @iconColor;
+		.iconFontStyle(@baseFontSize, @iconColor);
 		position: relative;
 		top: -3px;
 		left: 3px;
@@ -43,112 +37,103 @@
 	
 	&-disabled,
 	&-disabled * {
-		.disabledOpacity();
-		cursor: default !important;
 		color: @disabledColor !important;
+		.opacity(@disabledOpacity);
+		cursor: default !important;
 	}
 }
 // Popup shadow
 .z-colorbox-popup,
 .z-menu-popup {
-	position: absolute;
 	display: none;
+	position: absolute;
 	overflow: auto;
 	z-index: @basePopupZIndex;
 	.boxShadow('1px 1px 3px rgba(0, 0, 0, 0.5)');
 }
 // Colorpicker
 .z-colorpicker {
-	width: 384px;
-	height: 332px;
-	overflow: hidden;
-	position: relative;
+	.size(384px, 332px);
+	border: 1px solid @colorboxBorderColor;
 	background: @baseBackgroundColor;
-	border: 1px solid darken(@baseBorderColor, 50%);
+	position: relative;
+	overflow: hidden;
 	
 	&-gradient {
-		border: 1px solid darken(@baseBorderColor, 50%);
-		width: 256px;
-		height: 256px;
+		.size(256px, 256px);
+		border: 1px solid @colorboxBorderColor;
+		position: absolute;
 		left: 7px;
 		top: 31px;
-		position: absolute;
 		cursor: crosshair;
 	}
 	
 	&-overlay {
-		width: 256px;
-		height: 256px;
+		.size(256px, 256px);
 		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_gradient.png');
 	}
 	
 	&-bar {
-		border: 1px solid darken(@baseBorderColor, 50%);
+		.size(12px, 256px);
+		border: 1px solid @colorboxBorderColor;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_hue.png');
 		position: absolute;
+		left: 7px;
 		overflow: hidden;
 		cursor: n-resize;
-		width: 12px;
-		height: 256px;
-		left: 7px;
-		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_hue.png');
 	}
 	
 	&-circle {
+		.size(11px, 11px);
+		margin: -5px 0 0 -5px;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_select.gif');
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 11px;
-		height: 11px;
 		overflow: hidden;
-		margin: -5px 0 0 -5px;
-		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_select.gif');
 	}
 	
 	&-hue {
+		.size(27px, 256px);
 		position: absolute;
 		top: 31px;
 		left: 272px;
-		width: 27px;
-		height: 256px;
 	}
 	
 	&-arrows {
+		.size(27px, 9px);
+		margin: -4px 0 0 0;
+		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_arrows.gif');
 		position: absolute;
+		left: 0;
 		overflow: hidden;
 		cursor: n-resize;
-		width: 27px;
-		height: 9px;
-		margin: -4px 0 0 0;
-		left: 0;
-		.encodeURL(background-image, '~./zkex/img/colorbox/colorpicker_arrows.gif');
 	}
 	
 	&-color {
+		border: double;
+		background: transparent;
+		position: absolute;
 		top: 34px;
 		left: 315px;
-		border: double;
-		position: absolute;
-		background: transparent;
 	}
 	
 	&-newcolor {
-		position: relative;
-		width: 48px;
-		height: 32px;
+		.size(48px, 32px);
 		border-bottom: 1px solid;
+		position: relative;
 	}
 	
 	&-current {
-		position: relative;
-		width: 48px;
-		height: 32px;
+		.size(48px, 32px);
 		border-top: 1px solid;
+		position: relative;
 	}
 	
 	&-r, &-g, &-b, &-h, &-s, &-v {
+		width: 55px;
 		position: absolute;
 		left: 310px;
-		width: 55px;
 	}
 	
 	&-r {top: 122px;}
@@ -160,27 +145,22 @@
 	
 	&-text,
 	&-input {
-		font-family: @baseContentFontFamily;
-		font-size: @fontSizeMedium;
-		font-weight: normal;
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
 	}
 	
 	&-input {
-		float: right;
-		width: @baseWidth * 5;
-		height: @baseButtonHeight;
-		background: @baseBackgroundColor;
-		font-family: @baseContentFontFamily;
-		font-size: @baseFontSize;
-		font-weight: normal;
-		padding: 2px;
+		.size(@baseWidth * 5, @baseButtonHeight);
 		border: 1px solid @baseBorderColor;
+		padding: 2px;
+		background: @baseBackgroundColor;
+		float: right;
 	}
 	
 	&-hex {
 		position: absolute;
 		top: 300px;
 		left: 10px;
+		
 		.z-colorpicker-input {
 			margin-left: 5px;
 			width: @baseWidth * 8;
@@ -188,11 +168,11 @@
 	}
 	
 	&-button {
-		cursor: pointer;
-		top: 300px;
-		position: absolute;
-		left: 328px;
 		width: 42px;
+		position: absolute;
+		top: 300px;
+		left: 328px;
+		cursor: pointer;
 	}
 	
 	&-icon {
@@ -201,45 +181,40 @@
 }
 // Color Palette
 .z-colorpalette {
-	width: 262px; 
-	height: 222px;
-	border: 1px solid darken(@baseBorderColor, 50%);
-	background: @baseBackgroundColor;
+	.size(262px, 222px);
+	border: 1px solid @colorboxBorderColor;
 	padding-left: 4px;
+	background: @baseBackgroundColor;
 	
 	&-newcolor {
-		width: 50px;
-		height: 24px;
-		border: 1px solid darken(@baseBorderColor, 50%);
+		.size(50px, 24px);
+		border: 1px solid @colorboxBorderColor;
 		margin: 4px 2px;
 		position: relative;
 		left: 123px;
 	}
 	
-	&-input, &-button {
+	&-input,
+	&-button {
 		position: absolute;
 		top: 5px;
 		left: 185px;
 	}
 	
 	&-input {
-		width: 65px;
-		height: @baseButtonHeight;
-		background: @baseBackgroundColor;
-		font-family: @baseContentFontFamily;
-		font-size: @baseFontSize;
-		font-weight: normal;
-		padding: 2px;
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
+		.size(65px, @baseButtonHeight);
 		border: 1px solid @baseBorderColor;
+		padding: 2px;
+		background: @baseBackgroundColor;
 	}
 	
 	&-color {
-		width: 14px; 
-		height: 14px; 
-		float: left; 
+		.displaySize(inline-block, 14px, 14px);
 		border: 1px solid #FFFFFF;
-		display: inline-block;
 		cursor: pointer;
+		float: left; 
+		
 		&:hover {
 			border: 1px solid #000000;
 		}
@@ -253,29 +228,28 @@
 .z-menu-paletteicon,
 .z-colorbox-pickericon,
 .z-menu-pickericon {
-	z-index: 10;
-	width: 22px;
-	height: 22px;
-	cursor: pointer;
-	position: absolute;
+	.size(22px, 22px);
 	.encodeURL(background, '~./zkex/img/colorbox/cb-buttons.gif');
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
 }
 .z-colorbox-paletteicon,
 .z-menu-paletteicon {
-	left: 6px;
-	top: 5px;
 	background-position: 0 0;
+	top: 5px;
+	left: 6px;
 }
 .z-colorbox-pickericon,
 .z-menu-pickericon {
-	left: 31px;
-	top: 5px;
 	background-position: 0 -44px;
+	top: 5px;
+	left: 31px;
 }
 .z-colorpalette-popup .z-colorbox-paletteicon,
 .z-colorpalette-popup .z-menu-paletteicon {
-	left: 6px;
 	background-position: 0 -22px;
+	left: 6px;
 }
 .z-colorpalette-popup .z-colorbox-pickericon,
 .z-colorpalette-popup .z-menu-pickericon {

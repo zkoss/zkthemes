@@ -1,26 +1,41 @@
 @import "~./zul/less/_header.less";
 
 .z-auxhead {
-	th:last-child {
-		border-right: none;
+	th:first-child {
+		border-left: none;
+
+		// B50-3306729: the first header should have border-left when the first column is covered with other header
+		&.z-auxhead-border {
+			border-left: 1px solid @tableTitleBorderColor;
+		}
+	}
+
+	&-bar {
+		border-left: 1px solid @tableTitleBorderColor;
 	}
 }
+
 .z-auxheader {
-	.verGradient();
+	border-left: 1px solid @tableTitleBorderColor;
+	border-bottom: 1px solid @tableTitleBorderColor;
+	padding: 0;
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+	</c:if>
 	background-clip: padding-box;
+	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
-	padding: 0;
-	border-right: 1px solid @baseBorderColor;
-	border-bottom: 1px solid @baseBorderColor;
-	position: relative;
+
 	&-content {
-		font-family: @baseContentFontFamily;
-		font-size: @fontSizeMedium;
-		font-weight: bold;
-		color: @textColorGrayLight;
-		overflow: hidden;
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, bold, @textColorGrayLight);
 		padding: 4px 5px 3px;
 		line-height: @baseButtonHeight;
+		overflow: hidden;
 	}
+}
+
+.ie8 .z-auxheader {
+	position: static;
+	background: @meshBackgroundColor;
 }

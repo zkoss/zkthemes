@@ -1,18 +1,20 @@
 @import "~./zul/less/_header.less";
 
 .z-button {
-	font-family: @baseTitleFontFamily;
-	font-size: @fontSizeMedium;
-	font-weight: normal;
+	.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @baseTextColor);
+	min-height: @baseButtonHeight;
+	<c:if test="${zk.ie == 8}">
+		min-height: @baseButtonHeight - 8; //minus padding border height
+	</c:if>
+	border: 1px solid @buttonBorderColor;
+	.borderRadius(@baseBorderRadius);
 	padding: 3px 12px;
 	line-height: @baseLineHeight;
-	border: 1px solid darken(@baseBorderColor, 15%);
-	.borderRadius();
-	.verGradient();
+	.verGradient(@buttonGradientStart, @buttonGradientEnd);
 	text-shadow: 0 1px #FFFFFF;
 	cursor: pointer;
-	min-height: @baseButtonHeight;
-	
+	white-space: nowrap;
+
 	&:hover {
 		border-color: @hoverBorderColor;
 		.verGradient(@hoverGradientStart, @hoverGradientEnd);
@@ -28,9 +30,9 @@
 		.verGradient(@activeGradientStart, @activeGradientEnd);
 	}
 	&[disabled] {
-		.disabledOpacity();
-		border: 1px solid darken(@baseBorderColor, 15%);
-		.verGradient();
+		border: 1px solid @buttonBorderColor;
+		.verGradient(@buttonGradientStart, @buttonGradientEnd);
+		.opacity(@disabledOpacity);
 		.boxShadow('none');
 		cursor: default;
 	}

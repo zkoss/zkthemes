@@ -2,128 +2,118 @@
 
 .z-chosenbox {
 	display: inline-block;
-	overflow: hidden;
-	background: @baseBackgroundColor;
-	border: 1px solid @baseBorderColor;
+	border: 1px solid @inputBorderColor;
 	padding: 1px;
 	line-height: normal;
-	
+	background: @inputBackgroundColor;
+	overflow: hidden;
+
 	&-focus {
 		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
 	}
-	
+
 	&-item {
 		display: inline-block;
-		vertical-align: middle;
-		white-space: nowrap;
+		height: 18px;
+		border: 1px solid @innerBorderColor;
 		.borderRadius(@borderRadiusSmall);
 		margin: -2px 1px 1px 1px;
-		border: 1px solid darken(@baseBorderColor, 11%);
-		cursor: pointer;
-		height: 18px;
-		.verGradient();
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+		vertical-align: middle;
 		position: relative;
-		
+		white-space: nowrap;
+		cursor: pointer;
+
 		&-content {
+			.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
 			display: inline-block;
-			float: left;
-			padding: 0px 15px 0px 3px;
 			height: 16px;
+			padding: 0px 15px 0px 3px;
 			line-height: 18px;
-			font-size: @fontSizeMedium;
-			font-family: @baseContentFontFamily;
-			font-style: normal;
-			color: @textColorGrayDark;	
+			<c:if test="${zk.ie == 8}">
+				line-height: @baseIconHeight;
+			</c:if>
+			float: left;
 		}
-		
+
 		&-focus {
-			background: @hoverBackgroundColor;
 			border-color: @hoverBorderColor;
+			background: @hoverBackgroundColor;
 		}
 	}
-	
+
 	&-button {
-		width: 11px;
-		height: 11px;
+		.iconFontStyle(11px, @iconColor);
+		.size(11px, 11px);
 		line-height: 11px;
-		font-size: 11px;
 		text-align: center;
-		color: @iconColor;
-		.borderRadius(2px);
 		position: absolute;
 		right: 2px;
 		top: 3px;
 		<c:if test="${zk.ie > 0}">
-		width: 12px;
-		height: 12px;
-		line-height: 12px;
-		top: 2px;
+			.size(12px, 12px);
+			line-height: 12px;
+			top: 2px;
 		</c:if>
-		
+
 		&:hover {
 			color: @iconHoverColor;
 		}
 	}
-	
+
 	&-input {
-		display: inline-block;
-		background: transparent !important;
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
+		.displaySize(inline-block, 30px, 15px);
 		border: 0 !important;
+		padding: 2px;
+		background: transparent !important;
 		outline: 0;
 		.boxShadow('none');
-		padding: 2px;
-		width: 30px;
-		height: 15px;
-		color: @textColorGrayDark;
-		font-size: @fontSizeMedium;
-		font-family: @baseContentFontFamily;
 	}
-	
+
 	&-disabled {
-		.disabledOpacity();
 		background: @disabledBackgroundColor;
-		
+		.opacity(@disabledOpacity);
+
 		.z-chosenbox-item {
 			cursor: default !important;
 		}
-		
+
 		.z-chosenbox-item-content {
 			padding-right: 3px !important;
 		}
-		
+
 		.z-chosenbox-button {
 			display: none !important;
 		}
 	}
 
 	&-textcontent {
-		display: none;
-		font-size: @fontSizeMedium;
 		font-family: @baseContentFontFamily;
+		font-size: @fontSizeMedium;
+		display: none;
 		white-space: nowrap;
 	}
 
 	&-popup {
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
 		display: block;
-		position: absolute;
-		background: @baseBackgroundColor;
-		border: 1px solid @baseBorderColor;
+		border: 1px solid @popupBorderColor;
 		padding: 2px;
-		font-family: @baseContentFontFamily;
-		font-weight: normal;
-		font-size: @fontSizeMedium;
+		background: @popupBackgroundColor;
+		position: absolute;
 		overflow: auto;
 
 		&-hidden {
 			display: none;
 		}
 	}
-	
+
 	&-shadow {
 		.borderRadius(@borderRadiusSmall);
 		.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
 	}
-	
+
 	&-option {
 		cursor: pointer;
 		padding: 1px 5px;
@@ -132,25 +122,23 @@
 			background: @hoverBackgroundColor;
 		}
 	}
-	
+
 	&-empty {
-		padding: 1px 5px;
 		font-style: italic;
 		color: @disabledColor;
-		
+		padding: 1px 5px;
+
 		&-creatable {
-			cursor: pointer;
-			background: @hoverBackgroundColor;
 			color: @textColorGrayDark;
-			padding-top: 2px;			
+			padding-top: 2px;
+			background: @hoverBackgroundColor;
+			cursor: pointer;
 		}
 	}
-	
+
 	&-create {
-		font-size: @baseFontSize;
-		color: @textColorGreen;
-		width: 14px;
-		height: 14px;
+		.iconFontStyle(@baseFontSize, @textColorGreen);
+		.size(14px, 14px);
 		margin-right: 2px;
 	}
 }

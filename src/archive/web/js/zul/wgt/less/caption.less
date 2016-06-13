@@ -1,12 +1,11 @@
 @import "~./zul/less/_header.less";
 
 .z-caption {
-	width: 100%;
 	font-size: @fontSizeMedium;
-	white-space: nowrap;
-	height: auto;
-	line-height: @baseLineHeight;
+	.size(100%, auto);
 	min-height: @baseButtonHeight;
+	line-height: @baseLineHeight;
+	white-space: nowrap;
 
 	& > * {
 		margin-left: 4px;
@@ -16,11 +15,12 @@
 		} 
 	}
 
-	&-content, .z-label {
+	&-content,
+	.z-label {
 		display: inline-block;
 		padding: 4px 0px;
-		float: left;
 		line-height: @baseIconHeight;
+		float: left;
 	}
 
 	&-image {
@@ -32,14 +32,17 @@
 	}
 
 	.z-toolbar {
-		.z-a, .z-a:visited, .z-a:hover {
-			background: none;
-			border: 0;
+		.z-a,
+		.z-a:visited,
+		.z-a:hover {
 			color: #FFFFFF;
+			border: 0;
+			background: none;
 		}
 	}
 
-	.z-a, .z-a:visited {
+	.z-a,
+	.z-a:visited {
 		font-size: @fontSizeSmall; 
 		font-weight: normal; 
 		color: @baseTextColor; 

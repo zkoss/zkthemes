@@ -8,8 +8,9 @@
 }
 .itemSelected() {
 	.z-navitem-selected .z-navitem-content {
-		background: @navSelectedBackgroundColor;
 		color: @navSelectedColor;
+		background: @navSelectedBackgroundColor;
+		
 		&:hover {
 			background: lighten(@navSelectedBackgroundColor, 5%);
 		}
@@ -18,172 +19,295 @@
 .navLevel(@level) {
 	.z-nav-content,
 	.z-navitem-content {
-		background: darken(@navBackgroundColor, (@level - 1) * 3);
 		&:hover {
 			background: @navHoverBackgroundColor;
 		}
+		&[disabled]:hover {
+			color: @navColor;
+			background: darken(@navBackgroundColor, (@level - 1) * 3);
+		}
+	}
+	.z-nav-content,
+	.z-navitem-content,
+	.z-navseparator {
+		background: darken(@navBackgroundColor, (@level - 1) * 3);
 	}
 }
+// Navbar
 .z-navbar {
-	position: relative;
 	display: block;
-	
+	position: relative;
 	ul {
 		.restUl();
 	}
-	&-vertical {
-		li {
-			display: block;
-		}
-		.z-nav-content,
-		.z-navitem-content {
-			border-bottom-width: 0;
-			padding-bottom: 4px;
-		}
+	// overall style
+	> ul { //first level
 		.navLevel(1);
-		> ul { //topmost level
-			> li:last-child a {
-				border-bottom-width: 1px;
-			}
-			ul { //second level
-				display: none;
-				.z-nav-content,
-				.z-navitem-content {
-					border-width: 1px 0 0;
-					padding-bottom: 4px;
-				}
-				.navLevel(2);
-				ul { //third level
-					.navLevel(3);
-				}
-			}
-		}
-		.itemSelected();
-		.z-nav-content:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: @baseBarHeight;
-			width: 5px;
-			background: @navSelectedBackgroundColor;
+		
+		ul { //second level
 			display: none;
+			width: auto;
+			.navLevel(2);
+			
+			ul { //third level
+				.navLevel(3);
+			}
 		}
 	}
+	.itemSelected();
+	// horizontal style
 	&-horizontal {
 		li {
-			min-width: 180px;
 			display: inline-block;
+			min-width: 180px;
 		}
 		> ul { //topmost level
 			.z-nav-content,
 			.z-navitem-content {
-				border-right-width: 0;
-				padding-right: 17px;
+				border-left-width: 0;
 			}
 			.navLevel(1);
-			> li:last-child a {
-				border-right-width: 1px;
+			> li:first-child a,
+			> .z-navseparator + .z-nav > .z-nav-content,
+			> .z-navseparator + .z-navitem > .z-navitem-content {
+				border-left-width: 1px;
 			}
 			ul { //second level
-				display: none;
 				position: absolute;
 				left: 0;
-				width: 100%;
 				
 				.z-nav-content,
 				.z-navitem-content {
-					border-width: 0 0 1px 1px;
-					padding-top: 4px;
-					padding-right: 17px;
+					border-width: 0 1px 1px 0;
 				}
-				.navLevel(2);
-				> li:last-child a {
-					border-right-width: 1px;
-					padding-right: 16px;
+				> li:first-child a,
+				> .z-navseparator + .z-nav > .z-nav-content,
+				> .z-navseparator + .z-navitem > .z-navitem-content {
+					border-left-width: 1px;
 				}
 				ul { //third level
-					.navLevel(3);
-					> li:last-child a {
-						border-right-width: 1px;
-						padding-right: 16px;
+					> li:first-child a {
+						border-left-width: 1px;
 					}
 				}
 			}
 		}
-		.itemSelected();
 		.z-nav-content:before {
-			content: '';
+			.size(100%, 4px);
+			background: @navSelectedBackgroundColor;
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			height: 4px;
-			width: 180px;
-			background: @navSelectedBackgroundColor;
-			display: none;
+		}
+		.z-navseparator {
+			min-width: @baseWidth + 1; //plus 1 for center line
+			line-height: @baseBarHeight;
+			vertical-align: top; //for collapsed navbar
+			position: relative;
+			
+			&:before {
+				.size(1px, @baseBarHeight);
+				position: absolute;
+				top: 0;
+				left: @baseWidth / 2;
+			}
+		}
+	}
+	// vertical style
+	&-vertical {
+		> ul { //topmost level
+			> li:first-child a {
+				border-top-width: 1px;
+			}
+			.navLevel(1);
 		}
 	}
 }
-.z-nav-selected > .z-nav-content:before {
-	display: block;
-}
+
+// Nav and Navitem
 .z-nav,
 .z-navitem {
 	&-content {
-		display: block;
 		color: @navColor;
-		text-decoration: none;
-		border: 1px solid @navBorderColor;
+		display: block;
 		height: @baseBarHeight;
-		padding: 3px 16px;
+		border: 1px solid @navBorderColor;
+		padding: 0 8px;
 		position: relative;
+		white-space: nowrap;
+		overflow: hidden;
+		text-decoration: none;
+		line-height: @baseBarHeight;
 	}
 	&-image {
-		max-width: @navImageSize;
 		min-width: @navImageSize;
+		margin-bottom: 4px;
 	}
 	&-image,
 	i {
+		font-size: @baseFontSize;
+		.size(@baseIconWidth, @baseIconHeight);
 		margin-right: 12px;
-		vertical-align: text-bottom;
-		font-size: 14px;
 	}
 	&-text {
 		font-family: @baseContentFontFamily;
 		font-size: @fontSizeMedium;
 		font-weight: normal;
 		display: inline-block;
-		line-height: 24px;
-	}
-}
-
-.z-navitem-content {
-	&[disabled] {
-		.disabledOpacity();
-		cursor: default;
-		.resetGradient();
-		.boxShadow('none');
-		&:hover {
-			.disabledOpacity();
-			cursor: default;
-			.resetGradient();
-			.boxShadow('none');
-		}
 	}
 }
 
 .z-nav-info {
-	font-family: @baseContentFontFamily;
-	font-weight: bold;
-	font-size: @fontSizeSmall;
-	text-align: center;
-	margin-left: 8px;
-	.boxShadow("0 1px 2px rgba(0,0,0,0.5) inset, 0 1px 0 rgba(255,255,255,0.2)");
-	.borderRadius(@baseBorderRadius);
+	.fontStyle(@baseContentFontFamily, @fontSizeSmall, bold, @navSelectedColor);
 	display: inline-block;
-	color: @navSelectedColor;
+	height: 14px;
+	.borderRadius(@baseBorderRadius);
+	margin-left: 8px;
+	padding: 0 4px;
+	line-height: 14px;
 	background: lighten(@navSelectedBackgroundColor, 10%);
-	width: 16px;
-	height: 16px;
-	vertical-align: text-bottom;
+	text-align: center;
+	.boxShadow('0 1px 2px rgba(0,0,0,0.5) inset, 0 1px 0 rgba(255,255,255,0.2)');
+}
+
+.z-navitem-content[disabled],
+.z-navitem-content[disabled]:hover {
+	cursor: default;
+	
+	i, img, .z-navitem-text {
+		.opacity(0.5);
+	}
+}
+
+// NavSeparetor
+.z-navseparator:before {
+	content: '';
+	display: block;
+	background: @navSeparatorColor;
+}
+
+// Collapsed
+.z-navbar-collapsed {
+	> ul { //topmost level
+		> .z-nav > .z-nav-content ,
+		> .z-navitem > .z-navitem-content {
+			border-width: 0;
+			
+			> i {
+				margin-right: 0;
+				text-align: center;
+			}
+			&:hover {
+				color: @navColor;
+				background: @navBackgroundColor;
+			}
+		}
+		> .z-navseparator + .z-nav > .z-nav-content,
+		> .z-navseparator + .z-navitem > .z-navitem-content {
+			border-width: 0;
+		}
+		> .z-nav > .z-nav-content > .z-nav-text ,
+		> .z-navitem > .z-navitem-content > .z-navitem-text {
+			display: none;
+		}
+		> .z-navitem-selected:hover > .z-navitem-content {
+			color: @navSelectedColor;
+			background: lighten(@navSelectedBackgroundColor, 5%);
+		}
+		> .z-nav > .z-nav-content > .z-nav-info {
+			margin-left: 8px;
+		}
+	}
+}
+.z-navbar-horizontal.z-navbar-collapsed {
+	> ul { //topmost level
+		> .z-nav,
+		> .z-navitem {
+			min-width: @navCollapsedWidth;
+		}
+	}
+}
+.z-navbar-vertical.z-navbar-collapsed {
+	> ul { //topmost level
+		min-width: @navCollapsedWidth;
+		display: inline-block;
+	}
+}
+
+.z-nav-text-popup,
+.z-navitem-text-popup {
+	color: @navColor;
+	min-width: 180px;
+	height: @baseBarHeight;
+	border: 1px solid @navBorderColor;
+	padding: 0 32px;
+	line-height: @baseBarHeight;
+	background: @navBackgroundColor;
+	cursor: pointer;
+	white-space: nowrap;
+	z-index: @basePopupZIndex;
+	
+	&[disabled] {
+		cursor: default;
+		.boxShadow('none');
+		
+		&:hover {
+			cursor: default;
+			.boxShadow('none');
+		}
+	}
+}
+.z-navbar-vertical,
+.z-nav-popup {
+	li {
+		display: block;
+	}
+	.z-nav-content:before {
+		content: '';
+		.displaySize(none, 4px, @baseBarHeight);
+		background: @navSelectedBackgroundColor;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.z-navseparator {
+		height: @baseHeight + 1; //plus 1 for center line
+		position: relative;
+		
+		&:before {
+			.size(100%, 1px);
+			position: absolute;
+			top: @baseHeight / 2;
+		}
+	}
+	.z-nav-content,
+	.z-navitem-content {
+		border-top-width: 0;
+	}
+	.z-navseparator + .z-nav > .z-nav-content,
+	.z-navseparator + .z-navitem > .z-navitem-content {
+		border-top-width: 1px;
+	}
+}
+.z-nav-popup {
+	border-top-width: 0;
+	overflow: hidden;
+	z-index: @basePopupZIndex;
+	.navLevel(2);
+	.restUl();
+	
+	ul { //third level
+		display: none;
+		position: relative;
+		.restUl();
+		.navLevel(3);
+	}
+	.itemSelected();
+}
+.z-nav-content:before {
+	content: '';
+	display: none;
+}
+.z-nav-selected > .z-nav-content:before {
+	display: block;
 }

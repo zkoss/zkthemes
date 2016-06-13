@@ -9,71 +9,100 @@
 	display: inline-block;
 	min-height: @baseButtonHeight;
 	white-space: nowrap;
-}
 
-.z-combobox-input,
-.z-bandbox-input,
-.z-datebox-input,
-.z-timebox-input,
-.z-spinner-input,
-.z-doublespinner-input {
-	background: @baseBackgroundColor;
-	font-family: @baseContentFontFamily;
-	font-size: @fontSizeMedium;
-	font-weight: normal;
-	padding: 4px 5px;
-	border: 1px solid @baseBorderColor;
-	border-right: 0;
-	margin: 0;
-	height: @baseButtonHeight;
-	.leftBorderRadius(@borderRadiusSmall);
-	line-height: @baseLineHeight;
-	color: @baseTextColor;
-}
-.z-combobox-button,
-.z-bandbox-button,
-.z-datebox-button,
-.z-timebox-button,
-.z-spinner-button,
-.z-doublespinner-button {
-	background: @baseBackgroundColor;
-	vertical-align: middle;
-	cursor: pointer;
-	padding: 4px;
-	border: 1px solid @baseBorderColor;
-	overflow: hidden;
-	display: inline-block;
-	font-size: @baseFontSize;
-	font-weight: normal;
-	line-height: @baseLineHeight;
-	min-width: @baseButtonWidth;
-	height: @baseButtonHeight;
-	color: @iconColor;
-	.rightBorderRadius(@borderRadiusSmall);
-	text-align: left;
+	&-input {
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
+		height: @baseButtonHeight;
+		border: 1px solid @inputBorderColor;
+		border-right: 0;
+		.leftBorderRadius(@borderRadiusSmall);
+		margin: 0;
+		padding: 4px 5px;
+		line-height: @baseLineHeight;
+		background: @inputBackgroundColor;
 
-	&:hover {
-		border-color: @hoverBorderColor;
-		.verGradient(@hoverGradientStart, @hoverGradientEnd);
-	}
-	&:active {
-		border-color: @activeBorderColor;
-		.verGradient(@activeGradientStart, @activeGradientEnd);
-		.boxShadow('inset 1px 1px 1px #91AAB7');
-	}
-	input[disabled] + & {
-		&:hover,
-		&:active {
-			border-color: @baseBorderColor;
-			.resetGradient();
+		&:focus {
+			.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
+		}
+		&[readonly] {
+			border-color: @readonlyBorderColor;
+			background: @readonlyBackgroundColor;
+		}
+		&[readonly]:focus {
 			.boxShadow('none');
 		}
 	}
+
+	&-button {
+		.iconFontStyle(@baseFontSize, @iconColor);
+		display: inline-block;
+		min-width: @baseButtonWidth;
+		<c:if test="${zk.ie == 8}">
+			min-width: @baseButtonWidth - 10;
+		</c:if>
+		height: @baseButtonHeight;
+		border: 1px solid @inputBorderColor;
+		.rightBorderRadius(@borderRadiusSmall);
+		padding: 4px;
+		line-height: @baseLineHeight;
+		background: @inputBackgroundColor;
+		text-align: left;
+		vertical-align: middle;
+		overflow: hidden;
+		cursor: pointer;
+
+		&:hover {
+			border-color: @hoverBorderColor;
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			</c:if>
+		}
+		&:active {
+			border-color: @activeBorderColor;
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@activeGradientStart, @activeGradientEnd);
+			</c:if>
+			.boxShadow('inset 1px 1px 1px #91AAB7');
+		}
+		input[disabled] + & {
+			&:hover,
+			&:active {
+				border-color: @inputBorderColor;
+				.resetGradient();
+				.boxShadow('none');
+			}
+		}
+	}
+
+	&-disabled {
+		.opacity(@disabledOpacity);
+		& * {
+			color: @disabledColor !important;
+			background: @disabledBackgroundColor !important;
+			cursor: default !important;
+		}
+	}
+
+	&-invalid {
+		border: 1px solid @invalidBorderColor !important;
+		margin-right: -1px;
+		background: @baseBackgroundColor;
+	}
+
+	&-readonly:focus {
+		border-color: @readonlyBorderColor;
+		border-right-width: 0;
+		background: transparent repeat-x 0 0;
+		cursor: default;
+		.boxShadow(none);
+	}
+
+	&-rightedge {
+		border-right: 1px solid @inputBorderColor;
+		.rightBorderRadius(@borderRadiusSmall);
+	}
 }
-.z-datebox-button,
-.z-bandbox-button {
-	text-align: center;
-}
+
 .z-combobox-button.z-combobox-disabled,
 .z-bandbox-button.z-bandbox-disabled,
 .z-datebox-button.z-datebox-disabled,
@@ -83,9 +112,27 @@
 	display: none;
 }
 
-.z-timebox-button,
+.z-combobox-button {
+	font-size: @fontSizeLarge;
+	min-height: @baseButtonHeight;
+	<c:if test="${zk.ie == 8}">
+		min-width: @baseButtonHeight - 13;
+		min-height: @baseButtonWidth - 11;
+	</c:if>	
+	padding-left: 7px;
+	padding-top: 5px;
+}
+
+.z-datebox-button,
+.z-bandbox-button {
+	text-align: center;
+}
+
 .z-spinner-button,
 .z-doublespinner-button {
+	<c:if test="${zk.ie == 8}">
+		min-width: @baseButtonWidth - 2;
+	</c:if>	
 	padding: 0;
 	position: relative;
 
@@ -96,16 +143,14 @@
 	}
 
 	& > a {
-		padding: 0 7px;
 		color: @iconColor;
-		text-decoration: none;
+		.size(@baseButtonWidth, @baseButtonHeight / 2);
+		padding: 0 7px;
+		background: @baseBackgroundColor;
 		position: absolute;
 		left: 0;
-		width: @baseButtonWidth;
-		height: @baseButtonHeight / 2;
 		overflow: hidden;
-		background: @baseBackgroundColor;
-
+		text-decoration: none;
 
 		&:first-child {// up icon
 			top: -1px;
@@ -116,11 +161,15 @@
 		}
 		&:hover {
 			border-color: @hoverBorderColor;
-			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@hoverGradientStart, @hoverGradientEnd);
+			</c:if>
 		}
 		&:active {
 			border-color: @activeBorderColor;
-			.verGradient(@activeGradientStart, @activeGradientEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@activeGradientStart, @activeGradientEnd);
+			</c:if>	
 			.boxShadow('inset 1px 1px 1px #91AAB7');
 		}
 	}
@@ -129,12 +178,11 @@
 		z-index: 2; // greater than arrow icon
 	}
 	&:hover > i {
-		height: 1px;
+		.size(@baseButtonWidth, 1px);
 		border-top: 1px solid @hoverBorderColor;
 		position: absolute;
 		top: 11px;
 		left: 0;
-		width: @baseButtonWidth;
 	}
 	& > a ~ a {// bottom icon
 		bottom: -1px;
@@ -148,7 +196,7 @@
 		}
 	}
 }
-.z-timebox-disabled a,
+
 .z-spinner-disabled a,
 .z-doublespinner-disabled a {
 	&:active,
@@ -167,77 +215,6 @@
 	& + i[class*='-separator'] {
 		display: none;
 	}
-
-}
-
-.z-combobox,
-.z-bandbox,
-.z-datebox,
-.z-timebox,
-.z-spinner,
-.z-doublespinner {
-	&-input:focus {
-		.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
-	}
-	&-input[readonly] {
-		background: @readonlyBackgroundColor;
-		border-color: @readonlyBorderColor;
-	}
-	&-input[readonly]:focus {
-		.boxShadow('none');
-	}
-
-	&-invalid {
-		background: @baseBackgroundColor;
-		border-color: @invalidBorderColor;
-		border-right: 1px solid @invalidBorderColor!important;
-		margin-right: -1px;
-	}
-}
-
-.z-combobox-button {
-	font-size: @fontSizeLarge;
-	padding-left: 6px;
-	max-height: @baseButtonHeight;
-}
-// disable
-.z-spinner-disabled,
-.z-doublespinner-disabled,
-.z-timebox-disabled,
-.z-datebox-disabled,
-.z-bandbox-disabled,
-.z-comboitem-disabled,
-.z-combobox-disabled {
-	.disabledOpacity();
-
-	& * {
-		cursor: default !important;
-		color: @disabledColor !important;
-		background: @disabledBackgroundColor !important;
-	}
-}
-
-.z-spinner-readonly:focus,
-.z-doublespinner-readonly:focus,
-.z-timebox-readonly:focus,
-.z-datebox-readonly:focus,
-.z-bandbox-readonly:focus,
-.z-combobox-readonly:focus {
-	background: transparent repeat-x 0 0;
-	border-color: @readonlyBorderColor;
-	border-right-width: 0;
-	cursor: default;
-	.boxShadow(none);
-}
-
-.z-combobox-rightedge,
-.z-bandbox-rightedge,
-.z-datebox-rightedge,
-.z-timebox-rightedge,
-.z-spinner-rightedge,
-.z-doublespinner-rightedge {
-	border-right: 1px solid @baseBorderColor;
-	.rightBorderRadius(@borderRadiusSmall);
 }
 
 // Inplace editing
@@ -247,8 +224,8 @@
 .z-timebox-inplace .z-timebox-input,
 .z-spinner-inplace .z-spinner-input,
 .z-doublespinner-inplace .z-doublespinner-input {
-	padding: 3px;
 	border: 0;
+	padding: 3px;
 	background: none;
 
 	&:focus {
@@ -268,21 +245,19 @@
 // Comboitem
 .z-comboitem,
 .z-comboitem-button {
-	white-space: nowrap;
 	font-size: @fontSizeMedium;
+	white-space: nowrap;
 	cursor: pointer;
 }
 .z-comboitem {
-	text-shadow: 0 1px #FFFFFF;
-	padding: 0 2px;
-	position: relative;
 	display: block;
+	padding: 3px 2px;
+	position: relative;
+	text-shadow: 0 1px #FFFFFF;
 }
 .z-comboitem-inner,
 .z-comboitem-content {//description
-	color: @textColorGray;
-	font-size: @fontSizeXSmall;
-	padding-left: 6px;
+	.iconFontStyle(@fontSizeXSmall, @textColorGray);
 }
 .z-comboitem,
 .z-comboitem a,
@@ -293,17 +268,25 @@
 	text-decoration: none;
 }
 .z-comboitem-selected {
-	.verGradient(@selectedGradientStart, @selectedGradientEnd);
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@selectedGradientStart, @selectedGradientEnd);
+	</c:if>
 }
 .z-comboitem:hover {
-	.verGradient(@hoverGradientStart, @hoverGradientEnd);
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+	</c:if>
 }
 .z-comboitem-selected:hover {
-	.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+	</c:if>
 }
 .z-comboitem-image {
-	width: 1px;
+	margin-top: -4px;
 	margin-right: 3px;
+	float: left;
+	
 	&:empty {
 		margin-right: 0px;
 	}
@@ -313,14 +296,14 @@
 .z-bandbox-popup,
 .z-datebox-popup,
 .z-timebox-popup {
-	display: block;
-	position: absolute;
-	background: @baseBackgroundColor;
-	border: 1px solid @baseBorderColor;
-	padding: 2px;
 	font-family: @baseContentFontFamily;
 	font-weight: normal;
 	font-size: @fontSizeMedium;
+	display: block;
+	border: 1px solid @popupBorderColor;
+	padding: 2px;
+	background: @popupBackgroundColor;
+	position: absolute;
 	overflow: hidden;
 }
 
@@ -334,10 +317,10 @@
 }
 
 .z-combobox-content {
-	background: transparent none repeat 0 0;
 	border: 0;
 	padding: 0;
 	margin: 0;
+	background: transparent none repeat 0 0;
 	position: relative;
 	list-style-image: none;
 	list-style-position: outside;
@@ -350,4 +333,48 @@
 .z-datebox-shadow {
 	.borderRadius(@borderRadiusSmall);
 	.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
+}
+
+.ie8 {
+	.z-combobox,
+	.z-bandbox,
+	.z-datebox,
+	.z-timebox,
+	.z-spinner,
+	.z-doublespinner {
+		&-button {
+			&:hover {
+				.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
+			}
+			&:active {
+				.gradientFallback(@activeGradientStart, @activeGradientEnd);
+			}
+		}
+	}
+
+	.z-spinner,
+	.z-doublespinner {
+		&-button {
+			& > a {
+				&:hover {
+					.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
+				}
+				&:active {
+					.gradientFallback(@activeGradientStart, @activeGradientEnd);
+				}
+			}
+		}
+	}
+
+	.z-comboitem {
+		&-selected {			
+			.gradientFallback(@selectedGradientStart, @selectedGradientEnd);
+		}
+		&:hover {
+			.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
+		}
+		&-selected:hover {
+			.gradientFallback(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+		}
+	}
 }

@@ -9,7 +9,7 @@
 	.defaultOverflowZoom();
 	
 	&-shadow {
-		.borderRadius();
+		.borderRadius(@baseBorderRadius);
 		.boxShadow('0 0 4px rgba(0, 0, 0, 0.5)');
 	}
 	
@@ -18,25 +18,22 @@
 	}
 	
 	&-head {
+		border: 1px solid @headerBorderColor;
+		border-bottom-color: @baseBorderColor;
+		.topBorderRadius(@baseBorderRadius);
 		padding: 5px 5px 1px;
-		border: 1px solid darken(@baseBorderColor, 20%);
-		.boxShadow('inset 0px 1px 1px #FFFFFF');
 		background: @panelBackgroundColor;
 		overflow: hidden;
-		border-bottom-color: @baseBorderColor;
-		.topBorderRadius();
+		.boxShadow('inset 0px 1px 1px #FFFFFF');
 	}
 	
 	&-header {
-		color: @textColorGrayDark;
-		background: @panelBackgroundColor;
+		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
 		border: 0;
-		line-height: 24px;
-		font-weight: normal;
-		font-size: @fontSizeMedium;
-		font-family: @baseTitleFontFamily;
-		.defaultOverflowZoom();
 		padding: 3px 0 5px 0;
+		line-height: 24px;
+		background: @panelBackgroundColor;
+		.defaultOverflowZoom();
 		
 		&-move {
 			cursor: move;
@@ -44,12 +41,12 @@
 	}
 	
 	&-body {
+		border: 1px solid @bodyBorderColor;
+		border-top-width: 0;
+		.bottomBorderRadius(@baseBorderRadius);
 		margin: 0;
-		background: lighten(@panelBackgroundColor, 4%);
 		padding: 6px 3px 6px 3px;
-		border: 1px solid darken(@baseBorderColor, 20%);
-		border-top: 0;
-		.bottomBorderRadius();
+		background: @panelBodyBackground;
 		.defaultOverflowZoom();
 		
 		&:first-child {
@@ -61,37 +58,45 @@
 		padding: 4px;
 	}
 	
-	&-top .z-toolbar:not(.z-toolbar-panel),
-	&-bottom2 .z-toolbar:not(.z-toolbar-panel),
+	&-top .z-toolbar,
+	&-footer .z-toolbar,
 	&-bottom .z-toolbar {
 		border-width: 0 1px 1px 1px;
 		padding: 4px 3px 3px 3px;
 	}
+
+	&-top .z-toolbar.z-toolbar-panel,
+	&-footer .z-toolbar.z-toolbar-panel {
+		border-width: 0px;
+		padding: 4px;
+	}
 	
 	&-icon {
-		overflow: hidden;
-		margin: auto 1px;
-		cursor: pointer;
-		display: block;
-		.verGradient();
-		.borderRadius();
-		border: 1px solid @baseBorderColor;
-		float: right;
-		text-align: center;
 		color: @iconColor;
+		display: block;
+		border: 1px solid @baseBorderColor;
+		.borderRadius(@baseBorderRadius);
+		margin: auto 1px;
+		<c:if test="${zk.ie != 8}">
+			.verGradient(@baseGradientStart, @baseGradientEnd);
+		</c:if>
+		text-align: center;
+		overflow: hidden;
+		cursor: pointer;
+		float: right;
 		
 		&:hover {
-			.resetGradient();
-			border-color: @hoverBorderColor;
-			background: @hoverBackgroundColor;
 			color: @iconHoverColor;
+			border-color: @hoverBorderColor;
+			.resetGradient();
+			background: @hoverBackgroundColor;
 		}
+
 	}
 	
 	&-maximize, &-minimize, &-close, &-expand {
-		width: @baseButtonWidth + 4;
-		height: @baseButtonHeight;
 		font-size: @fontSizeLarge;
+		.size(@baseButtonWidth + 4, @baseButtonHeight);
 		line-height: @baseButtonHeight;
 	}
 	
@@ -109,39 +114,45 @@
 	}
 	
 	&-resize-faker {
-		position: absolute;
 		border: 1px dashed #1854C2;
-		overflow: hidden;
-		z-index: 60000;
-		left: 0;
-		top: 0;
 		background: #D7E6F7;
 		.opacity(0.5);
+		position: absolute;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		z-index: 60000;
 	}
 	
 	&-move-ghost {
-		.topBorderRadius();
-		position: absolute;
-		background: #D7E6F7;
-		overflow: hidden;
-		.opacity(0.6);
-		cursor: move;
+		.topBorderRadius(@baseBorderRadius);
 		margin: 0;
 		padding: 0;
+		background: #D7E6F7;
+		.opacity(0.6);
+		position: absolute;
+		overflow: hidden;
+		cursor: move;
 		
 		.z-panel-body {
 			padding: 0;
 		}
 		
+		<c:if test="${zk.ie == 8}">
+		.z-panel-icon {
+			.opacity(1);
+		}
+		</c:if>
+		
 		dl {
-			border: 1px solid darken(@baseBorderColor, 20%);
+			font-size: 0;			
+			display: block;
+			border: 1px solid @outerBorderColor;
 			border-top: 0;
 			margin: 0;
 			padding: 0;
-			overflow: hidden;			
-			display: block;
 			line-height: 0;
-			font-size: 0;
+			overflow: hidden;
 		}
 	}
 	
@@ -150,10 +161,10 @@
 	}
 	
 	&-noframe &-body {
-		background: white;
 		border: 0;
-		padding: 0;
 		.borderRadius(0);
+		padding: 0;
+		background: white;
 		
 		.z-panelchildren {
 			border-top: 0;
@@ -161,8 +172,8 @@
 	}
 	
 	&-noheader &-body {
-		border-top: 1px solid @baseBorderColor;
-		.borderRadius();
+		border-top: 1px solid @bodyBorderColor;
+		.borderRadius(@baseBorderRadius);
 	}
 	
 	&-noheader&-noframe &-body {
@@ -185,8 +196,16 @@
 }
 
 .z-panelchildren {
-	background: @baseBackgroundColor;
 	border: 1px solid @baseBorderColor;
+	background: @baseBackgroundColor;
 	position: relative;
 	.defaultOverflowZoom();
+}
+
+.ie8 .z-panel-icon {
+	.gradientFallback(@baseGradientStart, @baseGradientEnd);
+
+	.z-icon-minus {
+		margin-left: 1px;			
+	}
 }
