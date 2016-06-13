@@ -107,6 +107,12 @@
 				.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
 			</c:if>
 		}
+		.z-treecol-sorticon {
+			color: @iconColor;
+			position: absolute;
+			top: -7px;
+			left: 50%;
+		}
 	}
 	&-sizing,
 	&-sizing .z-treecol-content {
@@ -240,6 +246,10 @@
 		overflow: hidden;
 		width: 100%;
 	}
+}
+.z-tree-autopaging .z-treecell-content {
+	height: @meshAutoPagingRowHeight;
+	overflow: hidden;
 }
 // ZK-2151: use strict selector to prevent nest problem
 // IE8

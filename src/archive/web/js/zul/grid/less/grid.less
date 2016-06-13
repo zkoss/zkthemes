@@ -156,7 +156,9 @@
 				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
 			</c:if>
 			background-clip: padding-box;
+			<c:if test="${not (zk.ff > 0)}">
 			position: relative;
+			</c:if>
 		}
 		> .z-row-inner > .z-row-content { //for nest issue
 			color: @hoverColor;
@@ -239,6 +241,17 @@
 	&-bottom {
 		width: 100%;
 		border-top: 1px solid @pagingBorderColor;
+		overflow: hidden;
+	}
+}
+.z-grid-autopaging {
+	.z-row-content,
+	.z-groupfoot-content {
+		height: @meshAutoPagingRowHeight;
+		overflow: hidden;
+	}
+	.z-group-content {
+		height: @meshAutoPagingRowHeight - 2;
 		overflow: hidden;
 	}
 }
