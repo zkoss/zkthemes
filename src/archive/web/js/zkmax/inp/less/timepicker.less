@@ -32,9 +32,6 @@
 		.iconFontStyle(@baseFontSize, @iconColor);
 		display: inline-block;
 		min-width: @baseButtonWidth;
-		<c:if test="${zk.ie == 8}">
-			min-width: @baseButtonWidth - 10;
-		</c:if>
 		height: @baseButtonHeight;
 		border: 1px solid @inputBorderColor;
 		.rightBorderRadius(@borderRadiusSmall);
@@ -48,15 +45,11 @@
 
 		&:hover {
 			border-color: @hoverBorderColor;
-			<c:if test="${zk.ie != 8}">
-				.verGradient(@hoverGradientStart, @hoverGradientEnd);
-			</c:if>
+			.verGradient(@hoverGradientStart, @hoverGradientEnd);
 		}
 		&:active {
 			border-color: @activeBorderColor;
-			<c:if test="${zk.ie != 8}">
-				.verGradient(@activeGradientStart, @activeGradientEnd);
-			</c:if>
+			.verGradient(@activeGradientStart, @activeGradientEnd);
 			.boxShadow('inset 1px 1px 1px #91AAB7');
 		}
 		input[disabled] + & {
@@ -143,24 +136,18 @@
 }
 
 .z-timepicker-option:hover {
-	<c:if test="${zk.ie != 8}">
-		.verGradient(@hoverGradientStart, @hoverGradientEnd);
-	</c:if>
+	.verGradient(@hoverGradientStart, @hoverGradientEnd);
 }
 
 .z-timepicker-option-selected {
-	<c:if test="${zk.ie != 8}">
-		.verGradient(@selectedGradientStart, @selectedGradientEnd);
-	</c:if>
+	.verGradient(@selectedGradientStart, @selectedGradientEnd);
 	.z-comboitem-text {
 		color: @selectedColor;
 	}
 }
 
 .z-timepicker-option-selected:hover {
-	<c:if test="${zk.ie != 8}">
-		.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
-	</c:if>
+	.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
 	.z-timepicker-text {
 		color: @selectedHoverColor;
 	}
@@ -198,6 +185,7 @@
 .ie8 {
 	.z-timepicker {
 		&-button {
+			min-width: @baseButtonWidth - 10;
 			&:hover {
 				.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
 			}
@@ -208,7 +196,7 @@
 	}
 
 	.z-timepicker-option {
-		&-selected {			
+		&-selected {
 			.gradientFallback(@selectedGradientStart, @selectedGradientEnd);
 		}
 		&:hover {
