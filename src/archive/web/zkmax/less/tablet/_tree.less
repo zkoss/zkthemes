@@ -19,17 +19,19 @@
 			.borderRadius(12px);
 		}
 	}
-	&-selected {
-		.z-treerow-icon {
-			font-size: @fontSizeXLarge;
-			padding-left: 2px;
-			line-height: 22px;
-			
-			&.z-icon-radio {
-				.size(10px, 10px);
-				.borderRadius(5px);
-				margin: 6px;
-			}
+
+	// Sandbox-G14: use strict selector to override style
+	&-selected > .z-treecell > .z-treecell-content
+		> .z-treerow-checkable .z-treerow-icon {
+		
+		font-size: @fontSizeXLarge;
+		padding-left: 2px;
+		line-height: 22px;
+
+		&.z-icon-radio {
+			.size(10px, 10px);
+			.borderRadius(5px);
+			margin: 6px;
 		}
 	}
 }
