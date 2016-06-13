@@ -3,8 +3,7 @@
 .z-datebox,
 .z-timebox,
 .z-spinner,
-.z-doublespinner, 
-.z-timepicker {
+.z-doublespinner {
 	min-height: 32px;
 	
 	&-input {
@@ -73,12 +72,12 @@
 	}
 }
 
-.z-combobox-popup, .z-timepicker-popup {
+.z-combobox-popup {
 	padding: 0;
 	.gradient('ver', '#D3D3D3 0%; #E5E5E5 10%; #F2F2F2 25%; #FFFFFF 50%; #F2F2F2 75%; #E5E5E5 90%; #D3D3D3 100%');
 	overflow: hidden;
 }
-.z-comboitem, .z-timepicker-option {
+.z-comboitem {
 	font-size: @fontSizeXLarge;
 	padding: 15px 10px;
 	
@@ -110,17 +109,17 @@
 	padding: 0 2px;
 
 	&-time {
-		.boxOrientHor();
-		width: 50%;
+		.box('box-orient', 'horizontal');
+  		width: 50%;
 		.borderRadius(3px);
 		position: relative;
-		.gradient('ver', '#000 0%; #333 35%; #888 50%; #333 65%; #000 100%');
+		.gradient(ver, '#000 0%; #333 35%; #888 50%; #333 65%; #000 100%');
 	}
 	&-cave {
 		position: relative;
 	}
 	&-body {
-		.boxOrientHor();
+		.box(box-orient, horizontal);
 		width: 100%;
 	}
 	&-line {
@@ -136,7 +135,7 @@
 		color: #FFFFFF;
 		height: 210px;
 		margin: 4px 0;
-		.gradient('ver', '#000 0%; #444 45%; #444 55%; #000 100%');
+		.gradient(ver, '#000 0%; #444 45%; #444 55%; #000 100%');
 		position: relative;
 		overflow: hidden;
 		

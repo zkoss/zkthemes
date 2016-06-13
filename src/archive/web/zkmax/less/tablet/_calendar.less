@@ -18,18 +18,18 @@
 }
 .z-calendar-wheel {
 	&-date {
-		.boxOrientHorFlex();
+		.box2(box-orient, horizontal, box-flex, 1);
 		width: 100%;
 		.borderRadius(3px);
 		margin-right: 4px;
 		position: relative;
-		.gradient('ver', '#000 0%; #333 35%; #888 50%; #333 65%; #000 100%');
+		.gradient(ver, '#000 0%; #333 35%; #888 50%; #333 65%; #000 100%');
 	}
 	&-cave {
 		position: relative;
 	}
 	&-body {
-		.boxOrientHor();
+		.box(box-orient, horizontal);
 		width: 100%;
 	}
 	&-line {
@@ -45,7 +45,7 @@
 		color: #FFFFFF;
 		height: 210px;
 		margin: 0 2px;
-		.gradient('ver', '#000 0%; #444 45%; #444 55%; #000 100%');
+		.gradient(ver, '#000 0%; #444 45%; #444 55%; #000 100%');
 		position: relative;
 		overflow: hidden;
 		

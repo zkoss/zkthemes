@@ -22,7 +22,9 @@
 	//tree header div
 	&-header {
 		width: 100%;
-		.verGradient(@baseGradientStart, @baseGradientEnd);
+		<c:if test="${zk.ie != 8}">
+			.verGradient(@baseGradientStart, @baseGradientEnd);
+		</c:if>
 		position: relative;
 		overflow: hidden;
 		.resetTable();
@@ -89,7 +91,9 @@
 	border-left: 1px solid @meshTitleBorderColor;
 	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+	</c:if>
 	background-clip: padding-box;
 	position: relative;
 	overflow: hidden;
@@ -99,7 +103,9 @@
 		cursor: pointer;
 		
 		&:hover {
-			.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
+			</c:if>
 		}
 		.z-treecol-sorticon {
 			color: @iconColor;
@@ -124,8 +130,13 @@
 	}
 	&:hover {
 		> .z-treecell {
-			.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			</c:if>
 			background-clip: padding-box;
+			<c:if test="${not (zk.ff > 0)}">
+			position: relative;
+			</c:if>
 
 			> .z-treecell-content {
 				color: @hoverColor;
@@ -150,7 +161,9 @@
 	//selected tree cell
 	&.z-treerow-selected {
 		> .z-treecell {
-			.verGradient(@selectedGradientStart, @selectedGradientEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@selectedGradientStart, @selectedGradientEnd);
+			</c:if>
 			background-clip: padding-box;
 			position: relative;
 
@@ -161,38 +174,13 @@
 		
 		&:hover {
 			> .z-treecell {
-				.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
-				> .z-treecell-content {
-					color: @selectedHoverColor;
-				}
-			}
-		}
-	}
-	&.z-treerow-selected.z-treerow-focus {
-		> .z-treecell {
-			.verGradient(@selectedFocusGradientStart, @selectedFocusGradientEnd);
-			background-clip: padding-box;
-			position: relative;
+				<c:if test="${zk.ie != 8}">
+					.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+				</c:if>
 
-			> .z-treecell-content {
-				color: @selectedFocusColor;
-			}
-		}
-		&:hover {
-			> .z-treecell {
-				.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
 				> .z-treecell-content {
 					color: @selectedHoverColor;
 				}
-			}
-		}
-	}
-	&-focus {
-		> .z-treecell {
-			.verGradient(@meshContentFocusStart, @meshContentFocusEnd);
-			position: relative;
-			> .z-treecell-content {
-				color: @hoverColor;
 			}
 		}
 	}
@@ -227,17 +215,6 @@
 		}
 	}
 }
-
-body:not(.gecko) {
-	.z-treerow {
-		&:hover {
-			> .z-treecell {
-				position: relative;
-			}
-		}
-	}
-}
-
 //content
 .z-treecol-content,
 .z-treecell-content,

@@ -104,6 +104,9 @@
 		padding: 3px 0;
 		line-height: 20px;
 		vertical-align: baseline;
+		<c:if test="${zk.ie == 8}">
+			vertical-align: middle;
+		</c:if>
 	}
 	&-text {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGrayDark);
@@ -115,24 +118,5 @@
 		position: absolute;
 		top: 4px;
 		right: 10px;
-	}
-}
-
-.ie8 {
-	.z-paging {
-		&-input {
-			vertical-align: middle;
-		}
-		&-button {
-			.gradientFallback(@baseGradientStart, @baseGradientEnd);
-			&:active {
-				.gradientFallback(@baseGradientEnd, @baseGradientStart);
-			}
-			&[disabled] {
-				&:active {
-					.gradientFallback(@baseGradientStart, @baseGradientEnd);
-				}
-			}
-		}
 	}
 }

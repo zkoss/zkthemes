@@ -77,7 +77,9 @@
 		border: 1px solid @baseBorderColor;
 		.borderRadius(@baseBorderRadius);
 		margin: auto 1px;
-		.verGradient(@baseGradientStart, @baseGradientEnd);
+		<c:if test="${zk.ie != 8}">
+			.verGradient(@baseGradientStart, @baseGradientEnd);
+		</c:if>
 		text-align: center;
 		overflow: hidden;
 		cursor: pointer;
@@ -136,8 +138,14 @@
 			padding: 0;
 		}
 		
+		<c:if test="${zk.ie == 8}">
+		.z-panel-icon {
+			.opacity(1);
+		}
+		</c:if>
+		
 		dl {
-			font-size: 0;
+			font-size: 0;			
 			display: block;
 			border: 1px solid @baseBorderColor;
 			border-top: 0;
@@ -194,18 +202,9 @@
 	.defaultOverflowZoom();
 }
 
-.ie8 {
-	.z-panel-icon {
-		.gradientFallback(@baseGradientStart, @baseGradientEnd);
-		.z-icon-minus {
-			margin-left: 1px;
-		}
-	}
-	.z-panel {
-		&-move-ghost {
-			.z-panel-icon {
-				.opacity(1);
-			}
-		}
+.ie8 .z-panel-icon {
+	.gradientFallback(@baseGradientStart, @baseGradientEnd);
+	.z-icon-minus {
+		margin-left: 1px;			
 	}
 }
