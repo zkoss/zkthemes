@@ -91,7 +91,9 @@
 		&:hover td {
 			color: @hoverColor;
 			border-color: @meshContentHoverStart;
-			.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			</c:if>
 			background-clip: padding-box;
 			position: relative;
 		}
@@ -99,7 +101,9 @@
 			td {
 				color: @selectedColor;
 				border-color: @selectedGradientStart;
-				.verGradient(@selectedGradientStart, @selectedGradientEnd);
+				<c:if test="${zk.ie != 8}">
+					.verGradient(@selectedGradientStart, @selectedGradientEnd);
+				</c:if>
 				background-clip: padding-box;
 				position: relative;
 			}
@@ -287,26 +291,6 @@
 			&:hover td {
 			 	position: static;
 				background: @meshSelectedHoverBackgroundColorIE8;
-			}
-		}
-	}
-	.z-biglistbox {
-		&-header {
-			.gradientFallback(@baseGradientStart, @baseGradientEnd);
-		}
-		&-hover { //sortable header hover status
-			.gradientFallback(@meshTitleHoverStart, @meshTitleHoverEnd);
-		}
-		&-wscroll {
-			&-vertical {
-				.z-biglistbox-wscroll-endbar {
-					.gradientFallback(@baseGradientStart, @baseGradientEnd);
-				}
-			}
-			&-horizontal {
-				.z-biglistbox-wscroll-endbar {
-					.gradientFallback(@baseGradientStart, @baseGradientEnd);
-				}
 			}
 		}
 	}

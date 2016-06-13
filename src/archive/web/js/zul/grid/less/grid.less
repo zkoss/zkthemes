@@ -22,7 +22,9 @@
 	//grid header
 	&-header {
 		width: 100%;
-		.verGradient(@baseGradientStart, @baseGradientEnd);
+		<c:if test="${zk.ie != 8}">
+			.verGradient(@baseGradientStart, @baseGradientEnd);
+		</c:if>
 		position: relative;
 		overflow: hidden;
 		.resetTable();
@@ -80,14 +82,18 @@
 	border-left: 1px solid @meshTitleBorderColor;
 	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
-	.verGradient(@baseGradientStart, @baseGradientEnd);
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+	</c:if>
 	background-clip: padding-box;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
 
 	&-hover {
-		.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
+		<c:if test="${zk.ie != 8}">
+			.verGradient(@meshTitleHoverStart, @meshTitleHoverEnd);
+		</c:if>
 		.z-column-button {
 			display: block;
 		}
@@ -122,7 +128,9 @@
 		.boxShadow('inset 1px 0 #FFFFFF');
 		
 		&:hover {
-			.verGradient(darken(@meshTitleHoverStart, 5%), darken(@meshTitleHoverEnd, 10%));
+			<c:if test="${zk.ie != 8}">
+				.verGradient(darken(@meshTitleHoverStart, 5%), darken(@meshTitleHoverEnd, 10%));
+			</c:if>
 		}
 	}
 	&-sizing,
@@ -144,43 +152,27 @@
 	&:hover {
 		> .z-row-inner,
 		> .z-cell {
-			.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			<c:if test="${zk.ie != 8}">
+				.verGradient(@meshContentHoverStart, @meshContentHoverEnd);
+			</c:if>
 			background-clip: padding-box;
+			<c:if test="${not (zk.ff > 0)}">
+			position: relative;
+			</c:if>
 		}
 		> .z-row-inner > .z-row-content { //for nest issue
 			color: @hoverColor;
 		}
 	}
 }
-
-body:not(.gecko) {
-	.z-row {
-		&:hover {
-			> .z-row-inner,
-			> .z-cell {
-				position: relative;
-			}
-		}
-	}
-}
-
-.ie8 { //IE8 does not support :not() pseudo class
-	.z-row {
-		&:hover {
-			> .z-row-inner,
-			> .z-cell {
-				position: relative;
-			}
-		}
-	}
-}
-
 //Group
 .z-group {
 	&-inner {
 		border-top: 1px solid @meshTitleBorderColor;
 		border-bottom: 1px solid @meshTitleBorderColor;
-		.verGradient(@groupGradientStart, @groupGradientEnd);
+		<c:if test="${zk.ie != 8}">
+			.verGradient(@groupGradientStart, @groupGradientEnd);
+		</c:if>
 		position: relative;
 		overflow: hidden;
 		
@@ -203,7 +195,9 @@ body:not(.gecko) {
 	}
 }
 .z-groupfoot-inner {
-	.verGradient(@groupGradientEnd, @groupGradientStart);
+	<c:if test="${zk.ie != 8}">
+		.verGradient(@groupGradientEnd, @groupGradientStart);
+	</c:if>
 	overflow: hidden;
 }
 //content
