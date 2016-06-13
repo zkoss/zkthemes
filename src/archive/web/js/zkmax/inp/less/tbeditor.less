@@ -1,7 +1,3 @@
-<%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
-
-<%@ taglib uri="http://www.zkoss.org/dsp/web/theme" prefix="t" %>
-
 /**
  * @{zprefix} v2.0.0-beta.3 - A lightweight WYSIWYG editor
  * Default stylesheet for @{zprefix} editor
@@ -13,8 +9,9 @@
  *         Website : alex-d.fr
  */
  
- @zprefix: z-tbeditor;
- @url: "~./js/zkmax/inp/ext";
+@import "~./zul/less/_header.less";
+@zprefix: z-tbeditor;
+@url: "~./js/zkmax/inp/ext";
 
 .@{zprefix}-box, .@{zprefix}-editor {
   display: block;
