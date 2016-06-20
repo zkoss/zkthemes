@@ -11,7 +11,6 @@
 	</properties>
 	<packaging>jar</packaging>
 	<name>___DISPLAY_NAME___</name>
-	<url>http://www.zkoss.org/themes/atlantic</url>
 	<scm>
 		<url>http://mavensync.zkoss.org/maven2</url>
 	</scm>
