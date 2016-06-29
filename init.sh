@@ -16,12 +16,17 @@ while true; do
 	done
 
 	while true; do
-		read -p "Enter the [ARTIFACT ID] for your theme project and press [ENTER]: " artifactId
+		read -p "Enter the [ARTIFACT ID] (will also be your theme name) for your theme project and press [ENTER]: " artifactId
 		case $artifactId in
 			"" ) echo "[ARTIFACT ID] cannot be empty, try again.";;
+			# need to check with regex, because this string will be used in folder path
+			*[[:space:]]* ) echo "[ARTIFACT ID] cannot contain whitespace(s), try again.";;
 			* ) break;;
 		esac
 	done
+	
+	themeName=$artifactId
+	themeNameCap=$(echo $themeName | cut -c 1 | tr [a-z] [A-Z])$(echo $themeName | cut -c 2-)
 
 	while true; do
 		read -p "Enter the [VERSION] for your theme project and press [ENTER]: " version
@@ -31,17 +36,7 @@ while true; do
 		esac
 	done
 
-	while true; do
-		read -p "Enter the [THEME NAME] for your theme and press [ENTER]: " themeName
-		# need to check with regex, because this string will be used in folder path
-		case $themeName in
-			"" ) echo "[THEME NAME] cannot be empty, try again.";;
-			*[[:space:]]* ) echo "[THEME NAME] cannot contain whitespace(s), try again.";;
-			* ) break;;
-		esac
-	done
-
-	themeNameCap=$(echo $themeName | cut -c 1 | tr [a-z] [A-Z])$(echo $themeName | cut -c 2-)
+	
 
 	while true; do
 		read -p "Enter the [DISPLAY NAME] for your theme and press [ENTER]: " displayName
@@ -55,7 +50,6 @@ while true; do
 	echo "GROUP ID     : $groupId"
 	echo "ARTIFACT ID  : $artifactId"
 	echo "VERSION      : $version"
-	echo "THEME NAME   : $themeName"
 	echo "DISPLAY NAME : $displayName"
 	echo ""
 
@@ -119,13 +113,15 @@ fi
 
 echo -n "updating pom.xml..."
 sed -i.zktmp "0,/<groupId>.*<\/groupId>/s//<groupId>${groupId}<\/groupId>/" pom.xml
-echo -n "....."
-sed -i.zktmp "0,/<artifactId>.*<\/artifactId>/s//<artifactId>${artifactId}<\/artifactId>/" pom.xml
-echo -n "....."
-sed -i.zktmp "0,/<version>.*<\/version>/s//<version>${version}<\/version>/" pom.xml
-echo -n "....."
-sed -i.zktmp "0,/<name>.*<\/name>/s//<name>${displayName}<\/name>/" pom.xml
 echo -n "...."
+sed -i.zktmp "0,/<artifactId>.*<\/artifactId>/s//<artifactId>${artifactId}<\/artifactId>/" pom.xml
+echo -n "...."
+sed -i.zktmp "0,/<version>.*<\/version>/s//<version>${version}<\/version>/" pom.xml
+echo -n "...."
+sed -i.zktmp "0,/<name>.*<\/name>/s//<name>${artifactId}<\/name>/" pom.xml
+echo -n "...."
+sed -i.zktmp "0,/<description>.*<\/description>/s//<description>${displayName}<\/description>/" pom.xml
+echo -n "..."
 echo -n "done."
 echo ""
 
