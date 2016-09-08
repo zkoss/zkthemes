@@ -1,0 +1,41 @@
+.z-textbox,
+.z-decimalbox,
+.z-intbox,
+.z-longbox,
+.z-doublebox {
+	min-height: 32px;
+	padding: 4px 5px;
+	line-height: 16px;
+}
+.z-errorbox {
+	cursor: move;
+	
+	&-content {
+		font-size: @fontSizeMedium;
+		word-wrap: break-word; 
+	}
+	&-icon {
+		left: 5px;
+	}
+	> .z-errorbox-icon {
+		font-size: @fontSizeLarge;
+	}
+	&-close {
+		font-size: @fontSizeLarge;
+		.size(24px, 24px);
+		line-height: 24px;
+		text-align: center;
+		opacity: 0.9;
+	}
+}
+
+.z-errorbox-pointer ~ .z-errorbox-close {
+	top: 2px;
+	right: 4px;
+}
+.z-errorbox-right ~ .z-errorbox-close {
+	right: 10px;
+}
+.z-errorbox-up ~ .z-errorbox-close {
+	top: 8px;
+}

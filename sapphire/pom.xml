@@ -53,7 +53,6 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
-		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
 		<sourceDirectory>${project.basedir}/src/</sourceDirectory>
 		<resources>
 			<resource>
@@ -64,7 +63,7 @@
 			<plugin>
 				<groupId>org.zkoss.maven</groupId>
 				<artifactId>zkless-engine-maven-plugin</artifactId>
-				<version>0.9.7</version>
+				<version>1.0.0</version>
 				<executions>
 					<execution>
 						<id>compile-less</id>
@@ -74,7 +73,6 @@
 						<configuration>
 							<sourceDirectory>${project.basedir}/src/archive</sourceDirectory>
 							<outputDirectory>${project.basedir}/target/classes</outputDirectory>
-							<fromZKJar>true</fromZKJar>
 						</configuration>
 					</execution>
 				</executions>
@@ -93,14 +91,6 @@
 				<artifactId>maven-bundle-plugin</artifactId>
 				<version>2.3.7</version>
 				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>bundle</goal>
-						</goals>
-					</execution>
-				</executions>
 				<configuration>
 					<excludeDependencies>*;scope=provided|compile|runtime</excludeDependencies>
 					<instructions>
