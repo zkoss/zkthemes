@@ -1,0 +1,162 @@
+.z-calendar {
+	min-width: 420px;
+	
+	&-icon {
+		font-size: 24px;
+		.size(32px, 32px);
+		padding: 0 12px;
+	}
+	&-cell {
+		font-size: @baseFontSize;
+	}
+}
+
+//Calendar wheel
+.z-datebox-popup .z-calendar {
+	border: 0px;
+	min-width: 100px;
+}
+.z-calendar-wheel {
+	&-date {
+		.boxOrientHorFlex();
+		width: 100%;
+		.borderRadius(3px);
+		margin-right: 4px;
+		position: relative;
+		.gradient('ver', '#000 0%; #333 35%; #888 50%; #333 65%; #000 100%');
+	}
+	&-cave {
+		position: relative;
+	}
+	&-body {
+		.boxOrientHor();
+		width: 100%;
+	}
+	&-line {
+		.size(100%, 0);
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #555555;
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+	}
+	&-list {
+		.applyCSS3(box-flex, 1);
+		color: #FFFFFF;
+		height: 210px;
+		margin: 0 2px;
+		.gradient('ver', '#000 0%; #444 45%; #444 55%; #000 100%');
+		position: relative;
+		overflow: hidden;
+		
+		ul {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			list-style: none;
+			z-index: 2;
+		}
+		
+		li {
+			font-size: 40px;
+			display: block;
+			height: 70px;
+			margin: 0;
+			padding: 0 5px;
+			line-height: 70px;
+			opacity: 0.3;
+			text-align: center;
+			white-space: nowrap;
+			text-shadow: 0 1px #FFFFFF;
+			list-style: none;
+		}
+	}
+	&-footer {
+		height: 50px;
+		padding: 5px 0;
+		clear: both;
+	}
+	&-button {
+		.fontStyle(@baseContentFontFamily, 30px, bold, #000000);
+		width: 45%;
+		border: 1px solid #A6A6A6;
+		.borderRadius(3px);
+		margin: 1px 1px 0 0;
+		padding: 5px 15px;
+		line-height: 28px;
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+		text-shadow: 0 1px #FFFFFF;
+		
+		&:hover,
+		&:focus {
+			border-color: #0CBCFF;
+			.boxShadow('inset 1px 1px 1px #0CBCFF, inset -1px -1px 1px #0CBCFF');
+		}
+		&:active {
+			border-color: #808080 #B6B6B6 #B6B6B6 #808080;
+			.verGradient(@baseGradientEnd, @baseGradientStart);
+			.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
+		}
+	}
+	&-left {
+		float: left;
+	}
+	&-right {
+		float: right;
+	}
+}
+li.z-calendar-wheel-list-selected {
+	opacity: 1;
+}
+//iPhone
+@media @iphone {
+	.z-calendar-wheel {
+		&-date {
+			margin-right: 2px;
+		}
+		&-list {
+			height: 120px;
+			margin: 0 1px 0 0;
+			
+			li {
+				font-size: 20px;
+				height: 40px;
+				padding: 0;
+				line-height: 40px;
+			}
+		}
+		&-button {
+			font-size: 22px;
+		}		
+		// Bug ZK-Z773
+		//&-footer {
+		//	height: 35px;
+		//}
+	}
+}
+//Android
+@media @android {
+	.z-calendar-wheel {
+		&-date {
+			margin-right: 2px;
+		}
+		&-list {
+			margin: 0 1px 0 0;
+			height: 150px;
+			
+			li {
+				font-size: 24px;
+				height: 50px;
+				padding: 0;
+				line-height: 50px;
+			}
+		}
+		&-button {
+			font-size: 26px;
+		}
+		&-footer {
+			height: 40px;
+		}
+	}
+}

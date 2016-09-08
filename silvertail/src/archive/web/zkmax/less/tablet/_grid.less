@@ -1,0 +1,41 @@
+.z-column:last-child .z-column-button {
+	right: 2px;
+}
+.z-column-button {
+	.iconFontStyle(16px, #707070);
+	display: block;
+	border-left-color: @meshTitleBorderColor;
+	right: 1px;
+}
+
+.z-detail {
+	.size(24px, 24px);
+	line-height: 24px;
+	position: relative;
+	left: -3px;
+	
+	&-icon {
+		.iconFontStyle(18px, #707070);
+		top: 2px;
+		
+		&.z-icon-angle-right {
+			top: -1px;
+		}
+	}
+}
+.z-group-icon {
+	font-size: 20px;
+	.size(24px, 24px);
+	vertical-align: top;
+	
+	&-open,
+	&-close {
+		position: absolute;
+		left: 6px;
+		top: 4px;
+	}
+	
+	&-close {
+		left: 8px;
+	}
+}

@@ -1,0 +1,209 @@
+@import "~./zul/less/_header.less";
+
+.z-timepicker {
+	display: inline-block;
+	min-height: @baseButtonHeight;
+	white-space: nowrap;
+
+	&-input {
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
+		height: @baseButtonHeight;
+		border: 1px solid @inputBorderColor;
+		border-right: 0;
+		.leftBorderRadius(@borderRadiusSmall);
+		margin: 0;
+		padding: 4px 5px;
+		line-height: @baseLineHeight;
+		background: @inputBackgroundColor;
+
+		&:focus {
+			.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
+		}
+		&[readonly] {
+			border-color: @readonlyBorderColor;
+			background: @readonlyBackgroundColor;
+		}
+		&[readonly]:focus {
+			.boxShadow('none');
+		}
+	}
+
+	&-button {
+		.iconFontStyle(@baseFontSize, @iconColor);
+		display: inline-block;
+		min-width: @baseButtonWidth;
+		height: @baseButtonHeight;
+		border: 1px solid @inputBorderColor;
+		.rightBorderRadius(@borderRadiusSmall);
+		padding: 4px;
+		line-height: @baseLineHeight;
+		background: @inputBackgroundColor;
+		text-align: left;
+		vertical-align: middle;
+		overflow: hidden;
+		cursor: pointer;
+
+		&:hover {
+			border-color: @hoverBorderColor;
+			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		}
+		&:active {
+			border-color: @activeBorderColor;
+			.verGradient(@activeGradientStart, @activeGradientEnd);
+			.boxShadow('inset 1px 1px 1px #91AAB7');
+		}
+		input[disabled] + & {
+			&:hover,
+			&:active {
+				border-color: @inputBorderColor;
+				.resetGradient();
+				.boxShadow('none');
+			}
+		}
+	}
+
+	&-disabled {
+		.opacity(@disabledOpacity);
+		& * {
+			color: @disabledColor !important;
+			background: @disabledBackgroundColor !important;
+			cursor: default !important;
+		}
+	}
+
+	&-invalid {
+		border: 1px solid @invalidBorderColor !important;
+		margin-right: -1px;
+		background: @baseBackgroundColor;
+		.boxShadow(inset -1px 0 0 @invalidBorderColor);
+	}
+
+	&-readonly:focus {
+		border-color: @readonlyBorderColor;
+		border-right-width: 0;
+		background: transparent repeat-x 0 0;
+		cursor: default;
+		.boxShadow(none);
+	}
+
+	&-rightedge {
+		border-right: 1px solid @inputBorderColor;
+		.borderRadius(@borderRadiusSmall);
+	}
+}
+
+.z-timepicker-input {
+	&[readonly] {
+		cursor: pointer;
+	}
+}
+
+.z-timepicker-button.z-timepicker-disabled {
+	display: none;
+}
+
+.z-timepicker-button {
+	text-align: center;
+}
+
+.z-timepicker-inplace .z-timepicker-input {
+	border: 0;
+	padding: 3px;
+	background: none;
+
+	&:focus {
+		.resetGradient();
+		.boxShadow('none');
+	}
+}
+.z-timepicker-inplace .z-timepicker-button {
+	visibility: hidden;
+}
+
+.z-timepicker-popup {
+	max-height: 200px;
+}
+
+.z-timepicker-option {
+	display: block;
+	padding: 3px 2px;
+	position: relative;
+	text-shadow: 0 1px #FFFFFF;
+	font-size: @fontSizeMedium;
+	font-weight: normal;
+	color: @baseTextColor;
+	text-decoration: none;
+}
+
+.z-timepicker-option:hover {
+	.verGradient(@hoverGradientStart, @hoverGradientEnd);
+}
+
+.z-timepicker-option-selected {
+	.verGradient(@selectedGradientStart, @selectedGradientEnd);
+	.z-comboitem-text {
+		color: @selectedColor;
+	}
+}
+
+.z-timepicker-option-selected:hover {
+	.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+	.z-timepicker-text {
+		color: @selectedHoverColor;
+	}
+}
+
+.z-timepicker-popup {
+	font-family: @baseContentFontFamily;
+	font-weight: normal;
+	font-size: @fontSizeMedium;
+	display: block;
+	border: 1px solid @popupBorderColor;
+	padding: 2px;
+	background: @popupBackgroundColor;
+	position: absolute;
+	overflow: auto;
+}
+
+.z-timepicker-content {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent none repeat 0 0;
+	position: relative;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+}
+
+//Shadow
+.z-timepicker-shadow {
+	.borderRadius(@borderRadiusSmall);
+	.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
+}
+
+.ie8 {
+	.z-timepicker {
+		&-button {
+			min-width: @baseButtonWidth - 10;
+			&:hover {
+				.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
+			}
+			&:active {
+				.gradientFallback(@activeGradientStart, @activeGradientEnd);
+			}
+		}
+	}
+
+	.z-timepicker-option {
+		&-selected {
+			.gradientFallback(@selectedGradientStart, @selectedGradientEnd);
+		}
+		&:hover {
+			.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
+		}
+		&-selected:hover {
+			.gradientFallback(@selectedHoverGradientStart, @selectedHoverGradientEnd);
+		}
+	}
+}
