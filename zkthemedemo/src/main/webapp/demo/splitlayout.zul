@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Splitlayout" contentType="text/html;charset=UTF-8"?>
+<!--
+splitlayout.zul
+
+	Purpose:
+		
+	Description:
+		
+	History:
+		Thu Jul 20 14:20:11 CST 2017, Created by rudyhuang
+
+Copyright (C) 2017 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+    <splitlayout vflex="1" hflex="1" collapse="before">
+        <window title="Window 1" border="normal" vflex="1">
+            Drag/drop the splitter and click the add child button, it should work fine.
+        </window>
+        <splitlayout orient="horizontal" vflex="2">
+            <window title="Window 2" border="normal" hflex="1" vflex="1">
+                Hello, World!
+            </window>
+            <splitlayout hflex="1" vflex="1" collapse="after">
+                <window title="Window 3" border="normal" hflex="1" vflex="1">
+                    Hello, World!
+                </window>
+                <window title="Window 4" border="normal" hflex="1" vflex="1">
+                    Hello, World!
+                </window>
+            </splitlayout>
+        </splitlayout>
+    </splitlayout>
+</zk>

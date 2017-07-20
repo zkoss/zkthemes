@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+separator.zul
+
+	Purpose:
+		
+	Description:
+		
+	History:
+		Thu Jul 20 16:04:42 CST 2017, Created by rudyhuang
+
+Copyright (C) 2017 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+    <borderlayout hflex="1" vflex="1">
+        <west>
+            <separator orient="vertical" bar="true" vflex="1" spacing="50px" />
+        </west>
+        <center>
+            <nodom>
+                horizontal
+                <separator orient="horizontal" bar="true" hflex="1" spacing="50px" />
+                horizontal
+            </nodom>
+        </center>
+    </borderlayout>
+</zk>

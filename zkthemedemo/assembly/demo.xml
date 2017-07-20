@@ -22,7 +22,7 @@
 			<outputDirectory>/demo</outputDirectory>
 		</file>
 		<file>
-			<source>/../${project.basedir}/COPYING</source>
+			<source>../${project.basedir}/COPYING</source>
 			<outputDirectory>/doc</outputDirectory>
 		</file>
 	</files>

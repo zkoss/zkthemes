@@ -38,7 +38,8 @@
 							<item label="Groupbox"            topic="demo/groupbox" />
 							<item label="Groupbox (3d)"       topic="demo/groupbox-3d" />
 							<item label="Caption"             topic="demo/caption" />
-							
+							<item label="Splitlayout"         topic="demo/splitlayout" />
+
 						<category value="Menu" />
 							<item label="Menubar"    topic="demo/menu" />
 							<item label="Toolbar"    topic="demo/toolbar" />
@@ -71,6 +72,7 @@
 							<item label="Combobox"              topic="demo/inputs-combobox" />
 							<item label="Chosenbox"             topic="demo/chosenbox" />
 							<item label="Checkbox"             topic="demo/checkbox" />
+							<item label="Timepicker"             topic="demo/timepicker" />
 							
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />
@@ -80,6 +82,8 @@
 							<item label="Progressmeter" topic="demo/progressmeter" />
 							<item label="Slider"        topic="demo/slider" />
 							<item label="Splitter"      topic="demo/splitter" />
+							<item label="Separator"      topic="demo/separator" />
+
 							
 						<category value="Other Issues" />
 							<item label="Notification"  topic="demo/notification" />
