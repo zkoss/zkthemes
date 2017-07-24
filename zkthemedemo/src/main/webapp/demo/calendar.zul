@@ -12,5 +12,9 @@
 			<calendar weekOfYear="true"/>
 			<datebox  weekOfYear="true"/>
 		</vlayout>
+		<vlayout>
+			<calendar showTodayLink="true"/>
+			<datebox  showTodayLink="true"/>
+		</vlayout>
 	</hlayout>
 </zk>

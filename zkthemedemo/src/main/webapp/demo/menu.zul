@@ -44,7 +44,7 @@
 				</menu>
 				<menuseparator />
 				<menu label="Help"
-					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
+					image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png" disabled="true">
 					<menupopup>
 						<menuitem label="Index"
 							onClick="alert(self.label)" />
@@ -81,7 +81,7 @@
 			<label>Vertical: Default width is 100%</label>
 			<menubar width="100%" orient="vertical">
 				<menu label="Project"
-					image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png">
+					image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png" disabled="true">
 					<menupopup>
 						<menuitem
 							image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"

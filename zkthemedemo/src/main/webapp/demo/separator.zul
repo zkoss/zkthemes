@@ -20,7 +20,7 @@ Copyright (C) 2017 Potix Corporation. All Rights Reserved.
         <center>
             <nodom>
                 horizontal
-                <separator orient="horizontal" bar="true" hflex="1" spacing="50px" />
+                <separator orient="horizontal" bar="true" spacing="50px" />
                 horizontal
             </nodom>
         </center>
