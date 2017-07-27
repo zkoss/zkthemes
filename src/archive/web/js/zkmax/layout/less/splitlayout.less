@@ -5,6 +5,7 @@
 		position: relative;
 		width: 100%;
 		overflow: hidden;
+		display: block;
 	}
 	&-cave-left,
 	&-cave-right {
@@ -17,9 +18,11 @@
 	}
 	&-splitter {
 		border: 1px solid #cfcfcf;
+		cursor: default;
 		&-horizontal {
 			display: inline-block;
 			width: 8px;
+			height: 100%;
 			max-width: 8px;
 			padding: 0;
 			margin: 0;
@@ -32,7 +35,6 @@
 			background: -ms-linear-gradient(left, #fdfdfd 0, #f1f1f1 100%);
 			background: linear-gradient(to right, #fdfdfd 0, #f1f1f1 100%);
 			overflow: hidden;
-			cursor: e-resize;
 		}
 		&-horizontal > &-button {
 			width: 8px;
@@ -49,12 +51,12 @@
 			font-size: 10px;
 			top: -21px;
 			left: 2px;
-			cursor: e-resize
 		}
 		&-horizontal &-icon.z-icon-ellipsis-v ~ &-icon.z-icon-ellipsis-v {
 			top: 39px
 		}
 		&-vertical {
+			width: 100%;
 			height: 8px;
 			max-height: 8px;
 			padding: 0;
@@ -67,7 +69,6 @@
 			background: -ms-linear-gradient(top, #fdfdfd 0, #f1f1f1 100%);
 			background: linear-gradient(to bottom, #fdfdfd 0, #f1f1f1 100%);
 			overflow: hidden;
-			cursor: s-resize;
 		}
 		&-vertical > &-button {
 			width: 30px;
@@ -84,10 +85,9 @@
 		&-vertical &-icon.z-icon-ellipsis-h {
 			top: -2px;
 			left: -16px;
-			cursor: s-resize
 		}
 		&-vertical &-icon.z-icon-ellipsis-h ~ &-icon.z-icon-ellipsis-h {
-			left: 36px
+			left: 36px;
 		}
 		&-button {
 			color: #636363;
@@ -95,16 +95,20 @@
 			border: 1px solid #cfcfcf;
 			position: relative;
 			vertical-align: top;
-			cursor: pointer
+			cursor: pointer;
 		}
 		&-button-disabled {
-			border: 0
+			border: 0;
 		}
-		&-vertical &-button-disabled {
-			cursor: s-resize
+		&-vertical&-draggable,
+		&-draggable &-icon,
+		&-draggable &-button-disabled {
+			cursor: row-resize;
 		}
-		&-horizontal &-button-disabled {
-			cursor: e-resize
+		&-horizontal&-draggable
+		&-draggable &-icon,
+		&-draggable &-button-disabled {
+			cursor: col-resize;
 		}
 		&-button:hover .z-icon-caret-up,
 		&-button:hover .z-icon-caret-down,
