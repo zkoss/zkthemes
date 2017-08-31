@@ -7,7 +7,7 @@
 	</zscript>
 
 	<grid>
-		<columns menupopup="auto">
+		<columns menupopup="auto" sizable="true">
 			<column label="Author" sortAscending="&#36;{asc}" sortDescending="&#36;{dsc}"/>
 			<column label="Title" sort="auto" />
 			<column label="Publisher"/>

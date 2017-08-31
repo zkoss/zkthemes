@@ -7,6 +7,8 @@
 				<button label="Button" />
 				<button image="/common/img/volumn.gif" />
 				<button label="Button" image="/common/img/volumn.gif" />
+				<button label="Button" iconSclass="z-icon-volume-up" />
+				<button label="Button" orient="vertical" iconSclass="z-icon-gear" />
 			</div>
 		</window>
 		<window title="Button with longer label" sclass="center-bg-win"

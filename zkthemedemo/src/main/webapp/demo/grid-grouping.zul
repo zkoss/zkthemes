@@ -3,12 +3,12 @@
 		<columns sizable="true">
 			<column label="Brand" />
 			<column label="Processor Type" width="150px"/>
-			<column label="Memory (RAM)" width="120px"/>
+			<column label="Memory (RAM)" width="150px"/>
 			<column label="Price"  width="100px"/>
-			<column label="Hard Drive Capacity" width="150px"/>
+			<column label="Hard Drive Capacity" width="180px"/>
 		</columns>
 		<rows>
-			<group label="Dell"/>
+			<group label="Dell" open="true"/>
 			<row>
 				<label style="padding-left:15px" value="Dell E4500 2.2GHz"/>
 				<label value="Intel Core 2 Duo"/>
@@ -51,4 +51,3 @@
 		</rows>
 	</grid>
 </zk>
-			

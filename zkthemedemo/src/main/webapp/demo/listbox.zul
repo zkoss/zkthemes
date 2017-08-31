@@ -101,7 +101,7 @@
 	<separator/>
 	Paging can be supported to locate at three position: Top, Bottom, and Both.
 	<radiogroup
-		onCheck="tree.pagingPosition = self.selectedItem.label;listbox.pagingPosition = self.selectedItem.label">
+		onCheck="listbox.pagingPosition = self.selectedItem.label">
 		<radio label="top" />
 		<radio label="bottom" checked="true" />
 		<radio label="both" />

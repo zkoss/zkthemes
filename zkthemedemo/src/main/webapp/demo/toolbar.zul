@@ -1,18 +1,19 @@
 <?page title="Toolbar" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox>
-		<window title="Window" border="normal" height="300px" width="300px">
+		<window title="Window" border="normal" height="300px" width="400px">
 			<toolbar>
-				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
+				<toolbarbutton label="Button 1" iconSclass="z-icon-volume-up"/>
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" image="/common/img/network.gif"/>
 				<a href="http://www.zkoss.org">ZK</a>
 			</toolbar>
 			Window Content
 		</window>
-		<panel title="Panel" border="normal" height="300px" width="300px" framable="true" >
+		<panel title="Panel" border="normal" height="300px" width="400px" framable="true" >
 			<toolbar >
 				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" image="/common/img/network.gif"/>
+				<!--<toolbarbutton label="Button 3" mode="toggle" checked="true" disabled="true"/>-->
 			</toolbar>
 			<panelchildren >
 				Panel Content
@@ -23,7 +24,7 @@
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" image="/common/img/network.gif"/>
 			</toolbar>
 		</panel>
-		<tabbox height="300px" width="350px" >
+		<tabbox height="300px" width="450px" >
 			<tabs>
 				<tab label="Tab 1"/>
 				<tab label="Tab 2"/>
@@ -44,14 +45,15 @@
 	</hbox>
 	<separator />
 	<hbox>
-		<window title="Window" border="normal" height="300px" width="300px">
+		<window title="Window" border="normal" height="300px" width="400px">
 			<toolbar>
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" />
+				<toolbarbutton label="Button 3" mode="toggle" checked="true" disabled="true" />
 			</toolbar>
 			Window Content
 		</window>
-		<panel title="Panel" border="normal" height="300px" width="300px" framable="true" >
+		<panel title="Panel" border="normal" height="300px" width="400px" framable="true" >
 			<toolbar>
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" />
@@ -65,7 +67,7 @@
 				<toolbarbutton label="Button 2" mode="toggle" checked="true" />
 			</toolbar>
 		</panel>
-		<tabbox height="300px" width="350px" >
+		<tabbox height="300px" width="450px" >
 			<tabs>
 				<tab label="Tab 1"/>
 				<tab label="Tab 2"/>

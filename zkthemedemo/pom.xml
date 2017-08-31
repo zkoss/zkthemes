@@ -83,6 +83,11 @@
 			<artifactId>silvertail</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.zkoss.theme</groupId>
+			<artifactId>zk85theme</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 		<!--  
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
@@ -249,7 +254,7 @@
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<groupId>org.apache.maven.plugins</groupId>
-				<version>2.1.1</version>
+				<version>2.6</version>
 				<configuration>
 					<warSourceDirectory>${project.basedir}/src/main/webapp/</warSourceDirectory>
 				</configuration>

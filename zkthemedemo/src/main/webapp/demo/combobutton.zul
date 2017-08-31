@@ -48,6 +48,7 @@
 						</menu>
 					</menupopup>
 				</combobutton>
+				<toolbarbutton label="ToolbarButton" iconSclass="z-icon-gear" mode="toggle" />
 			</toolbar>
 		</window>
 	</hlayout>

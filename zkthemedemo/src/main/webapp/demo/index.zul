@@ -1,4 +1,3 @@
-<?init class="org.zkoss.theme.demo.ThemeDemoInitiator" ?>
 <?page title="ZK Theme Demo" ?>
 <?style src="/base.css" ?>
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
@@ -43,6 +42,7 @@
 						<category value="Menu" />
 							<item label="Menubar"    topic="demo/menu" />
 							<item label="Toolbar"    topic="demo/toolbar" />
+							<item label="Toolbar (Vertical)"    topic="demo/toolbar-vertical" />
 							<item label="Fisheyebar" topic="demo/fisheyebar" />
 							<item label="Navbar" topic="demo/nav" />	
 							

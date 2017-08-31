@@ -10,11 +10,11 @@
 		}
 	</style>
 	<div style="position: absolute; z-index: 50">
-		<div id="loading_div" width="100px" height="100px" style="border: 1px solid black">
+		<div id="loading_div" width="300px" height="300px" style="border: 1px solid black">
 			Dummy Div
 		</div>
 		<separator />
-		<div width="100px" height="100px" style="border: 1px solid #888888">
+		<div width="300px" height="300px" style="border: 1px solid #888888">
 			Renderer Defer: <span renderdefer="500000">Done</span>
 		</div>
 		<separator />

@@ -129,11 +129,7 @@
 		<window title="Menupopup" border="normal" width="300px"
 			height="300px">
 			<div height="50px"></div>
-			<button label="Open menupopup">
-				<attribute name="onClick">
-	popuop.open(self);
-</attribute>
-			</button>
+			<button label="Open menupopup" popup="popuop"/>
 			<menupopup id="popuop">
 				<menuitem
 					image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"

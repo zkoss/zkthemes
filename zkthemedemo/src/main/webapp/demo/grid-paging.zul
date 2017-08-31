@@ -12,6 +12,11 @@
 		grid.pagingChild.mold = "os".equals(grid.pagingChild.mold) ? "default" : "os";
 		</attribute>
 	</button>
+	<button label="Change Paging Disabled">
+		<attribute name="onClick">
+		grid.pagingDisabled = !grid.pagingDisabled;
+		</attribute>
+	</button>
 	<grid id="grid" mold="paging" pageSize="3">
 		<columns>
 			<column label="Index"/>
@@ -1185,4 +1190,3 @@
 		</rows>
 	</grid>
 </zk>
-			
