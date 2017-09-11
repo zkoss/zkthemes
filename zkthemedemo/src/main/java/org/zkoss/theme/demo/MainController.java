@@ -17,12 +17,14 @@ Copyright (C) 2011 Potix Corporation. All Rights Reserved.
 package org.zkoss.theme.demo;
 
 import java.util.Comparator;
+import java.util.Map;
 import java.util.Set;
 
 import org.zkoss.lang.Strings;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.Sessions;
+import org.zkoss.zk.ui.event.HistoryPopStateEvent;
 import org.zkoss.zk.ui.event.SelectEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
@@ -73,9 +75,11 @@ public class MainController extends SelectorComposer<Component> {
 		}, true);
 
 		String topic = Executions.getCurrent().getParameter("topic");
-		comp.getDesktop().setAttribute("topic", topic);
-		 String src = Strings.isEmpty(topic) ? "/demo/hello.zul" : ("/" + topic + ".zul");
-		_inc.setSrc(src);
+		if (!Strings.isEmpty(topic))
+			topic = topic.replaceAll("\\$", "/");
+		else
+			topic = "demo/hello";
+		_inc.setSrc("/" + topic + ".zul");
 
 		String curr = Themes.getCurrentTheme();
 		_model.addToSelection(curr);
@@ -97,5 +101,11 @@ public class MainController extends SelectorComposer<Component> {
 			item.setValue(data);
 		}
 	};
-	
+	@Listen("onHistoryPopState = #main")
+	public void handleHistoryPopState(HistoryPopStateEvent event) {
+		Map<String, ?> state = (Map<String, ?>) event.getState();
+		if (state != null) {
+			_inc.setSrc("/" + state.get("url") + ".zul");
+		}
+	}
 }
