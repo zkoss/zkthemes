@@ -17,8 +17,9 @@ Copyright (C) 2010 Potix Corporation. All Rights Reserved.
 package org.zkoss.theme.breeze;
 
 import org.zkoss.zk.ui.WebApp;
+import org.zkoss.zk.ui.WebApps;
 import org.zkoss.zk.ui.util.WebAppInit;
-import org.zkoss.zul.theme.StandardThemeProvider;
+import org.zkoss.zkmax.theme.ResponsiveThemeRegistry;
 import org.zkoss.zul.theme.Themes;
 
 /**
@@ -27,17 +28,16 @@ import org.zkoss.zul.theme.Themes;
  * @author sam
  */
 public class BreezeThemeWebAppInit implements WebAppInit {
-	
-	private final static String BREEZE_NAME = "breeze";
-	private final static String BREEZE_DISPLAY = "Breeze";
-	private final static int BREEZE_PRIORITY = 500;
-	
+	private static final String THEME_NAME = "breeze";
+	private static final String THEME_DISPLAY = "Breeze";
+	private static final int THEME_PRIORITY = 700;
+
 	public void init(WebApp webapp) throws Exception {
-		if (webapp.getConfiguration().getThemeProvider() == null)
-			webapp.getConfiguration().setThemeProvider(new StandardThemeProvider());
-		
-		//Themes.register(Themes.BREEZE_NAME, Themes.BREEZE_DISPLAY, Themes.BREEZE_PRIORITY);
-		Themes.register(BREEZE_NAME, BREEZE_DISPLAY, BREEZE_PRIORITY);
+		Themes.register(THEME_NAME, THEME_DISPLAY, THEME_PRIORITY);
+		// Bug ZK-2963: register theme for tablet responsive theme
+		String edition = WebApps.getEdition();
+		if ("EE".equals(edition)) {
+			Themes.register(ResponsiveThemeRegistry.TABLET_PREFIX + THEME_NAME, THEME_DISPLAY, THEME_PRIORITY);
+		}
 	}
-	
 }

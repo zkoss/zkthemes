@@ -1,0 +1,57 @@
+// Splitter
+.z-splitter {
+	&-vertical,
+	&-horizontal {
+		overflow: visible;
+	}
+	&-icon {
+		font-size: @fontSizeLarge;
+	}
+	&-vertical {
+		> .z-splitter-button {
+			.size(32px, 16px);
+			border-width: 1px;
+			background: @baseBackgroundColor;
+			top: -4px;
+			
+			&.z-splitter-button-disabled {
+				.size(0, 0);
+			}
+		}
+		.z-splitter-icon {
+			font-size: @fontSizeLarge;
+			top: -2px;
+			
+			&.z-icon-ellipsis-horizontal {
+				display: none;
+			}
+		}
+		&.z-splitter-nosplitter .z-splitter-icon {
+			top: 0;
+		}
+	}
+	&-horizontal {
+		> .z-splitter-button {
+			.size(16px, 32px);
+			border-width: 1px;
+			background: @baseBackgroundColor;
+			left: -5px;
+			
+			&.z-splitter-button-disabled {
+				.size(0, 0);
+			}
+		}
+		.z-splitter-icon {
+			font-size: @fontSizeLarge;
+			top: 9px;
+			left: 4px;
+			
+			&.z-icon-ellipsis-vertical {
+				display: none;
+			}
+		}
+		&.z-splitter-nosplitter .z-splitter-icon {
+			left: 6px;
+		}
+	}
+}

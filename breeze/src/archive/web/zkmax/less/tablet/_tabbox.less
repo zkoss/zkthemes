@@ -1,0 +1,75 @@
+.z-tabbox-scroll {
+	.z-tabs {
+		margin: 0 24px;
+		
+		.z-tabbox-vertical &,
+		.z-tabbox-vertical-right & {
+			margin: 32px 0;
+		}
+	}
+	.z-tabbox-right,
+	.z-tabbox-left {
+		width: 32px;
+	}
+	.z-tabbox-up,
+	.z-tabbox-down {
+		.z-tabbox-vertical &,
+		.z-tabbox-vertical-right & {
+			height: 32px;
+			padding: 4px 0;
+		}
+	}
+}
+
+.z-tab {
+	padding-right: 2px;
+	
+	.z-caption-content{
+		padding: 4px 0px;
+	}
+	&-icon {
+		margin-top: -8px;
+		left: 3px;
+		
+		.z-tabbox-accordion & {
+			margin-top: -9px;
+		}
+	}
+	&-text {
+		.z-tabbox-accordion & {
+			padding: 4px 5px 4px 8px;
+		}
+	}
+	&-button {
+		font-size: @fontSizeLarge;
+		opacity: 0.5;
+		
+		.z-tabbox-vertical & {
+			left: 0;
+		}
+		.z-tabbox-vertical-right & {
+			right: 2px;
+		}
+		.z-tabbox-accordion & {
+			opacity: 0.5;
+		}
+	}
+	&-selected .z-tab-button {
+		opacity: 0.7;
+		
+		.z-tabbox-vertical &,
+		.z-tabbox-vertical-right &,
+		.z-tabbox-accordion {
+			opacity: 0.7;
+		}
+	}
+}
+.z-toolbar.z-toolbar-tabs {
+	padding: 0 4px;
+}
+.z-tab-button+.z-tab-text {
+	margin-right: 16px;
+}
+.z-tabbox-vertical .z-tab-button+.z-tab-text {
+	margin-left: 16px;
+}

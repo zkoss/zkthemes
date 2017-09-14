@@ -1,0 +1,30 @@
+@import "~./zul/less/_header.less";
+
+.z-frozen {
+	.encodeThemeURL(background-image, '~./zul/img/common/bar-bg.png');
+	overflow: hidden;
+
+	&-body {
+		overflow: hidden;
+		float: left;
+	}
+
+	&-inner {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		float: right;
+
+		div {
+			height: 100%;
+		}
+	}
+}
+
+.ie8, .ie9, .ie10 {
+	.z-frozen {
+		&-inner {
+			padding-top: 1px;
+			margin-top: -1px;
+		}
+	}
+}

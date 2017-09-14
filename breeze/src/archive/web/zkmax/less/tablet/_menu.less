@@ -1,0 +1,31 @@
+.z-menubar-icon {
+	opacity: 1;
+}
+.z-menu,
+.z-menuitem {
+	&-content {
+		min-height: 32px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		line-height: normal;
+	}
+	&-image {
+		vertical-align: middle;
+	}
+}
+img ~ .z-menu-text, img ~ .z-menuitem-text {
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.z-menu-icon,
+.z-meunitem-icon,
+.z-menupopup .z-menu-icon,
+.z-menupopup .z-menuitem-icon,
+.z-menubar-vertical .z-menu-icon {
+	top: 7px;
+}
+
+.z-menubar-horizontal .z-menuseparator {
+	line-height: 32px;
+}
