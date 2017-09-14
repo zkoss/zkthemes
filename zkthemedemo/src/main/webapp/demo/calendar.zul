@@ -13,8 +13,8 @@
 			<datebox  weekOfYear="true"/>
 		</vlayout>
 		<vlayout>
-			<calendar showTodayLink="true"/>
-			<datebox  showTodayLink="true"/>
+			<calendar showTodayLink="true" />
+			<datebox  showTodayLink="true" todayLinkLabel="Choose today"/>
 		</vlayout>
 	</hlayout>
 </zk>

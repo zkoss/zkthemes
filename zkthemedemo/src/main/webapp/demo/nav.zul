@@ -95,7 +95,12 @@
 	<window title="Navbar (horizontal)" border="normal" width="1120px" height="400px">
 		<vlayout vflex="2">
 			<label value="Horizontal" />
-			<navbar orient="horizontal" >
+			<checkbox label="Make it shorter (tablet scroll test)" checked="false">
+				<attribute name="onCheck">
+					self.nextSibling.width = self.checked ? "300px" : "";
+				</attribute>
+			</checkbox>
+			<navbar orient="horizontal">
 			    <navitem label="Home" iconSclass="z-icon-home"/>
 			    <nav label="Get Started" iconSclass="z-icon-th-list" badgeText="3">
 			        <navitem label="Step One"/>

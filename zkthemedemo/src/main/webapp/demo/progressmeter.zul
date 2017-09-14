@@ -11,7 +11,6 @@
 			<vbox>
 				Progressmeter: (You can try different value)
 				<hbox spacing="0">
-					<separator orient="vertical" spacing="7px" />
 					<progressmeter id="pm" value="50" width="200px" />
 					<separator orient="vertical" spacing="3px" />
 					<label id="lb" value="50" />/100

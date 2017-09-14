@@ -40,6 +40,9 @@
 						<menuitem label="Exit"
 							image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
 							onClick="alert(self.label)" />
+						<menuitem label="Restart"
+							iconSclass="z-icon-rotate-left"
+							onClick="alert(self.label)" />
 					</menupopup>
 				</menu>
 				<menuseparator />
@@ -151,7 +154,7 @@
 			</menupopup>
 		</window>
 		<window title="Auto drop menubar" border="normal"
-			height="300px">
+			height="300px" width="350px">
 			<menubar id="menubar" width="100%">
 				<attribute name="onCreate">
 	self.setAutodrop(true);
@@ -260,6 +263,68 @@
 							content="#color=#184dc6" />
 					</menupopup>
 				</menu>
+			</menubar>
+			<label>Vertical Menubar (mobile only)</label>
+			<menubar height="104px" width="120px" scrollable="true" orient="vertical">
+				<menu label="Project"
+					  image="/img/Centigrade-Widget-Icons/Briefcase-16x16.png">
+					<menupopup>
+						<menuitem
+								image="/img/Centigrade-Widget-Icons/BriefcaseSpark-16x16.png"
+								label="New" onClick="alert(self.label)" />
+						<menuitem
+								image="/img/Centigrade-Widget-Icons/BriefcaseOpen-16x16.png"
+								label="Open" onClick="alert(self.label)" />
+						<menuitem
+								image="/img/Centigrade-Widget-Icons/DisketteBlack-16x16.png"
+								label="Save" onClick="alert(self.label)" />
+						<menuseparator />
+						<menuitem label="Exit"
+								  image="/img/Centigrade-Widget-Icons/DoorOpen-16x16.png"
+								  onClick="alert(self.label)" />
+					</menupopup>
+				</menu>
+				<menu label="Help"
+					  image="/img/Centigrade-Widget-Icons/QuestionmarkButton-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+								  onClick="alert(self.label)" />
+						<menu label="About">
+							<menupopup>
+								<menuitem label="About ZK"
+										  onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+										  onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
+						<menu label="Long text text">
+							<menupopup>
+								<menuitem label="About ZK"
+										  onClick="alert(self.label)" />
+								<menuitem label="About Potix"
+										  onClick="alert(self.label)" />
+							</menupopup>
+						</menu>
+					</menupopup>
+				</menu>
+				<menu image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
+					<menupopup>
+						<menuitem label="Index"
+								  onClick="alert(self.label)" />
+						<menu label="Color Picker"
+							  content="#color=#184dc6" />
+					</menupopup>
+				</menu>
+				<menu label="111"/>
+				<menu label="222"/>
+				<menu label="333"/>
+				<menu label="444"/>
+				<menu label="555"/>
+				<menu label="666"/>
+				<menu label="777"/>
+				<menu label="888"/>
+				<menu label="999"/>
+				<menu label="000"/>
 			</menubar>
 		</window>
 		<window title="Colorbox in Menu" border="normal" width="350px"

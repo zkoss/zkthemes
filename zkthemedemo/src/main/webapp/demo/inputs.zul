@@ -2,7 +2,7 @@
 <zk>
 	<hbox>
 		<window title="Default Mold" sclass="center-bg-win"
-			border="normal" width="300px" height="600px">
+			border="normal" width="300px" hflex="min">
 			<vbox>
 				Combobox:
 				<combobox>
@@ -43,7 +43,7 @@
 			</vbox>
 		</window>
 		<window title="Default Mold, Disabled" sclass="center-bg-win" 
-			border="normal" width="300px" height="600px">
+			border="normal" width="300px" hflex="min">
 			<vbox>
 				Combobox:
 				<combobox disabled="true">
@@ -84,7 +84,7 @@
 			</vbox>
 		</window>
 		<window title="Default Mold, Read Only" sclass="center-bg-win"
-			border="normal" width="300px" height="600px">
+			border="normal" width="300px" hflex="min">
 			<vbox>
 				Combobox:
 				<combobox readonly="true">
@@ -125,7 +125,7 @@
 			</vbox>
 		</window>
 		<window title="Default Mold, Inplace" sclass="center-bg-win"
-			border="normal" width="300px" height="600px">
+			border="normal" width="300px" hflex="min">
 			<vbox>
 				Combobox:
 				<combobox inplace="true">

@@ -2,9 +2,7 @@
 <zk>
 	<borderlayout>
 		<center>
-			<label multiline="true">
 			Center Content
-			</label>
 		</center>
 		<west title="West" size="20%" splittable="true" collapsible="true">
 			West Content
