@@ -1,0 +1,247 @@
+.z-combobox,
+.z-bandbox,
+.z-datebox,
+.z-timebox,
+.z-spinner,
+.z-doublespinner, 
+.z-timepicker {
+	min-height: 32px;
+	
+	&-input {
+		height: 32px;
+	}
+	&-button {
+		font-size: 20px;
+		min-width: 34px;
+		height: 32px;
+		max-height: 32px;
+		padding: 8px 6px;
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+		text-align: center;
+		opacity: 0.9;
+	}
+}
+.z-timebox-button {
+	&:hover {
+		border-color: @hoverBorderColor;
+		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		
+		> i {
+			.size(auto, auto);
+			border-top-width: 0;
+			position: static;
+		}
+	}
+	&:active {
+		border-color: @activeBorderColor;
+		.verGradient(@activeGradientStart, @activeGradientEnd);
+		.boxShadow('inset 1px 1px 1px #91AAB7');
+	}
+}
+.z-spinner-button,
+.z-doublespinner-button {
+	padding: 0px;
+	border: none;
+	
+	&:hover {
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+		
+		> i {
+			border-top: none;
+			position: static;
+		}
+	}
+	&:active {
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+	}
+	> a {
+		.size(32px, 32px);
+		border: 1px solid @baseBorderColor;
+		line-height: 36px;
+		background: inherit;
+		position: static;
+		float: right;
+		
+		&:first-child {
+			border-left: none;
+			line-height: 32px;
+		}
+		&:hover,
+		&:active {
+			.verGradient(#F2F9FE, #D6F0FD);
+		}
+	}
+}
+
+.z-combobox-popup, .z-timepicker-popup {
+	padding: 0;
+	.gradient('ver', '#D3D3D3 0%; #E5E5E5 10%; #F2F2F2 25%; #FFFFFF 50%; #F2F2F2 75%; #E5E5E5 90%; #D3D3D3 100%');
+	overflow: hidden;
+}
+.z-comboitem, .z-timepicker-option {
+	font-size: @fontSizeXLarge;
+	padding: 15px 10px;
+	
+	a,
+	a:visited {
+		font-size: @fontSizeXLarge;
+	}
+	&-inner {
+		font-size: @fontSizeMedium;
+		display: block;
+		margin-top: 4px;
+	}
+	&-text {
+		display: inline-block;
+		margin-top: -8px;
+		padding-left: 6px;
+	}
+	&-image {
+		width: auto;
+		margin-top: 0px;
+		float: left;
+	}
+}
+//Timebox Wheel
+.z-timebox-popup .z-timebox-wheel-body {
+	margin: 4px 0;
+}
+.z-timebox-wheel {
+	padding: 0 2px;
+
+	&-time {
+		.boxOrientHor();
+		width: 50%;
+		.borderRadius(3px);
+		position: relative;
+		.gradient('ver', '#000 0%; #333 35%; #888 50%; #333 65%; #000 100%');
+	}
+	&-cave {
+		position: relative;
+	}
+	&-body {
+		.boxOrientHor();
+		width: 100%;
+	}
+	&-line {
+		.size(100%, 0);
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #555555;
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+	}
+	&-list {
+		.applyCSS3(box-flex, 1);
+		color: #FFFFFF;
+		height: 210px;
+		margin: 4px 0;
+		.gradient('ver', '#000 0%; #444 45%; #444 55%; #000 100%');
+		position: relative;
+		overflow: hidden;
+		
+		ul {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			list-style: none;
+			z-index: 2;
+		}
+		
+		li {
+			font-size: 40px;
+			display: block;
+			height: 70px;
+			margin: 0;
+			padding: 0 5px;
+			line-height: 70px;
+			opacity: 0.3;
+			text-align: center;
+			white-space: nowrap;
+			text-shadow: 0 1px #FFFFFF;
+			list-style: none;
+		}
+	}
+	&-footer {
+		height: 50px;
+		padding: 5px 0;
+		clear: both;
+	}
+	&-button {
+		.fontStyle(@baseContentFontFamily, 30px, bold, #000000);
+		width: 45%;
+		border: 1px solid #A6A6A6;
+		.borderRadius(3px);
+		margin: 1px 1px 0 0;
+		padding: 5px 15px;
+		line-height: 28px;
+		.verGradient(@baseGradientStart, @baseGradientEnd);
+		text-shadow: 0 1px #FFFFFF;
+		
+		&:hover,
+		&:focus {
+			border-color: #0CBCFF;
+			.boxShadow('inset 1px 1px 1px #0CBCFF, inset -1px -1px 1px #0CBCFF');
+		}
+		&:active {
+			border-color: #808080 #B6B6B6 #B6B6B6 #808080;
+			.verGradient(@baseGradientEnd, @baseGradientStart);
+			.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
+		}
+	}
+	&-left {
+		float: left;
+	}
+	&-right {
+		float: right;
+	}
+}
+li.z-timebox-wheel-list-selected {
+	opacity: 1;
+}
+//iPhone
+@media @iphone {
+	.z-timebox-wheel {
+		&-list {
+			height: 120px;
+			margin: 0 1px 0 0;
+			
+			li {
+				font-size: 20px;
+				height: 40px;
+				padding: 0;
+				line-height: 40px;
+			}
+		}
+		&-button {
+			font-size: 22px;
+		}
+		// Bug ZK-Z773
+		//&-footer {
+		//	height: 35px;
+		//}
+	}
+}
+//Android
+@media @android {
+	.z-timebox-wheel {
+		&-list {
+			margin: 0 1px 0 0;
+			height: 150px;
+			
+			li {
+				font-size: 24px;
+				height: 50px;
+				padding: 0;
+				line-height: 50px;
+			}
+		}
+		&-button {
+			font-size: 26px;
+		}
+		&-footer {
+			height: 40px;
+		}
+	}
+}

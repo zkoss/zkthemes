@@ -55,16 +55,22 @@
 		<plugins>
 			<plugin>
 				<groupId>org.zkoss.maven</groupId>
-				<artifactId>yuicompressor-maven-plugin-zk</artifactId>
-				<version>1.2.0</version>
+				<artifactId>zkless-engine-maven-plugin</artifactId>
+				<version>1.0.0</version>
 				<executions>
 					<execution>
+						<id>compile-less</id>
 						<goals>
-							<goal>compress</goal>
+							<goal>lessc</goal>
 						</goals>
+						<configuration>
+							<sourceDirectory>${project.basedir}/src/archive</sourceDirectory>
+							<outputDirectory>${project.basedir}/target/classes</outputDirectory>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
+			<!-- Compile java -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -72,19 +78,24 @@
 				<configuration>
 					<source>1.5</source>
 					<target>1.5</target>
-					<excludes>
-						<exclude>**/archive/**</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
+			<!-- Build jar -->
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.1</version>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.7</version>
+				<extensions>true</extensions>
 				<configuration>
-					<archive>
-						<manifestFile>${project.basedir}/src/archive/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
+					<excludeDependencies>*;scope=provided|compile|runtime</excludeDependencies>
+					<instructions>
+						<_include>${project.basedir}/src/archive/META-INF/MANIFEST.MF</_include>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Export-Package>*</Export-Package>
+						<Import-Package>*</Import-Package>
+					</instructions>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -119,36 +130,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.zkoss.maven</groupId>
-										<artifactId>yuicompressor-maven-plugin-zk</artifactId>
-										<versionRange>[1.2.0,)</versionRange>
-										<goals>
-											<goal>compress</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 	</build>
 
 </project>
