@@ -2,67 +2,77 @@
 <zk>
 	<tree id="tree" width="400px" rows="8">
 		<treecols sizable="true">
-			<treecol label="Name" />
-			<treecol label="Description" />
+			<treecol label="Name"/>
+			<treecol label="Description"/>
 		</treecols>
 		<treechildren>
 			<treeitem>
 				<treerow>
-					<treecell label="Item 1" />
-					<treecell label="Item 1 description" />
+					<treecell label="Item 1"/>
+					<treecell label="Item 1 description"/>
 				</treerow>
 			</treeitem>
 			<treeitem>
 				<treerow>
-					<treecell label="Item 2" />
-					<treecell label="Item 2 description" />
+					<treecell label="Item 2"/>
+					<treecell label="Item 2 description"/>
 				</treerow>
 				<treechildren>
 					<treeitem>
 						<treerow>
-							<treecell label="Item 2.1" />
+							<treecell label="Item 2.1"/>
+							<treecell/>
 						</treerow>
 						<treechildren>
 							<treeitem>
 								<treerow>
-									<treecell label="Item 2.1.1" />
+									<treecell label="Item 2.1.1"/>
+									<treecell/>
 								</treerow>
 							</treeitem>
 							<treeitem>
 								<treerow>
-									<treecell label="Item 2.1.2" />
+									<treecell label="Item 2.1.2"/>
+									<treecell/>
 								</treerow>
 							</treeitem>
 						</treechildren>
 					</treeitem>
 					<treeitem>
 						<treerow>
-							<treecell label="Item 2.2" />
+							<treecell label="Item 2.2"/>
+							<treecell/>
 						</treerow>
 						<treechildren>
 							<treeitem>
 								<treerow>
-									<treecell label="Item 2.2.1" />
+									<treecell label="Item 2.2.1"/>
+									<treecell/>
 								</treerow>
 							</treeitem>
 						</treechildren>
 					</treeitem>
 				</treechildren>
 			</treeitem>
-			<treeitem label="Item 3" />
+			<treeitem>
+				<treerow>
+					<treecell label="Item 3"/>
+					<treecell/>
+				</treerow>
+			</treeitem>
 		</treechildren>
 	</tree>
 	<separator/>
 	Tree Live Data
-	<zscript>					
-	import org.zkoss.zkdemo.userguide.BinaryTreeModel;
-	
-	BinaryTreeModel btm = new BinaryTreeModel(new ArrayList(new org.zkoss.zkdemo.userguide.BigList(1000)));
+	<zscript>
+		import org.zkoss.zkdemo.userguide.BinaryTreeModel;
+
+		BinaryTreeModel btm = new BinaryTreeModel(new ArrayList(new org.zkoss.zkdemo.userguide.BigList(1000)));
 	</zscript>
 	<tree id="tree2" model="&#36;{btm}"/>
-	
+
 	<separator/>
-	Tree with CheckMark 
+	Tree with CheckMark
 	<button label="Toggle checkmark" onClick="tree3.checkmark = !tree3.checkmark;"/>
 	<button label="Toggle multiple" onClick="tree3.multiple = !tree3.multiple;"/>
 	<tree id="tree3" fixedLayout="true" rows="5" multiple="true" checkmark="true">
@@ -86,16 +96,19 @@
 					<treeitem>
 						<treerow>
 							<treecell label="Item 2.1"/>
+							<treecell/>
 						</treerow>
 						<treechildren>
 							<treeitem>
 								<treerow>
 									<treecell label="Item 2.1.1"/>
+									<treecell/>
 								</treerow>
 							</treeitem>
 							<treeitem>
 								<treerow>
 									<treecell label="Item 2.1.2"/>
+									<treecell/>
 								</treerow>
 							</treeitem>
 						</treechildren>
@@ -108,28 +121,33 @@
 					</treeitem>
 				</treechildren>
 			</treeitem>
-			<treeitem label="Item 3"/>
+			<treeitem>
+				<treerow>
+					<treecell label="Item 3"/>
+					<treecell/>
+				</treerow>
+			</treeitem>
 		</treechildren>
 	</tree>
-	
+
 	<separator/>
 	<radiogroup
-		onCheck="tree4.pagingPosition = self.selectedItem.label;">
-		<radio label="top" />
-		<radio label="bottom" checked="true" />
-		<radio label="both" />
+			onCheck="tree4.pagingPosition = self.selectedItem.label;">
+		<radio label="top"/>
+		<radio label="bottom" checked="true"/>
+		<radio label="both"/>
 	</radiogroup>
 	<separator/>
 	Paging with Tree
 	<button label="Change Paging Mold">
 		<attribute name="onClick">
-		tree4.pagingChild.mold = "os".equals(tree4.pagingChild.mold) ? "default" : "os";
+			tree4.pagingChild.mold = "os".equals(tree4.pagingChild.mold) ? "default" : "os";
 		</attribute>
 	</button>
 	<tree id="tree4" mold="paging" pageSize="15" model="&#36;{btm}">
 		<attribute name="onCreate">
-		tree4.renderItemByPath(new int[]{1,1,1,1,1,1,1,1,1,1,1,1});
-		tree4.renderItemByPath(new int[]{0,0,0,0,0,0,0,0,0,0,0,0});
+			tree4.renderItemByPath(new int[]{1,1,1,1,1,1,1,1,1,1,1,1});
+			tree4.renderItemByPath(new int[]{0,0,0,0,0,0,0,0,0,0,0,0});
 		</attribute>
 	</tree>
 </zk>
