@@ -92,7 +92,7 @@
 			</vlayout>
 		</hlayout>
 	</window>
-	<window title="Navbar (horizontal)" border="normal" width="1120px" height="400px">
+	<window title="Navbar (horizontal)" border="normal" width="1200px" height="500px">
 		<vlayout vflex="2">
 			<label value="Horizontal" />
 			<checkbox label="Make it shorter (tablet scroll test)" checked="false">

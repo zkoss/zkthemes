@@ -15,7 +15,7 @@
 				<bandbox>
 					<bandpopup>
 						<vbox>
-							<hbox>
+							<hbox align="middle">
 								Search
 								<textbox />
 							</hbox>

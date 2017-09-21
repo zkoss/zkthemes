@@ -14,7 +14,7 @@
 			<hbox>
 				<slider orient="vertical" />
 				<slider mold="sphere" orient="vertical" />
-				<slider mold="scale" orient="vertical" height="150px" /><!-- No effect by design -->
+				<slider mold="scale" orient="vertical" /><!-- No effect by design -->
 			</hbox>
 		</window>
 		<window title="Slider: Animation"

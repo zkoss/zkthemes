@@ -22,24 +22,6 @@
 				<toolbarbutton label="Button 2" image="/common/img/network.gif"/>
 			</toolbar>
 		</panel>
-		<tabbox height="300px" width="300px" >
-			<tabs>
-				<tab label="Tab 1"/>
-				<tab label="Tab 2"/>
-			</tabs>
-			<tabpanels>
-				<tabpanel>
-					Tabpanel Content
-				</tabpanel>
-				<tabpanel>
-					Tabpanel Content
-				</tabpanel>
-			</tabpanels>
-			<toolbar orient="vertical">
-				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
-				<toolbarbutton label="Button 2" image="/common/img/network.gif"/>
-			</toolbar>
-		</tabbox>
 	</hbox>
 	<separator />
 	<hbox>
@@ -64,23 +46,5 @@
 				<toolbarbutton label="Button 2" />
 			</toolbar>
 		</panel>
-		<tabbox height="300px" width="300px" >
-			<tabs>
-				<tab label="Tab 1"/>
-				<tab label="Tab 2"/>
-			</tabs>
-			<tabpanels>
-				<tabpanel>
-					Tabpanel Content
-				</tabpanel>
-				<tabpanel>
-					Tabpanel Content
-				</tabpanel>
-			</tabpanels>
-			<toolbar orient="vertical">
-				<toolbarbutton label="Button 1" />
-				<toolbarbutton label="Button 2" />
-			</toolbar>
-		</tabbox>
 	</hbox>
 </zk>

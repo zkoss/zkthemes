@@ -19,7 +19,7 @@
 				<vbox>
 					Textbox:
 					<div><textbox value="abc" /> (Normal)</div>
-					<div><textbox multiline="true" rows="4" value="abc" /> (Multiline)</div>
+					<div><textbox multiline="true" rows="4" placeholder="placeholder" /> (Multiline)</div>
 				</vbox>
 				<separator />
 			</window>
@@ -32,7 +32,7 @@
 				<vbox>
 					For showing error box:
 					<div><textbox constraint="/^`````````$/" /> (Normal)</div>
-					<div><textbox inplace="true" constraint="/^`````````$/" /> (Inplace)</div>
+					<div><textbox inplace="true" constraint="/^`````````$/,after_end" /> (Inplace)</div>
 				</vbox>
 				<separator />
 				Note: please click on the textbox and then click somewhere else.

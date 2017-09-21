@@ -3,21 +3,28 @@
 	<hbox>
 		<groupbox width="300px" height="300px" mold="3d">
 			<caption image="/common/img/volumn.gif" label="Caption" />
-			Groupbox Content	
+			Groupbox Content
 		</groupbox>
 		<groupbox width="300px" height="300px" mold="3d">
 			<caption label="Caption" />
-			Groupbox Content	
+			Groupbox Content
+		</groupbox>
+		<groupbox width="300px" height="300px" mold="3d" title="Title">
+			Groupbox Content  (wo/ caption)
+		</groupbox>
+		<groupbox width="300px" height="300px" mold="3d" title="Title">
+			<caption label="Caption" />
+			Groupbox Content (caption + title mixed)
 		</groupbox>
 	</hbox>
 	<separator />
 	<hbox>
 		<groupbox width="300px" height="300px" mold="3d">
 			<caption image="/common/img/volumn.gif" />
-			Groupbox Content	
+			Groupbox Content
 		</groupbox>
 		<groupbox width="300px" height="300px" mold="3d">
-			Groupbox Content	
+			Groupbox Content
 		</groupbox>
 	</hbox>
 </zk>
