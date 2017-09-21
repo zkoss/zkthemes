@@ -6,7 +6,7 @@
 			<vbox>
 				<slider />
 				<slider mold="sphere" />
-				<slider mold="scale" width="150px" />
+				<slider mold="scale" />
 			</vbox>
 		</window>
 		<window title="Slider: Vertical" sclass="center-bg-win"
