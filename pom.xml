@@ -11,6 +11,7 @@
 		<url>http://mavensync.zkoss.org/maven2</url>
 	</scm>
 	<modules>
+		<module>breeze</module>
 		<module>sapphire</module>
 		<module>silvertail</module>
 	</modules>
