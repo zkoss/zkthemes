@@ -62,10 +62,10 @@
 		lb1.setRowRenderer(new LiveGroupRenderer());
 		]]></zscript>
 	 	<columns sizable="true">
-	       <column width="80px" label="From"/>
-	       <column label="Subject"/>
-	       <column width="150px" label="Received"/>
-	       <column width="50px" label="Size"/>
+	       <column hflex="min" label="From"/>
+	       <column hflex="1" label="Subject"/>
+	       <column hflex="min" label="Received"/>
+	       <column width="100px" label="Size"/>
 	     </columns>
 	</grid>
 </zk>
