@@ -1,6 +1,6 @@
 <zk>
 	<toolbar orient="vertical" width="38px" height="100%">
-		<colorbox width="22px" height="12px" color="#FFFFFF" />
+		<colorbox width="36px" height="24px" color="#FFFFFF" />
 	</toolbar>
 	
 	<zscript>
