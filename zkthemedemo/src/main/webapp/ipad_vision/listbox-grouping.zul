@@ -1,6 +1,6 @@
 <listbox >
 	<listhead menupopup="auto" >
-		<listheader label="Brand" sort="auto" />
+		<listheader label="Brand" sort="auto" width="200px" />
 		<listheader label="Processor Type" sort="auto" width="150px"/>
 		<listheader label="Memory (RAM)" sort="auto" width="120px"/>
 		<listheader label="Price" sort="auto" width="100px"/>
@@ -31,6 +31,6 @@
 		<listcell label="160GB" />
 	</listitem>
 	<listfoot >
-		<listfooter label="Summary"/>
+		<listfooter label="Summary" span="5"/>
 	</listfoot>
 </listbox>
