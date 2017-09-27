@@ -40,7 +40,7 @@
 		</tabpanels>
 	</tabbox>
 	<separator />
-	<tabbox width="450px">
+	<tabbox width="680px">
 		<tabs>
 			<tab label="Tab 1" closable="true" />
 			<tab label="Tab 2" closable="true" image="/img/live.gif">
@@ -65,7 +65,7 @@
 			</tab>
 			<tab label="Tab 5" closable="true" />
 		</tabs>
-		<toolbar width="90px">
+		<toolbar width="230px">
 			<toolbarbutton image="/img/live.gif" onClick='alert("Live")' />
 			<toolbarbutton image="/img/defender.gif" onClick='alert("Defender")' />
 			<toolbarbutton image="/img/battery.gif" onClick='alert("Battery")' />
