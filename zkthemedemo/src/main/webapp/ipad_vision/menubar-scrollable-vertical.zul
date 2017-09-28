@@ -1,4 +1,4 @@
-<menubar id="menubar" width="100%">
+<menubar id="menubar" height="100%" orient="vertical">
 	<attribute name="onCreate">
 		self.setScrollable(true);
 	</attribute>
@@ -35,7 +35,6 @@
 			</menu>
 		</menupopup>
 	</menu>
-	<menuseparator />
 	<menu
 		image="/img/Centigrade-Widget-Icons/Spyglass-16x16.png">
 		<menupopup>
@@ -45,5 +44,15 @@
 				content="#color=#184dc6" />
 		</menupopup>
 	</menu>
-	<menuitem label="000" />
+	<menuitem label="111"/>
+	<menuitem label="222"/>
+	<menuseparator />
+	<menuitem label="333"/>
+	<menuitem label="444"/>
+	<menuitem label="555"/>
+	<menuitem label="666"/>
+	<menuitem label="777"/>
+	<menuitem label="888"/>
+	<menuitem label="999"/>
+	<menuitem label="000"/>
 </menubar>
