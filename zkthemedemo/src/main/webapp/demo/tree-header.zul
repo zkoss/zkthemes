@@ -246,7 +246,7 @@
 			</zscript>
 			<tree id="tree" model="&#36;{btm}" width="400px" mold="paging" pageSize="3">
 				<treecols>
-					<treecol label="Align Left" align="left" width="100px"/>
+					<treecol label="Align Left" align="left" />
 				</treecols>
 				<treefoot>
 					<treefooter label="footer width Image" image="/img/Centigrade-Widget-Icons/BookBlue-16x16.png"
