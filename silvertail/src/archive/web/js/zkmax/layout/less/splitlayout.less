@@ -1,0 +1,152 @@
+.z-splitlayout {
+	white-space: nowrap;
+	overflow: hidden;
+	&-cave-top, &-cave-bottom {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		display: block;
+	}
+	&-cave-left,
+	&-cave-right {
+		height: 100%;
+		display: inline-block;
+		position: relative;
+		white-space: normal;
+		vertical-align: top;
+		overflow: hidden;
+	}
+	&-splitter {
+		border: 1px solid #cfcfcf;
+		cursor: default;
+		&-horizontal {
+			display: inline-block;
+			width: 8px;
+			height: 100%;
+			max-width: 8px;
+			padding: 0;
+			margin: 0;
+			border-width: 0 1px;
+			background: #fdfdfd;
+			background: -moz-linear-gradient(left, #fdfdfd 0, #f1f1f1 100%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%, #fdfdfd), color-stop(100%, #f1f1f1));
+			background: -webkit-linear-gradient(left, #fdfdfd 0, #f1f1f1 100%);
+			background: -o-linear-gradient(left, #fdfdfd 0, #f1f1f1 100%);
+			background: -ms-linear-gradient(left, #fdfdfd 0, #f1f1f1 100%);
+			background: linear-gradient(to right, #fdfdfd 0, #f1f1f1 100%);
+			overflow: hidden;
+		}
+		&-horizontal > &-button {
+			width: 8px;
+			height: 30px;
+			border-width: 1px 0;
+		}
+		&-horizontal &-icon {
+			font-size: 11px;
+			position: absolute;
+			top: 9px;
+			left: 1px
+		}
+		&-horizontal &-icon.z-icon-ellipsis-v {
+			font-size: 10px;
+			top: -21px;
+			left: 2px;
+		}
+		&-horizontal &-icon.z-icon-ellipsis-v ~ &-icon.z-icon-ellipsis-v {
+			top: 39px
+		}
+		&-vertical {
+			width: 100%;
+			height: 8px;
+			max-height: 8px;
+			padding: 0;
+			border-width: 1px 0;
+			background: #fdfdfd;
+			background: -moz-linear-gradient(top, #fdfdfd 0, #f1f1f1 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfdfd), color-stop(100%, #f1f1f1));
+			background: -webkit-linear-gradient(top, #fdfdfd 0, #f1f1f1 100%);
+			background: -o-linear-gradient(top, #fdfdfd 0, #f1f1f1 100%);
+			background: -ms-linear-gradient(top, #fdfdfd 0, #f1f1f1 100%);
+			background: linear-gradient(to bottom, #fdfdfd 0, #f1f1f1 100%);
+			overflow: hidden;
+		}
+		&-vertical > &-button {
+			width: 30px;
+			height: 8px;
+			border-width: 0 1px
+		}
+		&-vertical &-icon {
+			font-size: 10px;
+			line-height: normal;
+			position: absolute;
+			top: -3px;
+			left: 11px
+		}
+		&-vertical &-icon.z-icon-ellipsis-h {
+			top: -2px;
+			left: -16px;
+		}
+		&-vertical &-icon.z-icon-ellipsis-h ~ &-icon.z-icon-ellipsis-h {
+			left: 36px;
+		}
+		&-button {
+			color: #636363;
+			display: inline-block;
+			border: 1px solid #cfcfcf;
+			position: relative;
+			vertical-align: top;
+			cursor: pointer;
+		}
+		&-button-disabled {
+			border: 0;
+		}
+		&-vertical&-draggable,
+		&-draggable &-icon,
+		&-draggable &-button-disabled {
+			cursor: row-resize;
+		}
+		&-horizontal&-draggable
+		&-draggable &-icon,
+		&-draggable &-button-disabled {
+			cursor: col-resize;
+		}
+		&-button:hover .z-icon-caret-up,
+		&-button:hover .z-icon-caret-down,
+		&-button:hover .z-icon-caret-right,
+		&-button:hover .z-icon-caret-left {
+			opacity: 1;
+			filter: alpha(opacity=100)
+		}
+		&-icon {
+			opacity: .5;
+			filter: alpha(opacity=50)
+		}
+		&-nosplitter {
+			cursor: default
+		}
+	}
+}
+//IE8
+.ie8 {
+	.z-splitlayout {
+		&-splitter-horizontal {
+			background: #f7f7f7
+		}
+		&-splitter-horizontal &-splitter-icon.z-icon-ellipsis-v {
+			font-size: 14px
+		}
+		&-splitter-horizontal &-splitter-icon.z-icon-ellipsis-v ~ &-splitter-icon.z-icon-ellipsis-v {
+			top: 37px
+		}
+		&-splitter-vertical {
+			background: #f7f7f7
+		}
+		&-splitter-vertical &-splitter-icon.z-icon-ellipsis-h {
+			font-size: 14px;
+			top: -3px
+		}
+		&-splitter-vertical &-splitter-icon.z-icon-ellipsis-h ~ &-splitter-icon.z-icon-ellipsis-h {
+			left: 38px
+		}
+	}
+}

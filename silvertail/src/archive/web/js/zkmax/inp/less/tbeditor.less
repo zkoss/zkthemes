@@ -1,5 +1,5 @@
 /**
- * @{zprefix} v2.0.0-beta.3 - A lightweight WYSIWYG editor
+ * @{zprefix} v2.6.0 - A lightweight WYSIWYG editor
  * Default stylesheet for @{zprefix} editor
  * ------------------------
  * @link http://alex-d.github.io/@{zprefix}
@@ -8,41 +8,73 @@
  *         Twitter : @AlexandreDemode
  *         Website : alex-d.fr
  */
- 
+
 @import "~./zul/less/_header.less";
 @zprefix: z-tbeditor;
-@url: "~./js/zkmax/inp/ext";
 
-.@{zprefix}-box, .@{zprefix}-editor {
+#@{zprefix}-icons {
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  width: 0; }
+  #@{zprefix}-icons svg {
+    height: 0;
+    width: 0; }
+
+.@{zprefix}-box *,
+.@{zprefix}-box *::before,
+.@{zprefix}-box *::after {
+  box-sizing: border-box; }
+
+.@{zprefix}-box svg {
+  width: 17px;
+  height: 100%;
+  fill: #222; }
+
+.@{zprefix}-box,
+.@{zprefix}-editor {
   display: block;
   position: relative;
   border: 1px solid #DDD;
-  width: 96%;
+  width: 100%;
   min-height: 300px;
   margin: 0px auto; }
 
 .@{zprefix}-box .@{zprefix}-editor {
   margin: 0 auto; }
 
-.@{zprefix}-box.@{zprefix}-fullscreen {
-  background: #FEFEFE; }
+.@{zprefix}-editor p {
+    margin: 0 0 1em;
+}
 
-.@{zprefix}-editor, .@{zprefix}-textarea {
+.@{zprefix}-box.@{zprefix}-fullscreen {
+  background: #FEFEFE;
+  border: none !important; }
+
+.@{zprefix}-editor,
+.@{zprefix}-textarea {
   position: relative;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 1% 2%;
+  box-sizing: border-box;
+  padding: 20px;
   min-height: 300px;
   width: 100%;
   border-style: none;
   resize: none;
-  outline: none; }
+  outline: none;
+  overflow: auto; }
 
-.@{zprefix}-box-blur .@{zprefix}-editor * {
+.@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-box-blur .@{zprefix}-editor::before {
   color: transparent !important;
   text-shadow: 0 0 7px #333; }
-.@{zprefix}-box-blur .@{zprefix}-editor img {
+  @media screen and (min-width: 0 0 ) {
+    .@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-box-blur .@{zprefix}-editor::before {
+      color: rgba(200, 200, 200, 0.6) !important; } }
+  @supports (-ms-accelerator: true) {
+    .@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-box-blur .@{zprefix}-editor::before {
+      color: rgba(200, 200, 200, 0.6) !important; } }
+
+.@{zprefix}-box-blur .@{zprefix}-editor img,
+.@{zprefix}-box-blur .@{zprefix}-editor hr {
   opacity: 0.2; }
 
 .@{zprefix}-textarea {
@@ -50,59 +82,104 @@
   display: block;
   overflow: auto;
   border: none;
-  white-space: normal; }
+  white-space: normal;
+  font-size: 14px;
+  font-family: "Inconsolata", "Consolas", "Courier", "Courier New", sans-serif;
+  line-height: 18px; }
 
 .@{zprefix}-box.@{zprefix}-editor-visible .@{zprefix}-textarea {
-  position: absolute;
-  top: 37px;
   height: 1px !important;
   width: 25%;
   min-height: 0 !important;
   padding: 0 !important;
   background: none;
-  opacity: 0; }
+  opacity: 0 !important; }
 
 .@{zprefix}-box.@{zprefix}-editor-hidden .@{zprefix}-textarea {
   display: block; }
+
 .@{zprefix}-box.@{zprefix}-editor-hidden .@{zprefix}-editor {
   display: none; }
 
-.@{zprefix}-editor[contenteditable=true]:empty:before {
+.@{zprefix}-box.@{zprefix}-disabled .@{zprefix}-textarea {
+  opacity: 0.8;
+  background: none; }
+
+.@{zprefix}-editor[contenteditable=true]:empty:not(:focus)::before {
   content: attr(placeholder);
-  color: #999; }
+  color: #999;
+  pointer-events: none; }
 
 .@{zprefix}-button-pane {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   width: 100%;
+  min-height: 36px;
   background: #ecf0f1;
   border-bottom: 1px solid #d7e0e2;
   margin: 0;
-  padding: 0;
+  padding: 0 5px;
   list-style-type: none;
   line-height: 10px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
-  .@{zprefix}-button-pane li {
-    display: inline-block;
-    text-align: center;
-    overflow: hidden;
-    padding: 0 !important; }
-    .@{zprefix}-button-pane li.@{zprefix}-separator {
+  .@{zprefix}-button-pane::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #d7e0e2; }
+  .@{zprefix}-button-pane .@{zprefix}-button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+    .@{zprefix}-button-pane .@{zprefix}-button-group .@{zprefix}-fullscreen-button svg {
+      color: transparent; }
+    .@{zprefix}-button-pane .@{zprefix}-button-group:not(:empty) + .@{zprefix}-button-group::before {
+      content: " ";
+      display: block;
       width: 1px;
       background: #d7e0e2;
       margin: 0 5px;
       height: 35px; }
-  .@{zprefix}-button-pane.@{zprefix}-disable li:not(.@{zprefix}-not-disable) button:not(.@{zprefix}-active) {
+  .@{zprefix}-button-pane button {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    padding: 1px 6px !important;
+    margin-bottom: 1px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    background: none;
+    -webkit-transition: background-color 150ms, opacity 150ms;
+            transition: background-color 150ms, opacity 150ms; }
+    .@{zprefix}-button-pane button.@{zprefix}-textual-button {
+      width: auto;
+      line-height: 35px; }
+  .@{zprefix}-button-pane.@{zprefix}-disable button:not(.@{zprefix}-not-disable):not(.@{zprefix}-active),
+  .@{zprefix}-disabled .@{zprefix}-button-pane button:not(.@{zprefix}-not-disable):not(.@{zprefix}-viewHTML-button) {
     opacity: 0.2;
     cursor: default; }
-  .@{zprefix}-button-pane.@{zprefix}-disable li.@{zprefix}-separator {
+  .@{zprefix}-button-pane.@{zprefix}-disable .@{zprefix}-button-group::before,
+  .@{zprefix}-disabled .@{zprefix}-button-pane .@{zprefix}-button-group::before {
     background: #e3e9eb; }
-  .@{zprefix}-button-pane li button {
-    padding: 1px 6px !important; }
-  .@{zprefix}-button-pane:not(.@{zprefix}-disable) li button:hover, .@{zprefix}-button-pane:not(.@{zprefix}-disable) li button:focus, .@{zprefix}-button-pane li button.@{zprefix}-active, .@{zprefix}-button-pane li.@{zprefix}-not-disable button:hover, .@{zprefix}-button-pane li.@{zprefix}-not-disable button:focus {
+  .@{zprefix}-button-pane button:not(.@{zprefix}-disable):hover,
+  .@{zprefix}-button-pane button:not(.@{zprefix}-disable):focus,
+  .@{zprefix}-button-pane button.@{zprefix}-active {
     background-color: #FFF;
     outline: none; }
-  .@{zprefix}-button-pane li .@{zprefix}-open-dropdown:after {
+  .@{zprefix}-button-pane .@{zprefix}-open-dropdown::after {
     display: block;
     content: " ";
     position: absolute;
@@ -112,11 +189,16 @@
     width: 0;
     border: 3px solid transparent;
     border-top-color: #555; }
-  .@{zprefix}-button-pane .@{zprefix}-buttons-right {
-    float: right;
-    width: auto; }
-    .@{zprefix}-button-pane .@{zprefix}-buttons-right button {
-      float: left; }
+  .@{zprefix}-button-pane .@{zprefix}-open-dropdown.@{zprefix}-textual-button {
+    padding-left: 10px !important;
+    padding-right: 18px !important; }
+    .@{zprefix}-button-pane .@{zprefix}-open-dropdown.@{zprefix}-textual-button::after {
+      top: 17px;
+      right: 7px; }
+  .@{zprefix}-button-pane .@{zprefix}-right {
+    margin-left: auto; }
+    .@{zprefix}-button-pane .@{zprefix}-right::before {
+      display: none !important; }
 
 .@{zprefix}-dropdown {
   width: 200px;
@@ -125,8 +207,7 @@
   border-top: none;
   background: #FFF;
   margin-left: -1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px; }
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px; }
   .@{zprefix}-dropdown button {
     display: block;
     width: 100%;
@@ -134,25 +215,31 @@
     line-height: 35px;
     text-decoration: none;
     background: #FFF;
-    padding: 0 14px;
+    padding: 0 10px;
     color: #333 !important;
     border: none;
     cursor: pointer;
     text-align: left;
     font-size: 15px;
-    -webkit-transition: all 0.15s;
-            transition: all 0.15s; }
+    -webkit-transition: all 150ms;
+            transition: all 150ms; }
     .@{zprefix}-dropdown button:hover, .@{zprefix}-dropdown button:focus {
       background: #ecf0f1; }
+    .@{zprefix}-dropdown button svg {
+      float: left;
+      margin-right: 14px; }
 
 /* Modal box */
 .@{zprefix}-modal {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -260px;
-  width: 520px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 520px;
+  width: 100%;
   height: 350px;
+  z-index: 11;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
@@ -161,14 +248,16 @@
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -250px;
-  width: 500px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 500px;
+  width: calc(100% - 20px);
   padding-bottom: 45px;
   z-index: 1;
   background-color: #FFF;
   text-align: center;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
-          box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
   .@{zprefix}-modal-box .@{zprefix}-modal-title {
@@ -182,39 +271,39 @@
     background: #fbfcfc; }
   .@{zprefix}-modal-box .@{zprefix}-progress {
     width: 100%;
-    background: #F00;
     height: 3px;
     position: absolute;
     top: 58px; }
     .@{zprefix}-modal-box .@{zprefix}-progress .@{zprefix}-progress-bar {
       background: #2BC06A;
       height: 100%;
-      -webkit-transition: width 0.15s linear;
-              transition: width 0.15s linear; }
+      -webkit-transition: width 150ms linear;
+              transition: width 150ms linear; }
   .@{zprefix}-modal-box label {
     display: block;
     position: relative;
     margin: 15px 12px;
-    height: 27px;
-    line-height: 27px;
+    height: 29px;
+    line-height: 29px;
     overflow: hidden; }
     .@{zprefix}-modal-box label .@{zprefix}-input-infos {
       display: block;
       text-align: left;
       height: 25px;
       line-height: 25px;
-      -webkit-transition: all 0.15;
-              transition: all 0.15; }
+      -webkit-transition: all 150ms;
+              transition: all 150ms; }
       .@{zprefix}-modal-box label .@{zprefix}-input-infos span {
         display: block;
-        color: #859fa5;
+        color: #69878f;
         background-color: #fbfcfc;
         border: 1px solid #DEDEDE;
-        padding: 0 2%;
-        width: 19.5%; }
+        padding: 0 7px;
+        width: 150px; }
       .@{zprefix}-modal-box label .@{zprefix}-input-infos span.@{zprefix}-msg-error {
         color: #e74c3c; }
-    .@{zprefix}-modal-box label.@{zprefix}-input-error input, .@{zprefix}-modal-box label.@{zprefix}-input-error textarea {
+    .@{zprefix}-modal-box label.@{zprefix}-input-error input,
+    .@{zprefix}-modal-box label.@{zprefix}-input-error textarea {
       border: 1px solid #e74c3c; }
     .@{zprefix}-modal-box label.@{zprefix}-input-error .@{zprefix}-input-infos {
       margin-top: -27px; }
@@ -222,20 +311,21 @@
       position: absolute;
       top: 0;
       right: 0;
-      height: 25px;
-      line-height: 25px;
+      height: 27px;
+      line-height: 27px;
       border: 1px solid #DEDEDE;
-      background: transparent;
-      width: 72%;
-      padding: 0 2%;
-      margin: 0 0 0 23%;
-      -webkit-transition: all 0.15s;
-              transition: all 0.15s; }
+      background: #fff;
+      font-size: 14px;
+      max-width: 330px;
+      width: 70%;
+      padding: 0 7px;
+      -webkit-transition: all 150ms;
+              transition: all 150ms; }
       .@{zprefix}-modal-box label input:hover, .@{zprefix}-modal-box label input:focus {
         outline: none;
         border: 1px solid #95a5a6; }
       .@{zprefix}-modal-box label input:focus {
-        background: rgba(230, 230, 255, 0.1); }
+        background: #fbfcfc; }
   .@{zprefix}-modal-box .error {
     margin-top: 25px;
     display: block;
@@ -253,20 +343,19 @@
     margin: 0 10px;
     background-color: #333;
     border: none;
-    border-top: none;
     cursor: pointer;
     font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif;
     font-size: 16px;
-    -webkit-transition: all 0.15s;
-            transition: all 0.15s; }
+    -webkit-transition: all 150ms;
+            transition: all 150ms; }
     .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit {
       right: 110px;
-      background: #2bc069; }
+      background: #2bc06a; }
       .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit:hover, .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit:focus {
-        background: #40d47d;
+        background: #40d47e;
         outline: none; }
       .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit:active {
-        background: #25a259; }
+        background: #25a25a; }
     .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-reset {
       color: #555;
       background: #e6e6e6; }
@@ -274,14 +363,15 @@
         background: #fbfbfb;
         outline: none; }
       .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-reset:active {
-        background: #d4d4d4; }
+        background: #d5d5d5; }
 
 .@{zprefix}-overlay {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   left: 0;
-  display: none; }
+  display: none;
+  z-index: 10; }
 
 /**
  * Fullscreen
@@ -298,360 +388,204 @@ body.@{zprefix}-body-fullscreen {
   margin: 0;
   padding: 0;
   z-index: 99999; }
-  .@{zprefix}-fullscreen.@{zprefix}-box, .@{zprefix}-fullscreen .@{zprefix}-editor {
+  .@{zprefix}-fullscreen.@{zprefix}-box,
+  .@{zprefix}-fullscreen .@{zprefix}-editor {
     border: none; }
+  .@{zprefix}-fullscreen .@{zprefix}-editor,
+  .@{zprefix}-fullscreen .@{zprefix}-textarea {
+    height: calc(100% - 37px) !important;
+    overflow: auto; }
   .@{zprefix}-fullscreen .@{zprefix}-overlay {
     height: 100% !important; }
+  .@{zprefix}-fullscreen .@{zprefix}-button-group .@{zprefix}-fullscreen-button svg {
+    color: #222;
+    fill: transparent; }
 
-/*
- * Reset for resetCss option
- */
-.@{zprefix}-editor object, .@{zprefix}-editor embed, .@{zprefix}-editor video, .@{zprefix}-editor img {
-  width: auto;
-  max-width: 100%; }
-.@{zprefix}-editor video, .@{zprefix}-editor img {
-  height: auto; }
-.@{zprefix}-editor img {
-  cursor: move; }
-.@{zprefix}-editor.@{zprefix}-reset-css {
-  background: #FEFEFE !important;
-  font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.45em !important;
-  white-space: normal !important;
-  color: #333; }
-  .@{zprefix}-editor.@{zprefix}-reset-css a {
-    color: #15c !important;
-    text-decoration: underline !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css div, .@{zprefix}-editor.@{zprefix}-reset-css p, .@{zprefix}-editor.@{zprefix}-reset-css ul, .@{zprefix}-editor.@{zprefix}-reset-css ol, .@{zprefix}-editor.@{zprefix}-reset-css blockquote {
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-    background: none !important;
-    margin: 0 !important;
-    margin-bottom: 15px !important;
-    line-height: 1.4em !important;
+.@{zprefix}-editor {
+  /*
+     * lset for resetCss option
+     */ }
+  .@{zprefix}-editor object,
+  .@{zprefix}-editor embed,
+  .@{zprefix}-editor video,
+  .@{zprefix}-editor img {
+    max-width: 100%; }
+  .@{zprefix}-editor video,
+  .@{zprefix}-editor img {
+    height: auto; }
+  .@{zprefix}-editor img {
+    cursor: move; }
+  .@{zprefix}-editor.@{zprefix}-reset-css {
+    background: #FEFEFE !important;
     font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif !important;
     font-size: 14px !important;
-    border: none; }
-  .@{zprefix}-editor.@{zprefix}-reset-css iframe, .@{zprefix}-editor.@{zprefix}-reset-css object, .@{zprefix}-editor.@{zprefix}-reset-css hr {
-    margin-bottom: 15px !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css blockquote {
-    margin-left: 32px !important;
-    font-style: italic !important;
-    color: #555; }
-  .@{zprefix}-editor.@{zprefix}-reset-css ul, .@{zprefix}-editor.@{zprefix}-reset-css ol {
-    padding-left: 20px !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css ul ul, .@{zprefix}-editor.@{zprefix}-reset-css ol ol, .@{zprefix}-editor.@{zprefix}-reset-css ul ol, .@{zprefix}-editor.@{zprefix}-reset-css ol ul {
-    border: none;
-    margin: 2px !important;
-    padding: 0 !important;
-    padding-left: 24px !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css hr {
-    display: block;
-    height: 1px;
-    border: none;
-    border-top: 1px solid #CCC; }
-  .@{zprefix}-editor.@{zprefix}-reset-css h1, .@{zprefix}-editor.@{zprefix}-reset-css h2, .@{zprefix}-editor.@{zprefix}-reset-css h3, .@{zprefix}-editor.@{zprefix}-reset-css h4 {
-    color: #111;
-    background: none;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-weight: bold; }
-  .@{zprefix}-editor.@{zprefix}-reset-css h1 {
-    font-size: 32px !important;
-    line-height: 38px !important;
-    margin-bottom: 20px !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css h2 {
-    font-size: 26px !important;
-    line-height: 34px !important;
-    margin-bottom: 15px !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css h3 {
-    font-size: 22px !important;
-    line-height: 28px !important;
-    margin-bottom: 7px !important; }
-  .@{zprefix}-editor.@{zprefix}-reset-css h4 {
-    font-size: 16px !important;
-    line-height: 22px !important;
-    margin-bottom: 7px !important; }
+    line-height: 1.45em !important;
+    white-space: normal !important;
+    color: #333; }
+    .@{zprefix}-editor.@{zprefix}-reset-css a {
+      color: #15c !important;
+      text-decoration: underline !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css div,
+    .@{zprefix}-editor.@{zprefix}-reset-css p,
+    .@{zprefix}-editor.@{zprefix}-reset-css ul,
+    .@{zprefix}-editor.@{zprefix}-reset-css ol,
+    .@{zprefix}-editor.@{zprefix}-reset-css blockquote {
+      box-shadow: none !important;
+      background: none !important;
+      margin: 0 !important;
+      margin-bottom: 15px !important;
+      line-height: 1.4em !important;
+      font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif !important;
+      font-size: 14px !important;
+      border: none; }
+    .@{zprefix}-editor.@{zprefix}-reset-css iframe,
+    .@{zprefix}-editor.@{zprefix}-reset-css object,
+    .@{zprefix}-editor.@{zprefix}-reset-css hr {
+      margin-bottom: 15px !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css blockquote {
+      margin-left: 32px !important;
+      font-style: italic !important;
+      color: #555; }
+    .@{zprefix}-editor.@{zprefix}-reset-css ul,
+    .@{zprefix}-editor.@{zprefix}-reset-css ol {
+      padding-left: 20px !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css ul ul,
+    .@{zprefix}-editor.@{zprefix}-reset-css ol ol,
+    .@{zprefix}-editor.@{zprefix}-reset-css ul ol,
+    .@{zprefix}-editor.@{zprefix}-reset-css ol ul {
+      border: none;
+      margin: 2px !important;
+      padding: 0 !important;
+      padding-left: 24px !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css hr {
+      display: block;
+      height: 1px;
+      border: none;
+      border-top: 1px solid #CCC; }
+    .@{zprefix}-editor.@{zprefix}-reset-css h1,
+    .@{zprefix}-editor.@{zprefix}-reset-css h2,
+    .@{zprefix}-editor.@{zprefix}-reset-css h3,
+    .@{zprefix}-editor.@{zprefix}-reset-css h4 {
+      color: #111;
+      background: none;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-weight: bold; }
+    .@{zprefix}-editor.@{zprefix}-reset-css h1 {
+      font-size: 32px !important;
+      line-height: 38px !important;
+      margin-bottom: 20px !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css h2 {
+      font-size: 26px !important;
+      line-height: 34px !important;
+      margin-bottom: 15px !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css h3 {
+      font-size: 22px !important;
+      line-height: 28px !important;
+      margin-bottom: 7px !important; }
+    .@{zprefix}-editor.@{zprefix}-reset-css h4 {
+      font-size: 16px !important;
+      line-height: 22px !important;
+      margin-bottom: 7px !important; }
 
 /*
- * Black theme
+ * Dark theme
  */
-.@{zprefix}-black .@{zprefix}-button-pane {
+.@{zprefix}-dark .@{zprefix}-textarea {
+  background: #111;
+  color: #ddd; }
+
+.@{zprefix}-dark .@{zprefix}-box {
+  border: 1px solid #343434; }
+  .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-fullscreen {
+    background: #111; }
+  .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor::before {
+    text-shadow: 0 0 7px #ccc; }
+    @media screen and (min-width: 0 0 ) {
+      .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor::before {
+        color: rgba(20, 20, 20, 0.6) !important; } }
+    @supports (-ms-accelerator: true) {
+      .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor::before {
+        color: rgba(20, 20, 20, 0.6) !important; } }
+  .@{zprefix}-dark .@{zprefix}-box svg {
+    fill: #ecf0f1;
+    color: #ecf0f1; }
+
+.@{zprefix}-dark .@{zprefix}-button-pane {
   background-color: #222;
   border-bottom-color: #343434; }
-  .@{zprefix}-black .@{zprefix}-button-pane li.@{zprefix}-separator {
+  .@{zprefix}-dark .@{zprefix}-button-pane::after {
+    background: #343434; }
+  .@{zprefix}-dark .@{zprefix}-button-pane .@{zprefix}-button-group:not(:empty)::before {
     background-color: #343434; }
-  .@{zprefix}-black .@{zprefix}-button-pane.@{zprefix}-disable li.@{zprefix}-separator {
+  .@{zprefix}-dark .@{zprefix}-button-pane .@{zprefix}-button-group:not(:empty) .@{zprefix}-fullscreen-button svg {
+    color: transparent; }
+  .@{zprefix}-dark .@{zprefix}-button-pane.@{zprefix}-disable .@{zprefix}-button-group::before {
     background-color: #2a2a2a; }
-  .@{zprefix}-black .@{zprefix}-button-pane:not(.@{zprefix}-disable) li button:hover, .@{zprefix}-black .@{zprefix}-button-pane:not(.@{zprefix}-disable) li button:focus, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-active, .@{zprefix}-black .@{zprefix}-button-pane li.@{zprefix}-not-disable button:hover, .@{zprefix}-black .@{zprefix}-button-pane li.@{zprefix}-not-disable button:focus {
-    background-color: #555; }
-  .@{zprefix}-black .@{zprefix}-button-pane li .@{zprefix}-open-dropdown:after {
+  .@{zprefix}-dark .@{zprefix}-button-pane button:not(.@{zprefix}-disable):hover,
+  .@{zprefix}-dark .@{zprefix}-button-pane button:not(.@{zprefix}-disable):focus,
+  .@{zprefix}-dark .@{zprefix}-button-pane button.@{zprefix}-active {
+    background-color: #333; }
+  .@{zprefix}-dark .@{zprefix}-button-pane .@{zprefix}-open-dropdown::after {
     border-top-color: #fff; }
-.@{zprefix}-black .@{zprefix}-dropdown {
+
+.@{zprefix}-dark .@{zprefix}-fullscreen .@{zprefix}-button-group .@{zprefix}-fullscreen-button svg {
+  color: #ecf0f1;
+  fill: transparent; }
+
+.@{zprefix}-dark .@{zprefix}-dropdown {
   border-color: #222;
-  background: #222; }
-  .@{zprefix}-black .@{zprefix}-dropdown button {
-    background: #222;
-    color: #fff; }
-    .@{zprefix}-black .@{zprefix}-dropdown button:hover, .@{zprefix}-black .@{zprefix}-dropdown button:focus {
-      background: #555; }
-.@{zprefix}-black .@{zprefix}-modal-box {
+  background: #333;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px; }
+  .@{zprefix}-dark .@{zprefix}-dropdown button {
+    background: #333;
+    color: #fff !important; }
+    .@{zprefix}-dark .@{zprefix}-dropdown button:hover, .@{zprefix}-dark .@{zprefix}-dropdown button:focus {
+      background: #222; }
+
+.@{zprefix}-dark .@{zprefix}-modal-box {
   background-color: #222; }
-  .@{zprefix}-black .@{zprefix}-modal-box .@{zprefix}-modal-title {
+  .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-title {
     border-bottom: 1px solid #555;
     color: #fff;
     background: #3c3c3c; }
-  .@{zprefix}-black .@{zprefix}-modal-box label {
+  .@{zprefix}-dark .@{zprefix}-modal-box label {
     display: block;
     position: relative;
     margin: 15px 12px;
     height: 27px;
     line-height: 27px;
     overflow: hidden; }
-    .@{zprefix}-black .@{zprefix}-modal-box label .@{zprefix}-input-infos span {
+    .@{zprefix}-dark .@{zprefix}-modal-box label .@{zprefix}-input-infos span {
       color: #eee;
       background-color: #2f2f2f;
       border-color: #222; }
-    .@{zprefix}-black .@{zprefix}-modal-box label .@{zprefix}-input-infos span.@{zprefix}-msg-error {
+    .@{zprefix}-dark .@{zprefix}-modal-box label .@{zprefix}-input-infos span.@{zprefix}-msg-error {
       color: #e74c3c; }
-    .@{zprefix}-black .@{zprefix}-modal-box label.@{zprefix}-input-error input, .@{zprefix}-black .@{zprefix}-modal-box label.@{zprefix}-input-error textarea {
+    .@{zprefix}-dark .@{zprefix}-modal-box label.@{zprefix}-input-error input,
+    .@{zprefix}-dark .@{zprefix}-modal-box label.@{zprefix}-input-error textarea {
       border-color: #e74c3c; }
-    .@{zprefix}-black .@{zprefix}-modal-box label input {
+    .@{zprefix}-dark .@{zprefix}-modal-box label input {
       border-color: #222;
       color: #eee;
       background: #333; }
-      .@{zprefix}-black .@{zprefix}-modal-box label input:hover, .@{zprefix}-black .@{zprefix}-modal-box label input:focus {
-        border-color: #95a5a6; }
-      .@{zprefix}-black .@{zprefix}-modal-box label input:focus {
-        background-color: rgba(230, 230, 255, 0.1); }
-.@{zprefix}-black .@{zprefix}-overlay {
-  background-color: rgba(0, 0, 0, 0.5); }
+      .@{zprefix}-dark .@{zprefix}-modal-box label input:hover, .@{zprefix}-dark .@{zprefix}-modal-box label input:focus {
+        border-color: #626262; }
+      .@{zprefix}-dark .@{zprefix}-modal-box label input:focus {
+        background-color: #2f2f2f; }
+  .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit {
+    background: #1b7943; }
+    .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit:hover, .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit:focus {
+      background: #25a25a; }
+    .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit:active {
+      background: #176437; }
+  .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-reset {
+    background: #333;
+    color: #ccc; }
+    .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-reset:hover, .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-reset:focus {
+      background: #444; }
+    .@{zprefix}-dark .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-reset:active {
+      background: #111; }
 
-/*
- * Buttons icons
- */
-.@{zprefix}-button-pane li button {
-  display: block;
-  position: relative;
-  text-indent: -9999px;
-  width: 35px;
-  height: 35px;
-  overflow: hidden;
-  background: transparent url(${c:encodeURL('@{url}/icons-black.png')}) no-repeat;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 0.15s, background-image 0.15s, opacity 0.15s;
-          transition: background-color 0.15s, background-image 0.15s, opacity 0.15s;
-  /* English and others */ }
-  .@{zprefix}-button-pane li button.@{zprefix}-viewHTML-button {
-    background-position: 5px -570px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-formatting-button {
-    background-position: 5px -120px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-    background-position: 5px -45px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-italic-button, .@{zprefix}-button-pane li button.@{zprefix}-em-button {
-    background-position: 5px -270px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-    background-position: 5px -495px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-    background-position: 5px -470px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-link-button {
-    background-position: 5px -345px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-insertImage-button {
-    background-position: 5px -245px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-justifyLeft-button {
-    background-position: 5px -320px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-justifyCenter-button {
-    background-position: 5px -70px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-justifyRight-button {
-    background-position: 5px -420px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-justifyFull-button {
-    background-position: 5px 5px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-unorderedList-button {
-    background-position: 5px -520px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-orderedList-button {
-    background-position: 5px -370px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-horizontalRule-button {
-    background-position: 5px -220px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-removeformat-button {
-    background-position: 5px -395px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-fullscreen-button {
-    background-position: 5px -170px; }
-  .@{zprefix}-button-pane li button.@{zprefix}-close-button {
-    background-position: 5px -95px; }
-
-.@{zprefix}-fullscreen .@{zprefix}-button-pane li button.@{zprefix}-fullscreen-button {
-  background-position: 5px -145px; }
-
-.@{zprefix}-button-pane li:first-child button {
-  margin-left: 6px; }
-.@{zprefix}-button-pane li:last-child button {
-  margin-right: 6px; }
-
-/* French */
-.@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-  background-position: 5px -195px; }
-.@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-  background-position: 5px -445px; }
-.@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-  background-position: 5px -295px; }
-
-.@{zprefix}-black {
-  /* French */ }
-  .@{zprefix}-black .@{zprefix}-button-pane li button {
-    background-image: url(${c:encodeURL('@{url}/icons-white.png')});
-    /* English and others */ }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-viewHTML-button {
-      background-position: 5px -570px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-formatting-button {
-      background-position: 5px -120px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-      background-position: 5px -45px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-italic-button, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-em-button {
-      background-position: 5px -270px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-      background-position: 5px -495px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-      background-position: 5px -470px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-link-button {
-      background-position: 5px -345px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-insertImage-button {
-      background-position: 5px -245px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyLeft-button {
-      background-position: 5px -320px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyCenter-button {
-      background-position: 5px -70px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyRight-button {
-      background-position: 5px -420px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyFull-button {
-      background-position: 5px 5px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-unorderedList-button {
-      background-position: 5px -520px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-orderedList-button {
-      background-position: 5px -370px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-horizontalRule-button {
-      background-position: 5px -220px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-removeformat-button {
-      background-position: 5px -395px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-fullscreen-button {
-      background-position: 5px -170px; }
-    .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-close-button {
-      background-position: 5px -95px; }
-  .@{zprefix}-black .@{zprefix}-fullscreen .@{zprefix}-button-pane li button.@{zprefix}-fullscreen-button {
-    background-position: 5px -145px; }
-  .@{zprefix}-black .@{zprefix}-button-pane li:first-child button {
-    margin-left: 6px; }
-  .@{zprefix}-black .@{zprefix}-button-pane li:last-child button {
-    margin-right: 6px; }
-  .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-    background-position: 5px -195px; }
-  .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-    background-position: 5px -445px; }
-  .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-    background-position: 5px -295px; }
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 4/3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* French */
-  /* Black theme */
-  .@{zprefix}-button-pane li button {
-    -webkit-background-size: 25px 600px !important;
-            background-size: 25px 600px !important;
-    background-image: url(${c:encodeURL('@{url}/icons-black-2x.png')}) !important;
-    /* English and others */ }
-    .@{zprefix}-button-pane li button.@{zprefix}-viewHTML-button {
-      background-position: 5px -570px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-formatting-button {
-      background-position: 5px -120px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-      background-position: 5px -45px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-italic-button, .@{zprefix}-button-pane li button.@{zprefix}-em-button {
-      background-position: 5px -270px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-      background-position: 5px -495px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-      background-position: 5px -470px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-link-button {
-      background-position: 5px -345px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-insertImage-button {
-      background-position: 5px -245px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-justifyLeft-button {
-      background-position: 5px -320px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-justifyCenter-button {
-      background-position: 5px -70px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-justifyRight-button {
-      background-position: 5px -420px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-justifyFull-button {
-      background-position: 5px 5px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-unorderedList-button {
-      background-position: 5px -520px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-orderedList-button {
-      background-position: 5px -370px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-horizontalRule-button {
-      background-position: 5px -220px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-removeformat-button {
-      background-position: 5px -395px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-fullscreen-button {
-      background-position: 5px -170px; }
-    .@{zprefix}-button-pane li button.@{zprefix}-close-button {
-      background-position: 5px -95px; }
-  .@{zprefix}-fullscreen .@{zprefix}-button-pane li a.@{zprefix}-fullscreen-button {
-    background-position: 5px -145px; }
-  .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-    background-position: 5px -195px; }
-  .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-    background-position: 5px -445px; }
-  .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-    background-position: 5px -295px; }
-  .@{zprefix}-black {
-    /* French */ }
-    .@{zprefix}-black .@{zprefix}-button-pane li button {
-      -webkit-background-size: 25px 600px !important;
-              background-size: 25px 600px !important;
-      background-image: url(${c:encodeURL('@{url}/icons-white-2x.png')}) !important;
-      /* English and others */ }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-viewHTML-button {
-        background-position: 5px -570px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-formatting-button {
-        background-position: 5px -120px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-        background-position: 5px -45px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-italic-button, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-em-button {
-        background-position: 5px -270px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-        background-position: 5px -495px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-        background-position: 5px -470px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-link-button {
-        background-position: 5px -345px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-insertImage-button {
-        background-position: 5px -245px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyLeft-button {
-        background-position: 5px -320px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyCenter-button {
-        background-position: 5px -70px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyRight-button {
-        background-position: 5px -420px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-justifyFull-button {
-        background-position: 5px 5px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-unorderedList-button {
-        background-position: 5px -520px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-orderedList-button {
-        background-position: 5px -370px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-horizontalRule-button {
-        background-position: 5px -220px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-removeformat-button {
-        background-position: 5px -395px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-fullscreen-button {
-        background-position: 5px -170px; }
-      .@{zprefix}-black .@{zprefix}-button-pane li button.@{zprefix}-close-button {
-        background-position: 5px -95px; }
-    .@{zprefix}-black .@{zprefix}-fullscreen .@{zprefix}-button-pane li a.@{zprefix}-fullscreen-button {
-      background-position: 5px -145px; }
-    .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-bold-button, .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strong-button {
-      background-position: 5px -195px; }
-    .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-underline-button {
-      background-position: 5px -445px; }
-    .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-strikethrough-button, .@{zprefix}-black .@{zprefix}-fr .@{zprefix}-button-pane li button.@{zprefix}-del-button {
-      background-position: 5px -295px; } }
-
+.@{zprefix}-dark .@{zprefix}-overlay {
+  background-color: rgba(15, 15, 15, 0.6); }
