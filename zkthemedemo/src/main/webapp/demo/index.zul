@@ -3,8 +3,7 @@
 <?component name="category" extends="label" style="font-weight:bold; font-size: 0.9 em;" ?>
 <?component name="item" inline="true" macroURI="/demo/_macro/_sidebar_item.zul" ?>
 <zk>
-	<window vflex="1" apply="org.zkoss.theme.demo.MainController">
-		<borderlayout>
+		<borderlayout vflex="1" apply="org.zkoss.theme.demo.MainController">
 			<north sclass="banner" border="none" size="60px" collapsible="true" style="background: #FFFFFF;">
 				<div hflex="1" vflex="1" style="display: inline-block">
 					<separator spacing="10px" />
@@ -100,7 +99,6 @@
 				<include id="xcontents" mode="instant" style="padding:20px;" src="${contentSrc}" />
 			</center>
 		</borderlayout>
-	</window>
 
 <script if='${execution.serverName == "www.zkoss.org" or execution.serverName == "www.potix.com"}'><![CDATA[
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

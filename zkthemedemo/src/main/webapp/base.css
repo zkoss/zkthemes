@@ -1,5 +1,7 @@
 .content .item {
 	margin-left: 22px;
+}
+.content .item .z-toolbarbutton-content {
 	color: #333333;
 	font-size: 11px;
 	text-decoration:none;
@@ -24,6 +26,10 @@
 	font-family: Verdana, Arial;
 	color: #333333;
 	font-weight: bold;
+	font-size: 15px;
+}
+.sidebar-left > div {
+	padding: 4px;
 }
 .sidebar-left .content {
 	padding: 8px;
