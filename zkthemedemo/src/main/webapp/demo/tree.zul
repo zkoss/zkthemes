@@ -150,4 +150,42 @@
 			tree4.renderItemByPath(new int[]{0,0,0,0,0,0,0,0,0,0,0,0});
 		</attribute>
 	</tree>
+	<separator/>
+	Frozen
+	<tree>
+		<frozen columns="2"/>
+		<treecols>
+			<treecol label="aaa" width="300px"/>
+			<treecol label="bbb" width="400px"/>
+			<treecol label="ccc" width="500px"/>
+			<treecol label="ddd" width="600px"/>
+			<treecol label="eee" width="700px"/>
+			<treecol label="fff" width="800px"/>
+		</treecols>
+		<treechildren>
+			<treeitem>
+				<treerow><treecell>111</treecell><treecell>222</treecell><treecell>333</treecell><treecell>444</treecell><treecell>555</treecell><treecell>666</treecell></treerow>
+			</treeitem>
+			<treeitem>
+				<treerow><treecell>111</treecell><treecell>222</treecell><treecell>333</treecell><treecell>444</treecell><treecell>555</treecell><treecell>666</treecell></treerow>
+			</treeitem>
+			<treeitem>
+				<treerow><treecell><textbox/></treecell><treecell><textbox/></treecell><treecell><textbox/></treecell><treecell><textbox/></treecell><treecell><textbox/></treecell><treecell><textbox/></treecell></treerow>
+			</treeitem>
+			<treeitem>
+				<treerow><treecell>111</treecell><treecell>222</treecell><treecell>333</treecell><treecell>444</treecell><treecell>555</treecell><treecell>666</treecell></treerow>
+			</treeitem>
+			<treeitem>
+				<treerow><treecell>111</treecell><treecell>222</treecell><treecell>333</treecell><treecell>444</treecell><treecell>555</treecell><treecell>666</treecell></treerow>
+			</treeitem>
+		</treechildren>
+		<treefoot>
+			<treefooter label="Footer 1"/>
+			<treefooter label="Footer 2"/>
+			<treefooter label="Footer 3"/>
+			<treefooter label="Footer 4"/>
+			<treefooter label="Footer 5"/>
+			<treefooter label="Footer 6"/>
+		</treefoot>
+	</tree>
 </zk>

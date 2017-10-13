@@ -128,5 +128,31 @@
 			<listheader label="Col" />
 		</listhead>
 	</listbox>
+	<separator/>
+	Frozen
+	<listbox>
+		<frozen columns="2"/>
+		<listhead>
+			<listheader label="aaa" width="300px"/>
+			<listheader label="bbb" width="400px"/>
+			<listheader label="ccc" width="500px"/>
+			<listheader label="ddd" width="600px"/>
+			<listheader label="eee" width="700px"/>
+			<listheader label="fff" width="800px"/>
+		</listhead>
+		<listitem><listcell>111</listcell><listcell>222</listcell><listcell>333</listcell><listcell>444</listcell><listcell>555</listcell><listcell>666</listcell></listitem>
+		<listitem><listcell>111</listcell><listcell>222</listcell><listcell>333</listcell><listcell>444</listcell><listcell>555</listcell><listcell>666</listcell></listitem>
+		<listitem><listcell><textbox/></listcell><listcell><textbox/></listcell><listcell><textbox/></listcell><listcell><textbox/></listcell><listcell><textbox/></listcell><listcell><textbox/></listcell></listitem>
+		<listitem><listcell>111</listcell><listcell>222</listcell><listcell>333</listcell><listcell>444</listcell><listcell>555</listcell><listcell>666</listcell></listitem>
+		<listitem><listcell>111</listcell><listcell>222</listcell><listcell>333</listcell><listcell>444</listcell><listcell>555</listcell><listcell>666</listcell></listitem>
+		<listfoot>
+			<listfooter label="Footer 1"/>
+			<listfooter label="Footer 2"/>
+			<listfooter label="Footer 3"/>
+			<listfooter label="Footer 4"/>
+			<listfooter label="Footer 5"/>
+			<listfooter label="Footer 6"/>
+		</listfoot>
+	</listbox>
 </div>
 </zk>
