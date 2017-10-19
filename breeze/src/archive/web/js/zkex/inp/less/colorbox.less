@@ -150,6 +150,7 @@
 	
 	&-input {
 		.size(@baseWidth * 5, @baseButtonHeight);
+		min-height: @baseButtonHeight;
 		border: 1px solid @baseBorderColor;
 		padding: 2px;
 		background: @baseBackgroundColor;
@@ -178,6 +179,9 @@
 	&-icon {
 		color: @textColorGreen;
 	}
+
+	// new theme compatible
+	&-rgb-text, &-hsv-text {display: none;}
 }
 // Color Palette
 .z-colorpalette {
