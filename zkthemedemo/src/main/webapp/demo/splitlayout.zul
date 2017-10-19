@@ -16,13 +16,13 @@ Copyright (C) 2017 Potix Corporation. All Rights Reserved.
 <zk>
     <splitlayout vflex="1" hflex="1" collapse="before">
         <window title="Window 1" border="normal" vflex="1">
-            Drag/drop the splitter and click the add child button, it should work fine.
+            Drag/drop the splitter, it should work fine.
         </window>
-        <splitlayout orient="horizontal" vflex="2">
+        <splitlayout orient="horizontal" vflex="2" collapse="after">
             <window title="Window 2" border="normal" hflex="1" vflex="1">
                 Hello, World!
             </window>
-            <splitlayout hflex="1" vflex="1" collapse="after">
+            <splitlayout hflex="1" vflex="1">
                 <window title="Window 3" border="normal" hflex="1" vflex="1">
                     Hello, World!
                 </window>
