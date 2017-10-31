@@ -5,7 +5,7 @@
 	<depends>zul</depends>
 	<version>
 		<version-class>org.zkoss.theme.breeze.Version</version-class>
-		<version-uid>8.5.0</version-uid>
+		<version-uid>8.5.1</version-uid>
 	</version>
 	
 	<listener>
