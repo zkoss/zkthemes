@@ -249,6 +249,26 @@
 	border-width: 0 1px;
 }
 
+.z-north,
+.z-south,
+.z-west,
+.z-east {
+	&-title {
+		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, bold, @textColorGray);
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+
+.z-west,
+.z-east {
+	&-title {
+		.transform('rotate(90deg)');
+		.applyCSS3('transform-origin', 'left bottom');
+	}
+}
+
 .ie8 {
 	.z-borderlayout > div {
 		border: 0;
