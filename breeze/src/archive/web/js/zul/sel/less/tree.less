@@ -222,6 +222,17 @@
 			}
 		}
 	}
+	//partial checkbox
+	&-partial .z-treerow-checkbox {
+		background-color: @checkedColor;
+		color: @checkedBackgroundColor;
+		&:before {
+			content: "\f068";
+		 	font-family: FontAwesome;
+		 	font-size: 12px;
+			padding-left: 2px;
+		}
+	}
 	//disabled
 	&.z-treerow-disabled {
 		* {
