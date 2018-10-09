@@ -1,25 +1,33 @@
 @import "~./zul/less/_header.less";
 
 .z-signature {
+	position: relative;
+	border: 1px solid @signatureBorderColor;
+	border-radius: @signatureBorderRadius;
+
 	&-toolbar {
-		position: relative;
-		bottom: 25%;
-		font-size: 80%;
-		height: 25%;
-		width: 45%
+		position: absolute;
+		bottom: 6px;
+		right: 5px;
+
+		&-hide {
+			display: none;
+		}
 	}
 
 	&-tool-button {
-		height: 90%;
-		width: 33%;
 		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, normal, @baseTextColor);
+		min-height: @baseButtonHeight;
 		border: 1px solid @buttonBorderColor;
 		.borderRadius(@baseBorderRadius);
+		padding: 3px 12px;
+		line-height: @baseLineHeight;
 		.verGradient(@buttonGradientStart, @buttonGradientEnd);
 		text-shadow: 0 1px #FFFFFF;
 		cursor: pointer;
 		white-space: nowrap;
-	
+		margin-right: 5px;
+
 		&:hover {
 			border-color: @hoverBorderColor;
 			.verGradient(@hoverGradientStart, @hoverGradientEnd);
@@ -34,9 +42,27 @@
 			border-color: @activeBorderColor;
 			.verGradient(@activeGradientStart, @activeGradientEnd);
 		}
+		&-icon {
+			.baseIconFont();
+			font-size: 16px;
+			vertical-align: bottom;
+		}
+		&-undo:before {
+			content: "\f112";
+		}
+		&-save:before {
+			content: "\f0c7";
+		}
+		&-clear:before {
+			content: "\f00d";
+		}
+		&-label:not(:empty) {
+			margin-left: 3px;
+		}
 	}
 
 	&-canvas {
-		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
 	}
 }
