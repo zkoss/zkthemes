@@ -2,6 +2,8 @@
 
 .z-slider {
 	background-image: none;
+	overflow: hidden;
+	position: relative;
 
 	&-center {
 		.borderRadius(5px);
@@ -25,6 +27,37 @@
 		&:hover {
 			.resetGradient();
 			background: @hoverBackgroundColor;
+		}
+	}
+	
+	&-knob-area {
+		stroke: @sliderAreaBackgroundColor;
+		data-angleOffset: 0;
+	}
+
+	&-knob-inner {
+		stroke: @sliderBackgroundColor;
+		data-angleOffset: 0;
+	}
+
+	&-knob-svg {
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	&-input {
+		border: 1px solid @inputBorderColor;
+		.borderRadius(@baseBorderRadius);
+		background: @inputBackgroundColor;
+		-webkit-appearance: none;
+		text-align: center;
+		position: absolute;
+		line-height: 1.5;
+		.fontStyle(@baseContentFontFamily, @fontSizeMedium, bold, @sliderInputColor);
+
+		&:focus {
+			.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75)');
 		}
 	}
 
