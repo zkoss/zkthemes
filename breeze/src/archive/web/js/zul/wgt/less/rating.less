@@ -1,54 +1,41 @@
 @import "~./zul/less/_header.less";
 
 .z-rating {
-    list-style-type: none;
+    display: inline-block;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    display: inline-block;
+    font-size: @fontSizeLarge;
+    line-height: @fontSizeLarge;
 
-    &-horizontal {
-        float: left;
-    }
-
-    &-a {
-        text-decoration: none;
-        display: block;
+    > .z-rating-icon {
         text-align: center;
-        padding: 4px;
-        font-size: @fontSizeLarge;
         color: @ratingIcon;
+        padding: 4px;
+        width: 26px;
+        height: 26px;
+        text-decoration: none;
     }
 
-    &-hover {
+    &-vertical > a {
+        display: block;
+    }
+
+    > .z-rating-selected {
+        color: @ratingIconSelected;
+    }
+
+    > .z-rating-hover {
         color: @ratingIconHover;
         text-shadow: 0px 0px 1px @ratingIconHoverTextShadow;
     }
 
-    &-selected {
-        color: @ratingIconSelected;
-    }
-
-    &-disabled {
-        cursor: default;
-        color: @ratingIcon;
+    > .z-rating-disabled {
         opacity: 0.5;
-
-        &-selected {
-            cursor: default;
-            color: @ratingIconSelected;
-            opacity: 0.5;
-        }
+        cursor: default;
     }
 
-    &-readonly {
+    > .z-rating-readonly {
         cursor: default;
-        color: @ratingIcon;
-
-        &-selected {
-            cursor: default;
-            color: @ratingIconSelected;
-        }
     }
 
 }
