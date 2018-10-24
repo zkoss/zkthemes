@@ -1,4 +1,5 @@
 @import "~./zul/less/_header.less";
+
 .z-cropper {
 	display: inline-block;
 	position: relative;
@@ -17,6 +18,18 @@
 			}
 			&-e, &-w {
 				height: 100%;
+			}
+			&-n {
+				.transform('translateY(-50%)');
+			}
+			&-e {
+				.transform('translateX(50%)');
+			}
+			&-w {
+				.transform('translateX(-50%)');
+			}
+			&-s {
+				.transform('translateY(50%)');
 			}
 		}
 	}
@@ -48,24 +61,18 @@
 		&-n {
 			cursor: row-resize;
 			top: 0;
-			.transform('translateY(-50%)');
 		}
 		&-e {
 			cursor: col-resize;
 			right: 0;
-			.transform('translateX(50%)');
 		}
 		&-w {
 			cursor: col-resize;
 			left: 0;
-			.transform('translateX(-50%)');
-
-
 		}
 		&-s {
 			cursor: row-resize;
 			bottom: 0;
-			.transform('translateY(50%)');
 		}
 		&-ne {
 			cursor: nesw-resize;
@@ -131,6 +138,8 @@
 		position: absolute;
 		overflow: hidden;
 		display: inline-block;
+		margin: 8px 4px;
+		.userSelectNone();
 
 		> ul {
 			.verGradient(@buttonGradientStart, @buttonGradientEnd);
@@ -138,7 +147,7 @@
 			border: 1px solid @buttonBorderColor;
 			box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
 			list-style-type: none;
-			margin: 8px 4px;
+			margin: 0;
 			padding: 0;
 			overflow: hidden;
 
@@ -148,6 +157,10 @@
 				
 				&:hover {
 					.verGradient(@hoverGradientStart, @hoverGradientEnd);
+				}
+
+				&:active {
+					.verGradient(@activeGradientStart, @activeGradientEnd);
 				}
 
 				&:first-child {
