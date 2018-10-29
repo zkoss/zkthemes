@@ -3,9 +3,18 @@
 .z-barcodescanner {
 	display: inline-block;
 	background: black;
-	
+	position: relative;
+
 	&-video {
 		height: 100%;
 		width: 100%;
+	}
+
+	&-canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 	}
 }
