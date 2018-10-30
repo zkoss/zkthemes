@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+barcodescanner.zul
+
+	Purpose:
+		
+	Description:
+		
+	History:
+		Tue Oct 30 16:56:18 CST 2018, Created by rudyhuang
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+    <barcodescanner type="QR"
+                    width="500px" height="500px"
+                    continuous="false"
+                    onDetect="result.value = event.result"/>
+    <separator/>
+    QR code scan result: <label id="result"/>
+</zk>

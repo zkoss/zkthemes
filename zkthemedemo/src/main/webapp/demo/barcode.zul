@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+barcode.zul
+
+	Purpose:
+		
+	Description:
+		
+	History:
+		Tue Oct 30 16:42:11 CST 2018, Created by rudyhuang
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+    <window title="1D barcode">
+        <vlayout>
+            <barcode value="test" barWidth="3" height="50px" />
+            <barcode type="EAN13" value="7610700948859" />
+            <barcode type="EAN13" value="7610700948859"
+                     displayValue="true" fontSize="15" height="75px" />
+        </vlayout>
+    </window>
+    <window title="2D barcode">
+        <vlayout>
+            <barcode type="QR" value="https://www.zkoss.org/"
+                     height="100px" width="100px"/>
+        </vlayout>
+    </window>
+</zk>
