@@ -60,6 +60,16 @@
 	&-non-selectable > .z-orgnode {
 		cursor: default;
 	}
+
+	&-close {
+		> .z-orgchildren {
+			display: none;
+		}
+
+		> .z-orgnode:after {
+			display: none;
+		}
+	}
 }
 
 .z-orgnode {
