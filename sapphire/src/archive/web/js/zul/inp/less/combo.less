@@ -159,19 +159,10 @@
 
 		&:first-child {// up icon
 			top: -1px;
-
-			&:active {
-				top: 0;
-			}
 		}
 		&:hover {
 			border-color: @hoverBorderColor;
 			.verGradient(@hoverGradientStart, @hoverGradientEnd);
-		}
-		&:active {
-			border-color: @activeBorderColor;
-			.verGradient(@activeGradientStart, @activeGradientEnd);
-			.boxShadow('inset 1px 1px 1px #91AAB7');
 		}
 	}
 	// separator
@@ -192,25 +183,15 @@
 			position: relative;
 			top: -2px;
 		}
-		&:active {
-			bottom: -2px;
-		}
 	}
 }
 
 .z-timebox-disabled a,
 .z-spinner-disabled a,
 .z-doublespinner-disabled a {
-	&:active,
 	&:hover {
 		.resetGradient();
 		.boxShadow('none');
-	}
-	&:first-child:active { // up icon
-		top: -1px; // same as default one
-	}
-	& ~ a:active { // bottom icon
-		bottom: -1px; // same as default one
 	}
 
 	// separator
@@ -218,6 +199,27 @@
 		display: none;
 	}
 }
+// button active
+.btnActive(@parent) {
+	@selector: ~'@{parent}';
+	@{selector} {
+		&-active&-icon,
+		&-active&-icon:hover {
+			border-color: @activeBorderColor;
+			.verGradient(@activeGradientStart, @activeGradientEnd);
+			.boxShadow('inset 1px 1px 1px #91AAB7');
+		}
+		&-button > a&-active:first-child {
+			top: 0;
+		}
+		&-button > a ~ a&-active {
+			bottom: -2px;
+		}
+	}
+}
+.btnActive('.z-timebox');
+.btnActive('.z-spinner');
+.btnActive('.z-doublespinner');
 
 // Inplace editing
 .z-combobox-inplace .z-combobox-input,

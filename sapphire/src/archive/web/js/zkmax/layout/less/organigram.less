@@ -13,6 +13,7 @@
 		height: 10px;
 		position: absolute;
 		left: 50%;
+		top: 0px;
 	}
 }
 
@@ -59,6 +60,16 @@
 	&-non-selectable > .z-orgnode {
 		cursor: default;
 	}
+
+	&-close {
+		> .z-orgchildren {
+			display: none;
+		}
+
+		> .z-orgnode:after {
+			display: none;
+		}
+	}
 }
 
 .z-orgnode {
@@ -70,6 +81,7 @@
 	border: @orgnodeBorder;
 	.verGradient(@orgnodeBackgroundColorStart, @orgnodeBackgroundColorEnd);
 	color: @orgnodeColor;
+	font-family: @baseContentFontFamily;
 
 	> i[class="z-orgnode-icon"] {
 		display: none;

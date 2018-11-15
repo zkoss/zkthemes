@@ -73,7 +73,8 @@
 							<item label="Checkbox (Mold)"      topic="demo/checkbox-mold"/>
 							<item label="Timepicker"             topic="demo/timepicker" />
 							<item label="Signature"              topic="demo/signature"/>
-							
+							<item label="Barcodescanner"        topic="demo/barcodescanner" />
+
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />
 							<item label="Combobutton"   topic="demo/combobutton" />
@@ -85,7 +86,7 @@
 							<item label="Separator"      topic="demo/separator" />
 							<item label="Video"         topic="demo/video"/>
 							<item label="Camera"        topic="demo/camera"/>
-
+							<item label="Barcode"       topic="demo/barcode" />
 							
 						<category value="Other Issues" />
 							<item label="Notification"  topic="demo/notification" />
