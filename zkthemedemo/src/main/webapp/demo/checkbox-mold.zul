@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+checkbox-mold.zul
+
+        Purpose:
+                
+        Description:
+                
+        History:
+                Wed Oct 31 14:10:54 CST 2018, Created by charlesqiu
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+	<hlayout>
+		<window title="Checkbox (switch)" hflex="1">
+			<vlayout>
+				Default
+				<checkbox mold="switch" label="Checkbox"/>
+				Checked
+				<checkbox mold="switch" checked="true" label="Checkbox"/>
+				Disabled
+				<checkbox mold="switch" disabled="true" label="Checkbox"/>
+			</vlayout>
+		</window>
+		<window title="Checkbox (toggle)" hflex="1">
+			<vlayout>
+				Default
+				<checkbox mold="toggle" label="Checkbox"/>
+				Checked
+				<checkbox mold="toggle" checked="true" label="Checkbox"/>
+				Disabled
+				<checkbox mold="toggle" disabled="true" label="Checkbox"/>
+			</vlayout>
+		</window>
+	</hlayout>
+</zk>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+signature.zul
+
+        Purpose:
+                
+        Description:
+                
+        History:
+                Tue Oct 30 17:46:37 CST 2018, Created by charlesqiu
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+	<vlayout>
+		<label value="Write down your name"/>
+		<signature id="signature" width="600px" height="200px"
+				   onSave="image.content = event.media"
+				   undoLabel="Undo" saveLabel="Save" clearLabel="Clear"/>
+		<hlayout>
+			<label value="Change pen color: "/>
+			<colorbox onChange='signature.penColor = self.value'/>
+			<label value="Change background color: "/>
+			<colorbox onChange='signature.backgroundColor = self.value' color="#FFFFFF"/>
+			<label value="Change pen size: "/>
+			<intbox onChange="signature.penSize = self.value"/>
+		</hlayout>
+		<label value="Click save to see the signature"/>
+		<image id="image" width="600px" height="200px" style="border: 1px solid black;"/>
+	</vlayout>
+</zk>

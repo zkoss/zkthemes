@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+video.zul
+
+        Purpose:
+                
+        Description:
+                
+        History:
+                Wed Oct 31 11:19:58 CST 2018, Created by charlesqiu
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+	<video id="video" width="600px" src="../media/video.mp4" poster="../img/ZK-Logo.gif"
+		   controls="true"/>
+	<hlayout>
+		<button label="Play" onClick="video.play()"/>
+		<button label="Stop" onClick="video.stop()"/>
+		<button label="Pause" onClick="video.pause()"/>
+	</hlayout>
+</zk>

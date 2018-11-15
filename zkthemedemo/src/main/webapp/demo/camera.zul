@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+camera.zul
+
+        Purpose:
+                
+        Description:
+                
+        History:
+                Wed Oct 31 11:20:07 CST 2018, Created by charlesqiu
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+	<vlayout>
+		<camera id="camera" width="600px" maxsize="-1"
+				onCreate="self.requestCamera()"
+				onSnapshotUpload='image.setContent(event.getMedia())'>
+			<attribute name="onVideoUpload">
+				Filedownload.save(event.getMedia());
+			</attribute>
+		</camera>
+		<hlayout>
+			<button label="Record" onClick="camera.start()"/>
+			<button label="Pause" onClick="camera.pause()"/>
+			<button label="Stop and Download" onClick="camera.stop()"/>
+			<button label="Snapshot" onClick="camera.snapshot()"/>
+		</hlayout>
+		<image id="image"/>
+	</vlayout>
+</zk>

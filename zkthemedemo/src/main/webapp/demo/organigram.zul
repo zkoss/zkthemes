@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+organigram.zul
+
+        Purpose:
+                
+        Description:
+                
+        History:
+                Tue Oct 30 18:14:51 CST 2018, Created by charlesqiu
+
+Copyright (C) 2018 Potix Corporation. All Rights Reserved.
+
+-->
+<zk>
+	<window>
+		<label value="Selected item: "/>
+		<label id="label"/>
+		<organigram id="organigram">
+			<orgchildren>
+				<orgitem label="Item1">
+					<orgchildren>
+						<orgitem id="item2" label="Item2">
+							<orgchildren>
+								<orgitem id="item3" label="Item3"/>
+								<orgitem id="item4" label="Item4"/>
+							</orgchildren>
+						</orgitem>
+						<orgitem label="Item5">
+							<orgchildren>
+								<orgitem label="Item6"/>
+								<orgitem label="Item7"/>
+							</orgchildren>
+						</orgitem>
+					</orgchildren>
+				</orgitem>
+			</orgchildren>
+		</organigram>
+		<hlayout>
+			<button label="Item2 open" onClick="item2.open = !item2.open"/>
+			<button label="Item3 disabled" onClick="item3.disabled = !item3.disabled"/>
+			<button label="Item4 selectable" onClick="item4.selectable = !item4.selectable"/>
+			<button label="getSelectedItem">
+				<attribute name="onClick">
+					Orgitem orgitem = organigram.getSelectedItem();
+					label.setValue(orgitem == null ? "null" : orgitem.getLabel());
+				</attribute>
+			</button>
+		</hlayout>
+	</window>
+	<zscript><![CDATA[
+		DefaultTreeNode root = new DefaultTreeNode(null, new DefaultTreeNode[]{
+			new DefaultTreeNode("Item1", new DefaultTreeNode[]{
+				new DefaultTreeNode("Item2", new DefaultTreeNode[]{
+					new DefaultTreeNode("Item3"), new DefaultTreeNode("Item4")
+				}),
+				new DefaultTreeNode("Item5", new DefaultTreeNode[]{
+					new DefaultTreeNode("Item6"), new DefaultTreeNode("Item7")
+				})
+			})
+		});
+		DefaultTreeModel model = new DefaultTreeModel(root);
+		model.addOpenPaths(new int[][]{{0}, {0, 0}, {0, 1}});
+	]]></zscript>
+	<window title="Organigram with model">
+		<label value="Selected item: "/>
+		<label id="label"/>
+		<organigram model="${model}"/>
+		<hlayout>
+			<button label="Item2 open">
+				<attribute name="onClick">
+					int[] item2Path = new int[]{0, 0};
+					boolean open = model.isPathOpened(item2Path);
+					if (open)
+						model.removeOpenPath(item2Path);
+					else
+						model.addOpenPath(item2Path);
+				</attribute>
+			</button>
+			<button label="getSelectedItem">
+				<attribute name="onClick">
+					Set selection = model.getSelection();
+					label.setValue(selection.isEmpty() ? "null" : selection.toArray()[0].getData());
+				</attribute>
+			</button>
+		</hlayout>
+	</window>
+</zk>
