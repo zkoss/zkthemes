@@ -70,7 +70,8 @@
 							<item label="Chosenbox"             topic="demo/chosenbox" />
 							<item label="Checkbox"             topic="demo/checkbox" />
 							<item label="Timepicker"             topic="demo/timepicker" />
-							
+							<item label="Barcodescanner"        topic="demo/barcodescanner" />
+
 						<category value="Miscellaneous" />
 							<item label="Button"        topic="demo/button" />
 							<item label="Combobutton"   topic="demo/combobutton" />
@@ -80,6 +81,7 @@
 							<item label="Slider"        topic="demo/slider" />
 							<item label="Splitter"      topic="demo/splitter" />
 							<item label="Separator"      topic="demo/separator" />
+							<item label="Barcode"       topic="demo/barcode" />
 
 							
 						<category value="Other Issues" />
