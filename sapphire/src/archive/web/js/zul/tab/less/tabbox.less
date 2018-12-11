@@ -243,10 +243,10 @@
 					.boxShadow('-1px 0px 0 #FFFFFF');
 					border-left: 0px;
 				}
-			}			
+			}
 		}
 		
-		> .z-tabpanels {		
+		> .z-tabpanels {
 			border: 1px solid @baseBorderColor;
 			border-right: 0;
 		}
@@ -321,7 +321,6 @@
 
 	&-content {
 		display: table;
-		width: 100%;
 		border-collapse: separate;
 		border-spacing: 0;
 		border-bottom: 1px solid @baseBorderColor;
@@ -333,13 +332,14 @@
 		list-style-type: none;
 		zoom: 1;
 		clear: both;
+		white-space: nowrap;
 	}
 }
 
 .z-tab {
 	font-family: @baseTitleFontFamily;
 	font-size: @fontSizeMedium;
-	display: block;
+	display: inline-block;
 	border: 1px solid @baseBorderColor;
 	border-width: 1px 1px 0px 1px;
 	.topBorderRadius(@baseBorderRadius);
@@ -350,8 +350,7 @@
 	text-align: center;
 	position: relative;
 	cursor: pointer;
-	float: left;
-	
+	vertical-align: bottom;
 
 	&-content {
 		display: block;
