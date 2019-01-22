@@ -52,14 +52,6 @@
 			.verGradient(@activeGradientStart, @activeGradientEnd);
 			.boxShadow('inset 1px 1px 1px #91AAB7');
 		}
-		input[disabled] + & {
-			&:hover,
-			&:active {
-				border-color: @inputBorderColor;
-				.resetGradient();
-				.boxShadow('none');
-			}
-		}
 	}
 
 	&-disabled {
@@ -68,6 +60,14 @@
 			color: @disabledColor !important;
 			background: @disabledBackgroundColor !important;
 			cursor: default !important;
+		}
+	}
+	&-disabled &-button {
+		&:hover,
+		&:active {
+			border-color: @inputBorderColor;
+			.resetGradient();
+			.boxShadow('none');
 		}
 	}
 
