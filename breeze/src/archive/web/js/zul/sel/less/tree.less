@@ -54,6 +54,11 @@
 
 		.z-treefooter {
 			overflow: hidden;
+			background: @meshFootBackgroundColor;
+		}
+
+		.z-treefoot-bar {
+			background: @meshFootBackgroundColor;
 		}
 	}
 	// ZK-3138: ROD loading indicator
@@ -91,6 +96,7 @@
 		}
 	}
 	&-bar {
+		.verGradient(@baseGradientStart, @baseGradientEnd);
 		border-left: 1px solid @meshTitleBorderColor;
 		border-bottom: 1px solid @meshTitleBorderColor;
 	}

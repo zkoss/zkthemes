@@ -58,6 +58,10 @@
 			overflow: hidden;
 			background: @meshFootBackgroundColor;
 		}
+
+		.z-foot-bar {
+			background: @meshFootBackgroundColor;
+		}
 	}
 	.z-row-inner, .z-cell {
 		background: @meshBackgroundColor;
@@ -84,6 +88,7 @@
 		border-right: none;
 	}
 	&-bar {
+		.verGradient(@baseGradientStart, @baseGradientEnd);
 		border-left: 1px solid @meshTitleBorderColor;
 		border-bottom: 1px solid @meshTitleBorderColor;
 	}
