@@ -57,6 +57,10 @@
 			overflow: hidden;
 			background: @meshFootBackgroundColor;
 		}
+
+		.z-listfoot-bar {
+			background: @meshFootBackgroundColor;
+		}
 	}
 
 	.z-listcell {
@@ -84,6 +88,7 @@
 		border-right: none;
 	}
 	&-bar {
+		.verGradient(@baseGradientStart, @baseGradientEnd);
 		border-right: 1px solid @meshTitleBorderColor;
 		border-bottom: 1px solid @meshTitleBorderColor;
 	}
