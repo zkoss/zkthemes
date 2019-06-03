@@ -7,13 +7,12 @@
 
 	&-input {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
-		width: 100%;
 		height: @baseButtonHeight;
 		border: 1px solid @inputBorderColor;
-		.borderRadius(@borderRadiusSmall);
+		border-right: 0;
+		.leftBorderRadius(@borderRadiusSmall);
 		margin: 0;
 		padding: 4px 5px;
-		padding-right: @baseButtonWidth + 5;
 		line-height: @baseLineHeight;
 		background: @inputBackgroundColor;
 
@@ -29,16 +28,9 @@
 		}
 	}
 
-	&-input-full {
-		padding-right: 5px;
-	}
-
 	&-button {
 		.iconFontStyle(@baseFontSize, @iconColor);
 		display: inline-block;
-		position: relative;
-		top: 0;
-		right: @baseButtonWidth;
 		min-width: @baseButtonWidth;
 		height: @baseButtonHeight;
 		border: 1px solid @inputBorderColor;
