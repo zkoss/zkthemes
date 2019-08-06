@@ -43,6 +43,10 @@
 	</developers>
 	<properties>
 		<servlet.version>2.4</servlet.version>
+		<zk.basedir>${project.basedir}/../zk</zk.basedir>
+		<zktheme.resources>${project.basedir}/src/archive</zktheme.resources>
+		<zktheme.web.resources>${zktheme.resources}/web</zktheme.web.resources>
+		<zktheme.theme.outputDirectory>${project.build.outputDirectory}/web/${project.artifactId}</zktheme.theme.outputDirectory>
 	</properties>
 	<repositories>
 		<repository>
@@ -77,46 +81,109 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<plugins>
-			<plugin>
-				<inherited>false</inherited>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.6</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<configuration>
-							<tasks>
-								<delete
-									file="${project.build.directory}\${project.artifactId}-${project.version}.jar" />
-								<jar
-									destfile="${project.build.directory}\${project.artifactId}-${project.version}.jar" />
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<inherited>false</inherited>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<descriptors>
-								<descriptor>bundle.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+		<sourceDirectory>${project.basedir}/src/</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${zktheme.resources}</directory>
+				<excludes>
+					<exclude>web/**</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>${zktheme.web.resources}</directory>
+				<excludes>
+					<exclude>**/*.less</exclude>
+				</excludes>
+				<targetPath>${zktheme.theme.outputDirectory}</targetPath>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.6.0</version>
+					<executions>
+						<execution>
+							<id>compile-less</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<executable>${zk.basedir}/node_modules/.bin/zklessc</executable>
+						<arguments>
+							<argument>--source</argument>
+							<argument>${zktheme.web.resources}</argument>
+							<argument>--output</argument>
+							<argument>${zktheme.theme.outputDirectory}</argument>
+							<argument>--compress</argument>
+							<argument>--less-opts</argument>
+							<argument>{"javascriptEnabled": true}</argument>
+						</arguments>
+					</configuration>
+				</plugin>
+				<!-- Compile java -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<source>8</source>
+						<target>8</target>
+					</configuration>
+				</plugin>
+				<!-- Build jar -->
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>2.3.7</version>
+					<extensions>true</extensions>
+					<configuration>
+						<excludeDependencies>*;scope=provided|compile|runtime</excludeDependencies>
+						<instructions>
+							<_include>${project.basedir}/src/archive/META-INF/MANIFEST.MF</_include>
+							<Bundle-Version>${project.version}</Bundle-Version>
+							<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
+							<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+							<Export-Package>*</Export-Package>
+							<Import-Package>*</Import-Package>
+						</instructions>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>3.1.1</version>
+					<executions>
+						<execution>
+							<id>bin</id>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+							<configuration>
+								<appendAssemblyId>false</appendAssemblyId>
+								<descriptors>
+									<descriptor>assembly/zip.xml</descriptor>
+								</descriptors>
+							</configuration>
+						</execution>
+						<execution>
+							<id>bundle</id>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+							<configuration>
+								<descriptors>
+									<descriptor>assembly/bundle.xml</descriptor>
+								</descriptors>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>
