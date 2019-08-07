@@ -8,134 +8,29 @@
 		<artifactId>zktheme</artifactId>
 		<version>9.0.0-SNAPSHOT</version>
 	</parent>
-	<groupId>org.zkoss.theme</groupId>
 	<artifactId>sapphire</artifactId>
 	<packaging>jar</packaging>
-	<version>9.0.0-SNAPSHOT</version>
 	<name>ZK Sapphire Theme</name>
 	<url>http://www.zkoss.org/themes/sapphire</url>
 	<description>ZK Sapphire Theme</description>
-	<licenses>
-		<license>
-			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
-			<url>http://www.gnu.org/licenses/lgpl.html</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-			<id>zkteam</id>
-			<name>ZK Team</name>
-			<email>info@zkoss.org</email>
-			<url>http://www.zkoss.org</url>
-			<organization>Potix</organization>
-			<organizationUrl>http://www.zkoss.org</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>8</timezone>
-			<properties>
-				<picUrl>http://www.zkoss.org</picUrl>
-			</properties>
-		</developer>
-	</developers>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>zkmaven</id>
-			<name>ZK Maven Plugin Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>maven-bundle-plugin</id>
-			<name>bnd maven plugin</name>
-			<url>http://repo1.maven.org/maven2</url>
-		</pluginRepository>
-	</pluginRepositories>
+	<properties>
+		<zk.basedir>${project.parent.basedir}/../zk</zk.basedir>
+	</properties>
 	<build>
-		<sourceDirectory>${project.basedir}/src/</sourceDirectory>
-		<resources>
-			<resource>
-				<directory>${project.basedir}/src/archive</directory>
-			</resource>
-		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.zkoss.maven</groupId>
-				<artifactId>zkless-engine-maven-plugin</artifactId>
-				<version>2.0.3</version>
-				<executions>
-					<execution>
-						<id>compile-less</id>
-						<goals>
-							<goal>lessc</goal>
-						</goals>
-						<configuration>
-							<sourceDirectory>${project.basedir}/src/archive</sourceDirectory>
-							<outputDirectory>${project.basedir}/target/classes</outputDirectory>
-							<arguments>
-								<argument>--js</argument>
-							</arguments>
-						</configuration>
-					</execution>
-				</executions>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>8</source>
-					<target>8</target>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<excludeDependencies>*;scope=provided|compile|runtime</excludeDependencies>
-					<instructions>
-						<_include>${project.basedir}/src/archive/META-INF/MANIFEST.MF</_include>
-						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Export-Package>*</Export-Package>
-						<Import-Package>*</Import-Package>
-					</instructions>
-				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2</version>
-				<executions>
-					<execution>
-						<id>bin</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>assembly/zip.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-					<execution>
-						<id>bundle</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<descriptors>
-								<descriptor>assembly/bundle.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
