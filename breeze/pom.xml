@@ -12,7 +12,7 @@
 	<url>http://www.zkoss.org/themes/breeze</url>
 	<description>ZK Breeze Theme</description>
 	<properties>
-		<zk.basedir>${project.parent.basedir}/../zk</zk.basedir>
+		<nodemodules.basedir>${project.parent.basedir}</nodemodules.basedir>
 	</properties>
 	<build>
 		<plugins>
