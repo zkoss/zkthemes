@@ -43,7 +43,7 @@
 	</developers>
 	<properties>
 		<servlet.version>2.4</servlet.version>
-		<zk.basedir>${project.basedir}/../zk</zk.basedir>
+		<nodemodules.basedir>${project.basedir}</nodemodules.basedir>
 		<zktheme.resources>${project.basedir}/src/archive</zktheme.resources>
 		<zktheme.web.resources>${zktheme.resources}/web</zktheme.web.resources>
 		<zktheme.theme.outputDirectory>${project.build.outputDirectory}/web/${project.artifactId}</zktheme.theme.outputDirectory>
@@ -113,7 +113,7 @@
 						</execution>
 					</executions>
 					<configuration>
-						<executable>${zk.basedir}/node_modules/.bin/zklessc</executable>
+						<executable>${nodemodules.basedir}/node_modules/.bin/zklessc</executable>
 						<arguments>
 							<argument>--source</argument>
 							<argument>${zktheme.web.resources}</argument>
