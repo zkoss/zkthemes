@@ -125,22 +125,3 @@
 		right: 10px;
 	}
 }
-
-.ie8 {
-	.z-paging {
-		&-input {
-			vertical-align: middle;
-		}
-		&-button {
-			.gradientFallback(@baseGradientStart, @baseGradientEnd);
-			&:active {
-				.gradientFallback(@baseGradientEnd, @baseGradientStart);
-			}
-			&[disabled] {
-				&:active {
-					.gradientFallback(@baseGradientStart, @baseGradientEnd);
-				}
-			}
-		}
-	}
-}

@@ -181,17 +181,6 @@ body:not(.gecko) {
 	}
 }
 
-.ie8 { //IE8 does not support :not() pseudo class
-	.z-row {
-		&:hover {
-			> .z-row-inner,
-			> .z-cell {
-				position: relative;
-			}
-		}
-	}
-}
-
 //Group
 .z-group {
 	&-inner {
@@ -296,37 +285,6 @@ body:not(.gecko) {
 .z-cell-hidden-column, .z-row-hidden-column {
 	white-space: nowrap;
 	overflow: hidden;
-}
-
-// IE 8
-.ie8 {
-	.z-grid-header {
-		background: @meshBackgroundColorIE8;
-	}
-	.z-column {
-		position: static;
-		background: @meshBackgroundColorIE8;
-		&-hover {
-			background: @meshHoverBackgroundColorIE8;
-		}
-
-		&-button:hover {
-			background: darken(@meshHoverBackgroundColorIE8, 3%);
-		}
-	}
-	.z-row:hover {
-		> .z-row-inner,
-		> .z-cell {
-			position: static;
-			background: @meshHoverBackgroundColorIE8;
-		}
-	}
-	.z-group-inner {
-		background: @meshGroupBackgroundColorIE8;
-	}
-	.z-groupfoot-inner {
-		background: @meshGroupFooterBackgroundColorIE8;
-	}
 }
 
 .ie9 {

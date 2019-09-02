@@ -189,29 +189,3 @@
 	.borderRadius(@borderRadiusSmall);
 	.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
 }
-
-.ie8 {
-	.z-timepicker {
-		&-button {
-			min-width: @baseButtonWidth - 10;
-			&:hover {
-				.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
-			}
-			&:active {
-				.gradientFallback(@activeGradientStart, @activeGradientEnd);
-			}
-		}
-	}
-
-	.z-timepicker-option {
-		&-selected {
-			.gradientFallback(@selectedGradientStart, @selectedGradientEnd);
-		}
-		&:hover {
-			.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
-		}
-		&-selected:hover {
-			.gradientFallback(@selectedHoverGradientStart, @selectedHoverGradientEnd);
-		}
-	}
-}
