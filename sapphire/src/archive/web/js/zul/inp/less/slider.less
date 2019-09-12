@@ -132,19 +132,3 @@
 		.encodeThemeURL(background-image, '~./zul/img/slider/ticks.gif');
 	}
 }
-
-.ie8 {
-	.z-slider {
-		&-button {
-			.gradientFallback(#FFFFFF, #EFEFEF);
-			&:active {
-				.gradientFallback(@baseGradientEnd, @baseGradientStart);
-			}
-		}
-
-		&-vertical .z-slider-center, 
-		&-horizontal .z-slider-center {
-			.gradientFallback(rgb(157,157,157), rgb(215,215,215));
-		}
-	}
-}

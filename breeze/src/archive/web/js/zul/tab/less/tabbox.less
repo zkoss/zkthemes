@@ -478,33 +478,3 @@
 		}
 	}
 }
-
-.ie8 {
-	.z-tab {
-		.gradientFallback(@baseGradientStart, @baseGradientEnd);
-		&:hover {
-			.gradientFallback(@hoverGradientStart, @hoverGradientEnd);
-		}
-		&-icon {
-			margin-top: -7px;
-			font-size: 14px;
-		}
-		&-disabled {
-			&:hover {
-				.gradientFallback(@baseGradientStart, @baseGradientEnd);
-			}
-		}
-	}
-	.z-tabbox {
-		&-icon {
-			.gradientFallback(@baseGradientStart, @baseGradientEnd);
-		}
-		&-accordion {
-			.z-tabpanel > .z-tab {
-				&-selected {
-					.gradientFallback(@baseGradientStart, @baseGradientEnd);
-				}
-			}
-		}
-	}
-}
