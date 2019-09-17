@@ -113,8 +113,10 @@
 						</execution>
 					</executions>
 					<configuration>
-						<executable>${nodemodules.basedir}/node_modules/.bin/zklessc</executable>
+						<workingDirectory>${nodemodules.basedir}</workingDirectory>
+						<executable>npx</executable>
 						<arguments>
+							<argument>zklessc</argument>
 							<argument>--source</argument>
 							<argument>${zktheme.web.resources}</argument>
 							<argument>--output</argument>
