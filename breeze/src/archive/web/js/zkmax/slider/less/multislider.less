@@ -1,0 +1,195 @@
+@import "~./zul/less/_header.less";
+
+.z-multislider {
+	white-space: nowrap;
+	overflow: visible;
+	cursor: pointer;
+	font-size: @fontSizeMedium;
+
+	&-inner {
+		position: relative;
+	}
+
+	&-track {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: @multisliderTrackColor;
+	}
+
+	&-marks {
+		position: relative;
+	}
+
+	&-mark {
+		position: absolute;
+
+		&-label {
+			position: absolute;
+			font-family: @baseTitleFontFamily;
+			text-align: center;
+		}
+	}
+
+	& .z-sliderbuttons {
+		&-tooltip {
+			border-radius: @multisliderBorderRadius;
+			background: @multisliderTooltipBackgroundColor;
+		}
+	}
+
+	&:not(&-disabled) {
+		& .z-sliderbuttons {
+			&-area {
+				background-color: @multisliderAreaColor;
+			}
+
+			&-button:hover {
+				border-color: @multisliderButtonHoverBorderColor;
+				background: @multisliderButtonHoverColor;
+			}
+
+			&-button:hover .z-sliderbuttons-tooltip {
+				display: block;
+			}
+
+			&-button:focus {
+				border-color: @multisliderButtonFocusBorderColor;
+				background: @multisliderButtonFocusColor;
+			}
+
+			&-button:active {
+				border-color: @multisliderButtonActiveBorderColor;
+				background: @multisliderButtonActiveColor;
+			}
+		}
+
+		& .z-sliderbuttons:nth-last-of-type(2n-4) .z-sliderbuttons-area {
+			background-color: @multisliderAreaColor2;
+		}
+	}
+
+	&-horizontal {
+		width: 300px;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		& .z-sliderbuttons {
+			&-area {
+				height: 100%;
+				margin-left: -5px;
+			}
+
+			&-button {
+				width: 10px;
+				height: 16px;
+				margin-top: -5px;
+
+				&:nth-child(2) {
+					margin-left: -10px;
+					border-top-left-radius: 16px;
+					border-bottom-left-radius: 16px;
+				}
+
+				&:last-child {
+					border-top-right-radius: 16px;
+					border-bottom-right-radius: 16px;
+				}
+			}
+
+			&-tooltip {
+				top: -25px;
+				left: 4px;
+				transform: translateX(-50%);
+				padding: 2px 4px;
+			}
+		}
+	}
+
+	&-horizontal &-inner {
+		width: 100%;
+		left: -10px;
+		margin: 40px 12px 30px;
+		height: @multisliderInnerSize;
+	}
+
+	&-horizontal &-mark-label {
+		top: 17px;
+		transform: translateX(-50%);
+	}
+
+	&-vertical {
+		height: 300px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		& .z-sliderbuttons {
+			&-area {
+				margin-top: -5px;
+				width: 100%;
+			}
+
+			&-button {
+				width: 16px;
+				height: 10px;
+				margin-left: -5px;
+
+				&:nth-child(2) {
+					margin-top: -10px;
+					border-top-left-radius: 16px;
+					border-top-right-radius: 16px;
+				}
+
+				&:last-child {
+					border-bottom-left-radius: 16px;
+					border-bottom-right-radius: 16px;
+				}
+			}
+
+			&-tooltip {
+				top: 3px;
+				left: 25px;
+				transform: translateY(-50%);
+				padding: 4px 2px;
+			}
+		}
+	}
+
+	&-vertical &-inner {
+		height: 100%;
+		top: -10px;
+		margin: 12px 40px 12px 12px;
+		width: @multisliderInnerSize;
+	}
+
+	&-vertical &-mark-label {
+		left: 20px;
+		transform: translateY(-50%);
+	}
+
+	&-disabled &-track {
+		background-color: @multisliderDisabledTrackColor;
+	}
+
+	&-disabled {
+		cursor: default;
+		& .z-sliderbuttons {
+			&-area {
+				background-color: @multisliderDisabledAreaColor;
+			}
+
+			&-button {
+				border-color: @multisliderDisabledButtonBorderColor;
+				background: @multisliderDisabledButtonColor;
+			}
+
+			&-tooltip {
+				background-color: @multisliderDisabledTooltipBackgroundColor;
+			}
+
+			&:nth-last-of-type(2n-4) .z-sliderbuttons-area {
+				background-color: @multisliderDisabledAreaColor2;
+			}
+		}
+	}
+}
