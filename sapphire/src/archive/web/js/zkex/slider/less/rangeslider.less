@@ -1,0 +1,182 @@
+@import "~./zul/less/_header.less";
+.z-rangeslider {
+	white-space: nowrap;
+	overflow: visible;
+	cursor: pointer;
+	font-size: @fontSizeMedium;
+
+	&-inner {
+		position: relative;
+	}
+	&-track {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: @rangesliderBorderRadius;
+		background-color: @rangesliderTrackColor;
+	}
+
+	&-marks {
+		position: relative;
+	}
+
+	&-mark {
+		position: absolute;
+		&-dot {
+			position: absolute;
+			width: @rangesliderDotSize;
+			height: @rangesliderDotSize;
+			background-color: @rangesliderEmptyBackgroundColor;
+			border: @rangesliderDotBorderWidth solid @rangesliderTrackColor;
+			border-radius: 50%;
+		}
+		&-active &-dot {
+			border-color: @rangesliderAreaColor;
+			z-index: 1;
+		}
+		&-label {
+			position: absolute;
+			font-family: @baseTitleFontFamily;
+			color: @rangesliderLabelColor;
+			text-align: center;
+		}
+	}
+
+	& .z-sliderbuttons {
+		&-button {
+			width: @rangesliderButtonSize;
+			height: @rangesliderButtonSize;
+			border-radius: 50%;
+			z-index: 2;
+		}
+
+		&-tooltip {
+			border-radius: @rangesliderBorderRadius;
+			background: @rangesliderTooltipBackgroundColor;
+		}
+
+		&-area {
+			background-color: @rangesliderAreaColor;
+		}
+	}
+
+	&-horizontal {
+		width: 300px;
+		& .z-sliderbuttons {
+			&-area {
+				margin-left: -8px;
+				height: 100%;
+			}
+			&-button {
+				margin-top: -5px;
+				margin-left: -8px;
+				top: 0;
+			}
+			&-tooltip {
+				top: -25px;
+				left: 7px;
+				transform: translateX(-50%);
+				padding: 2px 4px;
+			}
+		}
+	}
+	&-horizontal &-inner {
+		margin: 40px 12px 30px;
+		height: @rangesliderInnerSize;
+	}
+	&-horizontal &-mark-dot {
+		top: -3px;
+		transform: translateX(-50%);
+	}
+
+	&-horizontal &-mark-label {
+		top: 17px;
+		transform: translateX(-50%);
+	}
+
+	&-vertical {
+		height: 300px;
+		& .z-sliderbuttons {
+			&-area {
+				margin-top: -8px;
+				width: 100%;
+			}
+			&-button {
+				margin-top: -8px;
+				margin-left: -5px;
+				left: 0;
+			}
+			&-tooltip {
+				top: 7px;
+				left: 25px;
+				transform: translateY(-50%);
+				padding: 4px 2px;
+			}
+		}
+	}
+
+	&-vertical &-inner {
+		margin: 12px 30px 12px 12px;
+		width: @rangesliderInnerSize;
+		height: 100%;
+	}
+
+	&-vertical &-mark-dot {
+		left: -3px;
+		transform: translateY(-50%);
+	}
+
+	&-vertical &-mark-label {
+		left: 20px;
+		transform: translateY(-50%);
+	}
+
+	&:not(&-disabled) {
+		& .z-sliderbuttons-button:hover {
+			border-color: @rangesliderButtonHoverBorderColor;
+			background: @rangesliderButtonHoverColor;
+		}
+
+		& .z-sliderbuttons-button:hover .z-sliderbuttons-tooltip {
+			display: block;
+		}
+
+		& .z-sliderbuttons-button:focus {
+			border-color: @rangesliderButtonFocusBorderColor;
+			background: @rangesliderButtonFocusColor;
+		}
+
+		& .z-sliderbuttons-button:active {
+			border-color: @rangesliderButtonActiveBorderColor;
+			background: @rangesliderButtonActiveColor;
+		}
+	}
+
+	&-disabled &-track {
+		background-color: @rangesliderDisabledTrackColor;
+	}
+
+	&-disabled {
+		cursor: default;
+		& .z-sliderbuttons {
+			&-area {
+				background-color: @rangesliderDisabledAreaColor;
+			}
+			&-button {
+				background: @rangesliderDisabledButtonColor;
+				border-color: @rangesliderDisabledButtonBorderColor;
+			}
+			&-tooltip {
+				background-color: @rangesliderDisabledTooltipBackgroundColor;
+			}
+		}
+	}
+
+	&-disabled &-mark-dot {
+		border-color: @rangesliderDisabledTrackColor;
+	}
+
+	&-disabled &-mark-active &-mark-dot {
+		border-color: @rangesliderDisabledAreaColor;
+	}
+}

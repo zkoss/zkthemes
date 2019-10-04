@@ -1,0 +1,21 @@
+@import "~./zul/less/_header.less";
+
+.z-sliderbuttons {
+	&-button {
+		position: absolute;
+		border: 1px solid @buttonBorderColor;
+		background: linear-gradient(to bottom, @buttonGradientStart 0%, @buttonGradientEnd 100%);
+	}
+
+	&-tooltip {
+		position: absolute;
+		display: none;
+		color: @baseBackgroundColor;
+		vertical-align: top;
+		line-height: 1;
+	}
+
+	&-area {
+		position: absolute;
+	}
+}
