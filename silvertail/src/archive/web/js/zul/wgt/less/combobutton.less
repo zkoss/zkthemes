@@ -4,13 +4,14 @@
 	display: inline-block;
 	min-height: @baseButtonHeight;
 	cursor: pointer;
+	border: 1px solid @buttonBorderColor;
+	.borderRadius(@borderRadiusSmall);
+	overflow: hidden;
 
 	&-content {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
 		display: block;
 		min-height: @baseButtonHeight;
-		border: 1px solid @buttonBorderColor;
-		.borderRadius(@borderRadiusSmall);
 		padding: 4px 30px 4px 5px;
 		line-height: @baseLineHeight;
 		.verGradient(@buttonGradientStart, @buttonGradientEnd);
@@ -42,6 +43,7 @@
 		}
 	}
 	&:hover {
+		border-color: @hoverBorderColor;
 		.z-combobutton-content,
 		.z-combobutton-button {
 			border-color: @hoverBorderColor;
@@ -49,6 +51,7 @@
 		}
 	}
 	&:focus {
+		border-color: @focusBorderColor;
 		.z-combobutton-content,
 		.z-combobutton-button {
 			color: @focusColor;
@@ -61,6 +64,7 @@
 		}
 	}
 	&:active {
+		border-color: @activeBorderColor;
 		.z-combobutton-content,
 		.z-combobutton-button {
 			border-color: @activeBorderColor;
@@ -69,7 +73,7 @@
 	}
 	&[disabled] {
 		cursor: default;
-
+		border-color: @buttonBorderColor;
 		.z-combobutton-content,
 		.z-combobutton-button {
 			border-color: @buttonBorderColor;
