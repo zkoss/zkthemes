@@ -1,0 +1,175 @@
+@import "~./zul/less/_header.less";
+
+.z-pdfviewer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	// Safari fullscreen workaround
+	&:-webkit-full-screen {
+		width: 100% !important;
+		height: 100% !important;
+	}
+	// IE fullscreen workaround
+	&:-ms-fullscreen {
+		width: 100% !important;
+		height: 100% !important;
+	}
+	&:fullscreen &-toolbar-fullscreen > i::before {
+		content: '\f066'; // fa-icon-compress
+	}
+	&:-webkit-full-screen &-toolbar-fullscreen > i::before {
+		content: '\f066'; // fa-icon-compress
+	}
+	&:-ms-fullscreen &-toolbar-fullscreen > i::before {
+		content: '\f066'; // fa-icon-compress
+	}
+
+	&:hover &-toolbar {
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&-container {
+		overflow: auto;
+		height: 100%;
+		width: 100%;
+		background: @pdfviewerContainerBackgroundColor;
+	}
+
+	&-page {
+		position: relative;
+		margin: 0 auto;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+	}
+
+	&-text-layer {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		opacity: 0.2;
+		line-height: 1.0;
+
+		::selection {
+			background: @pdfviewerSelectionBackgroundColor;
+		}
+
+		> span {
+			color: transparent;
+			position: absolute;
+			white-space: pre;
+			cursor: text;
+			transform-origin: 0 0;
+		}
+	}
+
+	&-annotation-layer {
+		.linkAnnotation {
+			position: absolute;
+
+			> a {
+				position: absolute;
+				font-size: 1em;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&-toolbar {
+		background: @pdfviewerToolbarBackgroundColor;
+		border: 1px solid @pdfviewerToolbarBorderColor;
+		border-radius: @pdfviewerToolbarBorderRadius;
+		padding: @pdfviewerToolbarPadding;
+		opacity: 0;
+		position: absolute;
+		bottom: 1em;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: @fontSizeMedium;
+		font-family: @baseContentFontFamily;
+
+		&-button {
+			height: @pdfviewerToolbarButtonSize;
+			width: @pdfviewerToolbarButtonSize;
+			padding: 0;
+			border-radius: @borderRadiusSmall;
+			border: 0;
+			color: @pdfviewerToolbarButtonColor;
+			background: @pdfviewerToolbarButtonBackgroundColor;
+			margin-left: @pdfviewerToolbarMargins;
+
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+
+			> i {
+				pointer-events: none;
+			}
+
+			&:hover {
+				color: @pdfviewerToolbarButtonHoverColor;
+				background: @pdfviewerToolbarButtonHoverBackgroundColor;
+				border: 1px solid @pdfviewerToolbarButtonHoverBorderColor;
+			}
+			&:active {
+				color: @pdfviewerToolbarButtonActiveColor;
+				background: @pdfviewerToolbarButtonActiveBackgroundColor;
+				border: 1px solid @pdfviewerToolbarButtonActiveBorderColor;
+				box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+			}
+			&[disabled] {
+				opacity: @disabledOpacity;
+				color: @disabledColor;
+				background: @pdfviewerToolbarButtonBackgroundColor;
+				border: 0;
+				box-shadow: none;
+			}
+		}
+
+		&-separator {
+			height: 18px;
+			width: 1px;
+			display: inline-block;
+			vertical-align: middle;
+			border-left: 1px solid @pdfviewerToolbarSeparatorColor;
+			margin-left: @pdfviewerToolbarMargins;
+		}
+
+		&-page {
+			vertical-align: middle;
+		}
+
+		&-page-active {
+			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+			width: 33px;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-left: @pdfviewerToolbarMargins;
+
+			&:focus {
+				// ZK input:hover style workaround
+				-moz-appearance: textfield;
+				-webkit-appearance: textfield;
+			}
+			&:invalid {
+				border-color: @invalidBorderColor;
+			}
+		}
+
+		&-zoom.z-selectbox {
+			min-width: auto;
+			margin-left: @pdfviewerToolbarMargins;
+		}
+	}
+}
