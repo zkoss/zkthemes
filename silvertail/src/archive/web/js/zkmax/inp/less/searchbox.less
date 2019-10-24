@@ -1,0 +1,205 @@
+@import "~./zul/less/_header.less";
+
+.z-searchbox {
+	display: inline-block;
+	position: relative;
+	height: @searchboxHeight;
+	width: 180px;
+	padding: @searchboxPadding;
+	padding-right: 18px;
+	border: 1px solid @searchboxBorderColor;
+	border-radius: @searchboxBorderRadius;
+	color: @searchboxColor;
+	background: @searchboxBackgroundColor;
+	cursor: pointer;
+
+	&:hover {
+		border-color: @searchboxHoverBorderColor;
+		background: @searchboxHoverBackgroundColor;
+	}
+
+	&:focus {
+		border-color: @searchboxFocusBorderColor;
+	}
+
+	&:active {
+		border-color: @searchboxActiveBorderColor;
+		.verGradient(@activeGradientStart, @activeGradientEnd);
+		color: @searchboxActiveColor;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+	&:active &-placeholder {
+		color: @searchboxActiveColor;
+	}
+	&:active &-icon {
+		color: @searchboxActiveIconColor;
+	}
+
+	&[disabled] {
+		color: @searchboxDisableColor;
+		background: @searchboxDisableBackgroundColor;
+		cursor: default;
+		border-color: @searchboxDisableBorderColor;
+		box-shadow: none;
+		&-icon {
+			color: @searchboxDisableIconColor;
+		}
+	}
+	&[disabled] &-icon {
+		color: @searchboxDisableIconColor;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	&-label {
+		user-select: none;
+		display: inline-block;
+		max-width: 100%;
+		vertical-align: middle;
+		font-family: @baseContentFontFamily;
+		font-size: @searchboxFontSize;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&-placeholder {
+		user-select: none;
+		display: none;
+		max-width: 100%;
+		vertical-align: middle;
+		font-family: @baseContentFontFamily;
+		font-size: @searchboxFontSize;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: @searchboxPlaceholderColor;
+	}
+
+	&-icon {
+		color: @searchboxIconColor;
+		font-size: @fontSizeLarge;
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	&-popup {
+		position: absolute;
+		z-index: 1000;
+		border: 1px solid @searchboxPopupBorderColor;
+		border-radius: @searchboxPopupBorderRadius;
+		background: @searchboxPopupBackgroundColor;
+		padding: 2px;
+		font-family: @baseContentFontFamily;
+		font-size: @searchboxFontSize;
+		color: @searchboxColor;
+	}
+
+	&-shadow {
+		box-shadow: @searchboxPopupShadow;
+	}
+
+	& &-popup {
+		display: none;
+	}
+
+	&-search {
+		height: @searchboxHeight;
+		width: 100%;
+		padding: 0 5px;
+		border: 1px solid @inputBorderColor;
+		border-radius: @borderRadiusSmall;
+		background: @inputBackgroundColor;
+		margin-bottom: 2px;
+		&::placeholder {
+			color: @searchboxPlaceholderColor;
+			opacity: 1;
+		}
+		&::-webkit-input-placeholder {
+			color: @searchboxPlaceholderColor;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: @searchboxPlaceholderColor;
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			color: @searchboxPlaceholderColor;
+			opacity: 1;
+		}
+		&:focus {
+			box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	&-cave {
+		margin: 0;
+		padding: 0;
+		max-height: 350px;
+		overflow: auto;
+	}
+
+	&-item {
+		height: 24px;
+		white-space: nowrap;
+		list-style: none;
+		display: block;
+		padding: 4px 5px;
+		cursor: pointer;
+		border-radius: @searchboxPopupItemBorderRadius;
+		vertical-align: middle;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+	}
+
+	&-item&-selected {
+		.verGradient(@selectedGradientStart, @selectedGradientEnd);
+		color: @searchboxPopupItemSelectedColor;
+	}
+
+	&-item:hover {
+		.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		color: @searchboxPopupItemHoverColor;
+	}
+
+	&-item&-active {
+		.verGradient(@activeGradientStart, @activeGradientEnd);
+		color: @searchboxPopupItemActiveColor;
+	}
+	&-item-check {
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid @searchboxPopupItemCheckBorderColor;
+		background: @searchboxPopupItemCheckBackgroundColor;
+		border-radius: @searchboxPopupItemCheckBorderRadius;
+		width: @searchboxPopupItemCheckSize;
+		height: @searchboxPopupItemCheckSize;
+		margin-right: 5px;
+	}
+
+	&-item&-selected > &-item-check {
+		color: @searchboxPopupItemCheckCheckedColor;
+		background: @searchboxPopupItemCheckCheckedBackgroundColor;
+		.baseIconFont();
+		&::before {
+			content: "\f00c"; // fa-check
+		}
+	}
+}
