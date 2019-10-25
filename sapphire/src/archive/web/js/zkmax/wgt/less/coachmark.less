@@ -1,0 +1,100 @@
+@import "~./zul/less/_header.less";
+
+// coachmark
+.z-coachmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+
+	@keyframes expand {
+		0% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&-open {
+		animation: expand .8s .2s ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	&-content {
+		font-family: @baseContentFontFamily;
+		font-size: @fontSizeMedium;
+		font-weight: normal;
+		position: relative;
+		overflow: hidden;
+		display: table-cell;
+		min-width: 180px;
+		padding: @coachmarkPadding @coachmarkPaddingRight @coachmarkPadding @coachmarkPaddingLeft;
+		vertical-align: middle;
+		background-color: @coachmarkBackgroundColor;
+		.borderRadius(@baseBorderRadius);
+	}
+
+	&-pointer {
+		.displaySize(none, 0, 0);
+		border: 10px solid transparent;
+		position: absolute;
+		z-index: 100;
+	}
+
+	&-close {
+		font-size: @coachmarkIconSize;
+		.size(@coachmarkIconSize, @coachmarkIconSize);
+		position: absolute;
+		top: @coachmarkPadding;
+		right: @coachmarkPadding / 2;
+		color: @iconColor;
+		cursor: pointer;
+	}
+
+	&-icon {
+		background-color: @coachmarkBackgroundColor;
+		position: absolute;
+		z-index: 1;
+	}
+
+	&-mask {
+		position: fixed;
+		background: transparent;
+		animation: mask .3s .3s ease-in-out;
+		animation-fill-mode: forwards;
+
+		@keyframes mask {
+			0% {
+				background: transparent;
+			}
+			100% {
+				background: @coachmarkMaskBackground;
+			}
+		}
+	}
+}
+
+// coachmark arrow: base style
+.z-coachmark-right ~ .z-coachmark-close {
+	right: @coachmarkPadding + 16px;
+}
+.z-coachmark-up ~ .z-coachmark-close {
+	top: @coachmarkPadding + 16px;
+}
+
+.z-coachmark-left {
+	border-right-color: @coachmarkBackgroundColor;
+}
+.z-coachmark-right {
+	border-left-color: @coachmarkBackgroundColor;
+}
+.z-coachmark-up {
+	border-bottom-color: @coachmarkBackgroundColor;
+}
+.z-coachmark-down {
+	border-top-color: @coachmarkBackgroundColor;
+}
