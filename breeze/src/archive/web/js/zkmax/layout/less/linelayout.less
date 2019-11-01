@@ -1,0 +1,143 @@
+@import "~./zul/less/_header.less";
+
+.z-linelayout {
+	height: 100%;
+	width: 100%;
+	&-first {
+		flex: 1 0 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		overflow: hidden;
+	}
+	&-cave {
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		position: relative;
+	}
+	&-last {
+		flex: 1 0 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+		overflow: hidden;
+	}
+	&-line {
+		background: @linelayoutLineColor;
+		position: absolute;
+		z-index: 99;
+	}
+
+	&-vertical {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		.z-linelayout {
+			&-first {
+				flex-direction: column;
+			}
+			&-cave {
+				padding: 0 @linelayoutCavePadding;
+				flex-direction: column;
+			}
+			&-last {
+				flex-direction: column;
+			}
+			&-line {
+				height: 100%;
+				left: calc(50% - @linelayoutLineWidth / 2);
+				width: @linelayoutLineWidth;
+			}
+		}
+
+		.z-lineitem {
+			flex-direction: column;
+		}
+	}
+
+	&-horizontal {
+		display: flex;
+		flex-direction: column;
+
+		.z-linelayout {
+			&-first {
+				flex-direction: row;
+			}
+			&-cave {
+				padding: @linelayoutCavePadding 0;
+			}
+			&-last {
+				flex-direction: row;
+			}
+			&-line {
+				width: 100%;
+				top: calc(50% - @linelayoutLineWidth / 2);
+				height: @linelayoutLineWidth;
+			}
+		}
+	}
+}
+
+.z-lineitem {
+	// lineitem first & last area
+	flex: 1 0 0;
+	display: flex;
+	overflow: hidden;
+
+	> * {
+		flex-shrink: 0;
+		margin: auto;
+	}
+
+	&-stretch {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// point
+.z-lineitem-point {
+	// true lineitem in center
+	border: @linelayoutPointBorder;
+	border-radius: @linelayoutPointRadius;
+	overflow: hidden;
+	box-shadow: @linelayoutPointShadow;
+	height: @linelayoutPointSize;
+	width: @linelayoutPointSize;
+	font-size: @linelayoutPointIconSize;
+	color: @linelayoutPointIconColor;
+	z-index: 100;
+	background: @linelayoutPointBackgroundColor;
+
+	&-hidden {
+		visibility: hidden;
+	}
+
+	&-image {
+		vertical-align: baseline;
+		display: inline-flex;
+		height: inherit;
+		width: inherit;
+	}
+
+	&-icon {
+		height: inherit;
+		width: inherit;
+	}
+
+	&-inner {
+		height: inherit;
+		width: inherit;
+		background-size: cover;
+		line-height: @linelayoutPointSize;
+		text-align: center;
+
+		&:before {
+			position: relative;
+			top: @linelayoutPointIconFixTop;
+			left: @linelayoutPointIconFixLeft;
+		}
+	}
+}
