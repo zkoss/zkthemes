@@ -356,9 +356,10 @@
 @rangesliderDotBorderWidth: @rangesliderDotSize * 0.25;
 
 // multislider
-@multisliderTrackColor: @sliderBackgroundColor;
-@multisliderAreaColor: @sliderAreaBackgroundColor;
-@multisliderAreaColor2: Darken(@sliderAreaBackgroundColor, 30%);
+@multisliderTrackColor: #EEEEED;
+@multisliderAreaColor: #B6E1EA;
+@multisliderAreaColor2: Darken(@multisliderAreaColor, 15%);
+@multisliderButtonSize: 16px;
 @multisliderButtonBorderWidth: 1px;
 @multisliderButtonHoverColor: linear-gradient(to bottom, @hoverGradientStart 0%, @hoverGradientEnd 100%);
 @multisliderButtonHoverBorderColor: @hoverBorderColor;
@@ -368,11 +369,11 @@
 @multisliderButtonFocusBorderColor: @focusBorderColor;
 @multisliderTooltipBackgroundColor: rgba(0, 0, 0, 0.8);
 @multisliderDisabledTooltipBackgroundColor: rgba(0, 0, 0, 0.5);
-@multisliderBorderRadius: 2px;
+@multisliderBorderRadius: 3px;
 @multisliderInnerSize: 6px;
-@multisliderDisabledTrackColor: #f2fafe;
-@multisliderDisabledAreaColor: #cceaf0;
-@multisliderDisabledAreaColor2: #9bd8e6;
+@multisliderDisabledTrackColor: #F5F5F5;
+@multisliderDisabledAreaColor: #CCEAF0;
+@multisliderDisabledAreaColor2: Lighten(@multisliderAreaColor2, 10%);
 @multisliderDisabledButtonColor: @readonlyBackgroundColor;
 @multisliderDisabledButtonBorderColor: @readonlyBorderColor;
 
