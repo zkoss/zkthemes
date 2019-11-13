@@ -71,7 +71,7 @@
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>atlantic</artifactId>
-			<version>8.6.2</version>
+			<version>9.0.0-RC</version>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
