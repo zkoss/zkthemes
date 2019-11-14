@@ -438,12 +438,12 @@
 @stepbarSeparatorSize: 4px;
 @stepSize: 24px;
 @stepFontSize: 14px;
-@stepInactiveColor: @sliderBackgroundColor;
-@stepActiveColor: @sliderAreaBackgroundColor;
+@stepInactiveColor: #EEEEED;
+@stepActiveColor: #C4C4C4;
 @stepErrorColor: @notificationErrorColor;
-@stepCompleteColor: @sliderBackgroundColor;
-@stepHoverColor: darken(@stepCompleteColor, 10%);
-@stepClickColor: darken(@stepCompleteColor, 20%);
+@stepCompleteColor: @stepActiveColor;
+@stepHoverColor: Lighten(@stepCompleteColor, 10%);
+@stepClickColor: Darken(@stepCompleteColor, 10%);
 
 // portalchildren
 @portalchildrenFrameBorderColor: @panelBorderColor;
