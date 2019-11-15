@@ -4,7 +4,6 @@
 	background: @baseBackgroundColor;
 	overflow: hidden;
 	padding: @stepbarPadding;
-	align-items: center;
 	display: flex;
 	display: -ms-flexbox;
 	font-family: @baseTitleFontFamily;
@@ -25,12 +24,10 @@
 	padding: @stepbarPadding;
 	text-align: center;
 
-	&bar:not(&bar-linear) & {
-		cursor: pointer;
-	}
 	&:first-child,
 	&:first-child:before {
 		flex: 0;
+		white-space: nowrap;
 	}
 
 	&:before {
@@ -68,7 +65,6 @@
 		font-size: @stepFontSize;
 		line-height: @stepSize;
 		vertical-align: top;
-		white-space: nowrap;
 	}
 
 	&-active &-icon,
@@ -130,15 +126,31 @@
 
 	.z-step:before {
 		position: absolute;
+		width: 50%;
 		top: 18px;
-		left: 9px;
-		right: -3px;
-		transform: translateX(-50%);
+		left: -12px;
 		margin: 0;
 		z-index: -1;
 	}
 
-	.z-step:first-child:before {
+	.z-step:after {
+		content: ' ';
+		height: @stepbarSeparatorSize;
+		background-color: @stepInactiveColor;
+		position: absolute;
+		width: 50%;
+		top: 18px;
+		right: -12px;
+		margin: 0;
+		z-index: -1;
+	}
+
+	&.z-stepbar-linear .z-step-complete:after {
+		background-color: @stepActiveColor;
+	}
+
+	.z-step:first-child:before,
+	.z-step:last-child:after {
 		width: 0;
 	}
 
