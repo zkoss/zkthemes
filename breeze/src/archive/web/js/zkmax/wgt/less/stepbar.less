@@ -31,7 +31,7 @@
 	}
 
 	&:before {
-		content: ' ';
+		content: '';
 		height: @stepbarSeparatorSize;
 		background-color: @stepInactiveColor;
 		flex: 1;
@@ -44,6 +44,7 @@
 	}
 
 	&-icon {
+		display: inline-block;
 		width: @stepSize;
 		height: @stepSize;
 		margin-right: @stepbarPadding;
@@ -116,42 +117,75 @@
 .z-stepbar-wrapped-label {
 	.z-step {
 		position: relative;
-		flex-direction: column;
-		-ms-flex-direction: column;
+		flex: 2 2 @stepSize;
+		align-items: initial;
 	}
 
-	.z-step:first-child {
-		flex: 1;
+	.z-step:first-child, .z-step:last-child {
+		flex-grow: 1;
+		flex-shrink: 1;
 	}
 
 	.z-step:before {
-		position: absolute;
-		width: 50%;
-		top: 18px;
-		left: -12px;
-		margin: 0;
-		z-index: -1;
+		margin-left: -@stepbarPadding;
+		margin-right: 0;
 	}
 
 	.z-step:after {
-		content: ' ';
+		content: '';
 		height: @stepbarSeparatorSize;
 		background-color: @stepInactiveColor;
-		position: absolute;
-		width: 50%;
-		top: 18px;
-		right: -12px;
-		margin: 0;
-		z-index: -1;
+		flex: 1;
+		margin-left: 0;
+		margin-right: -@stepbarPadding;
 	}
 
-	&.z-stepbar-linear .z-step-complete:after {
-		background-color: @stepActiveColor;
+	.z-step:before,
+	.z-step:after {
+		margin-top: (@stepSize - @stepbarSeparatorSize) / 2;
+	}
+
+	.z-step-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		-ms-flex-direction: column;
+		align-items: center;
+		text-align: center;
+		vertical-align: top;
+	}
+
+	.z-step-content:before,
+	.z-step-content:after {
+		position: absolute;
+		height: @stepbarSeparatorSize;
+		background-color: @stepInactiveColor;
+		content: '';
+		top: (@stepSize - @stepbarSeparatorSize) / 2;
+	}
+
+	.z-step-content:before {		
+		left: 0;
+		right: calc(50% + (@stepSize / 2));
+	}
+
+	.z-step-content:after {
+		left: calc(50% + (@stepSize / 2));
+		right: 0;
 	}
 
 	.z-step:first-child:before,
-	.z-step:last-child:after {
-		width: 0;
+	.z-step:last-child:after,
+	.z-step:first-child .z-step-content:before,
+	.z-step:last-child .z-step-content:after {
+		display: none;
+	}
+
+	&.z-stepbar-linear .z-step-complete:after,
+	&.z-stepbar-linear .z-step-complete .z-step-content:after,
+	&.z-stepbar-linear .z-step-active .z-step-content:before,
+	&.z-stepbar-linear .z-step-complete .z-step-content:before {
+		background-color: @stepActiveColor;
 	}
 
 	.z-step-icon {
