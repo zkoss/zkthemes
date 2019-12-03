@@ -74,6 +74,10 @@
 		height: @multisliderInnerSize;
 	}
 
+	&-horizontal &-marks {
+		width: 100%;
+	}
+
 	&-horizontal &-mark-label {
 		top: 17px;
 		transform: translateX(-50%);
@@ -103,6 +107,11 @@
 	&-vertical &-inner {
 		margin: 12px 30px 12px 12px;
 		width: @multisliderInnerSize;
+		height: 100%;
+	}
+
+	&-vertical &-marks {
+		height: 100%;
 	}
 
 	&-vertical &-mark-label {
