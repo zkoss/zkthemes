@@ -84,6 +84,11 @@
 		margin: 40px 12px 30px;
 		height: @rangesliderInnerSize;
 	}
+
+	&-horizontal &-marks {
+		width: 100%;
+	}
+
 	&-horizontal &-mark-dot {
 		top: -3px;
 		transform: translateX(-50%);
@@ -118,6 +123,10 @@
 	&-vertical &-inner {
 		margin: 12px 30px 12px 12px;
 		width: @rangesliderInnerSize;
+		height: 100%;
+	}
+
+	&-vertical &-marks {
 		height: 100%;
 	}
 
