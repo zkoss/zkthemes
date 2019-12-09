@@ -26,7 +26,7 @@
 
 	&:first-child,
 	&:first-child:before {
-		flex: 0;
+		flex: 0 1 auto;
 		white-space: nowrap;
 	}
 
@@ -118,7 +118,7 @@
 	.z-step {
 		position: relative;
 		flex: 2 2 @stepSize;
-		align-items: initial;
+		align-items: stretch;
 	}
 
 	.z-step:first-child, .z-step:last-child {
