@@ -92,6 +92,7 @@
 		font-family: @baseContentFontFamily;
 		font-size: @cascaderFontSize;
 		color: @cascaderColor;
+		white-space: nowrap;
 	}
 
 	&-shadow {
@@ -108,7 +109,8 @@
 		border-left: 1px solid @cascaderSeparatorColor;
 		max-height: 350px;
 		overflow: auto;
-		float: left;
+		display: inline-block;
+		vertical-align: top;
 	}
 
 	&-cave:first-child {
@@ -136,10 +138,9 @@
 		}
 
 		.z-cascader-icon {
-			position: static;
+			top: 0;
 			line-height: @cascaderPopupItemHeight;
 			transform: none;
-			float: right;
 			margin-left: 4px;
 		}
 	}
