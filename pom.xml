@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.theme</groupId>
 	<artifactId>zktheme</artifactId>
-	<version>9.0.1-SNAPSHOT</version>
+	<version>9.0.0</version>
 	<packaging>pom</packaging>
 	<name>ZK Theme Maven Bulider</name>
 	<url>http://www.zkoss.org/themes</url>
@@ -73,12 +73,13 @@
 			<version>${project.version}</version>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
+		<!-- Commenting, as version 9.0.1-SNAPSHOT doesn't yet exist in ZK maven repo -->
+		<!-- <dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkmax</artifactId>
 			<version>${project.version}</version>
 			<optional>true</optional>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<sourceDirectory>${project.basedir}/src/</sourceDirectory>
