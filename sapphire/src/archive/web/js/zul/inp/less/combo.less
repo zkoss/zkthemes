@@ -9,6 +9,7 @@
 	display: inline-block;
 	min-height: @baseButtonHeight;
 	white-space: nowrap;
+	position: relative;
 
 	&-input {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @baseTextColor);
@@ -41,9 +42,9 @@
 	&-button {
 		.iconFontStyle(@baseFontSize, @iconColor);
 		display: inline-block;
-		position: relative;
+		position: absolute;
 		top: 0;
-		right: @baseButtonWidth;
+		right: 0;
 		min-width: @baseButtonWidth;
 		height: @baseButtonHeight;
 		border: 1px solid @inputBorderColor;
