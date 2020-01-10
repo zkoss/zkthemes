@@ -44,7 +44,7 @@
 		<pluginRepository>
 			<id>zkmaven</id>
 			<name>ZK Maven Plugin Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
+			<url>https://mavensync.zkoss.org/maven2</url>
 		</pluginRepository>
 		<pluginRepository>
 			<id>maven-bundle-plugin</id>

@@ -8,7 +8,7 @@
 	<name>ZK Theme Maven Bulider</name>
 	<url>http://www.zkoss.org/themes</url>
 	<scm>
-		<url>http://mavensync.zkoss.org/maven2</url>
+		<url>https://mavensync.zkoss.org/maven2</url>
 	</scm>
 	<modules>
 		<module>breeze</module>
@@ -47,7 +47,7 @@
 	<repositories>
 		<repository>
 			<id>zk repository</id>
-			<url>http://mavensync.zkoss.org/maven2</url>
+			<url>https://mavensync.zkoss.org/maven2</url>
 		</repository>
 	</repositories>
 	<dependencies>
