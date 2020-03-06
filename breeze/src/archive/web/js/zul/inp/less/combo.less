@@ -79,9 +79,12 @@
 
 	&-invalid {
 		border: 1px solid @invalidBorderColor !important;
-		margin-right: -1px;
 		background: @baseBackgroundColor;
 		.boxShadow(inset -1px 0 0 @invalidBorderColor);
+	}
+
+	&-invalid + &-button {
+		border-left: 1px solid @invalidBorderColor !important;
 	}
 
 	&-readonly:focus {
