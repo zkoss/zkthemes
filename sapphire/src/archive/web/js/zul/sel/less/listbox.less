@@ -79,13 +79,11 @@
 //listhead
 .z-listhead {
 	th:first-child {
+		border-left: none;
 		// B50-3306729: the first header should have border-left when the first column is covered with other header
 		&.z-listhead-border {
 			border-left: 1px solid @meshTitleBorderColor;
 		}
-	}
-	th:last-child {
-		border-right: none;
 	}
 	&-bar {
 		.verGradient(@baseGradientStart, @baseGradientEnd);
@@ -94,7 +92,7 @@
 	}
 }
 .z-listheader {
-	border-right: 1px solid @meshTitleBorderColor;
+	border-left: 1px solid @meshTitleBorderColor;
 	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
 	.verGradient(@baseGradientStart, @baseGradientEnd);
