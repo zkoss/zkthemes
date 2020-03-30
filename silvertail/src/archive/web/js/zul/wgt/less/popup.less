@@ -1,20 +1,19 @@
 @import "~./zul/less/_header.less";
 
 .z-popup {
-	border: 1px solid @popupBorderColor;
-	.borderRadius(1px);
-	.verGradient(@popupGradientStart, @popupGradientEnd);
 	position: absolute;
 	top: 0;
 	left: 0;
-	overflow: hidden;
-	.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
 
 	&-content {
 		.fontStyle(@baseContentFontFamily, @fontSizeMedium, normal, @textColorGray);
 		height: 100%;
 		padding: 10px;
 		line-height: @baseLineHeight;
+		border: 1px solid @popupBorderColor;
+		.borderRadius(1px);
+		.verGradient(@popupGradientStart, @popupGradientEnd);
+		.boxShadow('0 0 15px rgba(0, 0, 0, 0.35)');
 	}
 }
 
