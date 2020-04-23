@@ -11,7 +11,7 @@
 	<artifactId>sapphire</artifactId>
 	<packaging>jar</packaging>
 	<name>ZK Sapphire Theme</name>
-	<url>http://www.zkoss.org/themes/sapphire</url>
+	<url>https://www.zkoss.org/themes/sapphire</url>
 	<description>ZK Sapphire Theme</description>
 	<properties>
 		<nodemodules.basedir>${project.parent.basedir}</nodemodules.basedir>

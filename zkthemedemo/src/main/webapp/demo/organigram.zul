@@ -59,13 +59,13 @@ Copyright (C) 2018 Potix Corporation. All Rights Reserved.
 				})
 			})
 		});
-		DefaultTreeModel model = new DefaultTreeModel(root);
-		model.addOpenPaths(new int[][]{{0}, {0, 0}, {0, 1}});
+		DefaultTreeModel orgModel = new DefaultTreeModel(root);
+		orgModel.addOpenPaths(new int[][]{{0}, {0, 0}, {0, 1}});
 	]]></zscript>
 	<window title="Organigram with model">
 		<label value="Selected item: "/>
 		<label id="label"/>
-		<organigram model="${model}"/>
+		<organigram model="${orgModel}"/>
 		<hlayout>
 			<button label="Item2 open">
 				<attribute name="onClick">

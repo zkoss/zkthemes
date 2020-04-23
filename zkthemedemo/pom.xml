@@ -51,7 +51,6 @@
 		<timelinez.version>2.3.1_50</timelinez.version>
 		<timeplotz.version>1.1_50</timeplotz.version>
 		<packname>-${maven.build.timestamp}</packname>
-		<atlantic.version>1.1.5</atlantic.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -59,19 +58,15 @@
 			<url>https://mavensync.zkoss.org/maven2</url>
 		</repository>
 		<repository>
-			<id>ZK PE Evaluation</id>
-			<url>https://mavensync.zkoss.org/zk/pe-eval</url>
-		</repository>
-		<repository>
 			<id>ZK EE Evaluation</id>
-			<url>https://mavensync.zkoss.org/zk/ee-eval</url>
+			<url>https://mavensync.zkoss.org/eval</url>
 		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>atlantic</artifactId>
-			<version>9.0.1</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
@@ -88,13 +83,6 @@
 			<artifactId>silvertail</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<!--  
-		<dependency>
-			<groupId>org.zkoss.theme</groupId>
-			<artifactId>classicblue</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		-->
 		<dependency>
 			<groupId>org.beanshell</groupId>
 			<artifactId>bsh</artifactId>
@@ -207,37 +195,19 @@
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>7.6.8.v20121106</version>
+				<version>9.4.28.v20200408</version>
 				<configuration>
 					<stopKey>foo</stopKey>
 					<stopPort>9999</stopPort>
 					<webAppSourceDirectory>${project.basedir}/src/archive/</webAppSourceDirectory>
 					<webApp>
 						<contextPath>/${project.artifactId}</contextPath>
+						<webInfIncludeJarPattern>^$</webInfIncludeJarPattern>
+						<containerIncludeJarPattern>^$</containerIncludeJarPattern>
 					</webApp>
 				</configuration>
-				<executions>
-					<execution>
-						<id>start-jetty</id>
-						<phase>pre-integration-test</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<scanIntervalSeconds>0</scanIntervalSeconds>
-							<daemon>true</daemon>
-						</configuration>
-					</execution>
-					<execution>
-						<id>stop-jetty</id>
-						<phase>post-integration-test</phase>
-						<goals>
-							<goal>stop</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
