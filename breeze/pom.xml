@@ -9,7 +9,7 @@
 	<artifactId>breeze</artifactId>
 	<packaging>jar</packaging>
 	<name>ZK Breeze Theme</name>
-	<url>http://www.zkoss.org/themes/breeze</url>
+	<url>https://www.zkoss.org/themes/breeze</url>
 	<description>ZK Breeze Theme</description>
 	<properties>
 		<nodemodules.basedir>${project.parent.basedir}</nodemodules.basedir>

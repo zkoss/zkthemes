@@ -47,6 +47,7 @@
 		<zktheme.resources>${project.basedir}/src/archive</zktheme.resources>
 		<zktheme.web.resources>${zktheme.resources}/web</zktheme.web.resources>
 		<zktheme.theme.outputDirectory>${project.build.outputDirectory}/web/${project.artifactId}</zktheme.theme.outputDirectory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<repositories>
 		<repository>
