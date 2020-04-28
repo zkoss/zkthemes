@@ -11,7 +11,7 @@
 	<artifactId>silvertail</artifactId>
 	<packaging>jar</packaging>
 	<name>ZK Silvertail Theme</name>
-	<url>http://www.zkoss.org/themes/silvertail</url>
+	<url>https://www.zkoss.org/themes/silvertail</url>
 	<description>ZK Silvertail Theme</description>
 	<properties>
 		<nodemodules.basedir>${project.parent.basedir}</nodemodules.basedir>
