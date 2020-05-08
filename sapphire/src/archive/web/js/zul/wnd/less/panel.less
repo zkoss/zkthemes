@@ -74,10 +74,15 @@
 		border-width: 0px;
 		padding: 4px;
 	}
-	
+
+	&-icons {
+		display: inline-block;
+		float: right;
+	}
+
 	&-icon {
 		color: @iconColor;
-		display: block;
+		display: inline-block;
 		border: 1px solid @baseBorderColor;
 		.borderRadius(@baseBorderRadius);
 		margin: auto 1px;
@@ -85,7 +90,7 @@
 		text-align: center;
 		overflow: hidden;
 		cursor: pointer;
-		float: right;
+		padding: 0;
 		
 		&:hover {
 			color: @iconHoverColor;

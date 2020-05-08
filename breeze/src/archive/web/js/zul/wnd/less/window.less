@@ -37,10 +37,15 @@
 		.defaultOverflowZoom();
 	}
 
+	&-icons {
+		display: inline-block;
+		float: right;
+	}
+
 	&-icon {
 		font-size: @fontSizeLarge;
 		color: @iconColor;
-		.displaySize(block, @baseButtonWidth + 4, @baseButtonHeight);
+		.displaySize(inline-block, @baseButtonWidth + 4, @baseButtonHeight);
 		border: 1px solid @baseBorderColor;
 		.borderRadius(@baseBorderRadius);
 		margin: auto 1px;
@@ -49,7 +54,7 @@
 		text-align: center;
 		overflow: hidden;
 		cursor: pointer;
-		float: right;
+		padding: 0;
 
 		&:hover {
 			color: @iconHoverColor;
