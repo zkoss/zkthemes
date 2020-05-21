@@ -158,13 +158,15 @@
 		bottom: 0;
 	}
 	&-top {
-		.z-tabs-content {
-			white-space: nowrap;
-		}
-		.z-tab {
-			display: inline-block;
-			float: none;
-			vertical-align: bottom;
+		> .z-tabs {
+			.z-tabs-content {
+				white-space: nowrap;
+			}
+			.z-tab {
+				display: inline-block;
+				float: none;
+				vertical-align: bottom;
+			}
 		}
 	}
 	// bottom
@@ -198,7 +200,7 @@
 			border: 1px solid @baseBorderColor;
 			border-bottom: 0;
 		}
-		.z-toolbar-tabs {
+		> .z-toolbar-tabs {
 			border-top: 1px solid @baseBorderColor;
 			border-bottom: 0;
 			top: auto;
@@ -293,19 +295,19 @@
 				.boxShadow('none');
 				cursor: default;
 			}
-		}
-		.z-tab-button {
-			.opacity(0.7);
-			&:hover {
-				color: @iconHoverColor;
-			}
+			.z-tab-button {
+				.opacity(0.7);
+				&:hover {
+					color: @iconHoverColor;
+				}
 
-			+ .z-tab-text {
-				margin-right: @baseButtonWidth;
+				+ .z-tab-text {
+					margin-right: @baseButtonWidth;
+				}
 			}
-		}
-		.z-tab-text {
-			padding: 3px 5px 3px 8px;
+			.z-tab-text {
+				padding: 3px 5px 3px 8px;
+			}
 		}
 	}
 
