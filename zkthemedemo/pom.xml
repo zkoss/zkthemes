@@ -4,10 +4,10 @@
 	<parent>
 		<artifactId>zktheme</artifactId>
 		<groupId>org.zkoss.theme</groupId>
-		<version>8.5.1.2</version>
+		<version>8.5.1.3</version>
 	</parent>
 	<artifactId>zkthemedemo</artifactId>
-	<version>8.5.1.2</version>
+	<version>8.5.1.3</version>
 	<packaging>war</packaging>
 	<name>ZK Theme Demo</name>
 	<url>http://www.zkoss.org/themes</url>
