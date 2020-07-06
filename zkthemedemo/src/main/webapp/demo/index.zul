@@ -90,6 +90,7 @@
 							
 						<category value="Other Issues" />
 							<item label="Notification"  topic="demo/notification" />
+							<item label="Toast"         topic="demo/toast" />
 							<item label="Drag and Drop" topic="demo/drag-and-drop" />
 							<item label="Loading"       topic="demo/loading" />
 							<item label="JS Error"      topic="demo/error" />

@@ -152,6 +152,11 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>za11y</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.zkoss.zkforge</groupId>
 			<artifactId>ckez</artifactId>
 			<version>${ckez.version}</version>
@@ -176,6 +181,21 @@
 			<groupId>org.zkoss.zkforge</groupId>
 			<artifactId>gmapsz</artifactId>
 			<version>${gmapsz.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>wcag_c</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>wcag_purple_c</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>wcag_navy_c</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
