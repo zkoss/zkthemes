@@ -184,12 +184,27 @@
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>wcag</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
 			<artifactId>wcag_c</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>wcag_purple</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
 			<artifactId>wcag_purple_c</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.themepack</groupId>
+			<artifactId>wcag_navy</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
