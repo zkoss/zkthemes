@@ -61,7 +61,7 @@
 		height: 100%;
 		line-height: calc(@searchboxHeight - 2px);
 		padding: @searchboxPadding;
-		padding-right: 18px;
+		padding-right: 34px;
 		vertical-align: middle;
 		font-family: @baseContentFontFamily;
 		font-size: @searchboxFontSize;
@@ -95,6 +95,10 @@
 		top: 50%;
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
+	}
+
+	&-clear {
+		right: @fontSizeLarge + 8px; // space for down arrow
 	}
 
 	&-popup {
