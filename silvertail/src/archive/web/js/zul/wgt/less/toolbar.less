@@ -17,13 +17,23 @@
 			font-size: @fontSizeLarge;
 		}
 
-		&-on > .z-toolbar-overflowpopup-button {
-			cursor: pointer;
-			float: right;
-			position: absolute;
-			top: 50%;
-			.transform('translateY(-50%)');
-			right: 4px;
+		&-on {
+			> .z-toolbar-overflowpopup-button {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				.transform('translateY(-50%)');
+				right: 4px;
+			}
+			> .z-toolbar {
+				&-end {
+					position: relative;
+					right: @fontSizeLarge + 4px;
+				}
+				&-center {
+					padding-right: @fontSizeLarge;
+				}
+			}
 		}
 
 		&-off > .z-toolbar-overflowpopup-button {
