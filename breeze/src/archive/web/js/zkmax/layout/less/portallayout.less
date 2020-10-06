@@ -145,3 +145,38 @@
 		}
 	}
 }
+
+.z-portallayout-popup {
+	font-family: @baseContentFontFamily;
+	font-weight: normal;
+	font-size: @fontSizeMedium;
+	display: none;
+	color: @baseTextColor;
+	border: 1px solid @popupBorderColor;
+	padding: 2px;
+	background: @popupBackgroundColor;
+	position: absolute;
+	overflow: auto;
+	min-height: 10px;
+
+	&-content {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		background: transparent none repeat 0 0;
+		position: relative;
+		list-style: none outside none;
+		min-width: 100%;
+		display: inline-block;
+	}
+	&-nav {
+		cursor: pointer;
+		padding: 3px 2px;
+		&:focus {
+			.verGradient(@hoverGradientStart, @hoverGradientEnd);
+		}
+	}
+	&-open {
+		display: block;
+	}
+}
