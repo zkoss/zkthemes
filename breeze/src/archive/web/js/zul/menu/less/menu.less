@@ -137,6 +137,9 @@
 	// icon sclass
 	&-content i {
 		vertical-align: text-bottom;
+		&:first-child {
+			margin-right: 4px;
+		}
 	}
 }
 .z-menu {
@@ -271,6 +274,9 @@
 		display: inline-block;
 		min-width: @menuImageSize;
 		margin-right: 9px;
+		&:first-child {
+			margin-right: 9px; // for override default
+		}
 	}
 }
 //define checked menuitem effect in menupopup
