@@ -74,13 +74,11 @@
 //column
 .z-columns {
 	th:first-child {
+		border-left: none;
 		// B50-3306729: the first header should have border-left when the first column is covered with other header
 		&.z-columns-border {
 			border-left: 1px solid @meshTitleBorderColor;
 		}
-	}
-	th.z-column:last-child {
-		border-right: none;
 	}
 	&-bar {
 		.verGradient(@baseGradientStart, @baseGradientEnd);
@@ -89,7 +87,7 @@
 	}
 }
 .z-column {
-	border-right: 1px solid @meshTitleBorderColor;
+	border-left: 1px solid @meshTitleBorderColor;
 	border-bottom: 1px solid @meshTitleBorderColor;
 	padding: 0;
 	.verGradient(@baseGradientStart, @baseGradientEnd);
@@ -145,12 +143,12 @@
 }
 //row and cell
 .z-row {
-	td:last-child {
-		border-right: none;
+	td:first-child {
+		border-left: none;
 	}
 	.z-row-inner,
 	.z-cell {
-		border-right: 1px solid @meshContentBorderColor;
+		border-left: 1px solid @meshContentBorderColor;
 		overflow: hidden;
 		position: relative;
 		z-index: 0;
