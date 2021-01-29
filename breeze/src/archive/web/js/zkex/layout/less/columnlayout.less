@@ -1,5 +1,9 @@
 @import "~./zul/less/_header.less";
 
+.z-columnlayout {
+	white-space: nowrap;
+}
+
 .z-columnlayout,
 .z-columnchildren,
 .z-columnchildren-content {
@@ -7,8 +11,9 @@
 }
 .z-columnchildren {
 	height: 100%;
-	float: left;
-	
+	display: inline-block;
+	vertical-align: top;
+
 	&-content {
 		.size(100%, 100%);
 	}
