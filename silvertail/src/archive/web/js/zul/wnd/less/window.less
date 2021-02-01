@@ -172,11 +172,7 @@
 	&-window.z-window-highlighted .z-window-content {
 		padding: 17px;
 		padding-bottom: 15px;
-	}
-
-	&-window {
-		min-width: 250px;
-		max-width: 100vw;
+		overflow: auto;
 	}
 
 	.z-label {
@@ -187,6 +183,8 @@
 
 	&-buttons {
 		text-align: center;
+		left: 0;
+		position: sticky;
 		& > * {
 			margin: 0 2px;
 		}
