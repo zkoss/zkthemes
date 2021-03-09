@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>zktheme</artifactId>
 		<groupId>org.zkoss.theme</groupId>
-		<version>9.5.1-SNAPSHOT</version>
+		<version>9.5.1</version>
 	</parent>
 	<artifactId>breeze</artifactId>
 	<packaging>jar</packaging>

@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>zktheme</artifactId>
 		<groupId>org.zkoss.theme</groupId>
-		<version>9.5.1-SNAPSHOT</version>
+		<version>9.5.1</version>
 	</parent>
 	<artifactId>zkthemedemo</artifactId>
 	<packaging>war</packaging>
@@ -63,7 +63,7 @@
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>atlantic</artifactId>
-			<version>9.5.0</version>
+			<version>9.5.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
