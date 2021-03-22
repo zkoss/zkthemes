@@ -5,7 +5,7 @@
 	
 	<version>
 		<version-class>org.zkoss.theme.sapphire.Version</version-class>
-		<version-uid>9.5.1</version-uid>
+		<version-uid>9.5.1.1</version-uid>
 	</version>
 
 </language-addon>
