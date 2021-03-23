@@ -12,7 +12,7 @@
 	th {
 		font-family: @baseTitleFontFamily;
 		font-weight: bold;
-		padding: 12px 3px;
+		padding: 12px 8px;
 	}
 
 	table {
@@ -48,6 +48,11 @@
 
 	&-decade {
 		min-height: 162px;
+
+		.z-calendar-cell {
+			text-align: left;
+			padding: 0 4px;
+		}
 	}
 	&-month,
 	&-year {
@@ -56,6 +61,7 @@
 		.z-calendar-cell {
 			min-height: 48px;
 			line-height: @baseLineHeight * 3;
+			padding: 0 4px;
 		}
 	}
 	&-cell {
