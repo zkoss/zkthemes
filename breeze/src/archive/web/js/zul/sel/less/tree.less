@@ -185,7 +185,6 @@
 		> .z-treecell {
 			.verGradient(@selectedGradientStart, @selectedGradientEnd);
 			background-clip: padding-box;
-			position: relative;
 
 			> .z-treecell-content {
 				color: @selectedColor;
@@ -205,7 +204,6 @@
 		> .z-treecell {
 			.verGradient(@selectedFocusGradientStart, @selectedFocusGradientEnd);
 			background-clip: padding-box;
-			position: relative;
 
 			> .z-treecell-content {
 				color: @selectedFocusColor;
@@ -223,7 +221,6 @@
 	&-focus {
 		> .z-treecell {
 			.verGradient(@meshContentFocusStart, @meshContentFocusEnd);
-			position: relative;
 			> .z-treecell-content {
 				color: @hoverColor;
 			}
@@ -256,7 +253,6 @@
 		}
 		&:hover > .z-treecell {
 			.resetGradient();
-			position: relative;
 		}
 	}
 }
@@ -264,16 +260,6 @@
 .z-treecell-hidden-col {
 	white-space: nowrap;
 	overflow: hidden;
-}
-
-body:not(.gecko) {
-	.z-treerow {
-		&:hover {
-			> .z-treecell {
-				position: relative;
-			}
-		}
-	}
 }
 
 //content

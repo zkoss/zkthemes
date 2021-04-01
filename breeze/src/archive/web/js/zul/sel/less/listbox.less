@@ -200,7 +200,6 @@
 			border-color: @selectedGradientStart;
 			.verGradient(@selectedGradientStart, @selectedGradientEnd);
 			background-clip: padding-box;
-			position: relative;
 
 			> .z-listcell-content {
 				color: @selectedColor;
@@ -210,7 +209,6 @@
 			> .z-listcell {
 				border-color: @selectedHoverGradientStart;
 				.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
-				position: relative;
 			}
 			.z-listcell-content {
 				color: @selectedHoverColor;
@@ -222,7 +220,6 @@
 			border-color: @selectedGradientStart;
 			.verGradient(@selectedFocusGradientStart, @selectedFocusGradientEnd);
 			background-clip: padding-box;
-			position: relative;
 
 			> .z-listcell-content {
 				color: @selectedFocusColor;
@@ -232,7 +229,6 @@
 			> .z-listcell {
 				border-color: @selectedHoverGradientStart;
 				.verGradient(@selectedHoverGradientStart, @selectedHoverGradientEnd);
-				position: relative;
 			}
 			.z-listcell-content {
 				color: @selectedHoverColor;
@@ -243,7 +239,6 @@
 		> .z-listcell {
 			.verGradient(@meshContentFocusStart, @meshContentFocusEnd);
 			background-clip: padding-box;
-			position: relative;
 		}
 		.z-listcell-content {
 			color: @hoverColor;
@@ -277,7 +272,6 @@
 		}
 		&:hover > .z-listcell {
 			.resetGradient();
-			position: relative;
 		}
 		a, a:visited, a:hover {
 			text-decoration: none;
@@ -285,16 +279,6 @@
 	}
 	a, a:visited, a:hover {
 		text-decoration: none;
-	}
-}
-
-body:not(.gecko) {
-	.z-listitem {
-		&:hover {
-			> .z-listitem {
-				position: relative;
-			}
-		}
 	}
 }
 
