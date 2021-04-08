@@ -170,21 +170,23 @@
 .z-messagebox {
 	display: inline-block;
 	white-space: normal;
-	padding: 2px 16px 12px;
-	&-window.z-window-modal .z-window-content, 
+	width: @messageboxWindowWidth - @windowFramePadding * 2 - @messageboxIconMarginLeft - @messageboxIconSize - @messageboxPaddingHorizontal;
+	&-window.z-window-modal .z-window-content,
 	&-window.z-window-highlighted .z-window-content {
 		overflow: auto;
 		padding: 16px 0px;
 	}
 
 	&-window {
-		width: 360px;
+		width: @messageboxWindowWidth;
 	}
 
 	.z-label {
 		font-family: @baseContentFontFamily;
 		font-size: @fontSizeMedium;
 		color: @textColorGrayDark;
+		display: inline-block;
+		padding: @messageboxPadding;
 	}
 
 	&-buttons {
@@ -203,13 +205,13 @@
 
 	&-icon {
 		font-size: 30px;
-		.displaySize(inline-block, @baseBarWidth, @baseBarHeight);
+		.displaySize(inline-block, @messageboxIconSize, @messageboxIconSize);
 		border: 0;
 		background-repeat: no-repeat;
 		text-align: center;
 		vertical-align: top;
 		cursor: pointer;
-		margin-left: 16px;
+		margin-left: @messageboxIconMarginLeft;
 	}
 
 	&-question {
