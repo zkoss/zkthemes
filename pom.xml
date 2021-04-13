@@ -42,7 +42,6 @@
 		</developer>
 	</developers>
 	<properties>
-		<servlet.version>2.4</servlet.version>
 		<nodemodules.basedir>${project.basedir}</nodemodules.basedir>
 		<zktheme.resources>${project.basedir}/src/archive</zktheme.resources>
 		<zktheme.web.resources>${zktheme.resources}/web</zktheme.web.resources>
@@ -56,12 +55,6 @@
 		</repository>
 	</repositories>
 	<dependencies>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>${servlet.version}</version>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zk</artifactId>
