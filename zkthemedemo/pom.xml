@@ -42,7 +42,7 @@
 		<commons-lang.version>2.4</commons-lang.version>
 		<commons-logging.version>1.1.1</commons-logging.version>
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
-		<commons-io.version>1.3.1</commons-io.version>
+		<commons-io.version>2.8.0</commons-io.version>
 		<ckez.version>4.14.0.0</ckez.version>
 		<gmapsz.version>3.1.0</gmapsz.version>
 		<timelinez.version>2.3.1_50</timelinez.version>
