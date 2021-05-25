@@ -47,6 +47,7 @@
 		<zktheme.web.resources>${zktheme.resources}/web</zktheme.web.resources>
 		<zktheme.theme.outputDirectory>${project.build.outputDirectory}/web/${project.artifactId}</zktheme.theme.outputDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<zkless.opts>{"javascriptEnabled": true}</zkless.opts>
 	</properties>
 	<repositories>
 		<repository>
@@ -117,7 +118,7 @@
 							<argument>${zktheme.theme.outputDirectory}</argument>
 							<argument>--compress</argument>
 							<argument>--less-opts</argument>
-							<argument>{"javascriptEnabled": true}</argument>
+							<argument>${zkless.opts}</argument>
 						</arguments>
 					</configuration>
 				</plugin>
@@ -208,4 +209,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>windows</family>
+				</os>
+			</activation>
+			<properties>
+				<zkless.opts>{\\\"javascriptEnabled\\\":true}</zkless.opts>
+			</properties>
+		</profile>
+	</profiles>
 </project>
