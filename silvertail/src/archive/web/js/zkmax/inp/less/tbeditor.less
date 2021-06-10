@@ -1,5 +1,5 @@
 /**
- * @{zprefix} v2.6.0 - A lightweight WYSIWYG editor
+ * @{zprefix} v2.7.2 - A lightweight WYSIWYG editor
  * Default stylesheet for @{zprefix} editor
  * ------------------------
  * @link http://alex-d.github.io/@{zprefix}
@@ -10,7 +10,7 @@
  */
 
 @import "~./zul/less/_header.less";
-@zprefix: z-tbeditor;
+@zprefix: z-tbeditor; // Potix: turn trumbowyg.css into tbeditor.less
 
 #@{zprefix}-icons {
   overflow: hidden;
@@ -38,13 +38,13 @@
   border: 1px solid #DDD;
   width: 100%;
   min-height: 300px;
-  margin: 0px auto; }
+  margin: 0px auto; } // Potix: style modified
 
 .@{zprefix}-box .@{zprefix}-editor {
   margin: 0 auto; }
 
 .@{zprefix}-editor p {
-    margin: 0 0 1em;
+    margin: 0 0 1em; // Potix: style modified
 }
 
 .@{zprefix}-box.@{zprefix}-fullscreen {
@@ -62,11 +62,14 @@
   resize: none;
   outline: none;
   overflow: auto; }
+  .@{zprefix}-editor.@{zprefix}-autogrow-on-enter,
+  .@{zprefix}-textarea.@{zprefix}-autogrow-on-enter {
+    transition: height 300ms ease-out; }
 
 .@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-box-blur .@{zprefix}-editor::before {
   color: transparent !important;
   text-shadow: 0 0 7px #333; }
-  @media screen and (min-width: 0 0 ) {
+  @media screen and (min-width: 0 \0) {
     .@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-box-blur .@{zprefix}-editor::before {
       color: rgba(200, 200, 200, 0.6) !important; } }
   @supports (-ms-accelerator: true) {
@@ -111,21 +114,18 @@
   pointer-events: none; }
 
 .@{zprefix}-button-pane {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
   width: 100%;
   min-height: 36px;
   background: #ecf0f1;
   border-bottom: 1px solid #d7e0e2;
   margin: 0;
   padding: 0 5px;
+  position: relative;
   list-style-type: none;
   line-height: 10px;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+          backface-visibility: hidden;
+  z-index: 11; }
   .@{zprefix}-button-pane::after {
     content: " ";
     display: block;
@@ -137,22 +137,19 @@
     height: 1px;
     background: #d7e0e2; }
   .@{zprefix}-button-pane .@{zprefix}-button-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap; }
+    display: inline-block; }
     .@{zprefix}-button-pane .@{zprefix}-button-group .@{zprefix}-fullscreen-button svg {
       color: transparent; }
     .@{zprefix}-button-pane .@{zprefix}-button-group:not(:empty) + .@{zprefix}-button-group::before {
       content: " ";
-      display: block;
+      display: inline-block;
       width: 1px;
       background: #d7e0e2;
       margin: 0 5px;
-      height: 35px; }
+      height: 35px;
+      vertical-align: top; } // Potix: ZK-4916: style modified for trumbowyg v2.7.2
   .@{zprefix}-button-pane button {
-    display: block;
+    display: inline-block;
     position: relative;
     width: 35px;
     height: 35px;
@@ -162,8 +159,8 @@
     border: none;
     cursor: pointer;
     background: none;
-    -webkit-transition: background-color 150ms, opacity 150ms;
-            transition: background-color 150ms, opacity 150ms; }
+    vertical-align: baseline; // Potix: ZK-4916: style modified for trumbowyg v2.7.2
+    transition: background-color 150ms, opacity 150ms; }
     .@{zprefix}-button-pane button.@{zprefix}-textual-button {
       width: auto;
       line-height: 35px; }
@@ -196,7 +193,7 @@
       top: 17px;
       right: 7px; }
   .@{zprefix}-button-pane .@{zprefix}-right {
-    margin-left: auto; }
+    float: right; }
     .@{zprefix}-button-pane .@{zprefix}-right::before {
       display: none !important; }
 
@@ -207,7 +204,8 @@
   border-top: none;
   background: #FFF;
   margin-left: -1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px; }
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px;
+  z-index: 11; }
   .@{zprefix}-dropdown button {
     display: block;
     width: 100%;
@@ -221,8 +219,7 @@
     cursor: pointer;
     text-align: left;
     font-size: 15px;
-    -webkit-transition: all 150ms;
-            transition: all 150ms; }
+    transition: all 150ms; }
     .@{zprefix}-dropdown button:hover, .@{zprefix}-dropdown button:focus {
       background: #ecf0f1; }
     .@{zprefix}-dropdown button svg {
@@ -277,8 +274,7 @@
     .@{zprefix}-modal-box .@{zprefix}-progress .@{zprefix}-progress-bar {
       background: #2BC06A;
       height: 100%;
-      -webkit-transition: width 150ms linear;
-              transition: width 150ms linear; }
+      transition: width 150ms linear; }
   .@{zprefix}-modal-box label {
     display: block;
     position: relative;
@@ -291,8 +287,7 @@
       text-align: left;
       height: 25px;
       line-height: 25px;
-      -webkit-transition: all 150ms;
-              transition: all 150ms; }
+      transition: all 150ms; }
       .@{zprefix}-modal-box label .@{zprefix}-input-infos span {
         display: block;
         color: #69878f;
@@ -319,8 +314,7 @@
       max-width: 330px;
       width: 70%;
       padding: 0 7px;
-      -webkit-transition: all 150ms;
-              transition: all 150ms; }
+      transition: all 150ms; }
       .@{zprefix}-modal-box label input:hover, .@{zprefix}-modal-box label input:focus {
         outline: none;
         border: 1px solid #95a5a6; }
@@ -346,8 +340,7 @@
     cursor: pointer;
     font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif;
     font-size: 16px;
-    -webkit-transition: all 150ms;
-            transition: all 150ms; }
+    transition: all 150ms; }
     .@{zprefix}-modal-box .@{zprefix}-modal-button.@{zprefix}-modal-submit {
       right: 110px;
       background: #2bc06a; }
@@ -368,9 +361,11 @@
 .@{zprefix}-overlay {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
   width: 100%;
   left: 0;
   display: none;
+  top: 0;
   z-index: 10; }
 
 /**
@@ -501,7 +496,7 @@ body.@{zprefix}-body-fullscreen {
     background: #111; }
   .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor::before {
     text-shadow: 0 0 7px #ccc; }
-    @media screen and (min-width: 0 0 ) {
+    @media screen and (min-width: 0 \0 ) {
       .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor *, .@{zprefix}-dark .@{zprefix}-box.@{zprefix}-box-blur .@{zprefix}-editor::before {
         color: rgba(20, 20, 20, 0.6) !important; } }
     @supports (-ms-accelerator: true) {
