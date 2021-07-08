@@ -86,13 +86,15 @@
 
 	//toolbar mold
 	&-toolbar {
+		border-color: transparent;
+
 		.z-combobutton-content,
 		.z-combobutton-button {
 			border-color: transparent;
-			.borderRadius(0);
 			.resetGradient();
 		}
 		&:focus {
+			border-color: transparent;
 			.z-combobutton-content,
 			.z-combobutton-button {
 				border-color: transparent;
@@ -100,13 +102,17 @@
 			}
 		}
 		&:active {
+			border-color: @activeBorderColor;
+			.boxShadow('inset 1px 1px 1px rgba(210, 210, 210, 0.75), 0 0 7px #CFCFCF');
 			.z-combobutton-content,
 			.z-combobutton-button {
-				border-color: @hoverBorderColor;
-				.verGradient(@hoverGradientStart, @hoverGradientEnd);
+				border-color: @activeBorderColor;
+				.verGradient(@activeGradientStart, @activeGradientEnd);
 			}
 		}
 		&[disabled] {
+			border-color: transparent;
+			.boxShadow('none');
 			.z-combobutton-content,
 			.z-combobutton-button {
 				border-color: transparent;
