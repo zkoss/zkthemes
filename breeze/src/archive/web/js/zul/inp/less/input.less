@@ -113,10 +113,12 @@
 	top: 8px;
 	right: 8px;
 	cursor: pointer;
+	.opacity(0.6);
 
 	&:hover {
 		border: 1px solid @errorboxBorderColor;
 		.borderRadius(@borderRadiusSmall - 1);
+		.opacity(1);
 	}
 }
 .z-errorbox-icon {
@@ -139,11 +141,4 @@
 }
 .z-errorbox-up ~ .z-errorbox-close {
 	top: 15px;
-}
-
-.z-errorbox-close {
-	.opacity(0.6);
-	&:hover {
-		.opacity(1);
-	}
 }

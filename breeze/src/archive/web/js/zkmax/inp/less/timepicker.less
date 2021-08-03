@@ -23,6 +23,7 @@
 		&[readonly] {
 			border-color: @readonlyBorderColor;
 			background: @readonlyBackgroundColor;
+			cursor: pointer;
 		}
 		&[readonly]:focus {
 			.boxShadow('none');
@@ -46,7 +47,7 @@
 		padding: 4px;
 		line-height: @baseLineHeight;
 		background: @inputBackgroundColor;
-		text-align: left;
+		text-align: center;
 		vertical-align: middle;
 		overflow: hidden;
 		cursor: pointer;
@@ -100,18 +101,8 @@
 	}
 }
 
-.z-timepicker-input {
-	&[readonly] {
-		cursor: pointer;
-	}
-}
-
 .z-timepicker-button.z-timepicker-disabled {
 	display: none;
-}
-
-.z-timepicker-button {
-	text-align: center;
 }
 
 .z-timepicker-inplace .z-timepicker-input {
@@ -126,10 +117,6 @@
 }
 .z-timepicker-inplace .z-timepicker-button {
 	visibility: hidden;
-}
-
-.z-timepicker-popup {
-	max-height: 200px;
 }
 
 .z-timepicker-option {
@@ -171,6 +158,7 @@
 	background: @popupBackgroundColor;
 	position: absolute;
 	overflow: auto;
+	max-height: 200px
 }
 
 .z-timepicker-content {
