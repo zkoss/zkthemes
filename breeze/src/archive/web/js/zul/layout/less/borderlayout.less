@@ -89,6 +89,10 @@
 .z-west,
 .z-east {
 	height: 100%; // Fixed for B30-1902533.zul
+	&-title {
+		.transform('rotate(90deg)');
+		.applyCSS3('transform-origin', 'left bottom');
+	}
 }
 
 .z-west,
@@ -145,6 +149,13 @@
 		line-height: @baseLineHeight;
 		.opacity(0.5);
 		position: absolute;
+	}
+	&-title {
+		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, bold, @textColorGray);
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		line-height: @baseButtonHeight;
 	}
 }
 .z-north-splitter,
@@ -220,25 +231,4 @@
 .z-south-splitter-button {
 	.size(30px, 8px);
 	border-width: 0 1px;
-}
-
-.z-north,
-.z-south,
-.z-west,
-.z-east {
-	&-title {
-		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, bold, @textColorGray);
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
-		line-height: @baseButtonHeight;
-	}
-}
-
-.z-west,
-.z-east {
-	&-title {
-		.transform('rotate(90deg)');
-		.applyCSS3('transform-origin', 'left bottom');
-	}
 }
