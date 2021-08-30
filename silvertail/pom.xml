@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.zkoss.theme</groupId>
 		<artifactId>zktheme</artifactId>
-		<version>9.6.0.1-SNAPSHOT</version>
+		<version>9.6.0.1</version>
 	</parent>
 	<artifactId>silvertail</artifactId>
 	<packaging>jar</packaging>
