@@ -1,0 +1,201 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+	id 'java'
+	id 'maven-publish'
+	id "com.github.node-gradle.node" version "3.1.0"
+	id 'com.github.gmazzo.buildconfig' version '3.0.3'
+	id 'idea'
+}
+
+idea {
+	module {
+		outputDir file("$buildDir/classes/main")
+		testOutputDir file("$buildDir/classes/test")
+	}
+}
+
+subprojects {
+	afterEvaluate {
+		java.sourceCompatibility = JavaVersion.VERSION_1_8
+		tasks.withType(JavaCompile) {
+			options.encoding = 'UTF-8'
+		}
+
+		repositories {
+			mavenCentral()
+
+			maven {
+				name = 'ZK Repository'
+				url = uri('https://mavensync.zkoss.org/maven2')
+			}
+
+			maven {
+				name = 'ZK Evaluation Repository'
+				url = uri('https://mavensync.zkoss.org/eval')
+			}
+		}
+
+		publishing {
+			publications {
+				"$project.name"(MavenPublication) {
+					groupId = "${group}"
+					artifactId = project.name
+					// pom configuration
+					pom {
+						name = project.description
+						url = "https://www.zkoss.org/$project.name"
+						description = project.description
+						licenses {
+							license {
+								name = 'GNU LESSER GENERAL PUBLIC LICENSE, Version 3'
+								url = 'https://www.gnu.org/licenses/lgpl.html'
+								distribution = 'repo'
+							}
+						}
+						developers {
+							developer {
+								id = 'zkteam'
+								name = 'ZK Team'
+								email = 'info@zkoss.org'
+								url = 'https://www.zkoss.org'
+								organization = 'Potix'
+								organizationUrl = 'https://www.zkoss.org'
+								roles = ['architect', 'developer']
+								timezone = '8'
+								properties = [
+										picUrl: 'https://www.zkoss.org'
+								]
+							}
+						}
+						scm {
+							connection = 'scm:git:https://github.com/zkoss/zk.git'
+							url = 'https://mavensync.zkoss.org/maven2'
+						}
+						withXml {
+							// add repositories in generated pom
+							def repositoriesNode = asNode().appendNode('repositories')
+							project.repositories.each { repository ->
+								if (repository instanceof MavenArtifactRepository && repository.name != 'MavenRepo' && repository.name != 'MavenLocal') {
+									def repositoryNode = repositoriesNode.appendNode('repository')
+									repositoryNode.appendNode('id', repository.name)
+									repositoryNode.appendNode('url', repository.url)
+								}
+							}
+						}
+					}
+					// add dependencies to pom
+					from(components.java)
+					suppressAllPomMetadataWarnings()
+				}
+			}
+		}
+
+		// move & rename default-pom.xml
+		task preparePomFile(type: Copy) {
+			dependsOn(rootProject.tasks.withType(GenerateMavenPom))
+			into file("$projectDir/build/pom")
+			from file("$rootDir/build/publications/$project.name")
+			include '**/pom-default.xml'
+			rename 'pom-default.xml', 'pom.xml'
+			setDuplicatesStrategy(DuplicatesStrategy.INCLUDE)
+		}
+
+		// Compile LESS
+		task compileLess(type: Exec) {
+			dependsOn(npmInstall)
+			def lessOpts = System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows') ? '{\\\"javascriptEnabled\\\":true}' : '{"javascriptEnabled": true}'
+			commandLine "$rootDir/node_modules/.bin/zklessc", '-s', "src/main/resources/web/${project.name}", '-o', "codegen/resources/web/${project.name}", '-c', '--less-opts', lessOpts
+		}
+
+		// Configure additional resource for generated resources
+		processResources() {
+			dependsOn(compileLess)
+			from("codegen/resources") {
+				setDuplicatesStrategy(DuplicatesStrategy.INCLUDE)
+			}
+
+			// replace @version@ token in xml files
+			from('src/main/resources') {
+				include "**/config.xml", "**/lang.xml", "**/lang-addon.xml"
+				filter(ReplaceTokens, tokens: [version: "$version".toString()]) // Gstring to String
+				setDuplicatesStrategy(DuplicatesStrategy.INCLUDE)
+			}
+		}
+
+		jar {
+			exclude "**/*.less", "**/less/**"
+			manifest {
+				attributes(
+						"Build-Jdk-Spec": JavaVersion.current(),
+						"Created-By": 'Gradle ' + project.getGradle().getGradleVersion()
+				)
+			}
+		}
+
+		// build sources jar for bundle
+		task sourcesJar(type: Jar) {
+			dependsOn(generateBuildConfig)
+			archiveClassifier = 'sources'
+
+			// add generated java in to source
+			from "$buildDir/generated/source/buildConfig/main/main/org"
+
+			from 'src/main/java/org'
+			from('src/main/resources') {
+				exclude '**/metainfo'
+			}
+			setDuplicatesStrategy(DuplicatesStrategy.INCLUDE)
+		}
+
+		// combine jar & pom.xml into one bundle.jar for release theme
+		task bundleJar(type: Jar) {
+			dependsOn 'jar'
+			dependsOn 'sourcesJar'
+			dependsOn 'preparePomFile'
+			archiveClassifier = "bundle"
+			def elementName = "${project.name}-${project.version}"
+			from "$buildDir/pom"
+			from("$buildDir/libs") {
+				include "**/${elementName}.jar"
+				include "**/${elementName}-sources.jar"
+				setDuplicatesStrategy(DuplicatesStrategy.INCLUDE)
+			}
+		}
+
+		// build zip for release zk
+		task zip(type: Zip) {
+			dependsOn 'jar'
+			dependsOn 'sourcesJar'
+			archiveFileName = "${project.name}-${project.version}.zip"
+			destinationDirectory = file("$buildDir/zip")
+			from("$buildDir/libs/${project.name}-${project.version}.jar") {
+				rename "${project.name}-${project.version}.jar", "${project.name}.jar"
+			}
+			from("$buildDir/libs/${project.name}-${project.version}-sources.jar") {
+				rename "${project.name}-${project.version}-sources.jar", "${project.name}-sources.jar"
+			}
+			from "$projectDir/readme.txt"
+		}
+
+		task release() {
+			dependsOn 'bundleJar'
+			dependsOn 'zip'
+			doLast {
+				copy {
+					from "$buildDir/zip/${project.name}-${project.version}.zip"
+					into "$buildDir/dist"
+				}
+				copy {
+					from "$buildDir/libs/${project.name}-${project.version}-bundle.jar"
+					into "$buildDir/dist/maven"
+				}
+			}
+		}
+
+		// Delete codegen folder before clean
+		clean.doFirst {
+			delete "$projectDir/codegen/"
+		}
+	}
+}

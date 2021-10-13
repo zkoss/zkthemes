@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<config-name>silvertail</config-name><!-- used to resolve dependency -->
+	<depends>zul</depends>
+	<version>
+		<version-class>org.zkoss.theme.silvertail.Version</version-class>
+		<version-uid>@version@</version-uid>
+	</version>
+	
+	<listener>
+		<listener-class>org.zkoss.theme.silvertail.SilvertailThemeWebAppInit</listener-class>
+	</listener>
+</config>

@@ -1,0 +1,5 @@
+rootProject.name = 'zktheme'
+
+include(':silvertail')
+include(':breeze')
+include(':sapphire')

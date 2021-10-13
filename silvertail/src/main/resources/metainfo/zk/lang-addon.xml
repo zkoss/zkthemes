@@ -1,0 +1,12 @@
+<language-addon>
+	<addon-name>silvertail</addon-name>
+	<depends>zul</depends>
+	<language-name>xul/html</language-name>
+
+	<version>
+		<version-class>org.zkoss.theme.silvertail.Version</version-class>
+		<version-uid>@version@</version-uid>
+	</version>
+
+	
+</language-addon>

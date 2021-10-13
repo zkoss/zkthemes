@@ -1,0 +1,33 @@
+plugins {
+	id 'java-library'
+	id 'com.github.gmazzo.buildconfig'
+	id 'idea'
+}
+
+idea {
+	module {
+		outputDir file("$buildDir/classes/main")
+		testOutputDir file("$buildDir/classes/test")
+	}
+}
+
+java {
+	// Declaring feature variants for optionalImplementation, to generate dependency optional in pom
+	registerFeature('optional') {
+		usingSourceSet(sourceSets.main)
+	}
+}
+
+dependencies {
+	optionalImplementation "org.zkoss.zk:zk:${project.property('zkVersion')}"
+	optionalImplementation "org.zkoss.zk:zul:${project.property('zkVersion')}"
+	optionalImplementation "org.zkoss.zk:zkmax:${project.property('zkVersion')}"
+}
+
+buildConfig {
+	className = 'Version'
+	packageName = "org.zkoss.theme.${project.name}"
+	buildConfigField("String", "UID", provider { "\"${project.version}\"" })
+}
+
+description = 'ZK Silvertail Theme'
