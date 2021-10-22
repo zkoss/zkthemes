@@ -141,9 +141,11 @@ subprojects {
 			// add generated java in to source
 			from "$buildDir/generated/source/buildConfig/main/main/org"
 
+			includeEmptyDirs false
 			from 'src/main/java/org'
 			from('src/main/resources') {
 				exclude '**/metainfo'
+				include '**/*.less'
 			}
 			setDuplicatesStrategy(DuplicatesStrategy.INCLUDE)
 		}
@@ -190,6 +192,16 @@ subprojects {
 					from "$buildDir/libs/${project.name}-${project.version}-bundle.jar"
 					into "$buildDir/dist/maven"
 				}
+				copy {
+					from "$buildDir/libs/${project.name}-${project.version}-bundle.jar"
+					into "$rootDir/build/dist/theme"
+					rename "${project.name}-${project.version}-bundle.jar", "${project.name}.jar"
+				}
+				copy {
+					from "$buildDir/zip/${project.name}-${project.version}.zip"
+					into "$rootDir/build/theme"
+					rename "${project.name}-${project.version}.zip", "${project.name}.zip"
+				}
 			}
 		}
 
@@ -198,6 +210,10 @@ subprojects {
 			delete "$projectDir/codegen/"
 		}
 	}
+}
+
+task release() {
+	dependsOn subprojects.collect { ":$it.name:release" }
 }
 
 // change all the version in gradle.properties under zkthemes
