@@ -198,9 +198,12 @@ subprojects {
 					rename "${project.name}-${project.version}-bundle.jar", "${project.name}.jar"
 				}
 				copy {
+					from "$buildDir/libs/${project.name}-${project.version}-bundle.jar"
+					into "$rootDir/build/theme/maven"
+				}
+				copy {
 					from "$buildDir/zip/${project.name}-${project.version}.zip"
 					into "$rootDir/build/theme"
-					rename "${project.name}-${project.version}.zip", "${project.name}.zip"
 				}
 			}
 		}
