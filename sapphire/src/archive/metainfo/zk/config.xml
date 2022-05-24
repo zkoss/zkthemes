@@ -5,7 +5,7 @@
 	<depends>zul</depends>
 	<version>
 		<version-class>org.zkoss.theme.sapphire.Version</version-class>
-		<version-uid>9.6.2</version-uid>
+		<version-uid>9.6.3</version-uid>
 	</version>
 
 	<listener>
