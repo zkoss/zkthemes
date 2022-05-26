@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>zktheme</artifactId>
 		<groupId>org.zkoss.theme</groupId>
-		<version>9.5.1.3</version>
+		<version>9.5.1.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>zkthemedemo</artifactId>
 	<packaging>war</packaging>
