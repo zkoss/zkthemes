@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.theme</groupId>
 	<artifactId>zktheme</artifactId>
-	<version>8.6.4.1</version>
+	<version>8.6.4.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>ZK Theme Maven Bulider</name>
 	<url>http://www.zkoss.org/themes</url>
