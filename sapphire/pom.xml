@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.zkoss.theme</groupId>
 		<artifactId>zktheme</artifactId>
-		<version>9.5.1.4-SNAPSHOT</version>
+		<version>9.5.1.4</version>
 	</parent>
 	<artifactId>sapphire</artifactId>
 	<packaging>jar</packaging>
