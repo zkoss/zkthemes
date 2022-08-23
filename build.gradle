@@ -139,10 +139,10 @@ subprojects {
 			archiveClassifier = 'sources'
 
 			// add generated java in to source
-			from "$buildDir/generated/source/buildConfig/main/main/org"
+			from "$buildDir/generated/source/buildConfig/main/main"
 
 			includeEmptyDirs false
-			from 'src/main/java/org'
+			from 'src/main/java'
 			from('src/main/resources') {
 				exclude '**/metainfo'
 				include '**/*.less'
