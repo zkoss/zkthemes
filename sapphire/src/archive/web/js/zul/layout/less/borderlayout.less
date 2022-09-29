@@ -150,6 +150,13 @@
 		.opacity(0.5);
 		position: absolute;
 	}
+	&-title {
+		.fontStyle(@baseTitleFontFamily, @fontSizeMedium, bold, @textColorGray);
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		line-height: @baseButtonHeight;
+	}
 }
 .z-north-splitter,
 .z-south-splitter {
