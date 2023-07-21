@@ -102,11 +102,19 @@ subprojects {
 		}
 
 		// Compile LESS
-		task compileLess(type: Exec) {
+		task compileLess() {
 			setOnlyIf { project.ext['gradleFrontendSkip'] == 'false' }
 			dependsOn(npmInstall)
-			def lessOpts = System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows') ? '{\\\"javascriptEnabled\\\":true}' : '{"javascriptEnabled": true}'
-			commandLine "$rootDir/node_modules/.bin/zklessc", '-s', "src/main/resources/web/${project.name}", '-o', "codegen/resources/web/${project.name}", '-c', '--less-opts', lessOpts
+			if (new File("$projectDir/src/main/resources/web/$project.name/").exists()) {
+				inputs.dir("$projectDir/src/main/resources/web/$project.name/")
+				outputs.dir("$projectDir/codegen/resources/web/$project.name/")
+				doLast {
+					exec {
+						def lessOpts = System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows') ? '{\\\"javascriptEnabled\\\":true}' : '{"javascriptEnabled": true}'
+						commandLine "$rootDir/node_modules/.bin/zklessc", '-s', "src/main/resources/web/${project.name}", '-o', "codegen/resources/web/${project.name}", '-c', '--less-opts', lessOpts
+					}
+				}
+			}
 		}
 
 		// Configure additional resource for generated resources
