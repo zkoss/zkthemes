@@ -75,7 +75,7 @@
 	Tree with CheckMark
 	<button label="Toggle checkmark" onClick="tree3.checkmark = !tree3.checkmark;"/>
 	<button label="Toggle multiple" onClick="tree3.multiple = !tree3.multiple;"/>
-	<tree id="tree3" fixedLayout="true" rows="5" multiple="true" checkmark="true">
+	<tree id="tree3"  rows="5" multiple="true" checkmark="true">
 		<treecols>
 			<treecol label="Name"/>
 			<treecol label="Description"/>

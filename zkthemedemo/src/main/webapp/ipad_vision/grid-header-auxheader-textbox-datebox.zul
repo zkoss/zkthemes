@@ -1,4 +1,4 @@
-<grid fixedLayout="true" width="900px">
+<grid  width="900px">
 	<columns id="cs">
 		<column label="Align Left" align="left" width="300px"/>
 		<column label="Align Center" align="center" width="300px"/>

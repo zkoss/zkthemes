@@ -1,4 +1,4 @@
-<grid fixedLayout="true" width="900px">
+<grid  width="900px">
 	<columns sizable="true">
 		<column label="Type">
 			<menubar>

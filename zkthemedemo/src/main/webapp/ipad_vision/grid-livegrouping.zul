@@ -113,7 +113,7 @@
 	model.setOpenGroup0(1, false);
 	]]>
 	</zscript>
-	<grid id="lb1" height="400px" fixedLayout="true" model="${model}" rowRenderer="${renderer}">
+	<grid id="lb1" height="400px"  model="${model}" rowRenderer="${renderer}">
 	 	<columns sizable="true">
 	       <column width="80px" label="From"/>
 	       <column label="Subject"/>

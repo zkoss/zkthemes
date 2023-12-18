@@ -1,4 +1,4 @@
-<listbox width="900px" fixedLayout="true">
+<listbox width="900px" >
 	<auxhead>
 		<auxheader label="A+B" colspan="2" />
 		<auxheader label="C" />

@@ -1,5 +1,5 @@
 <zk>
-	<grid id="lb1" height="400px" fixedLayout="true">
+	<grid id="lb1" height="400px" >
 		<zscript><![CDATA[
 		import org.zkoss.zkdemo.userguide.LiveGroupRenderer;
 		import org.zkoss.zul.SimpleGroupsModel;

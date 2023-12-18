@@ -4,7 +4,7 @@
 		<window
 			title="auxhead, column, auxhead"
 			border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid  width="300px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
 					<auxheader label="C"/>
@@ -36,7 +36,7 @@
 		<window
 			title="column, auxhead, auxhead"
 			border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid  width="300px">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
 					<column label="Align Center" align="center" width="100px"/>
@@ -68,7 +68,7 @@
 		<window
 			title="column, auxhead, auxhead"
 			border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid  width="300px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
 					<auxheader label="C"/>
@@ -102,7 +102,7 @@
 		<window
 			title="Only column"
 			border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid  width="300px">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
 					<column label="Align Center" align="center" width="100px"/>
@@ -125,7 +125,7 @@
 		<window
 			title="Only auxhead: It shouldn't display auxhead"
 			border="normal" >
-			<grid fixedLayout="true" width="300px">
+			<grid  width="300px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
 					<auxheader label="C"/>
@@ -147,7 +147,7 @@
 		<window
 			title="No auxhead, No columns"
 			border="normal" >
-			<grid fixedLayout="true" width="400px">
+			<grid  width="400px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2"/>
 					<auxheader label="C"/>
@@ -171,7 +171,7 @@
 			<window
 			title="Textbox and datebox in auxheader"
 			border="normal" >
-			<grid fixedLayout="true" width="600px">
+			<grid  width="600px">
 				<columns id="cs">
 					<column label="Align Left" align="left" width="100px"/>
 					<column label="Align Center" align="center" width="100px"/>
@@ -215,7 +215,7 @@
 		<window
 			title="Embedded menubar, button, datebox and Listbox in column"
 			border="normal">
-			<grid fixedLayout="true" width="600px">
+			<grid  width="600px">
 				<columns sizable="true">
 					<column label="Type">
 						<menubar>

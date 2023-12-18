@@ -8,7 +8,7 @@
 	</listbox>		
 
 	<separator bar="true"/>
-	<listbox fixedLayout="true">
+	<listbox >
 		<listhead sizable="true">
 			<listheader align="center" width="40px"
 				image="/img/Centigrade-Widget-Icons/ArrowsUpDown-16x16.png" />
@@ -63,7 +63,7 @@
 	Listbox with checkmarks
 	<button label="Toggle checkmark" onClick="box.checkmark = !box.checkmark"/>
 	<button label="Toggle multiple" onClick="box.multiple = !box.multiple"/>
-	<listbox id="box" fixedLayout="true" multiple="true" checkmark="true">
+	<listbox id="box"  multiple="true" checkmark="true">
 		<listhead menupopup="auto">
 			<listheader label="Name"/>
 			<listheader label="Gender" sort="client"/>

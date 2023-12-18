@@ -1,5 +1,5 @@
 <zk>
-<grid fixedLayout="true" width="600px">
+<grid  width="600px">
 	<columns>
 		<column width="40px" />
 		<column label="Product Name"/>
@@ -183,7 +183,7 @@
 </grid>
 <separator />
 Nested Grid
-<grid fixedLayout="true" width="600px">
+<grid  width="600px">
 	<columns>
 		<column width="40px" />
 		<column label="Product Name"/>

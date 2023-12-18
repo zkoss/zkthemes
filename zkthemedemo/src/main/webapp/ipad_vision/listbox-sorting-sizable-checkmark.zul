@@ -1,4 +1,4 @@
-<listbox fixedLayout="true" width="400px" multiple="true" checkmark="true">
+<listbox  width="400px" multiple="true" checkmark="true">
 	<listhead sizable="true">
 		<listheader align="center" width="40px"/>
 		<listheader label="Subject" sort="auto" />

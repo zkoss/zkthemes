@@ -4,7 +4,7 @@
 	<hbox>
 		<window title="auxhead, column, auxhead" border="normal"
 			hflex="min">
-			<listbox width="400px" fixedLayout="true">
+			<listbox width="400px" >
 				<auxhead>
 					<auxheader label="A+B" colspan="2" />
 					<auxheader label="C" />
@@ -32,7 +32,7 @@
 		</window>
 		<window title="column, auxhead, auxhead" border="normal"
 			hflex="min">
-			<listbox fixedLayout="true" width="400px">
+			<listbox  width="400px">
 				<listhead id="cs">
 					<listheader label="Align Left" align="left" />
 					<listheader label="Align Center" align="center"/>
@@ -61,7 +61,7 @@
 		
 		<window title="auxhead, auxhead, column" border="normal"
 			hflex="min">
-			<listbox fixedLayout="true" width="400px">
+			<listbox  width="400px">
 				<auxhead>
 					<auxheader label="A+B" colspan="2" />
 					<auxheader label="C" />
@@ -93,7 +93,7 @@
 	Sorting
 	<hbox>
 		<window title="sorting, sizeable" border="normal">
-			<listbox fixedLayout="true" width="400px">
+			<listbox  width="400px">
 				<listhead sizable="true">
 					<listheader align="center" width="40px"
 						image="/img/Centigrade-Widget-Icons/ArrowsUpDown-16x16.png" />
@@ -128,7 +128,7 @@
 		</window>
 		
 		<window title="sorting, sizeable with header" border="normal">
-			<listbox fixedLayout="true" width="400px">
+			<listbox  width="400px">
 				<auxhead>
 					<auxheader label="A+B (Align Center)" colspan="2" align="center"/>
 					<auxheader label="C" />
@@ -170,7 +170,7 @@
 		</window>
 		
 		<window title="sorting, resize, checkable" border="normal" >
-			<listbox fixedLayout="true" width="400px" multiple="true" checkmark="true">
+			<listbox  width="400px" multiple="true" checkmark="true">
 				<listhead sizable="true">
 					<listheader align="center" width="40px"/>
 					<listheader label="Subject" sort="auto" />
@@ -213,7 +213,7 @@
 	Grouping
 	<hbox>
 		<window title="grouping" border="normal">
-			<listbox fixedLayout="true" width="400px">
+			<listbox  width="400px">
 				<listhead sizable="true">
 					<listheader label="Brand" />
 					<listheader label="Price"  width="100px"/>
@@ -259,7 +259,7 @@
 		</window>
 		
 		<window title="grouping with height" border="normal">
-			<listbox fixedLayout="true" width="400px" height="200px">
+			<listbox  width="400px" height="200px">
 				<listhead sizable="true">
 					<listheader label="Brand" />
 					<listheader label="Price"  width="100px"/>
@@ -311,7 +311,7 @@
 				listbox.pagingChild.mold = "os".equals(listbox.pagingChild.mold) ? "default" : "os";
 				</attribute>
 			</button>
-			<listbox id="listbox" fixedLayout="true" width="400px" mold="paging" pageSize="3">
+			<listbox id="listbox"  width="400px" mold="paging" pageSize="3">
 				<listhead sizable="true">
 					<listheader label="Brand" />
 					<listheader label="Price"  width="100px"/>

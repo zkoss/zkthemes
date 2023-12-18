@@ -1,4 +1,4 @@
-<listbox fixedLayout="true" width="900px" height="200px">
+<listbox  width="900px" height="200px">
 	<listhead sizable="true">
 		<listheader label="Brand" />
 		<listheader label="Price"  width="100px"/>

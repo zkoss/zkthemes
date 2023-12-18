@@ -1,4 +1,4 @@
-<listbox fixedLayout="true" width="900px">
+<listbox  width="900px">
 	<listhead id="cs">
 		<listheader label="Align Left" align="left" />
 		<listheader label="Align Center" align="center"/>

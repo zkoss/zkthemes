@@ -1,4 +1,4 @@
-<grid fixedLayout="true">
+<grid >
 	<columns sizable="true">
 		<column label="Brand" />
 		<column label="Processor Type" width="150px"/>

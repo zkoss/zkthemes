@@ -1,4 +1,4 @@
-<grid fixedLayout="true" width="900px">
+<grid  width="900px">
 	<auxhead>
 		<auxheader label="A+B" colspan="2"/>
 		<auxheader label="C"/>

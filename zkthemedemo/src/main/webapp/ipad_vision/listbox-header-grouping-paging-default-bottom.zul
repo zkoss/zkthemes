@@ -1,5 +1,5 @@
 <zk>
-	<listbox id="listbox" fixedLayout="true" width="900px" mold="paging" pageSize="3">
+	<listbox id="listbox"  width="900px" mold="paging" pageSize="3">
 		<listhead sizable="true">
 			<listheader label="Brand" />
 			<listheader label="Price"  width="100px"/>

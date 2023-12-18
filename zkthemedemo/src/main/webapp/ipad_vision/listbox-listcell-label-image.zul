@@ -1,4 +1,4 @@
-<listbox fixedLayout="true">
+<listbox >
 	<listhead sizable="true">
 		<listheader align="center" width="40px"
 			image="/img/Centigrade-Widget-Icons/ArrowsUpDown-16x16.png" />

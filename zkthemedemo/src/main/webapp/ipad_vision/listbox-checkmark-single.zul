@@ -1,4 +1,4 @@
-<listbox id="box" fixedLayout="true" multiple="false" checkmark="true">
+<listbox id="box"  multiple="false" checkmark="true">
 	<listhead menupopup="auto">
 		<listheader label="Name"/>
 		<listheader label="Gender" sort="client"/>
