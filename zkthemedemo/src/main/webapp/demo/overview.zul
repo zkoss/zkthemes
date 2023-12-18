@@ -79,7 +79,7 @@
 			</vlayout>
 		</window>
 		<separator orient="vertical" />
-		<panel hflex="1" vflex="1" border="normal" title="Panel" framable="true"
+		<panel hflex="1" vflex="1" border="rounded" title="Panel"
 			closable="true" maximizable="true" minimizable="true" collapsible="true">
 			<panelchildren>
 				<vlayout vflex="1" spacing="0">

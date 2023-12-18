@@ -1,7 +1,7 @@
 <?page title="Panel (No border)" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<hbox spacing="0">
-		<panel framable="true" height="300px" width="300px" 
+		<panel border="rounded" height="300px" width="300px"
 			maximizable="true" minimizable="true" collapsible="true" closable="true"
 			title="Panel (with frame)">
 			<toolbar mold="panel">Toolbar</toolbar>
@@ -23,7 +23,7 @@
 			<toolbar mold="panel">Toolbar</toolbar>
 		</panel>
 		<separator orient="vertical" spacing="10px" />
-		<panel framable="true" height="300px" width="300px">
+		<panel border="rounded" height="300px" width="300px">
 			<toolbar mold="panel">Toolbar</toolbar>
 			<panelchildren>
 				Panel Content
@@ -43,7 +43,7 @@
 	</hbox>
 	<separator spacing="10px" />
 	<hbox spacing="0">
-		<panel framable="true" height="300px" width="300px" 
+		<panel border="rounded" height="300px" width="300px"
 			maximizable="true" minimizable="true" collapsible="true" closable="true"
 			title="Panel (with frame)">
 			<panelchildren>
@@ -58,7 +58,7 @@
 			</panelchildren>
 		</panel>
 		<separator orient="vertical" spacing="10px" />
-		<panel framable="true" height="300px" width="300px">
+		<panel border="rounded" height="300px" width="300px">
 			<panelchildren>
 				Panel Content
 			</panelchildren>

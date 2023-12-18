@@ -8,7 +8,7 @@
 			</toolbar>
 			Window Content
 		</window>
-		<panel title="Panel" border="normal" height="300px" width="300px" framable="true" >
+		<panel title="Panel" border="rounded" height="300px" width="300px">
 			<toolbar orient="vertical">
 				<toolbarbutton label="Button 1" image="/common/img/volumn.gif"/>
 				<toolbarbutton label="Button 2" image="/common/img/network.gif"/>
@@ -32,7 +32,7 @@
 			</toolbar>
 			Window Content
 		</window>
-		<panel title="Panel" border="normal" height="300px" width="300px" framable="true" >
+		<panel title="Panel" border="rounded" height="300px" width="300px">
 			<toolbar orient="vertical">
 				<toolbarbutton label="Button 1" />
 				<toolbarbutton label="Button 2" />

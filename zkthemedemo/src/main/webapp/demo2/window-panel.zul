@@ -2,7 +2,7 @@
 <zk>
 	<hbox>
 		<window title="Window" border="normal" height="300px" width="300px" mold="desktop">
-			<panel height="100%" border="normal" framable="true" title="Panel" mold="desktop">
+			<panel height="100%" border="rounded" title="Panel" mold="desktop">
 				<panelchildren mold="desktop">
 					Panel Content (with title, frame)
 				</panelchildren>
@@ -16,7 +16,7 @@
 			</panel>
 		</window>
 		<window title="Window" border="normal" height="300px" width="300px" mold="desktop">
-			<panel height="100%" border="normal" framable="true" mold="desktop">
+			<panel height="100%" border="rounded" mold="desktop">
 				<panelchildren mold="desktop">
 					Panel Content (no title, with frame)
 				</panelchildren>
