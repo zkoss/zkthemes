@@ -1,3 +1,9 @@
+ZK Themes (Deprecated)
+========
+
+This project is deprecated as of release 10.0.0,
+please use [ZK Theme Pack](https://www.zkoss.org/product/zkthemepack) instead.
+
 *** How to build the project ***
 
 run the following maven command
