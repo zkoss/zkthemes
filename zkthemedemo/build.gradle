@@ -43,7 +43,7 @@ dependencies {
 	implementation "commons-lang:commons-lang:2.4"
 	implementation "commons-logging:commons-logging:1.1.1"
 	implementation "org.apache.commons:commons-fileupload2-javax:2.0.0-M2"
-	implementation "commons-io:commons-io:2.13.0"
+	implementation "commons-io:commons-io:2.15.1"
 	implementation "org.zkoss.common:zcommon:${project.version}"
 	implementation "org.zkoss.zkforge.el:zcommons-el:1.1.0"
 	implementation "org.zkoss.zk:zhtml:${project.version}"
