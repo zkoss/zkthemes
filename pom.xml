@@ -207,6 +207,29 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- SBOM (CycloneDX) for CRA compliance: per-theme BOM. Inherited to each theme
+			     module (breeze/sapphire/silvertail); outputName uses the module artifactId so
+			     zkthemedeploy.sh attaches <theme>-sbom-cyclonedx.json to each theme artifact. -->
+			<plugin>
+				<groupId>org.cyclonedx</groupId>
+				<artifactId>cyclonedx-maven-plugin</artifactId>
+				<version>2.9.2</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>makeBom</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputFormat>json</outputFormat>
+					<schemaVersion>1.6</schemaVersion>
+					<projectType>library</projectType>
+					<includeTestScope>false</includeTestScope>
+					<outputName>${project.artifactId}-sbom-cyclonedx</outputName>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<profiles>
